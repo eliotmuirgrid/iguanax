@@ -1,0 +1,10 @@
+{
+ "tables":{
+ "Kin":{
+  "desc":"",
+  "columns":[
+   {"type":"integer", "name":"Id",       "desc":""},
+   {"type":"string",  "name":"GivenName","desc":""},
+   {"type":"string",  "name":"LastName", "desc":""},
+   {"type":"string",  "name":"Relation", "desc":""}]}
+}}

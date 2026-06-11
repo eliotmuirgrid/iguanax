@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">debug.getmetatable(table)\n</pre><ul><li><code><strong>table</strong></code>: The object whose metatable you want to retrieve.</li></ul><p><br></p><h3>Notes</h3><ul><li>If the object's metatable has a <code>__metatable</code> field, its value is returned instead of the actual metatable.</li><li> This is used to protect the metatable from being accessed or modified.</li></ul><h3><br></h3><h3>Returns</h3><ul><li>The metatable if one exists, or <code>nil</code> if the object does not have a metatable. <em><u>(table)</u></em> or <em><u>(nil)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local T = {}\nlocal MT = { __index = function() return \"default\" end }\n\ndebug.setmetatable(T, MT)\n\nlocal Retrieved = debug.getmetatable(T)\nprint(type(Retrieved))&nbsp; -- prints \"table\"\n</pre><ul><li>This retrieves the metatable assigned to table <code>T</code>. If the metatable has a <code>__metatable</code> field, that value is returned instead.</li></ul>",
+    "Name": "debug.getmetatable",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>table</u></em> The object (usually a table or userdata) to get the metatable for.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Returns the metatable of the given object."
+}

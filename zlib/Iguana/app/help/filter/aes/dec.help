@@ -1,0 +1,18 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">filter.aes.dec{data = &lt;value&gt;, key = &lt;value&gt;}\n</pre><ul><li><code><strong>data</strong></code>: The AES-encrypted string to decrypt.</li><li><code><strong>key</strong></code>: The AES decryption key used to encrypt the data originally.</li></ul><p>The input must have been encrypted using AES with the same key and padding method. If the key is incorrect or data is corrupted, decryption may fail or return garbled output.</p><p><br></p><h3>Returns</h3><ul><li>A decrypted string. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">-- First encrypt some data\nlocal MyData = [[Lorem Ipsum is simply dummy text of the printing and typesetting industry.]]\nlocal EncryptedString = filter.aes.enc{data = MyData, key = \"mysecretmysecret\"}\n-- Now decrypt the encrypted data using the same key\nlocal Decrypted = filter.aes.dec{data = EncryptedString, key = \"mysecretmysecret\"}\n</pre><ul><li><code>Decrypted</code> will contain the original unencrypted string if <code>data</code> was a valid AES-encrypted string and <code>key</code> is correct.</li></ul>",
+    "Name": "filter.aes.dec",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The string to decrypt.</p>",
+            "Name": "data",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u></em> The shared encryption key.</p>",
+            "Name": "key",
+            "Required": true
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Decrypts data encoded using AES encryption."
+}

@@ -1,0 +1,23 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">crypto.rsa.encrypt{\n&nbsp; &nbsp;data&nbsp; &nbsp; &nbsp;= &lt;data&gt;,\n&nbsp; &nbsp;key&nbsp; &nbsp; &nbsp; = &lt;public_key&gt;,\n&nbsp; &nbsp;keyform&nbsp; = &lt;format&gt;\n}\n</pre><ul><li><code><strong>data</strong></code>: The input value to encrypt.</li><li><code><strong>key</strong></code>: The public key used for encryption.</li><li><code><strong>keyform</strong></code> <em>(optional)</em>: If omitted, defaults to <code>'pem'</code>. Specify <code>'der'</code> only if you are using a DER-encoded key.</li></ul><p><br></p><h3>Notes</h3><ul><li>Each encryption run produces different ciphertext (due to randomization).</li><li>Input size is limited by the RSA key (e.g., ~117 bytes for 1024-bit, ~245 bytes for 2048-bit).</li><li>The encrypted data can only be decrypted using the matching private key.</li><li>Inputs shorter than the max are padded with PKCS#1 v1.5.</li></ul><p><br></p><h3>Returns</h3><ul><li>The encrypted message&nbsp;as a binary-encoded string. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">-- Encrypt the data using the public key\nlocal PublicKey = io.open('path/to/public.pem'):read('*a')\nlocal Encrypted = crypto.rsa.encrypt{\n &nbsp; data&nbsp; &nbsp; = 'hello',\n &nbsp; key&nbsp; &nbsp; &nbsp;= PublicKey,\n &nbsp; keyform = 'pem'\n}\n-- Decrypt the encrypted data using the private key\nlocal PrivateKey = io.open('path/to/private.pem'):read('*a')\nlocal Decrypted = crypto.rsa.decrypt{\n &nbsp; data&nbsp; &nbsp; &nbsp;= Encrypted,\n &nbsp; key&nbsp; &nbsp; &nbsp; = PrivateKey,\n &nbsp; keyform&nbsp; = 'pem'\n}\n</pre>",
+    "Name": "crypto.rsa.encrypt",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The input to encrypt.</p>",
+            "Name": "data",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u></em> The RSA public key.</p>",
+            "Name": "key",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u></em> The key format, <code>'pem'</code> or <code>'der'</code> (default is <code>'pem'</code>).</p>",
+            "Name": "keyform",
+            "Required": false
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Encrypts data using an RSA public key."
+}

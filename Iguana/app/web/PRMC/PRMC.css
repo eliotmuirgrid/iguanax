@@ -1,0 +1,107 @@
+/* PRMC promote changes modal */
+
+.PRMCmodal .PRMCintro{ margin: 4px 0 14px; }
+.PRMCmodal .RPOheader{ margin: 0 0 6px; }
+
+.PRMCmodal .RPOcomponentDiv{
+  margin: 8px 0 12px;
+}
+.PRMCmodal .RPOcomponentDiv:last-of-type{
+  margin-bottom: 0;
+}
+.PRMCmodal .RPOrepoRow + .RPOrepoRow{
+  margin-top: 10px;
+}
+
+.PRMCmodal .RPOrepoRow{
+  grid-template-columns: 104px 1fr;
+}
+.PRMCmodal .RPOrepoRow > div:nth-child(2){
+  min-width: 0;
+}
+.PRMCmodal .RPOrepoRow > div:nth-child(3){
+  display: none;
+}
+
+.PRMCinputCol{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  max-width: 640px;
+}
+.PRMCinputCol .FORMinput{
+  width: 100%;
+  box-sizing: border-box;
+}
+.PRMCbranchRow .FORMlabel,
+.PRMCpromotionTypeRow .FORMlabel{
+  margin-top: 4px;
+}
+
+.PRMCintro .RPOdescription{
+  padding-left: 4px;
+}
+.PRMCintroDetail{
+  margin-top: 6px;
+}
+.PRMCdefaultHint{
+  font-size: 12px;
+  opacity: 0.75;
+  line-height: 16px;
+}
+.PRMCmode{
+  opacity: 0.65;
+  font-size: 12px;
+  margin-left: 6px;
+  white-space: nowrap;
+}
+.PRMCpromotionOptions{
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  min-height: 28px;
+}
+.PRMCpromotionOption{
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: var(--grey-600);
+  font-size: 12px;
+  line-height: 16px;
+}
+.PRMCpromotionOption input{
+  margin: 0;
+}
+.PRMCnotice{
+  margin: 12px 0 0 104px;
+  color: var(--grey-600);
+  font-size: 12px;
+  line-height: 16px;
+}
+
+.PRMCbuttons{
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+.PRMCmodal a,
+.PRMCmodal a:visited{
+  color: var(--blue);
+  text-decoration: none;
+}
+.PRMCmodal a:hover{
+  text-decoration: underline;
+}
+
+.PRMCerror{
+  margin-top: 12px;
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(220, 53, 69, 0.35);
+  background: rgba(220, 53, 69, 0.08);
+  color: rgba(160, 0, 0, 0.95);
+  font-size: 12px;
+  line-height: 16px;
+  white-space: pre-line;
+}

@@ -1,0 +1,11 @@
+GetVariables=&message_id=1
+ContentLength=0
+Method=GET
+Version=1.1
+RequestLocation=/dashboard.xml
+RequestString=GET /dashboard.xml?&message_id=1 HTTP/1.1
+COUNT_OF_GET_VARS=1
+message_id=1
+COUNT_OF_POST_VARS=0
+COUNT_OF_COOKIES=1
+Iguana3_Session=4

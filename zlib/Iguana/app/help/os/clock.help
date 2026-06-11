@@ -1,0 +1,7 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">os.clock()\n</pre><ul><li>Returns the amount of CPU time (in seconds) consumed by the program since it started running.</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>Unlike <code><a href=\"@os.time\" target=\"_blank\">os.time</a></code>, which measures real time, <code>os.clock</code> measures CPU time, which is useful for profiling and benchmarking code execution.</li><li>The returned value includes fractions of a second, allowing for sub-second precision.</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>An approximation of CPU time used by the program. <em><u>(number)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local duration = os.clock()\ntrace(duration)\n\n-- The sub-second portion of the clock time can be useful\nlocal _, subsec = math.modf(os.clock())\nlocal msec = tostring(subsec):sub(3, 5)\n\ntrace(subsec) -- as a number\ntrace(msec)&nbsp; &nbsp;-- as a millisecond string\n</pre><ul><li>This example traces the total CPU time used and also extracts a millisecond value from the fractional part.</li></ul>",
+    "Name": "os.clock",
+    "Parameters": null,
+    "ParameterTable": false,
+    "SummaryLine": "Returns an approximation of the amount (in seconds) of CPU time used by the program."
+}

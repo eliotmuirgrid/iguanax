@@ -1,0 +1,38 @@
+This directory contains the amalgamated version of the sqlite3 library.
+
+Typically, library features are enabled at build time by defining various macros directly in the compile command.
+For example,
+    -DSQLITE_THREADSAFE=1 -DSQLITE_ENABLE_LOCKING_STYLE=0 -DSQLITE_ENABLE_MEMORY_MANAGEMENT=1 -DSQLITE_TEMP_STORE=3 -DSQLITE_ENABLE_FTS3_PARENTHESIS=1 -DSQLITE_ENABLE_FTS3=1 -DSQLITE_HAS_CODEC=1
+
+However, in an attempt to declutter the core makefile, the SQLite3 library feature defines are now defined in the following header file:
+    * SQLTEconfig.h
+
+For the defines to take effect, the following line is added to the beginning of sqlite3.c:
+    #include "SQLTEconfig.h"
+
+
+
+To upgrade the sqlite3 libaray to a newer version:
+    1. download the amalgamated source code
+    2. replace sqlite3.h, sqlite3.c and shell.c in the this directory
+    3. add #include "SQLTEconfig.h" to the beginning of sqlite3.c
+
+If you have to create the amalgamated source and header files manually:
+    1. download the source code
+    2. cd sqlite-version-3.18.0/
+    3. ./configure
+    4. make .target_source
+    5. tclsh tool/mksqlite3c.tcl
+    6. tclsh tool/mksqlite3h.tcl . >sqlite3.h
+
+
+
+The upgrade procedure above is for vanilla SQLite3, and our version seems to include the proprietary SQLite Encryption Extension (SEE).
+To build the vanilla version, we need to remove the following line from SQLTEconfig.h:
+    #define SQLITE_HAS_CODEC 1
+
+If we need to upgrade to newer versions with the SQLite Encryption Extension, we likely need to get our login back by contacting hawci support.
+
+Reference:
+https://www.hwaci.com/sw/sqlite/see.html
+https://www.sqlite.org/see/doc/release/www/index.wiki

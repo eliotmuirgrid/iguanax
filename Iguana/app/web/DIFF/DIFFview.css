@@ -1,0 +1,79 @@
+a.DIFFoption:hover {
+   cursor: pointer;
+}
+
+span.DIFFoption {
+   color: var(--grey-400);
+	margin-left: 4px;
+	margin-right: 4px; 
+}
+
+.DIFFcurrentHeader {
+   background-color: rgba(191, 233, 233, 0.75);
+}
+
+.DIFFcurrentText {
+   background-color: rgba(224, 245, 245, 0.75);
+}
+
+.DIFFincomingHeader {
+   background-color: rgba(209, 215, 250, 0.75);
+}
+
+.DIFFincomingText {
+   background-color: rgba(237, 239, 249, 0.75);
+}
+
+.CodeMirror .DIFFwidget {
+   background-color: white;
+   padding-bottom: 3px;
+}
+
+.CodeMirror .DIFFwidget a {
+   font-family: var(--font-buttons);
+   font-size: 10px;
+	font-weight: 500;
+   color: var(--grey-500);
+   letter-spacing: 0.02em;
+}
+
+.CodeMirror .DIFFwidget a:hover {
+   color: var(--blue);
+}
+
+.DIFFcurrentHeader ~ pre span span::after { content: none; }
+.DIFFcurrentHeader ~ pre > span::after {
+  content: " (Current Change)";
+  color: #013134;
+  opacity: 0.6;
+  font-size: 10px;
+  font-family: var(--font-sans);
+  margin-left: 6px;
+  letter-spacing: 0.02em;
+}
+/* remove any inner-span labels */
+.DIFFincomingHeader ~ pre span span::after {
+   content: none; /* or "" */
+ }
+ 
+ /* add one label at the end of the line */
+ .DIFFincomingHeader ~ pre > span::after {
+   content: " (Incoming Change)";
+   color: #000638;
+   opacity: 0.6;
+   font-size: 10px;
+   font-family: var(--font-sans);
+   margin-left: 6px;
+   letter-spacing: 0.02em;
+ }
+
+
+.cm-s-ifware .DIFFcurrentHeader ~ pre span {
+   color: var(--teal-darker);
+   font-weight: 400;
+}
+
+.cm-s-ifware .DIFFincomingHeader ~ pre span span {
+   color: var(--indigo-darker);
+   font-weight: 400;
+}

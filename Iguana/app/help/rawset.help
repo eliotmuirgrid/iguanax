@@ -1,0 +1,23 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">rawset(table, index, value)\n</pre><ul><li><code><strong>table</strong></code>: A Lua table to act on</li><li><code><strong>index</strong></code>: The index of the value to set</li><li><code><strong>value</strong></code>: The updated value to assign to <code>table</code>[<code>index</code>]</li></ul><p><br></p><h3>Notes</h3><ul><li>This allows bypassing of any logic that might exist in table's metatable:</li><li>See <code><a href=\"@rawget\" target=\"_blank\">rawget</a></code> for how to retrieve a table value without exercising metamethods</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>The updated table. <em><u>(table)</u></em></li></ul><p><br></p><h3><strong>Example</strong></h3><pre class=\"ql-syntax\" spellcheck=\"false\">local T = { name=\"Jane\"}\nrawset(T, \"age\", 11);\n</pre>",
+    "Name": "rawset",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u> </em>Target table name.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>any type</u> </em>Value to use.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>any type</u> </em>Index to use.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Sets the real value of a table element, without invoking any metamethod"
+}

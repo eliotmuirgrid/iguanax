@@ -1,0 +1,18 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">hl7.message{vmd=&lt;value&gt;, name=&lt;value&gt;}\n</pre><ul><li><code><strong>vmd</strong></code>: Name of the VMD file that defines the message schema.</li><li><code><strong>name</strong></code>: A message name from the VMD file used to generate the empty message structure</li></ul><p><br></p><h3>Notes</h3><ul><li>Creates an empty HL7/EDI data tree to populate with data</li><li>Returns an empty message object whose sub-fields are the segments of the message.</li></ul><p><br></p><h3>Returns</h3><ul><li>An empty data tree representing an&nbsp;<span style=\"background-color: initial;\">HL</span>7/EDI message. <em><u>(HL7 node tree)</u></em></li></ul><p><br></p><h3>Example</h3><p>To run this example: </p><ul><li>Create a new vmd file called <code style=\"background-color: rgb(240, 240, 240);\">adt</code>, and use the dropdown to ensure a vmd file is selected (the extension will be automatically added). </li><li>Select the file in the filetree. This brings up the vmd in the right pane. </li><li>Click <code style=\"background-color: rgb(240, 240, 240);\">EDIT</code> and then use the vmd importer feature to import the <code style=\"background-color: rgb(240, 240, 240);\">ADTA01</code> definition from the leftmost pane and press <code style=\"background-color: rgb(240, 240, 240);\">IMPORT</code> then <code style=\"background-color: rgb(240, 240, 240);\">DONE</code>. </li><li>See <a href=\"https://docs.interfaceware.com/docs/IguanaX_Documentation_Home/Development/Interfaces/HL7_Health_Level_Seven_/HL7_2FX12_Schema_File__2A_2Evmd_/Creating_a_VMD_2645065729?_highlight=vmd\" target=\"_blank\" style=\"color: rgb(37, 144, 205);\">documentation</a> for more on vmd creation.</li></ul><pre class=\"ql-syntax\" spellcheck=\"false\">local Msg = hl7.message{vmd=\"adt.vmd\", name=\"ADTA01\"}\n\nMsg.PID[5][1][1][1] = \"Smith\"\nMsg.PID[5][1][2]&nbsp; &nbsp; = \"Eliot\"\n</pre>",
+    "Name": "hl7.message",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u> </em>The name of a VMD schema file.</p>",
+            "Name": "vmd",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u> </em>The name of a message definition in the VMD file.</p>",
+            "Name": "name",
+            "Required": true
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Create an empty HL7/EDI data tree to populate with data."
+}

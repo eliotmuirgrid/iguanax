@@ -1,0 +1,28 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">crypto.aes.decrypt{\n&nbsp; &nbsp;data = &lt;data&gt;,\n&nbsp; &nbsp;key = &lt;secret&gt;,\n&nbsp; &nbsp;iv = &lt;random&gt;,\n&nbsp; &nbsp;blockcipher = &lt;blockcipher&gt;\n}\n</pre><ul><li><code><strong>data</strong></code>: The binary-encoded string to decrypt.</li><li><code><strong>key</strong></code>: The shared secret key, in binary encoding.</li><li><code><strong>iv</strong></code>: The initialization vector (IV), in binary encoding.</li><li><code><strong>blockcipher</strong></code>: The AES block-cipher mode. Must be one of: <code style=\"background-color: rgb(240, 240, 240);\">ecb</code>, <code style=\"background-color: rgb(240, 240, 240);\">cbc</code>, <code style=\"background-color: rgb(240, 240, 240);\">cfb</code>, <code style=\"background-color: rgb(240, 240, 240);\">ofb</code>, or <code style=\"background-color: rgb(240, 240, 240);\">ctr</code>.</li></ul><h3><br></h3><h3>Notes</h3><ul><li>This function decrypts data using the Advanced Encryption Standard (AES).</li><li>The key, iv, and blockcipher mode must match what was used during encryption.</li><li>If parameters don't match or the data is corrupted:</li><li class=\"ql-indent-1\">In some modes, decryption may fail with an error.</li><li class=\"ql-indent-1\">In other modes, it may return a garbled result without error.</li></ul><p><br></p><h3>Returns</h3><ul><li>The decrypted message, in binary encoding. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local data = filter.hex.dec('6C0C78D1E15455FFE12316DA57CFC669')\n\nlocal decrypted = crypto.aes.decrypt{\n&nbsp; &nbsp;data = data,\n&nbsp; &nbsp;key = '1234567890123456',\n&nbsp; &nbsp;iv = '1234567890123456',\n&nbsp; &nbsp;blockcipher = 'cbc'\n}\n\ntrace(decrypted)\n-- Output: hello world\n</pre>",
+    "Name": "crypto.aes.decrypt",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The input to decrypt. </p>",
+            "Name": "data",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u></em> The shared secret key, in binary-encoding.</p>",
+            "Name": "key",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u></em> The randomly-generated initialization vector, in binary-encoding.</p>",
+            "Name": "iv",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u></em> The AES block-cipher mode, one of: <em>ecb, cbc</em>, <em>cfb</em>, <em>ofb</em>, or <em>ctr.</em></p>",
+            "Name": "blockcipher",
+            "Required": true
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Decrypts data using AES (Advanced Encryption Standard)."
+}

@@ -1,0 +1,80 @@
+.SMPLgoToInput {
+   width: 20px;
+   text-align: center;
+   margin: 0;
+   padding: 0;
+   height : 20px;
+}
+#mb-divider {
+   border-top: 1px solid var(--grey-300) !important;
+   margin: 8px -8px !important;
+}
+#mini-browser button#mb-search {
+   margin: 0px;
+   padding: 6px 10px;
+   font-size: 9px;
+   /* width: 100%; */
+}
+.SMPLhidden { 
+   display: none; 
+}
+.SMPLmsgFirst {
+	background-image: url("/TRANS/images/toolbar/button_msg_first.svg");
+}
+.SMPLmsgFirst.disabled {
+	background-image: url("/TRANS/images/toolbar/button_msg_first_disabled.svg");
+}
+.SMPLmsgPrev {
+	background-image: url("/TRANS/images/toolbar/button_msg_prev.svg");
+}
+.SMPLmsgPrev.disabled {
+	background-image: url("/TRANS/images/toolbar/button_msg_prev_disabled.svg");
+}
+.SMPLmsgNext {
+	background-image: url("/TRANS/images/toolbar/button_msg_next.svg");
+}
+.SMPLmsgNext.disabled {
+	background-image: url("/TRANS/images/toolbar/button_msg_next_disabled.svg");
+}
+.SMPLmsgLast {
+	background-image: url("/TRANS/images/toolbar/button_msg_last.svg");
+}
+.SMPLmsgLast.disabled {
+	background-image: url("/TRANS/images/toolbar/button_msg_last_disabled.svg");
+}
+.SMPLmsgEdit {
+	background-image: url("/TRANS/images/toolbar/button_msg_edit.svg");
+}
+.SMPLmsgAdd {
+	background-image: url("/SMPL/SMPLiconAddMessage.svg");
+}
+.SMPLmsgEdit.disabled {
+	opacity: 0.2;
+	cursor: not-allowed !important;
+}
+.SMPLinsertHex {
+	background-image: url("/SMPL/SMPLiconInsertHex.svg");
+}
+#SMPLhexInput {
+	width: 40px;
+	margin-left: 6px;
+}
+.SMPLhexCodeInput{
+	display: contents;
+}
+
+.SMPLbuttonGroup{
+	display: flex;
+	justify-self: end;
+	gap: 4px;
+}
+.SMPLimportFromFileControls{
+	margin-top: 4px;
+}
+.SMPLmodal {
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding: 10px 8px;
+   background: var(--grey-100);
+}

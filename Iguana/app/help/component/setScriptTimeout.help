@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">component.setScriptTimeout(seconds)\n</pre><ul><li><code><strong>seconds</strong></code>: The number of seconds the script is allowed to run before timing out (default maximum is 300 seconds).</li></ul><h4><br></h4><h3>Notes</h3><ul><li>This function sets the timeout only for the current script execution.</li><li>It has no effect when the script runs inside the editor (only active in production).</li><li>If you know a task may take longer than usual, increase the timeout to avoid premature script termination.</li><li>Be mindful that very long timeouts can cause stalled or stuck components if an issue arises.</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">-- Set the script timeout to 20 seconds\ncomponent.setScriptTimeout(20)\n</pre>",
+    "Name": "component.setScriptTimeout",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>integer</u></em> Timeout in seconds.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Sets a new timeout for the current script."
+}

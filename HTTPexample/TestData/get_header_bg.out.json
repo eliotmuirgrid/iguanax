@@ -1,0 +1,27 @@
+[
+    {
+        "body": "",
+        "header": {
+            "headers": {
+                "Accept": "image/png,*/*;q=0.5",
+                "Accept-Charset": "ISO-8859-1,utf-8;q=0.7,*;q=0.7",
+                "Accept-Encoding": "gzip,deflate",
+                "Accept-Language": "en-us,en;q=0.5",
+                "Connection": "keep-alive",
+                "Cookie": "Iguana3_Session=3",
+                "Host": "localhost",
+                "Keep-Alive": "300",
+                "Referer": "http://localhost/db_deliver.css",
+                "User-Agent": "Mozilla/5.0 (Windows; U; Windows NT 5.0; en-US; rv:1.8.1) Gecko/20061010 Firefox/2.0"
+            },
+            "request": {
+                "location": "/images/header_bg.gif",
+                "method": "GET",
+                "query": ""
+            }
+        },
+        "header_data": "GET /images/header_bg.gif HTTP/1.1\r\nHost: localhost\r\nUser-Agent: Mozilla/5.0 (Windows; U; Windows NT 5.0; en-US; rv:1.8.1) Gecko/20061010 Firefox/2.0\r\nAccept: image/png,*/*;q=0.5\r\nAccept-Language: en-us,en;q=0.5\r\nAccept-Encoding: gzip,deflate\r\nAccept-Charset: ISO-8859-1,utf-8;q=0.7,*;q=0.7\r\nKeep-Alive: 300\r\nConnection: keep-alive\r\nReferer: http://localhost/db_deliver.css\r\nCookie: Iguana3_Session=3\r\n\r\n",
+        "size_body": 0,
+        "size_headers": 404
+    }
+]

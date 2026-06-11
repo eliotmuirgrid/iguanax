@@ -1,0 +1,23 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">os.execute{command = &lt;command&gt;, dir = &lt;directory&gt;, timeout = &lt;seconds&gt;}\n-- or\nos.execute(&lt;command&gt;)\n</pre><ul><li><code><strong>command</strong></code>: The shell command to execute.</li><li><code><strong>dir</strong></code> <em>(optional)</em>: working directory for the command.</li><li><code><strong>timeout</strong></code> <em>(optional)</em>: time limit for execution.</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>Executes a system command from an optional directory, optionally with a timeout.</li><li>Commonly used to interact with the OS or external programs from Lua.</li><li>For long-running processes, you may need to extend the Translator script timeout using <code><a href=\"@component.setScriptTimeout\" target=\"_blank\">component.setScriptTimeout</a></code><a href=\"@component.setScriptTimeout\" target=\"_blank\">.</a></li><li>Use a timeout sum slightly greater than the longest <code>os.execute</code> timeout you plan to use.</li></ul><h4><strong>Special Exit Codes</strong> (custom logic):</h4><ul><li><code>-10</code>: Bad Exit</li><li><code>-20</code>: Timed Out</li><li><code>-30</code>: Bad Wait</li><li><code>-40</code>: Retries Exceeded</li><li><code>-50</code>: Execute Failed</li><li><code>98</code>: Bad Directory</li></ul><p><strong>Alternative Usage</strong></p><pre class=\"ql-syntax\" spellcheck=\"false\">local exit_code = os.execute(&lt;command&gt;)\n</pre><ul><li>This is the standard Lua version of <code>os.execute</code>, which only accepts the command string and returns the exit code.</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>Exit code of the command. <em><u>(integer)</u></em></li><li>Standard output. <em>(<u>string)</u></em></li><li>Standard error. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local code, stdout, stderr = os.execute{\n&nbsp; &nbsp;command = \"ls\",\n&nbsp; &nbsp;dir = \"~/..\",\n&nbsp; &nbsp;timeout = 10\n}\n\n-- Alternatively\nlocal code = os.execute(\"git\")\n</pre><ul><li>The first example runs the <code>ls</code> command from a parent directory with a timeout. The second uses the basic form to check for Git availability.</li></ul>",
+    "Name": "os.execute",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The command to run.</p>",
+            "Name": "command",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u></em> <em>(Optional)</em> The directory to run the command from (default is <code>\".\"</code>).</p>",
+            "Name": "dir",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>integer</u></em> <em>(Optional) </em>The number of seconds to wait before killing the command (default is <code style=\"background-color: rgb(240, 240, 240);\">60</code>).</p>",
+            "Name": "timeout",
+            "Required": false
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Executes an external application – usually a command line."
+}

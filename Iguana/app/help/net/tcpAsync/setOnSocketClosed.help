@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">Socket:setOnSocketClosed(Callback)\n</pre><ul><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>Socket</strong></code>: The asynchronous socket connection handle<strong> </strong></li><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>Callback</strong></code>: a Lua function accepting an asynchronous socket connection handle</li></ul><p><br></p><h3>Notes</h3><ul><li>Sets the <code>onSocketClosed</code> callback function for the asynchronous socket connection handle.</li><li>Callback must be a Lua function that accepts the following parameters: asynchronous socket connection handle, data buffer, error message</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local function onClose(Socket, Buffer, Error)\n &nbsp; iguana.logDebug(Socket .. \" closed\")\n   if #Buffer &gt; 0 then\n      iguana.logDebug(Socket .. \" closed with data \" .. Buffer)\n   end\n &nbsp; if Error then\n      iguana.logDebug(Error)\n   end\nend\n\nSocket:setOnSocketClosed(onClose)\n</pre>",
+    "Name": "net.tcpAsync:setOnSocketClosed",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>function</u></em> The Lua function that handles the onSocketClosed socket event.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Sets the onSocketClosed callback function for the asynchronous socket connection"
+}

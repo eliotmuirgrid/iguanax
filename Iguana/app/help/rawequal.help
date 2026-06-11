@@ -1,0 +1,18 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">rawequal(v1, v2)\n</pre><ul><li><code><strong>v1</strong></code>: The first value</li><li><code><strong>v2</strong></code>: The second value</li></ul><p><br></p><h3>Notes</h3><ul><li>Checks whether two values are equal without invoking any metamethods.</li><li>This also avoids coercion of numbers and strings</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>Result (true or false). <em>(<u>bool)</u></em></li></ul><p><br></p><h3><strong>Example</strong></h3><pre class=\"ql-syntax\" spellcheck=\"false\">local V1 = \"101\"\nlocal V2 = 101\nrawequal(V1, V2) -- returns false\n</pre>",
+    "Name": "rawequal",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>any type</u></em> The first value. </p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>any type</u></em> The second value. </p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Checks whether two values are equal, without invoking any metamethod."
+}

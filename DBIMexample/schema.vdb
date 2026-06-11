@@ -1,0 +1,9 @@
+{
+ "tables":{
+ "Patient":{
+  "desc":"",
+  "columns":[
+   {"type":"string",  "name":"id",       "desc":""},
+   {"type":"string",  "name":"firstname","desc":""},
+   {"type":"string",  "name":"lastname", "desc":""}]}
+}}

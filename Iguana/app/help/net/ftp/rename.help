@@ -1,0 +1,23 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">Conn:rename{\n    remote_path = &lt;path&gt;, \n    new_remote_path = &lt;path&gt;,\n    debug = &lt;true|false&gt;\n}\n</pre><ul><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>remote_path</strong></code>: The full path of the file or directory to be renamed on the remote server.</li><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>new_remote_path</strong></code>: The new path of the file or directory on the remote server.</li><li><code><strong>debug</strong></code> <em>(optional)</em>: If <code>true</code>, return verbose debug information. Errors thrown will also contain debug information.</li></ul><p><br></p><h3>Notes:</h3><ul><li>Use <code style=\"color: rgb(37, 144, 205);\"><a href=\"http://localhost:7654/@net.ftp.init\" target=\"_blank\">net.ftp.init</a></code> to create a connection object.</li></ul><p><br></p><h3>Returns</h3><ul><li><code style=\"background-color: rgb(240, 240, 240);\">true</code> if successful. <code style=\"background-color: rgb(240, 240, 240);\">false</code> is never returned, errors are thrown instead. <em>(<u>bool)</u></em></li><li>Debug information (if requested). <em>(<u>string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local FtpConn = net.ftp.init{\n  server='example', \n  username='user', \n  password='password',\n-- live=true -- uncomment to run in translator\n}\n\nFtpConn:rename{remote_path='old_name.txt', new_remote_path='new_name.txt'}\n\n-- This can also be used to move files to a 'processed' directory\nFtpConn:rename{\n  remote_path='/fox_out/test.txt', \n  new_remote_path='/fox_processed/test'..os.date()..'.txt'\n}\n</pre>",
+    "Name": "net.ftp:rename",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u> </em>The old<strong> </strong>name of the file or directory to be renamed on the remote server.</p>",
+            "Name": "remote_path",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u> </em>The new<strong> </strong>name of the file or directory to be renamed on the remote server.</p>",
+            "Name": "new_remote_path",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>bool</u> </em>Enable debug log (default is <code style=\"background-color: rgb(240, 240, 240);\">false</code>).</p>",
+            "Name": "debug",
+            "Required": false
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Renames a single file or directory on the remote server."
+}

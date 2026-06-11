@@ -1,0 +1,23 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">iguana.call{\n&nbsp; &nbsp;api=apiPath,\n&nbsp; &nbsp;data=dataTable,\n&nbsp; &nbsp;live=true|false\n}\n</pre><ul><li><code><strong>api</strong></code>: The path to the API endpoint to invoke, such as:</li><li class=\"ql-indent-1\"><code>\"/user/list\"</code> to list users</li><li class=\"ql-indent-1\"><code>\"/component/start\"</code> to start a component</li><li><code><strong>data</strong></code> <em>(optional)</em>: A Lua table containing request data. </li></ul><p>\tThe specific structure depends on the API being called.</p><ul><li><code><strong>live</strong></code> <em>(optional)</em>: Boolean flag:</li><li class=\"ql-indent-1\"><code>true</code>: The API call is executed live and can modify the system.</li><li class=\"ql-indent-1\"><code>false</code> (default): Runs in the editor simulation mode without applying changes.</li></ul><p><br></p><h3>Notes</h3><ul><li>Use <code><a href=\"@iguana.callList\" target=\"_blank\">iguana.callList</a></code> to explore available APIs and their required parameters.</li><li>Supplying incomplete or incorrect parameters will typically result in an error.</li><li>Calls made in the editor are simulated unless <code>live = true</code> is explicitly provided.</li></ul><p><br></p><h3>Returns</h3><ul><li>A Lua table or other data structure representing the response from the API. The format depends on the API endpoint. <em><u>(any type)</u></em></li></ul><p><br></p><h3>Example</h3><h4>List Users:</h4><pre class=\"ql-syntax\" spellcheck=\"false\">local Users = iguana.call{api=\"/user/list\", live=true}\n</pre><h4>Start and Stop a Component:</h4><pre class=\"ql-syntax\" spellcheck=\"false\">local Components = iguana.components()\nlocal _, ComponentId = next(Components)\niguana.call{api = \"/component/start\", data = {components = {ComponentId}}, live=true}\niguana.call{\n&nbsp;&nbsp; api = \"/component/stop\",\n &nbsp; data = {components = {ComponentId}},\n &nbsp; live = true\n}\n</pre>",
+    "Name": "iguana.call",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The API endpoint to call (e.g., <code>\"/user/list\"</code>, <code>\"/component/start\"</code>).</p>",
+            "Name": "api",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>table</u></em> A table containing data to send to the API.</p>",
+            "Name": "data",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>bool</u></em> If <code>true</code>, executes in the live system (default is <code>false</code>).</p>",
+            "Name": "live",
+            "Required": false
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Call Iguana's API"
+}

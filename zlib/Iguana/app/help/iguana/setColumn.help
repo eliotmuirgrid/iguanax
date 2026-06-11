@@ -1,0 +1,28 @@
+{
+    "Description": "<p> 🔄  <strong>Replacement:</strong> <code style=\"background-color: rgb(240, 240, 240); color: rgb(37, 144, 205);\"><a href=\"http://localhost:7654/@ui.addDashboardColumn\" target=\"_blank\">ui.addDashboardColumn</a></code>. </p><p> ⚠️  <strong>Deprecated:</strong>    <code style=\"background-color: rgb(240, 240, 240);\">iguana.setColumn</code> will be removed in a future version.&nbsp;</p><p><br></p><h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">ui.addDashboardColumn{ name=string, width=int, priority=int, title=string }\n</pre><ul><li><code><strong>name</strong></code> (<em>string</em>): The column name (required).</li><li><code><strong>width</strong></code> (<em>int</em>): Width of the column in pixels. Default: <code>40</code>.</li><li><code><strong>priority</strong></code> (<em>int</em>): Determines the column order. Use <code>-1</code> to place the column last. Default: <code>0</code>.</li><li><code><strong>title</strong></code> (<em>string</em>): Custom title (CSS style). Default: <code>\"\"</code>.</li></ul><p><br></p><h3>Notes</h3><ul><li>Columns are displayed in ascending order of <strong>priority</strong>.</li><li>A priority of <strong>-1</strong> places the column at the end.</li><li>Columns with the same priority are sorted <strong>alphabetically by name</strong>.</li><li>This function will be removed in a future version.</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">ui.addDashboardColumn{\n&nbsp; &nbsp;name = \"test\",\n&nbsp; &nbsp;width = 100,\n&nbsp; &nbsp;priority = 0\n}\n</pre>",
+    "Name": "iguana.setColumn",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The column name.</p>",
+            "Name": "name",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>integer</u></em> Width of the column in pixels.</p>",
+            "Name": "width",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>integer</u></em> Determines the column order.</p>",
+            "Name": "priority",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u></em>&nbsp;Custom title (CSS style).</p>",
+            "Name": "title",
+            "Required": false
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "*DEPRECATED* - Use ui.addDashboardColumn instead."
+}

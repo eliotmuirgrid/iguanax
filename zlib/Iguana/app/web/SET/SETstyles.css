@@ -1,0 +1,194 @@
+.SETmainContent {
+	overflow: hidden;
+	height: 100vh;
+}
+
+.SETcontentAsideHeader {
+	/* background: var(--white); */
+	/* border-right: 1px solid var(--grey-300); */
+}
+
+.SETcontentAside {
+	overflow: hidden;
+	/* Match dashboard colours */
+	background-color: #ebf3f6;
+	border-right: 1px solid var(--grey-400);
+}
+
+.SETcontentAside:hover {
+	overflow: auto;
+}
+
+.SETcontentBody {
+	overflow: auto;
+	/* Match dashboard colours */
+	background-color: #D2E4EC;
+}
+
+.SETheading {
+	/* font-family: var(--font-buttons); */
+	/* color: var(--blue-dark);
+	font-size: 16px !important;
+	font-weight: 500 !important;
+	margin-bottom: 16px; */
+}
+
+.SETsettingsNav * {
+	font-family: var(--font-buttons);
+	font-weight: 370;
+	font-size: 13px;
+}
+
+.SETsettingsNavPage {
+	color: var(--grey-600);
+	font-weight: var(--semibold);
+	list-style-type: none;
+}
+
+.SETsettingsNavPage:hover {
+	cursor: pointer;
+	font-weight: var(--bold);
+	color: var(--grey-700);
+}
+
+.SETsettingsNavPage.selected {
+	font-weight: var(--bold);
+	color: var(--grey-800);
+}
+
+/* .SETsettingsNavPage.selected::before {
+   content: "";
+   background-color: var(--blue);
+   border-radius: 9999px;
+} */
+.SETsettingsIconSvg {
+	fill: var(--grey-300);
+}
+.SETsettingsPane {
+	border-radius: 4px;
+	border: solid 1px var(--grey-400);
+	background-color: var(--white);
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+	border: none;
+	max-width: 1050px;
+}
+
+.SETsettingsPaneHeader {
+	border-bottom: 1px solid var(--grey-300);
+}
+
+.SETtable {
+	border-collapse: collapse;
+}
+
+.SETtableHeading {
+	border: 1px solid var(--grey-300);
+	text-align: left;
+	border-left: 0px;
+	border-right: 0px;
+}
+
+.SETtableHeading:first-child {
+	border-left: 1px solid var(--grey-300);
+}
+
+.SETtableHeading:last-child {
+	border-right: 1px solid var(--grey-300);
+}
+
+.SETtableData {
+	border: 1px solid var(--grey-300);
+	text-align: left;
+	border-left: 0px;
+	border-right: 0px;
+}
+
+.SETtableData:first-child {
+	border-left: 1px solid var(--grey-300);
+}
+
+.SETtableData:last-child {
+	border-right: 1px solid var(--grey-300);
+}
+
+.SETpermissionsListTableRow:hover .SETpermissionsListTableData {
+	background-color: unset;
+}
+
+.SETnotificationRuleList table {
+	border-collapse: collapse;
+}
+
+.SETpermissionsList table {
+	border-collapse: collapse;
+}
+
+.SETusersList table {
+	border-collapse: collapse;
+}
+
+
+.SETusersList td:last-child {
+	white-space: nowrap;
+	text-align: right;
+}
+
+.SETpermissionsList td:last-child {
+	white-space: nowrap;
+	text-align: right;
+}
+
+.SETnotificationRuleList a {
+	text-decoration: none;
+}
+
+.SETusersList a {
+	text-decoration: none;
+}
+
+.SETpermissionsList a {
+	text-decoration: none;
+}
+
+.SETnotificationRuleList a:hover {
+	border-bottom: 1px solid rgba(var(---blue), 0.5);
+}
+
+.SETusersList a:hover {
+	border-bottom: 1px solid rgba(var(---blue), 0.5);
+}
+
+.SETpermissionsList a:hover {
+	border-bottom: 1px solid rgba(var(---blue), 0.5);
+}
+
+.SETnotificationRuleDelete:hover {
+	background: var(--red) !important;
+	color: var(--red-lighter) !important;
+}
+
+.SETusersList .SETdeleteRow:hover {
+	background: var(--red) !important;
+	color: var(--red-lighter) !important;
+}
+
+.SETpermissionsList .SETdeleteRow:hover {
+	background: var(--red) !important;
+	color: var(--red-lighter) !important;
+}
+
+.SETnotificationRuleChannelList {
+	border-bottom: 1px dashed var(--grey-600);
+	cursor: default;
+}
+
+.SETpasswordLabel,
+.SETuserInfo {
+	width: 100%;
+	font-weight: var(--semibold);
+	font-size: 12px;
+	line-height: 16px;
+	display: block;
+	margin-bottom: var(--label-margin-bottom);
+	color: var(--grey-700);
+}

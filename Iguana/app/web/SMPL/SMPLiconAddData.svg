@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>icon-add-sample-data</title>
+    <g id="icon-add-sample-data" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M13,2 L13,9 L12,9 L12,3 L4,3 L4,13 L8,13 L8,14 L3,14 L3,2 L13,2 Z M10,9 L10,10 L5,10 L5,9 L10,9 Z M11,7 L11,8 L5,8 L5,7 L11,7 Z M11,5 L11,6 L5,6 L5,5 L11,5 Z" id="Combined-Shape" fill="#6B7A86" fill-rule="nonzero"></path>
+        <path d="M13,11 L13,13 L15,13 L15,14 L13,14 L13,16 L12,16 L12,14 L10,14 L10,13 L12,13 L12,11 L13,11 Z" id="Combined-Shape" fill="#6B7A86"></path>
+    </g>
+</svg>

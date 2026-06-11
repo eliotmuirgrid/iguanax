@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">conn:quote(data)\n</pre><ul><li><code><strong>conn</strong></code>: The database connection object.</li><li><code><strong>data</strong></code>: The raw string value that needs to be escaped for safe inclusion in an SQL query.</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>This function is essential when dynamically constructing SQL queries using user input or variable data.</li><li>It ensures that embedded quote characters (<code>'</code> or <code>\"</code>) within the input do not break the SQL syntax.</li><li>Prevents SQL injection by safely escaping input that may contain malicious content.</li><li>Escaped strings are safe to use directly in SQL statements.</li></ul><h4><br></h4><h4>Why this matters:</h4><ul><li>Malicious actors may exploit systems using SQL injection by injecting special characters and additional statements into unescaped inputs. Always use <code>conn:quote()</code> when inserting user input into SQL queries.</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>An escaped string surrounded by single quotes. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Sql = 'SELECT * FROM MyTable WHERE Name = ' .. conn:quote(MyName)\n</pre><ul><li>This example constructs a secure SQL query that safely handles any special characters within <code>MyName</code>.</li></ul>",
+    "Name": "db:quote",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The string to escape.</p>",
+            "Name": "data",
+            "Required": true
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Returns an escaped string surrounded by single quotes."
+}

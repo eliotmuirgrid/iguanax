@@ -1,0 +1,7 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">iconv.list()\n</pre><ul><li>Returns a table of all character encodings and their known aliases.</li></ul><p><br></p><h3>Notes</h3><ul><li>This list is primarily for debugging or exploration.</li><li>To check if a specific encoding is supported, use <code><a href=\"@iconv.supported\" target=\"_blank\">iconv.supported</a></code> instead.</li></ul><p><br></p><h3>Returns</h3><ul><li>A table containing aliases for each encoding available. <em><u>(table)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local List = iconv.list()\n</pre><ul><li>This returns a table that maps available encodings to their aliases.</li></ul>",
+    "Name": "iconv.list",
+    "Parameters": null,
+    "ParameterTable": false,
+    "SummaryLine": "Lists all available encodings and aliases understood by iconv."
+}

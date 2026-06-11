@@ -1,0 +1,117 @@
+.SNCKsnackbar {
+    visibility: visible; /* Hidden by default. Visible on click */
+    text-align: left; /* Left aligned text */
+    border-radius: 4px; /* Rounded borders */
+    padding: 24px; /* Equal horizontal padding left and right */
+    position: fixed; /* Sit on top of the screen */
+    z-index: 9999; /* Add a z-index if needed */
+    left: 50%; /* Center the snackbar (Starting position) */
+    transform: translateX(-50%); /* Center the snackbar (Offset back by half the width) */
+    bottom: 48px; /* 30px from the bottom */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 16px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.5);
+    background-color: var(--grey-800); /* Dark grey background color $grey-800 */
+    color: var(--grey-100); /* $grey-100 */
+}
+
+.SNCKsnackbar .SNCKclosePanel { /* Close icon position and styling */
+    margin-left: auto;
+    padding-left: 16px;
+    width: 16px;
+    height: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: 0 0 auto;
+    cursor: pointer;
+    color: var(--grey-400);
+}
+
+.SNCKsnackbar a{
+    color: var(--blue);
+}
+
+.SNCKsnackbar--error {
+    visibility: visible;
+}
+
+.SNCKsnackbar--info {
+    visibility: visible;
+}
+
+.SNCKsnackbar--success {
+    visibility: visible;
+}
+
+.SNCKsnackbar--warning {
+    visibility: visible;
+}
+
+.SNCKsnackbar .SNCKmessage::before { /* Styling of labels */
+    font-family: var(--font-buttons);
+    font-size: 11px;
+    margin-right: 0;
+    flex: 0 0 auto;
+    line-height: 1;
+}
+
+.SNCKsnackbar--error .SNCKmessage::before {
+    content: "×";
+    color: #DC2626; /* Red-600 error icon */
+    width: 16px;
+    height: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    box-sizing: border-box;
+    border: 2px solid currentColor;
+    border-radius: 9999px;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.SNCKsnackbar--info .SNCKmessage::before {
+    content: "INFO:";
+    color: #2CA9F0; /* Blue (Custom) */
+}
+
+.SNCKsnackbar--success .SNCKmessage::before {
+    content: "✓";
+    color: #6FD93E; /* Green (Custom) */
+    margin-right: 2px;
+    width: 16px;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.SNCKsnackbar--warning .SNCKmessage::before {
+    content: "WARNING:";
+    color: #FFDA3B; /* Yellow (Custom) */
+}
+
+.SNCKsnackbarCloseIcon {
+  fill: var(--grey-400);
+  width: 16px;
+  height: 16px;
+}
+
+.SNCKsnackbarCloseIcon:hover {
+  fill: var(--grey-600);
+}
+
+.SNCKmessage {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    flex: 1 1 auto;
+    min-width: 0;
+    overflow-wrap: anywhere;
+}

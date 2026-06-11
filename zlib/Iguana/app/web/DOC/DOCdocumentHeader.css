@@ -1,0 +1,58 @@
+.DOCdocumentHeader {
+  background-color: aquamarine;
+  display: flex;
+  align-items: center;   
+  padding: 0 0.5em;
+  grid-row: 1;      
+  justify-content: space-between; 
+}
+
+.DOCdate {
+  flex: 0 0 auto;     
+}
+
+.DOCtitleSection{
+  display: flex;
+  align-items: center;   
+  padding: 0 0.5em; 
+  grid-row: 2;     
+}
+
+.DOCtitle {
+  flex: 1 1 auto;  
+  padding-left: 1em;     
+  padding-right: 1em;
+}
+
+.DOCbutton {
+  flex: 0 0 auto;        
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px; height: 28px;
+  border: none;
+  background: transparent;
+  padding: 0;
+  color: #333;
+  cursor: pointer;
+  border-radius: 6px;
+}
+.DOCbutton:hover { background: rgba(0,0,0,0.06); }
+.DOCbutton:active { transform: translateY(1px); }
+.DOCbutton:focus-visible { outline: 2px solid #2684ff; outline-offset: 2px; }
+
+.DOCicon {
+  display: block;
+}
+
+.DOCtagBarTags{
+  font-size: x-small;
+}
+
+.DOCeditTags{
+  padding-left: .5em;
+}
+
+.DOCtagsEditInput{
+  width : 90%;
+}

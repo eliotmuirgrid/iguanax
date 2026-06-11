@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">os.fs.abspath(&lt;path&gt;)\n</pre><ul><li><code><strong>path</strong></code>: A relative path to a file or directory.</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>This function resolves the absolute path based on the <strong>working directory of the Iguana executable</strong>.</li><li>It does <strong>not</strong> verify that the path exists—only resolves the full path from the input.</li><li>Useful when working with relative references in scripts or file manipulations.</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>The absolute path for the given input. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Path = os.fs.abspath(\"../foo.txt\")\n</pre><ul><li>This example converts the relative path <code>\"../foo.txt\"</code> into an absolute path based on the Iguana working directory.</li></ul>",
+    "Name": "os.fs.abspath",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> A relative file path to convert.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Converts a relative path to an absolute one."
+}

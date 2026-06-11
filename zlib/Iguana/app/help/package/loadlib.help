@@ -1,0 +1,18 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">package.loadlib(libname, funcname)\n</pre><ul><li><code><strong>libname</strong></code>: Path or identifier of the C library file.</li><li><code><strong>funcname</strong></code>: The function within the library to expose as a callable C function.</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>This function loads the specified C library and returns a Lua-callable version of the specified function.</li><li>The <code>funcname</code> must conform to the expected C function signature for Lua (i.e., the <code>lua_CFunction</code> protocol).</li><li>Often used to extend Lua with custom compiled code when performance or system-level access is required.</li><li>Misuse can result in crashes or undefined behavior if the library or function are invalid or incompatible.</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>The function <code>funcname</code> as a C function. <em><u>(function)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local myfunc = package.loadlib(\"mylib.so\", \"init_mylib\")\n</pre><ul><li>This example loads the function <code>init_mylib</code> from the shared library <code>mylib.so</code> and assigns it to <code>myfunc</code>.</li></ul>",
+    "Name": "package.loadlib",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The name of the C library to load.</p>",
+            "Name": "libname",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u></em> The name of the function to retrieve from the library.</p>",
+            "Name": "funcname",
+            "Required": true
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Dynamically links the host program with a C library."
+}

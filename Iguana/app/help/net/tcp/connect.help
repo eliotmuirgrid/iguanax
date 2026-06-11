@@ -1,0 +1,33 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">net.tcp.connect('hostname:port')&nbsp;alternatively:&nbsp;\nnet.tcp.connect{\n  host=&lt;value&gt;, \n  port=&lt;value&gt;,\n  secure = &lt;true|false&gt;\n  timeout = &lt;value&gt;\n  ssl = &lt;table&gt;\n}\n</pre><ul><li><code><strong>host</strong></code>: The remote host to connect to.</li><li><code><strong>port</strong></code>: The port on the remote host to connect to.</li><li><code><strong>secure</strong></code> <em>(optional)</em>: Whether to use SSL for this connection.</li><li><code><strong>timeout</strong></code> <em>(optional)</em>: Timeout in seconds for operations on this connection.</li><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>ssl</strong></code> <em>(optional)</em>:  A table to enable and configure TLS/SSL encryption for secure communication. The table supports the keys:</li><li class=\"ql-indent-1\"><code style=\"background-color: rgb(240, 240, 240);\">verify_peer</code> - if <code style=\"background-color: rgb(240, 240, 240);\">true</code>, peer verification is enabled (default is <code>true</code> )</li><li class=\"ql-indent-1\"><code>verify_host</code> - if <code>true</code>, verify the host certificate matches URL (default is <code>true</code>).</li><li class=\"ql-indent-1\"><code style=\"background-color: rgb(240, 240, 240);\">ca_file</code> - the path to the certificate authority file to use for peer verification.</li></ul><p><br></p><h3>Notes</h3><ul><li>Establish a connection to a remote host with TCP/IP.</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>A socket object. <em>(<u>socket)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local s = net.tcp.connect{host=hostname, port=8086}\ns:send(Data)\nlocal Ack = s:receive()\ns:close()\n</pre>",
+    "Name": "net.tcp.connect",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u> </em>The hostname of the remote site.</p>",
+            "Name": "host",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>integer</u> </em>The port on the remote site.</p>",
+            "Name": "port",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>bool</u> </em>Whether SSL is enabled (default = false). </p>",
+            "Name": "secure",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>integer</u> </em>Maximum wait time, in seconds (default = 5s).</p>",
+            "Name": "timeout",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>table</u> </em>The SSL option table. See description for more details.</p>",
+            "Name": "ssl",
+            "Required": false
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Connect to a remote host with TCP/IP."
+}

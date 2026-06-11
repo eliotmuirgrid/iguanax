@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">filter.uri.enc(data)\n</pre><ul><li><code><strong>data</strong></code>: A raw string that may contain special characters (e.g., spaces, symbols) that must be URI-encoded for inclusion in a URL or web request.</li></ul><p><br></p><h3>Returns</h3><ul><li>The URI-encoded string. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local P = filter.uri.enc(\"a=sdf sdf @!\")\n</pre><ul><li><code>P</code> → <code>\"a%3Dsdf%20sdf%20%40%21\"</code></li></ul>",
+    "Name": "filter.uri.enc",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The string to encode as URI component.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Encodes a string for safe inclusion in a URI component."
+}

@@ -1,0 +1,138 @@
+.POPtooltip {
+   position: fixed;
+   z-index: 1000;
+   padding: 8px;
+   border-radius: 12px;
+   pointer-events: auto;
+}
+
+.POPtooltip::after {
+   content: '';
+   position: absolute;
+   width: 0;
+   height: 0;
+   border: 10px solid transparent;
+}
+
+.POPtooltip-bottom::after {
+   top: -20px;
+   left: 50%;
+   transform: translateX(-50%);
+   border-bottom-color: #333;
+}
+
+.POPtooltip-top::after {
+   bottom: -20px;
+   left: 50%;
+   transform: translateX(-50%);
+   border-top-color: #333;
+}
+
+.POPtooltip-left::after {
+   right: -20px;
+   top: 50%;
+   transform: translateY(-50%);
+   border-left-color: #333;
+}
+
+.POPtooltip-right::after {
+   left: -20px;
+   top: 50%;
+   transform: translateY(-50%);
+   border-right-color: #333;
+}
+
+.POPtooltip-left.POPtooltip-flowDown::after {
+    top: 5px;
+    transform: none;
+}
+.POPtooltip-left.POPtooltip-flowUp::after {
+    bottom: 5px;
+    top: auto;
+    transform: none;
+}
+.POPtooltip-right.POPtooltip-flowDown::after {
+    top: 5px;
+    transform: none;
+}
+.POPtooltip-right.POPtooltip-flowUp::after {
+    bottom: 5px;
+    top: auto;
+    transform: none;
+}
+
+/* Error variant */
+.POPtooltip--error {
+    background: #f8d7da;
+    border: 1px solid var(--red);
+    color: #842029;
+}
+
+.POPtooltip--error.POPtooltip-bottom::after {
+    border-bottom-color: var(--red);
+}
+.POPtooltip--error.POPtooltip-top::after {
+    border-top-color: var(--red);
+}
+.POPtooltip--error.POPtooltip-left::after {
+    border-left-color: var(--red);
+}
+.POPtooltip--error.POPtooltip-right::after {
+    border-right-color: var(--red);
+}
+
+/* Info variant */
+.POPtooltip--info {
+    background: white;
+    border: 1px solid var(--blue);
+    color: #212529;
+}
+
+.POPtooltip--info.POPtooltip-bottom::after {
+    border-bottom-color: var(--blue);
+    
+}
+.POPtooltip--info.POPtooltip-top::after {
+    border-top-color: var(--blue);
+}
+.POPtooltip--info.POPtooltip-left::after {
+    border-left-color: var(--blue);
+}
+.POPtooltip--info.POPtooltip-right::after {
+    border-right-color: var(--blue);
+}
+.POPtooltip{
+    font-size: 11px;
+}
+.POPtooltip > div{
+    padding-left: 8px;
+    padding-right: 8px;
+    color: var(--grey-800);
+    font-size: 11px;
+}
+.POPtooltip > div:not(:first-of-type){
+    border-top: 1px solid var(--grey-300);
+    margin: 12px 0;
+    padding-top: 12px;
+}
+.POPtooltip > div:last-of-type{
+    margin-bottom: 0px;
+
+}
+.POPtooltip.POPtooltip--info > div:not(:first-of-type){
+    border-top-color: var(--blue-light);
+}
+.POPtooltip.POPtooltip--error > div:not(:first-of-type){
+    border-top-color: var(--red-light);
+}
+
+.COMtooltip.POPtooltip.POPtooltip--info > div:not(:first-of-type){
+    border-top: 1px solid var(--grey-300);
+}
+.POPtooltip .CARDloading-spinner{
+    width: unset;
+}
+
+.POPtooltip a{
+    color: var(--blue);
+}

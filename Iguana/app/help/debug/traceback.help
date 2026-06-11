@@ -1,0 +1,23 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">debug.traceback([thread] [, message] [, level])\n</pre><ul><li><code><strong>thread</strong></code><em> (optional)</em>: If provided, specifies the thread whose stack to trace. Defaults to the current thread.</li><li><code><strong>message</strong></code><strong> </strong><em>(optional)</em>: A string that is prepended to the output. Useful for labeling or logging.</li><li><code><strong>level</strong></code><em> (optional)</em>: The call stack level to begin tracing from. Defaults to 1 (the function calling <code>debug.traceback</code>).</li></ul><p><br></p><h3>Returns</h3><ul><li>A string with the call stack traceback. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local foo = debug.traceback(\"Something went wrong\", 2)\ntrace(foo)\n</pre><ul><li>The <code style=\"text-wrap-mode: wrap; color: rgb(43, 49, 51);\">foo</code><span style=\"text-wrap-mode: wrap; font-family: Helvetica, Arial, sans-serif; color: rgb(43, 49, 51); background-color: white;\"> variable will contain a detailed call stack beginning two levels up, with the message prepended.</span></li></ul>",
+    "Name": "debug.traceback",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>thread</u></em> <em>(Optional)</em> The thread to inspect.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u></em> <em>(Optional) </em>A message to prefix the traceback with.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>integer</u></em> <em>(Optional) </em>Stack level at which to start the traceback (default is 1).</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Returns a string with a traceback of the call stack."
+}

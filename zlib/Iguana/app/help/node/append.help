@@ -1,0 +1,18 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">Node:append(Type, Value)\n</pre><ul><li><code><strong>Node</strong></code>: The parent XML node to which the new node will be appended.</li><li><code><strong>Type</strong></code>: Specifies the kind of node to add (element, attribute, etc.).</li><li><code><strong>Value</strong></code>: The data or label for the new node.</li></ul><p><br></p><h3>Notes</h3><ul><li>This function is only valid for <strong>XML node trees</strong>.</li><li>The new node is always added as the <strong>last child</strong> of the parent node.</li><li>Useful for dynamically building XML structures.</li></ul><p><br></p><h3>Returns</h3><ul><li>The newly appended node. <em><u>(node tree)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Xml = [[&lt;note&gt;\n&lt;to&gt;John&lt;/to&gt;\n&lt;from&gt;Mary&lt;/from&gt;\n&lt;heading&gt;Reminder&lt;/heading&gt;\n&lt;body&gt;The samples are in Room 204. Please check them before the end of the day.&lt;/body&gt;\n&lt;/note&gt;]]\n&nbsp; &nbsp;\nlocal XmlRoot = xml.parse{data=Xml}.note\n\n-- Append a new element named 'Patient' to an existing XML node\nlocal node = XmlRoot:append(xml.ELEMENT, 'Patient')\ntrace(XmlRoot.Patient)\n\n-- Equivalent long form:\nlocal node = node.append(XmlRoot, xml.ELEMENT, 'Patient')\ntrace(XmlRoot.Patient)\n</pre><ul><li>\ttrace(XmlRoot.Patient)This adds <code>&lt;Patient&gt;</code> to the end of <code>XmlRoot</code>.</li></ul>",
+    "Name": "node:append",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The type of the new node. Must be one of: <code style=\"background-color: rgb(240, 240, 240);\">xml.ELEMENT</code>, <code style=\"background-color: rgb(240, 240, 240);\">xml.ATTRIBUTE</code>, <code style=\"background-color: rgb(240, 240, 240);\">xml.TEXT</code>, or <code style=\"background-color: rgb(240, 240, 240);\">xml.CDATA</code></p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u></em> The name or content of the new node, depending on its type.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Appends a new child node to the end of the current XML node."
+}

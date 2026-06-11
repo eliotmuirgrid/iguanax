@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">io.lines([filename])\n</pre><ul><li><code><strong>filename</strong></code> <em>(optional)</em>: </li></ul><p>\tIf provided, the function opens the file in read mode and returns an iterator. </p><p>\tIf omitted, it operates on the default input file.</p><h3><br></h3><h3>Notes</h3><ul><li>The function returns an iterator that reads lines from the file one by one.</li><li>When the end of the file is reached, the iterator returns <code>nil</code> to signal termination of the loop.</li><li>The file is automatically closed after the iteration completes.</li></ul><p><br></p><h3>Returns</h3><ul><li>An iterator function.</li><li>Each call to the iterator returns the next line as a <code>string</code>, or <code>nil</code> when the end of the file is reached. <em><u>(string)</u></em> or <em><u>(nil)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local file = io.open(\"Lines.txt\", \"a\")&nbsp; -- \"a\" = append mode\nfile:write(\"Adding more text.\\n\")\nfile:close()\n&nbsp; &nbsp;\nfor Line in io.lines(\"Lines.txt\") do\n &nbsp; -- Process Line\nend\n</pre><ul><li>This loop reads each line of <code>Foo.txt</code> and processes it inside the loop.</li></ul>",
+    "Name": "io.lines",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> <em>(Optional)</em> The name of the file to open in read mode.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Reads a file one line at a time."
+}

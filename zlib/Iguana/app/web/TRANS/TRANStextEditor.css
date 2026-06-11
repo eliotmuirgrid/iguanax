@@ -1,0 +1,398 @@
+.tx{
+ padding: 0;
+ color : #A22;
+}
+.gr{
+ padding: 0;
+ color : #C0C0C0;
+}
+
+.an, .editbox{
+ font-size: 14px;
+ line-height: 17px;
+ padding: 0;
+ color: black;
+ cursor: default;
+}
+
+div.CodeMirror{
+ font-size: 12px;
+ line-height: 1.4em;
+ height: 100%;
+}
+#TRANSeditorDiv.TRANSreadOnlyClass{
+	background-color: var(--grey-200) !important;
+}
+.TRANSreadOnlyClass .CodeMirror{
+	background-color: var(--grey-200);
+	background-image: url(/TRANS/images/TRANSreadOnlyWatermark.svg);
+	background-repeat: no-repeat;
+	background-position: bottom 40px right 40px;
+}
+
+div.CodeMirror-scroll{
+ height: 100%;
+ /* position: relative; */
+ cursor: text;
+}
+
+.CodeMirror-line-numbers{
+ text-align: right;
+ padding-right : 2px;
+ font-size: 14px;
+ line-height: 17px;
+ padding-left: 0;
+ padding-top: 0;
+ padding-bottom: 0;
+ color: black;
+ cursor: default;
+}
+
+.CodeMirror-iframe{
+ width:100%; 
+ height: 100%; 
+ display: block;
+ border-right: 1px solid #b1b1b1;
+}
+
+div.an {
+ height: 0;
+}
+
+div.an.stale{
+   opacity: 0.15;             /* Standard style for transparency */
+}
+
+div.CodeMirror-line-numbers {
+  color: #999999;
+  border-right: 1px solid #dddddd;
+  background-color: #f9f9f9;
+  /*font-weight: bold;*/
+}
+
+div.CodeMirror-gutter {
+   /* Doesn't make sense to use the text cursor here since you can't edit the
+   line numbers. */
+   cursor: default;
+}
+
+.dirty {
+   margin-right: 2px;
+   height: 15px;
+   width: 4px;
+   background-color: #FFEE62;
+}
+
+div.CodeMirror-line-numbers, 
+.editbox{
+   margin: 0px; 
+   padding-left: 6px;
+}
+
+
+table.an, tr.an, td.an, tbody.an {
+margin: 0;
+padding: 0;
+border-spacing: 0;
+border-collapse: collapse;
+}
+
+/* For the logging */
+td.l{
+   text-align: right;
+}
+
+td.t{
+   color : grey;
+}
+
+pre.code, 
+.editbox {
+  color: #666666;
+}
+
+.editbox p {
+  margin: 0;
+}
+
+/* rect colors should match the colours in the CodeMirror theme css */
+
+rect.lua-comment {
+  fill: #BB9977;
+}
+
+rect.merge-conflict 
+{
+    fill: #f00;
+    fill-opacity: 0.2;
+    stroke: #f00;
+}
+
+rect.lua-keyword {
+  fill: blue;
+}
+
+rect.lua-stdfunc {
+  fill: #077;
+}
+
+rect.lua-error {
+  fill: #F6CECE;
+  stroke: #8E2525;
+}
+
+rect.lua-error-line {
+  fill: #dcebf5;
+}
+
+rect.lua-scrollbar {
+  fill: #0E68BF;
+  stroke: #0E68BF; 
+  fill-opacity: 0.2;
+  stroke-opacity: 0.3;
+}
+
+/* Script error styles */
+.error-highlight-row {
+  background-color: #dcebf5 !important;
+}
+
+div.error-box {
+  position: absolute;
+  z-index: 10;
+  background-color: var(--red-lighter);
+  border: 1px solid var(--red-light);
+  color: var(--red);
+  /* white-space: pre; */
+  /* box-shadow: 0 1px 0 0 rgba(0, 0, 0, 0.15); */
+  border-radius: 4px;
+}
+
+div.error-box textarea:target{
+   border: 0px;
+}
+
+div.error-box div.error-toolbar{
+   padding: 2px 2px 0px 0px;
+   font-size: 9px;
+	font-family: var(--font-sans);
+   color: #c44040;
+}
+div.error-box div.error-toolbar{
+   user-select: none;
+}
+div.error-box div.error-toolbar * {
+	font-family: var(--font-sans);
+}
+
+div.error-box div.error-toolbar a,
+div.error-box div.error-toolbar a:visited {
+   color: inherit;
+}
+
+div.error-box div.error-message{
+   padding: 2px 6px 2px 0.5em;
+}
+
+div.error-box div.error-toolbar img{
+   cursor: pointer;
+}
+
+div.error-box img.error-stack,
+div.error-box img.error-expand,
+div.error-box img.error-collapse{
+   padding-right: 2px;
+}
+
+div.error-box div.error-buttons{
+   float: right;
+   padding-left: 7px;
+   padding-right: 1px;
+   height: 0px; /* minimum height */
+}
+
+div.error-box.collapsed{
+   cursor: pointer;
+}
+
+div.error-box.collapsed div.error-toolbar{
+   float: right;
+}
+
+div.error-box.collapsed div.error-message{
+   margin-right: 52px; /* make space for the buttons on the right */
+}
+
+div.error-box.collapsed div.error-toolbar span{
+   display: none;
+}
+
+div.error-box.collapsed img.error-collapse{
+   display: none;
+}
+
+div.error-box.expanded{
+   cursor: move;
+}
+
+div.error-box.expanded div.error-toolbar{
+   border-bottom: 1px solid #ebc1c1;
+   padding-left: 0.5em;
+   height: 18px;
+   background: #f7d6d6; /* for non-css3 browsers */
+}
+
+div.error-box.expanded div.error-toolbar span{
+   float: left;
+}
+
+div.error-box.expanded div.error-message{
+   cursor: text;
+}
+
+div.error-box.expanded img.error-expand{
+   display: none;
+}
+
+/* End of script error styles */
+
+div.anpane {
+ background-color:#EEE; border-top:1px solid #555;
+ border-bottom:1px solid #888; 
+ padding: 0px;
+ clear : left;
+ white-space: nowrap;
+}
+
+div.aninfo {
+ /*display: inline-block;  /* stops the div from being too wide */ 
+ white-space: nowrap;
+ position: relative;
+ top : -10px;
+ z-index : 1000;
+ moz-user-select: none;    /* #15281 these crytic CSS codes should make the annotation controls unselectable - first is for Mozilla */
+ -khtml-user-select: none; /* this one is Chrome/Safari */ 
+ user-select: none;        /* CSS3 way of achieving the same thing. */
+ float: left;
+ padding: 1px;
+}
+
+.TRANSfirst,
+.TRANSback,
+.TRANSnext,
+.TRANSlast{
+ cursor : pointer;
+ padding: 3px;
+ padding-top: 1px;
+ padding-bottom: 1px;
+}
+
+span.print{
+ color : #0B0;
+}
+
+span.tx, span.print{
+ white-space : pre;
+}
+
+.toolbar{
+ vertical-align: middle;
+ font-size: 11px;
+ margin-left: 10px;
+ text-shadow: 0 1px 1px #F7F7F7;
+}
+
+input.toggle_annotations{
+ /*vertical-align: middle;*/
+}
+
+
+div.an_sb {
+   overflow: hidden;
+   display: flex;
+   align-items: center;
+   white-space: nowrap;
+   font-size: 10.5px;
+   /* color: #78909c;
+   float: left;
+   font-size: 10px;
+   height: 20px;
+   letter-spacing: 0.05em;
+   line-height: 20px;
+   width: 50%; */
+}
+
+.TRANSbottomBarCurrentFile {
+   grid-column: 1 / 2;
+   min-width: 0;                     /* REQUIRED for proper ellipsis in CSS grid */
+   font-family: var(--font-monospace);
+   font-size: 11px;
+   color: var(--grey-500);
+   background-color: transparent;
+   border: 0;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   display: block;
+   padding: 0px;
+ }
+.TRANSannotationStatus {
+   color: #c92c2c; /* red */
+   font-size: 10.5px;
+   letter-spacing: 0;
+   text-transform: none;
+}
+.TRANSspinner{
+ position: relative;
+ top: 2px;
+ height: 12px;
+}
+
+/* treeview */
+span.tv{
+ position: absolute;
+ margin-top: -2px;
+ padding-right: 2px;
+ border: 1px dotted #00BB00;
+ background-color: #E9FFE9;
+ color: black;
+ opacity: 0.9;
+ line-height: 12px;
+ z-index: 2000;
+}
+
+span.tv.front{
+ z-index: 2001;
+ border-color: #215FA3;
+}
+
+/* treeview placeholder */
+span.tv_ph{
+ visibility: hidden;
+ padding-left: 50px;
+ white-space: nowrap;
+}
+
+span.tv, span.tv_ph{
+ font-size: 11px;
+}
+
+ul.ifwareTreeview{
+ margin-top: 0;
+ margin-bottom: 0;
+}
+
+ul.ifwareTreeview li.expandable span.treeIcon {
+ height:15px !important;
+}
+
+.executeNowText {
+    text-decoration: underline ! important;
+    color: purple ! important;
+}
+.TRANSstatus_annotations{
+   grid-column: 1 / 3;      /* span full width */
+   grid-row: 2;
+   white-space: nowrap;
+   padding-left: 2px;
+}

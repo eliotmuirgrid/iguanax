@@ -1,0 +1,108 @@
+.DOC2navButton{
+	padding: 4px;
+	text-align: center;
+	cursor: pointer;
+	color: var(--grey-500);
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+ }
+ .DOC2navButton:hover {
+	background: var(--grey-200);
+	color: var(--grey-800);
+; }
+.DOC2navButton:active {
+	background: var(--grey-300);
+	padding-top: 5px;
+	padding-bottom: 3px;
+; }
+
+.DOC2loadNewer,
+.DOC2loadNewest {
+	border-bottom: 1px solid var(--grey-300);
+ }
+ .DOC2knownArea,
+.DOC2scrollbarBox{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background-color:var(--white);
+	overflow: hidden;
+}
+.DOC2scrollbarHoverLine{
+	width: 100%;
+	height: 3px;
+	background-color: var(--grey-500);
+	opacity: 50%;
+	position: absolute;
+	overflow: hidden;
+	cursor: pointer;
+	z-index: 8;
+}
+.DOC2hidden{
+	display: none !important;
+}
+
+.DOC2scrollbarLineSelected{
+	width: 100%;
+	height: 3px;
+	background-color: red;
+	position: absolute;
+	transition: top 0.5s ease;
+	overflow: hidden;
+	z-index: 15;
+}
+.DOC2scrollbarLine{
+	width: 100%;
+	height: 3px;
+	background-color: var(--grey-400);
+	position: absolute;
+	transition: top 0.5s ease;
+	overflow: hidden;
+	z-index: 14;
+}
+
+.DOC2scrollbarLineTop,
+.DOC2scrollbarLineBottom{
+	width: 100%;
+	height: 4px;
+	background-color: var(--grey-400);
+	position: absolute;
+	transition: top 0.5s ease;
+	overflow: hidden;
+	z-index: 10;
+	cursor: pointer;
+}
+
+.DOC2scrollbarLine:hover{
+	height: 5px;
+}
+.DOC2scrollbarLineBottom.DOC2lineSelected,
+.DOC2scrollbarLineTop.DOC2lineSelected{
+	background-color: var(--blue) !important;
+}
+.DOC2scrollbarLineTop:hover,
+.DOC2scrollbarLineBottom:hover{
+	height: 4px;
+	background-color: var(--grey-500);
+}
+
+.DOC2unknownTop,
+.DOC2unknownBottom{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	transition: top 0.5s ease;
+	overflow: hidden;
+	background-color:var(--grey-300);
+	overflow: hidden;
+}
+
+.DOC2loadOlder{
+	border-top: 1px solid var(--grey-300);
+ }
+ .DOC2loadOldest {
+	border-bottom: 1px solid var(--grey-300);
+	transform: rotate(180deg);
+ }

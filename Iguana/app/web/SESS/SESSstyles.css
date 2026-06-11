@@ -1,0 +1,296 @@
+.SESSbackground {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: linear-gradient(0deg, rgba(0, 52, 101, 1) 0%, rgba(0, 100, 173, 1) 100%);
+}
+
+.SESSmodal {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	width: 500px;
+	display: grid;
+	/* grid-template-columns: 130px 1fr; */
+	grid-template-columns: 1fr;
+	border-radius: 4px;
+	background: var(--white);
+	box-shadow: 0 4px 16px 0 rgba(0, 0, 0, 0.5);
+}
+
+.SESSmodalSidebar {
+	/* background: var(--blue-darker); */
+	border-radius: 4px 0px 0px 4px;
+	background: rgb(9,30,58);
+	background: linear-gradient(0deg, rgba(9,30,58,1) 0%, rgba(0,96,159,1) 75%, rgba(37,144,205,1) 100%);}
+
+.SESSappIcon {
+	/* height: 130px;
+	width: 130px;
+	position: absolute;
+	top: 20px;
+	left: 32px; */
+	display: none;
+}
+
+.SESSmodalMainArea {
+	padding: 48px;
+	padding-top: 48px;
+	padding-bottom: 48px;
+}
+
+.SESSmainLogoArea {
+	position: relative;
+	top: -12px;
+	display: grid;
+	grid-template-rows: auto auto;
+	margin-bottom: -4px;
+}
+
+.SESSiguanaWordmark {
+	width: 250px;
+	height: 87px;
+	margin: 0 auto;
+}
+
+.SESSloginVersion {
+	font-family: var(--font-buttons);
+	color: var(--green);
+	font-size: 24px;
+	position: relative;
+	text-align: right;
+	padding-right: 32px;
+	margin-top: -4px;
+	/* bottom: 24px; */
+	/* right: -12px; */
+}
+
+.SESSloginLegalStatement {
+	font-size: 10px;
+	margin-top: 12px;
+	padding-top: 12px;
+	color: var(--grey-600);
+	border-top: solid 1px var(--grey-300);
+}
+
+.SESSloginForm {
+	display: block;
+	margin-bottom: 12px;
+}
+
+.SESSloginInputs {
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    row-gap: 4px;
+    align-items: end;
+    margin-bottom: 12px;
+}
+
+.SESSlabel {
+	width: 100%;
+	font-weight: var(--semibold);
+	font-size: 12px;
+	line-height: 16px;
+	display: block;
+	margin-bottom: var(--label-margin-bottom);
+	color: var(--grey-700);
+}
+
+.SESSloginFormInput {
+	font-family: var(--font-sans);
+	border-radius: var(--border-radius);
+	border: 1px solid var(--grey-400);
+	font-weight: var(--regular);
+	font-size: 12px;
+	line-height: 16px;
+	padding: 6px 8px;
+	color: var(--grey-800);
+	width: 100%;
+	margin: 0px;
+	height: 36px;
+	background: var(--grey-100);
+	box-sizing: border-box;
+}
+
+.SESSloginButtonContainer {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 0px;
+}
+
+.SESSloginButton {
+    width: 100%;
+    min-width: 120px;
+    height: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 12px;
+    padding: 12px 24px;
+}
+
+.SESSfooter {
+	width: 100%;
+	height: 120px;
+	position: absolute;
+	bottom: -120px;
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: end;
+}
+
+.SESSfooterText {
+	color: var(--white);
+	font-size: 10px;
+	letter-spacing: 0.06em;
+	font-family: var(--font-buttons);
+	margin: 0px 0px 2px 0px;
+	opacity: 0.4;
+}
+
+.SESSinterfacewareLogo {
+	width: 190px;
+	height: 36px;
+	opacity: 0.4;
+	transition: 450ms ease-out;
+}
+
+.SESSpasswordWarning,
+.SESSerror {
+	text-align: center;
+	border-radius: var(--border-radius);
+	font-size: 11px;
+	width: 100%;
+	padding: 6px;
+	/* margin-top: 12px; */
+	background: var(--red-lighter);
+	color: var(--red-dark);
+	display: none;
+	box-sizing: border-box;
+}
+.SESSforgotPassword,
+.SESSpasswordWarning a{
+	color: var(--grey-600);
+	text-decoration: none;
+}
+.SESSforgotPassword:hover,
+.SESSpasswordWarning a:hover{
+	color: var(--blue);
+	text-decoration: underline;
+}
+.SESSsvrDownSpacing {
+	margin-bottom: 16px;
+}
+
+/* modal */
+.SESSserverDownContainer {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background-color: rgba(var(---grey-400), 0.60);
+	/* Page dimmer */
+	opacity: 1;
+	transition: opacity 150ms ease-in;
+	z-index: 999999;
+}
+
+.SESSserverDown {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	margin-right: -50%;
+	transform: translate(-50%, -50%);
+	background: var(--white);
+	border: 1px solid var(--grey-400);
+	box-shadow: 0 2px 0 0 rgba(var(---grey-400), 1);
+	border-radius: var(--border-radius);
+	padding: 32px !important;
+	max-width: 90%;
+}
+
+.SESSforgotPassword{
+	font-size: 10px;
+	text-align: center;
+	/* color : var(--blue); */
+}
+.SESSforgotPasswordDiv{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	margin-top: 12px;
+}
+
+.SESSunsupported {
+	text-align: center;
+}
+
+.SESSloginSpinner{
+	border: 4px solid #f3f3f3;
+	border-top: 4px solid #3498db;
+	border-radius: 50%;
+	width: 10px;
+	height: 10px;
+	animation: INITspin 2s linear infinite;
+}
+
+/* Google SSO Integration Styles */
+.SESSloginDivider {
+	display: flex;
+	align-items: center;
+	margin: 18px 0;
+	margin-top: 24px;
+	opacity: 0.7;
+	width: 100%;
+	grid-column: 1 / -1;
+}
+
+.SESSdividerLine {
+	flex: 1;
+	height: 1px;
+	background: #e0e0e0;
+}
+
+.SESSdividerText {
+	padding: 0 16px;
+	font-size: 13px;
+	color: #666;
+	font-weight: 400;
+}
+
+.SESSgoogleButton {
+	min-height: 44px;
+	width: 100%;
+	max-width: 300px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.SESSpassword,
+.SESSusername{
+	margin-bottom: 8px;
+}
+/* Error styling for SSO-specific errors */
+.SESSerror,
+.SESSpasswordWarning,
+.SESSgoogleError,
+.SESSMicrosoftError,
+.SESSSamlError{
+	color: #e74c3c;
+	font-size: 11px;
+	margin: 2px 0;
+	padding: 8px;
+	background-color: #fdf2f2;
+	border: 1px solid #f5c6cb;
+	border-radius: 4px;
+	display: none;
+	text-align: center;
+}
+

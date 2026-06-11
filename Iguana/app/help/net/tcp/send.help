@@ -1,0 +1,23 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">Socket:send(Data [, Start [, End]])\n</pre><ul><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>Socket</strong></code>: a tcp connection opened with <code style=\"color: rgb(37, 144, 205);\"><a href=\"http://localhost:7654/@net.tcp.connect\" target=\"_blank\">net.tcp.connect</a></code></li><li><code><strong>Data</strong></code>: the data to be sent to the remote server.</li><li><code><strong>Start</strong></code> <em>(optional)</em>: where in the data string to start.</li><li><code><strong>End</strong></code> <em>(optional)</em>: where in the data string to stop.</li></ul><p><br></p><h3>Notes</h3><ul><li>Send data to a remote host via a socket opened using net.tcp.connect.</li><li>Can provide <code><strong>Start</strong></code> and <code><strong>End</strong></code> to send a subset of the <code><strong>Data</strong></code>.</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>The number of bytes sent. <em>(<u>integer)</u></em></li></ul><p><br></p><h3><strong>Example</strong></h3><pre class=\"ql-syntax\" spellcheck=\"false\">local s = net.tcp.connect('hostname:8086')\ns:send(Data)\nlocal Ack = s:receive()\ns:close()\n</pre>",
+    "Name": "net.tcp:send",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u> </em>The data to send.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>integer</u> (Optional) </em>Where in Data to start.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>integer</u> (Optional) </em>Where in Data to stop.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Send data to a remote host via an open socket."
+}

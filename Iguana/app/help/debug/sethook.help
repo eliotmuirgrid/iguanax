@@ -1,0 +1,28 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">debug.sethook([thread,] hook, mask [, count])\n</pre><ul><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>thread</strong></code> <em>(optional)</em>: If omitted, operates on the current thread.</li><li><code><strong>hook</strong></code>: A function that will be called when the hook is triggered.</li><li><code><strong>mask</strong></code>: A string with any combination of the following characters:</li><li class=\"ql-indent-1\"><code>\"c\"</code>: Call events</li><li class=\"ql-indent-1\"><code>\"r\"</code>: Return events</li><li class=\"ql-indent-1\"><code>\"l\"</code>: Line events</li><li><code><strong>count</strong></code><em> (optional)</em>: If provided and non-zero, the hook is also triggered every <code>count</code> VM instructions.</li></ul><p><br></p><h3>Notes</h3><ul><li>Calling <code>debug.sethook()</code> with no arguments removes the hook.</li><li>The hook function receives:</li><li class=\"ql-indent-1\">An event string (<code>\"call\"</code>, <code>\"return\"</code>, <code>\"tail return\"</code>, <code>\"line\"</code>, or <code>\"count\"</code>)</li><li class=\"ql-indent-1\">(Optional) The line number (for <code>\"line\"</code> events)</li><li>Inside a hook, you can call <code><a href=\"@debug.getinfo\" target=\"_blank\">debug.getinfo</a>(2)</code> to inspect the function currently running.</li><li>In a <code>\"tail return\"</code> event, the function is being simulated and <code>debug.getinfo</code> may return invalid data.</li></ul><h3><br></h3><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local function myHook(event, line)\n&nbsp; &nbsp;print(\"Hook triggered:\", event, line)\nend\n\ndebug.sethook(myHook, \"crl\", 100)&nbsp; -- Hook on calls, returns, lines, and every 100 instructions\n</pre><ul><li>This sets a debug hook that will be triggered on all call, return, and line events, and periodically every 100 instructions.</li></ul>",
+    "Name": "debug.sethook",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>thread</u></em> <em>(Optional) </em>Thread to use.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>function</u></em> Hook function to call.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u></em> String mask indicating when to call the hook function.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>number</u></em> <em>(Optional)</em> Call the hook function after this number of instructions.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Sets the given function as a hook."
+}

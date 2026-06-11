@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">package.seeall(module)\n</pre><ul><li><code><strong>module</strong></code>: The module table to be modified to inherit from the global environment.</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li><code>package.seeall</code> is used in conjunction with the legacy <code>module</code> function.</li><li>It allows the module to access global variables by setting its <code>__index</code> to <code>_G</code>.</li><li>Intended to make globals visible inside the module's scope without redefining them.</li><li><strong>Deprecated Behavior:</strong> The <code>module()</code> function is deprecated in Lua 5.2 and will be removed in 5.3.</li><li>It is recommended to follow the <a href=\"http://help.interfaceware.com/v6/recommended-module-structure?v=6.0.0\" target=\"_blank\">modern module structure</a> instead.</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">module('foo', package.seeall)\n</pre><ul><li>This example sets up the <code>foo</code> module so that it inherits from the global environment, allowing access to global variables within the module.</li></ul>",
+    "Name": "package.seeall",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The name of the module.</p>",
+            "Name": "module",
+            "Required": true
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Sets a metatable for a module with its __index field referring to the global environment."
+}

@@ -1,0 +1,55 @@
+/******************************************************************************/
+/* ------------------------------ HELP MODAL ---------------------------------*/
+
+
+.helpTooltip 
+{
+   -moz-border-radius-bottomleft: 8px;
+   -moz-border-radius-bottomright: 8px;
+   -moz-border-radius-topleft: 8px;
+   -moz-border-radius-topright: 8px;
+   background:#d2e6f4 url(/images/ttclose.gif) no-repeat scroll 95% 9px; /* Light Blue Background */
+   border: 3px solid #FFFFFF;
+   font-size:10px;
+   line-height:16px;
+   margin:7px 0 0 7px;
+   padding:10px 12px 12px;
+   position:absolute;
+   text-align:left;
+   width:250px;
+   z-index:5998;
+   display:none;
+}
+
+.helpTooltip b 
+{
+   border-bottom:1px solid #AAAAAA;
+   color:#3c667d !important;  /* Tooltip Heading Color */
+   cursor:pointer;
+   display:block;
+   font-size:10px;
+   text-transform: uppercase;
+   margin:0 0 10px;
+   padding-bottom:5px;
+   width:100%;
+}
+
+.helpTooltip em 
+{
+   color:#222222;
+   display:block;
+   font-style:normal;
+   font-weight:normal;
+   letter-spacing:0.02em;
+   margin:0 0 7px;
+}
+.helpIcon
+{
+   text-decoration:none;
+   cursor:help;
+}
+.helpIcon img
+{
+   vertical-align:middle;
+   margin-bottom:.25em;
+}

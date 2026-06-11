@@ -1,0 +1,45 @@
+.ESRinformation{
+   overflow-wrap: break-word;
+   color: var(--grey-600);
+   line-height: 1.75;
+   max-height: 100px;
+   overflow-y: auto;
+}
+.ESRbuttonGroup{
+   justify-content: right;
+}
+.ESRrepoRow{
+	display: grid;
+	grid-template-columns: 150px 1.0fr auto;
+  	margin-top: 10px;
+}
+.ESRnoRepoWarning{
+	color: var(--red);
+	text-decoration: none;
+	word-break: break-all;
+	padding-right: 2px;
+}
+.ESRrepoRow a{
+	text-decoration: none;
+	color: var(--blue);
+}
+.ESRrepoRow a:hover{
+	text-decoration: underline;
+}
+.ESRexampleDiv{
+	border-radius: var(--border-radius);
+	border: solid 1px var(--grey-300);
+	padding: 24px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+	margin-bottom: 16px;
+	overflow: hidden;
+	background: var(--grey-100);
+}
+.ESRexample{
+   height: 7em !important;
+   padding: 12px !important;
+   resize: none;
+	font-family: var(--font-monospace) !important;
+	margin-top: 8px;
+}

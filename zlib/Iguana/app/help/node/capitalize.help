@@ -1,0 +1,7 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">Node:capitalize()\n</pre><ul><li><code><strong>Node</strong></code>: A string node whose value you want to capitalize.</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>Only affects the <strong>first character</strong> of the string.</li><li>Does <strong>not</strong> change the case of any other characters.</li><li>Can be used on any string-valued node (e.g., from XML or HL7 trees).</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>A string with the first character capitalized. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Xml = xml.parse{data = \"&lt;text&gt;example&lt;/text&gt;\"}\nlocal Capitalized = Xml.text:nodeText():capitalize()\ntrace(Capitalized)\n</pre><ul><li>This example capitalizes the value of an XML node.</li></ul>",
+    "Name": "node:capitalize",
+    "Parameters": null,
+    "ParameterTable": false,
+    "SummaryLine": "Capitalizes the first letter of a string"
+}

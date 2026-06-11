@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">math.abs(x)\n</pre><ul><li><code><strong>x</strong></code>: A numeric value whose absolute value you want to compute.</li></ul><p><br></p><h3>Returns</h3><ul><li>The absolute value of <code>x</code>. <em><u>(number)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local A = math.abs(-10)\n-- A will be 10\n</pre>",
+    "Name": "math.abs",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>number</u></em> The number to calculate the absolute value from.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Calculates the absolute value of a number."
+}

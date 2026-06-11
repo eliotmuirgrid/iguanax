@@ -1,0 +1,28 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">crypto.sign{\n&nbsp; &nbsp;data&nbsp; &nbsp; &nbsp; = &lt;data&gt;,\n&nbsp; &nbsp;key&nbsp; &nbsp; &nbsp; &nbsp;= &lt;RSA or DSA private key&gt;,\n&nbsp; &nbsp;algorithm = &lt;algorithm&gt;,\n&nbsp; &nbsp;keyform&nbsp; &nbsp;= &lt;format&gt;\n}\n</pre><ul><li><code><strong>data</strong></code>: The input content to generate a signature for.</li><li><code><strong>key</strong></code>: The private key used to generate the signature.</li><li><code><strong>algorithm</strong></code>: The hash function used when computing the signature.</li><li><code><strong>keyform</strong></code> <em>(optional)</em>: The format of the private key; defaults to <code>'pem'</code> if not specified.</li></ul><p><br></p><h3>Returns</h3><ul><li>The RSA or DSA digital signature, as a binary-encoded string. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local PrivateKey = io.open('path/to/private.pem'):read('*a')\nlocal BinarySignature = crypto.sign{\n&nbsp; &nbsp;data&nbsp; &nbsp; &nbsp; = 'hello',\n&nbsp; &nbsp;key&nbsp; &nbsp; &nbsp; &nbsp;= PrivateKey,\n&nbsp; &nbsp;algorithm = 'sha1'\n}\n</pre>",
+    "Name": "crypto.sign",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The data to sign.</p>",
+            "Name": "data",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u></em> The RSA or DSA private key.</p>",
+            "Name": "key",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u></em> The hashing algorithm (e.g., <code>'sha1'</code>, <code>'sha256'</code>).</p>",
+            "Name": "algorithm",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u></em> The input key format, either <code>'pem'</code> or <code>'der'</code> (default = <code>'pem'</code>).</p>",
+            "Name": "keyform",
+            "Required": false
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Cryptographically sign data with RSA or DSA."
+}

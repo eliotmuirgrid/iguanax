@@ -1,0 +1,357 @@
+
+.LBUbuttons{
+   margin-top: 4px;
+   display: flex;
+   justify-content: end;
+}
+.LBUtitle {
+   margin: unset;
+   font-weight: var(--bold);
+   font-size: 20px;
+   line-height: 32px;
+   color: var(--grey-700);
+   padding-bottom: 24px;
+   margin-bottom: 0px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   padding-left: 10px;
+}
+.LBUinfo{
+   background-color: var(--grey-200);
+   padding: 12px;
+   border-radius: 4px;
+   border: 1px solid var(--grey-300);
+   color: var(--grey-600);
+}
+.LBUdetTableTop,
+.LBUtableTop{
+   border-bottom-left-radius: unset !important;
+   border-bottom-right-radius: unset !important;
+   border-bottom: unset !important;
+}
+.LBUdetTableBottom{
+   border-top-left-radius: unset !important;
+   border-top-right-radius: unset !important;
+   max-height: 196px;
+}
+.LBUpopout .POPpopoutCard-content{
+   padding-top: 28px;
+   padding-bottom: 28px;
+}
+.LBUtableBottom{
+   border-top-left-radius: unset !important;
+   border-top-right-radius: unset !important;
+}
+.LBUdetails .LBUtableBottom,
+.LBUcontainer .LBUtableBottom{
+   max-height: 260px;
+}
+
+.LBUtableBottom,
+.LBUdetTableBottom{
+   overflow-y: auto;
+   /* overflow: hidden; */
+}
+.LBUtable { 
+   border-radius: var(--border-radius);
+   border: 1px solid var(--grey-300);
+   background-color: var(--grey-100);
+   /* overflow: hidden; */
+   width: 99.8%;
+}
+.LBUheading{
+   /* border-bottom: 1px solid var(--grey-300); */
+   background-color: var(--grey-200);
+}
+.LBUrow{
+   border-top: 1px solid var(--grey-300);
+}
+.LBUheading, 
+.LBUrow {
+   display: grid;
+   column-gap: 24px;
+   grid-template-columns: 1fr 140px 140px 140px;
+}
+.LBUlink {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	height: 24px;
+	width: 32px;
+}
+.LBUlink:hover{
+	color: var(--blue);
+}
+.LBUlink:hover .LBUlinkDiv{
+	content: url(/NWC/NWCiconNewWindowHover.svg);
+}
+.LBUlinkDiv{
+	content: url(/NWC/NWCiconNewWindow.svg);
+}
+.LBUheading > div{
+   font-weight: var(--semibold);
+   color: var(--grey-800);
+   padding-left: 18px;
+   padding-right: 12px;
+   min-height: 32px;
+   box-sizing: border-box;
+   display: flex;
+   align-items: center;
+   padding-top: 16px;
+   padding-bottom: 16px;
+   width: 100;
+}
+.LBUrow > div{
+   text-align: left;
+   border-left: 0px;
+   border-right: 0px;
+   padding: 12px;
+   /* padding-left: 18px; */
+   /* padding-right: 18px; */
+   color: var(--grey-600);
+}
+.LBUrow > div:first-of-type{
+   padding-left: 24px;
+}
+.LBUheading > div:first-of-type{
+   padding-left: 24px;
+}
+.LBUnameDiv{
+   display: grid;
+   column-gap: 18px;
+   grid-template-columns: auto 1fr;
+}
+.LBUdata{
+   margin-top: 4px;
+}
+.LBUnameDiv .LBUname{
+   margin-top: 4px;
+   font-weight: 510;
+}
+.LBUdetRow .LBUzero{
+   margin-left: 0;
+   padding-left: 12px;
+   text-align: left;
+}
+.LBUzero{
+   margin-left: -6px;
+   text-align: center;
+   font-weight: var(--light);
+}
+.LBUahead::after{
+   opacity: 0.6;
+   content:"";
+   display:inline-block;
+   width:1.1em; 
+   height:1.1em;
+   margin-left:.6em;                         /* gap between text and icon */
+   vertical-align:-0.5em;                  /* tweak to baseline if needed */
+   background:url("/TRGT/images/TRGTpushRemoteSvg.svg") no-repeat center/contain;
+}
+.LBUbehind::after{
+   opacity: 0.6;
+   content:"";
+   display:inline-block;
+   width:1.1em; 
+   height:1.1em;
+   margin-left:.6em;                         /* gap between text and icon */
+   vertical-align:-0.5em;                  /* tweak to baseline if needed */
+   background:url("/TRGT/images/TRGTpullRemoteSvg.svg") no-repeat center/contain;
+}
+.LBUusageHref{
+   margin-left: 6px;
+}
+.LBUahead,
+.LBUbehind,
+.LBUusedIn {
+   text-align: center;
+   justify-content: center;
+   align-items: center;
+   display: flex;
+}
+.LBUrepoLink,
+.LBUname{
+   color: var(--blue);
+   text-decoration: none;
+}
+.LBUrepoLink:hover,
+.LBUname:hover{
+   text-decoration: underline;
+}
+.LBUinfoDiv{
+   border: 1px solid var(--grey-300);
+   border-radius: var(--border-radius);
+   background: var(--grey-100);
+   padding: 32px;
+   padding-top: 48px;
+   display: grid;
+   grid-template-columns: auto 1fr;
+   column-gap: 12px;
+   row-gap: 12px;
+}
+.LBUdetName{
+   display: block;
+   font-weight: bold;
+   font-size: 14px;
+   margin-bottom: 4px;
+   word-wrap: break-word;
+   color: var(--grey-800);
+}
+.LBUdetHead{
+   border-radius: var(--border-radius);
+   background: var(--grey-100);
+   border: 1px solid var(--grey-300);
+   text-align: left;
+   padding: 32px;
+}
+.LBUdetDesc{
+   color: var(--grey-600);
+   font-size: 11.5px;
+   line-height: 20px;
+}
+.LBUnotSet{
+   color: var(--grey-600);
+   font-style: italic;
+}
+.LBUdetHeader,
+.LBUdetRow{
+   display: grid;
+   grid-template-columns: 40px 1.5fr 1fr 3fr 122px;
+}
+.LBUdetTable { 
+   border-radius: var(--border-radius);
+   border: 1px solid var(--grey-300);
+   background-color: var(--grey-100);
+   width: 99.8%;
+}
+.LBUdetHeader{
+   background-color: var(--grey-200);  
+   height: 36px;
+}
+.LBUdetHeader > div{
+   font-weight: var(--semibold);
+   color: var(--grey-800);
+   padding-left: 18px;
+   padding-right: 12px;
+   box-sizing: border-box;
+   display: flex;
+   align-items: center;
+   padding-top: 8px;
+   padding-bottom: 8px;
+}
+.LBUdetRow > div{
+   text-align: left;
+   border-left: 0px;
+   border-right: 0px;
+   padding: 12px;
+   padding-left: 18px;
+   padding-right: 18px;
+   color: var(--grey-600);
+}
+.LBUbuttonGroup{
+   display: flex;
+   column-gap: 24px;
+   justify-content: end;
+}
+.LBUcheckbox{
+   width: 18px;
+}
+.LBUcheckbox input{
+   margin-right: 2px;
+   margin-top: 4px;
+}
+.LBUtop{
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   column-gap: 24px;
+}
+.LBUgathering{
+   padding: 24px;
+   padding-top: 22px;
+   padding-left: 0px;
+   color: var(--grey-600);
+   text-align: center;
+}
+.LBUdesc{
+   margin-top: 1px;
+   white-space: nowrap;     /* keep text on one line           */
+   overflow: hidden;        /* hide anything that spills over  */
+   text-overflow: ellipsis; /* replace the hidden part with …  */
+   font-size: 11.5px;
+   line-height: 20px;
+}
+.LBUheaderDesc{
+   color: var(--grey-600);
+   padding: 4px;
+   font-size: 12.5px;
+}
+
+.LBUhref{
+   color: var(--blue) !important;
+   text-decoration: none;
+   cursor: pointer;
+   text-align: center;
+}
+.LBUhref:hover{
+   text-decoration: underline;
+}
+.LBUpath{
+   font-family: monospace;
+}
+.LBUdetRow{
+   border-top: 1px solid var(--grey-300);
+}
+.LBUcontainer{
+   max-height: 800px;
+   overflow-y: hidden;
+}
+.LBUwarningIcon::before {
+   content: '• ';
+	color: red;
+	font-weight: var(--extra-bold);
+   margin-left: -10px;
+   margin-right: 4px;
+}
+.LBUlinkData{
+   text-align: left;
+   border-left: 0px;
+   border-right: 0px;
+   padding: 6px;
+   padding-left: 12px;
+   padding-right: 12px;
+   color: var(--grey-600);
+   display: grid;
+   column-gap: 8px;
+   grid-template-columns: auto auto;
+}
+.LBUopen{
+   margin-top: 2px;
+}
+.LBUdata{
+   white-space: nowrap;     /* keep text on one line           */
+   overflow: hidden;        /* hide anything that spills over  */
+   text-overflow: ellipsis; /* replace the hidden part with …  */  
+   color: unset;
+   text-decoration: unset;
+}
+.LBUloading{
+   display: flex;
+   justify-content: center;
+}
+.LBUerrorFeedback{
+   color: var(--red);
+   margin-top: 4px;
+}
+.LBUnoLibs{
+   text-align: center;
+   padding: 24px;
+   color: var(--grey-600);
+}
+.LBUhref a{
+   color: var(--blue);
+   text-decoration: unset;
+}
+.LBUhref a:hover{
+   text-decoration: underline;
+}

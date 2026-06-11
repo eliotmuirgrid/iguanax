@@ -1,0 +1,815 @@
+.CARDswitchAndTitle {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	column-gap: 16px;
+}
+.CARDswitchTarget {
+	display: inline-flex;
+	align-items: center;
+}
+.CARDdescriptionTarget {
+	padding: 8px 16px;
+	padding-top: 8px;
+	margin-bottom: 8px;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	column-gap: 8px;
+}
+.CARDcurrentActions,
+.CARDlabelActions,
+.CARDnameActions {
+	margin-left: 8px;
+}
+.CARDgitEditButtonStyle {
+	margin-top: -4px;
+	margin-bottom: -4px;
+}
+.CARDeditBtn {
+	cursor: pointer;
+	width: 20px;
+	height: 20px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border-radius: var(--border-radius);
+}
+.CARDeditBtn:hover:not(.CARDdisableLink) {
+	background: var(--grey-300);
+}
+.CARDeditBtn img {
+	width: 12px;
+}
+.CARDnameBlockEdit{
+	display: flex;
+	padding: 18px 0px;
+}
+.CARDnameBlock {
+	display: grid;
+	grid-template-columns: auto 1fr auto auto auto;
+	padding: 18px 0px;
+}
+.CARDeditName{
+	padding-top: 8px;
+	margin-left: 10px;
+}
+.CARDname {
+	color: var(--blue);
+	font-size: 14px;
+	font-weight: 600;
+	word-break: break-all;
+	height: 24px;
+	padding-top: 8px;
+}
+.CARDnameSpacing {
+	padding-bottom: 15px;
+}
+.CARDhidden{
+	display: none !important;
+}
+.CARDvisHidden{
+	visibility: hidden !important;
+}
+.CARDnotificationTarget {
+	/* margin-top: -18px; */
+	color: var(--grey-600);
+	border: solid 1px var(--grey-200);
+	border-radius: var(--border-radius);
+	padding: 12px;
+}
+.CARDnotificationTarget a{
+	color: var(--blue);
+	text-decoration: none;
+}
+.CARDnotificationTarget a:hover{
+	text-decoration: underline;
+}
+.CARDaddTags:hover,
+.CARDaddDescription:hover{
+	color: var(--blue);
+	text-decoration: underline;
+}
+.CARDaddTags,
+.CARDaddDescription {
+	cursor: pointer;
+}
+.CARDdescriptionEditInput {
+	height: 8em !important;
+	resize: none;
+}
+/* Card Editable Fields section */
+.CARDtableContainer {
+	background: var(--grey-200);
+	border-radius: var(--border-radius);
+	padding: 16px;
+	line-height: initial;
+	border: 1px solid var(--grey-300);
+}
+.CARDfieldTarget {
+	margin-top: 12px;
+	padding-top: 16px;
+	padding-bottom: 4px;
+	border-top: 1px solid var(--grey-300);
+	max-height: 200px;
+	overflow-y: auto;
+	height: 100%;
+}
+.CARDtableContainer>div:first-child {
+	padding-top: 0px;
+	border-top: none;
+}
+.CARDtableContainer>div:last-child {
+	padding-bottom: 0px;
+}
+.CARDbranchRow,
+.CARDrepoRow,
+.CARDactionsRow,
+.CARDgitRow {
+	display: grid;
+	grid-template-columns: 158px 1.0fr auto auto;
+  	margin-top: 12px;
+  	margin-bottom: 12px;
+}
+.CARDrepoRow{
+	margin-top: 24px;
+}
+.CARDbranchRow{
+	margin-bottom: -10px;
+	margin-top: 24px;
+}
+.CARDcommitRow{
+	display: grid;
+	grid-template-columns: 158px 1.0fr;
+  	margin-top: 10px;
+}
+.CARDbranch,
+.CARDcurrentCommitIdDiv,
+.CARDqueueCountValue,
+.CARDcurrentCommit,
+.CARDnoRepo,
+.CARDerrorCountValue {
+	color: var(--grey-600);
+}
+.CARDcurrentCommit {
+	word-break: break-word;
+}
+.CARDpermissableAction{
+	cursor: pointer;
+}
+.CARDeditConnection,
+.CARDaction,
+.CARDremoveUpstream,
+.CARDseeInCollection,
+.CARDaddToCollection,
+.CARDchangeBranch,
+.CARDeditUpstream,
+.CARDpermissableAction,
+.CARDcurrentRealCommitIdDiv,
+a.CARDbranchName,
+a.CARDcurrentRepo {
+	color: var(--blue);
+	text-decoration: none;
+	word-break: break-all;
+}
+.CARDcurrentRepo{
+	color: var(--grey-600);
+}
+.CARDcurrentCommitDescription{
+	display: -webkit-box; /* For iOS, Safari, and older versions of Chrome */
+	display: -moz-box; /* For older versions of Firefox */
+	display: box; /* Standard syntax */
+	-webkit-box-orient: vertical; /* Set the orientation to vertical */
+	-moz-box-orient: vertical;
+	box-orient: vertical;
+	-webkit-line-clamp: 2; /* Show only two lines of text */
+	line-clamp: 2;
+	max-height: 4em; /* Set the height for two lines of text */
+	overflow: hidden; /* Hide any overflowing content */
+	text-overflow: ellipsis;
+	padding-bottom: 4px;
+
+}
+.CARDviewCurrentCommit{
+	text-decoration: none;
+	padding-right: 2px;
+	padding-left: 2px;
+}
+.CARDeditConnection:hover,
+.CARDaction:hover,
+.CARDcurrentRealCommitIdDiv:hover,
+.CARDremoveUpstream:hover,
+.CARDseeInCollection:hover,
+.CARDaddToCollection:hover,
+.CARDchangeBranch:hover,
+.CARDeditUpstream:hover,
+a.CARDbranchName:hover,
+a.CARDcurrentRepo:hover {
+	color: var(--blue);
+	text-decoration: underline;
+	cursor: pointer;
+}
+.CARDtags{
+	color: var(--grey-600);
+}
+.CARDdescription {
+	overflow-wrap: break-word;
+	color: var(--grey-600);
+	white-space: pre-wrap;
+	line-height: 1.75;
+	max-height: 100px;
+	overflow-y: auto;
+}
+.CARDqueuePosition{
+	display: inline;
+   background: var(--white);
+   box-shadow: 0 1px 2px rgb(0 0 0 / 38%);
+   padding: 1px 6px;
+   border-radius: 9999px;
+   font-weight: 600;
+	color: var(--grey-600) !important;
+	margin-right: 4px;
+}
+
+.CARDlastActivityValue {
+	display: grid;
+	grid-template-columns: max-content auto;
+}
+
+.CARDlastActivityValue,
+.CARDqueuePosition,
+.CARDgitTerm {
+	cursor: pointer;
+	color: var(--blue);
+}
+.CARDstatusRow {
+	display: grid;
+	grid-template-columns: 150px auto;
+	row-gap: 12px;
+	column-gap: 8px;
+	padding-bottom: 16px;
+}
+.CARDstatusClearQueue,
+.CARDstatusClearError,
+.CARDstatusRepositionQueue {
+	cursor: pointer;
+	text-align: left;
+	display: inline-flex;
+	align-items: center;
+	justify-content: left;
+	color: var(--grey-600);
+}
+.CARDstatusClearError{
+	margin-left: 6px;
+}
+.CARDstatusClearQueue{
+	margin-left: 2px;
+}
+.CARDerrorOffset {
+	margin-left: 3px;
+}
+
+.CARDclearFont {
+	color: var(--blue);
+	padding-left: 2px;
+	padding-right: 2px;
+}
+.CARDlastActivityTimestamp:hover,
+.CARDclearFont:hover {
+	text-decoration: underline;
+}
+.CARDdetailedCard {
+	width: 100%;
+}
+.CARDdetailedCardId .POPpopoutCard-content{
+	padding-top: 12px;
+}
+.CARDdetailedCardId .POPpopoutCard-header {
+	height: auto;
+}
+.CARDdetailedCardId .POPpopoutCard-header {
+	height: auto;
+	gap: 24px;
+}
+.CARDdetailedCardId .POPpopoutCard-header .POPpopoutCard-title {
+	flex-grow: 1;
+}
+.CARDdetailedCardId.POPpopoutCard-wrapper {
+	width: 70%;
+	max-width: 800px;
+	min-width: 400px;
+	max-height: 100%;
+	overflow: auto;
+	position: unset;
+	top: unset;
+	left: unset;
+	transform: unset;
+}
+.CARDqueueCountValue,
+.CARDerrorCountValue {
+	display: inline;
+}
+.CARDerrorCount {
+	display: inline;
+	cursor: pointer;
+	background: var(--white);
+	box-shadow: 0 1px 2px rgb(0 0 0 / 50%);
+	padding: 1px 6px;
+	border-radius: 9999px;
+	font-weight: 600;
+	margin-right: 4px;
+}
+.CARDerrorDisplayRed{
+	color: var(--red);
+}
+.CARDerrorDisplayGrey{
+	color: var(--grey-600);
+}
+
+.CARDlastActivityWrap > div {
+	white-space: pre-wrap;
+	max-width: 500px;
+	max-height: 100px;
+	overflow-y: auto;
+}
+
+.CARDlastErrorTooltip > div {
+	/* white-space: pre-wrap; */
+}
+
+.CARDqueueCount {
+	display: inline;
+	cursor: pointer;
+	background: var(--white);
+	box-shadow: 0 1px 2px rgb(0 0 0 / 50%);
+	padding: 1px 6px;
+	border-radius: 9999px;
+	color: var(--grey-600);
+	font-weight: 600;
+}
+.CARDpermissionDiv,
+.CARDbottomRow {
+	margin-top: 16px;
+}
+.CARDcomponentIDlabel {
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	color: grey;
+	font-size: 11px;
+}
+.CARDcomponentIDcopy {
+	margin-left: 8px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+}
+.CARDcomponentIDcopy img {
+	width: 14px;
+	height: 14px;
+}
+.CARDviewDetails::before{
+	content: url("/CARD/CARDopen.svg");
+	padding-right: 12px;
+}
+.CARDclosedFolder .CARDviewDetails::before{
+	content: url("/CARD/CARDclosed.svg");
+	padding-right: 12px;
+}
+.CARDcancelInplace,
+.CARDsaveInplace,
+.CARDsaveName,
+.CARDcancelName,
+.CARDsaveDescription,
+.CARDcancelLabel,
+.CARDsaveCurrentCommit,
+.CARDcancelCurrentCommit,
+.CARDsaveGit,
+.CARDcancelGit {
+	height: 24px;
+	width: 32px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.CARDbuttonDone,
+.CARDbuttonDelete{
+	display: none;
+}
+.CARDviewDetails {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+  	text-align: center;
+  	font-family: var(--font-buttons);
+	color: var(--grey-500);
+	font-weight: 500;
+	font-size: 11px;
+	letter-spacing: 0.1em;
+	padding-right: 24px;
+	padding: 16px 0px;
+	border-top: 1px solid var(--grey-300);
+}
+.CARDviewDetails:hover {
+  background-color: #ccc;
+  cursor: pointer;
+}
+.CARDdetails {
+  overflow: hidden;
+  border-top: 1px solid var(--grey-300);
+  padding-top: 4px;
+  margin-top: 12px;
+}
+.CARDclosedFolder .CARDdetails{
+	display: none;
+}
+.CARDcurrentCommitIdDevelopment,
+.CARDloadingCommit{
+	color: var(--grey-600);
+	word-break: break-all;
+}
+.CARDcurrentRunningCommit{
+	height: 28px;
+	word-break: break-all;
+}
+.CARDcommitTime,
+.CARDcommitAuthor,
+.CARDcommitDescription{
+	word-break: break-word;
+	color: var(--grey-600);
+	padding-right: 24px;
+}
+.CARDeditConRight{
+	margin-left: 12px;
+}
+.CARDeditConLeft,
+.CARDeditConRight,
+.CARDmakeCopyBracketsEnd,
+.CARDmakeCopyBrackets,
+.CARDpreAction,
+.CARDpostAction{
+	word-break: break-word;
+	color: var(--grey-600);
+	padding-right: 4px;
+}
+.CARDpermission{
+	word-break: break-word;
+	color: var(--grey-600);
+}
+.CARDeditConLeft,
+.CARDmakeCopyBracketsEnd,
+.CARDpostAction{
+	padding-left: 4px;
+}
+.CARDpermissionDiv{
+	display: grid;
+	grid-template-columns: 158px auto auto 1fr;
+	padding-bottom: 12px;
+}
+.CARDgitBlock{
+	padding-bottom: 16px;
+	border-bottom: 1px solid var(--grey-300);
+	border-top: 1px solid var(--grey-300);
+}
+.CARDpermissableAction{
+	display: grid;
+	grid-template-columns: auto auto auto auto;
+}
+.CARDcopyAction{
+	display: grid;
+	grid-template-columns: auto auto auto;
+}
+.CARDinjectTarget{
+	padding-top: 20px;
+	padding-bottom: 0px;
+	padding-left: 16px;
+	max-height: 200px;
+	overflow-y: auto;
+}
+.CARDinjectTarget a{
+	color: var(--blue);
+	text-decoration: unset;
+}
+.CARDinjectTarget a:hover{
+	text-decoration: underline;
+}
+.CARDcustomFieldsErrorRow{
+	display: grid;
+	grid-template-columns: 92px 32px auto auto;
+}
+.CARDcurrentRepoGrid{
+	display: grid;
+	grid-template-columns: auto auto auto 4px 24px auto auto auto 1fr;
+}
+.CARDcurrentCommitDevelopmentGrid{
+	display: grid;
+	grid-template-columns: auto 18px 64px 4px 1fr;
+}
+.CARDcurrentCommitGrid{
+	/* display: grid; */
+	/* grid-template-columns: auto; */
+	margin-right: 12px;
+}
+.CARDcurrentNoRepoGrid{
+	display: grid;
+	grid-template-columns: auto auto 18px 38px 4px 1fr;
+}
+.CARDcurrentTemplateGrid{
+	display: grid;
+	grid-template-columns: auto auto auto 4px 1fr;
+}
+.CARDnoRepoGrid{
+	display: grid;
+	grid-template-columns: auto 8px 20px 4px 1fr;
+}
+.CARDcurrentCommitIdDiv,
+.CARDnoRepo{
+	padding-right: 4px;
+}
+.CARDcurrentCommitIdDiv{
+	line-height: 22px;
+}
+.CARDtemplateRemoveButtons {
+	justify-content: flex-end; /* Change to flex-end for right alignment */
+	margin-top: 32px;
+	margin-right: 0;
+	margin-left: auto;
+}
+
+.CARDnoRepoWarning{
+	color: var(--red);
+	text-decoration: none;
+	word-break: break-all;
+	padding-right: 2px;
+}
+.CARDorDiv{
+	text-align: center;
+	padding-right: 2px;
+	padding-left: 2px;
+	color: var(--grey-600);
+}
+
+.CARDifwVerified::after {
+	content: url("/CARD/CARDoutlineBlue.svg");
+	margin-left: 8px;
+}
+.CARDverified::after {
+	content: url("/CARD/CARDoutlineGrey.svg");
+	margin-left: 8px;
+	color: var(--grey-600);
+}
+
+.CARDcustomizeFeedback {
+	color: red;
+}
+.CARDrefreshSpinner{
+	animation: CARDspin 1s linear infinite;
+}
+.CARDloading-spinner {
+	border: 4px solid rgba(0, 0, 0, 0.1);
+	border-top: 4px solid #3498db;
+	border-radius: 50%;
+	width: 15px;
+	height: 15px;
+	animation: CARDspin 1s linear infinite;
+	margin-left: 10px;
+	margin: 18px;
+	display: inline-block;
+}
+
+@keyframes CARDspin {
+	0% { transform: rotate(0deg); }
+	100% { transform: rotate(360deg); }
+}
+.CARDnewCommitExists::before {
+   content: '• ';
+	color: red;
+	font-size: 12px;
+	font-weight: var(--extra-bold);
+	padding-right: 4px;
+}
+.CARDunsecureTags::after{
+   content: '• No matching role tags (no permissions applied)';
+	color: red;
+	font-size: 12px;
+	/* font-weight: var(--extra-bold); */
+	padding-right: 4px;
+	padding-left: 6px;
+}
+
+.CARDswitchTarget .TOGstatus{
+	height: 16px;
+	width: 16px;
+}
+.CARDdisableLink,
+.CARDdisableLink *{
+	cursor: not-allowed !important;
+	color: grey !important;
+	text-decoration: unset !important;
+	opacity: 0.5 !important;
+}
+.CARDdisable,
+.CARDdisable *{
+	cursor: not-allowed !important;
+	color: grey !important;
+	text-decoration: unset !important;
+}
+.CARDtagRow{
+	display: grid;
+	grid-template-columns: 144px 1fr;
+	column-gap: 8px;
+	margin-bottom: 8px;
+	padding-left: 4px;
+}
+.CARDdetails .FORMlabel,
+.CARDfieldTarget .FORMlabel,
+.CARDstatusRow .FORMlabel{
+	padding-left: 4px;
+}
+.CARDtagRowInner{
+	display: grid;
+	grid-template-columns: 1fr auto auto;
+	column-gap: 8px;
+}
+.CARDtagRowInnerEdit{
+	display: grid;
+	grid-template-columns: 1fr auto auto;
+	column-gap: 8px;
+}
+.CARDtagEditInputError{
+	color: red;
+}
+.CARDtagClickable:hover{
+	text-decoration: underline;
+	cursor: pointer;
+}
+.CARDtagClickable{
+	font-weight: 900 !important;
+	margin-right: 3px;
+	text-decoration: none;
+}
+.CARDtagMoreInfo{
+	height: 20px;
+	font-size: larger;
+}
+
+.CARDfieldInfo {
+    font-size: larger;
+    cursor: pointer;
+    color: var(--grey-600);
+	margin-right: 4px;
+	height: 20px;
+	padding: 0;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	min-width: 20px;
+}
+
+.CARDrunFromComponentMoreInfo:hover,
+.CARDfieldInfo:hover,
+.CARDtagMoreInfo:hover{
+	color: var(--blue);
+}
+.CARDtagValue {
+	overflow-x: auto;
+	overflow-y: hidden;
+	padding-top: 1px;
+}
+.CARDtagValue .DASHhashtag{
+	font-size: 11px;
+}
+/* .CARDeditConnectionsDiv{
+	display: grid;
+	grid-template-columns: auto auto auto;
+	padding-top: 9px;
+} */
+.CARDvalueEdit{
+	font-family: monospace !important;
+}
+.CARDactionPopup{
+	max-width: 500px;
+}
+.CARDrunComponentOnDropdown{
+	margin-top: 0px !important;
+}
+.CARDshowHideGrid{
+	display: grid;
+	grid-template-columns: auto auto auto 1fr;
+	column-gap: 4px;
+	margin-top: 4px;
+	margin-left: 2px;
+	color: var(--grey-600);
+}
+.CARDshowMore,
+.CARDshowLess{
+	cursor: pointer;
+	color: var(--blue);
+
+}
+.CARDshowMore:hover,
+.CARDshowLess:hover{
+	text-decoration: underline;
+}
+.CARDhideShowRow{
+	display: grid;
+	grid-template-columns: 158px 1fr 126px;
+	margin-bottom: 24px;
+}
+.CARDless .CARDcommitComponentInput,
+.CARDless .CARDcommitInput{
+	display: none;
+}
+
+.CARDless .CARDshowLess{
+	display: none;
+}
+.CARDshowMore{
+	display: none;
+}
+.CARDless .CARDshowMore{
+	display: block;
+}
+.CARDrunningCommit{
+	margin-bottom: 18px;
+}
+.CARDless .CARDcommitInputRow{
+	display: none;
+}
+.CARDcommitComponentInput{
+	margin-bottom: 8px;
+}
+.CARDcommitInputRowGrid{
+	display: grid;
+	grid-template-columns: 1fr auto;
+}
+.CARDcommitIdView{
+	display: inline;
+	margin-right: 6px;
+	font-family: var(--font-monospace);
+	font-size: 13px;
+}
+.CARDcommitMessage{
+	display: inline;
+	margin-top: 18px;
+	font-size: 11px;
+	padding-left: 4px;
+	color: var(--grey-500);
+}
+
+.CARDrunFromComponentMoreInfo{
+	height: 28px;
+	width: 38px;
+	font-size: 16px;
+	margin-left: 8px;
+}
+
+.CARDarrowPrev{
+	margin-right: 4px;
+	margin-left: 4px;
+}
+.CARDarrowNext,
+.CARDarrowPrev,
+.CARDviewConn{
+	cursor: pointer;
+	text-decoration: none;
+	user-select: none;
+	background-color: var(--white);
+	padding: 12px;
+	margin-top: 2px;
+	border: 1px solid var(--grey-300) !important;
+	border-radius: var(--border-radius);
+	display: flex;
+	align-items: center;
+	font-family: var(--font-buttons);
+	column-gap: 12px;
+	cursor: pointer;
+	color: var(--grey-600);
+}
+.CARDarrowNext:hover *,
+.CARDarrowPrev:hover *,
+.CARDviewConn:hover *{
+	color: var(--blue);
+}
+.CARDdisabledArrow *,
+.CARDdisabledArrow{
+	color: var(--grey-300) !important;
+}
+.CARDatSymbol{
+	padding-right: 6px;
+	padding-left: 6px;
+}
+.CARDbranchSymbol{
+	padding-left: 6px;
+}
+.CARDrepoBranchRow{
+	color: var(--grey-600);
+}
+.CARDgitUrlNotSet { 
+	color: var(--red);
+	opacity: 0.9; 
+}
+.CARDdotDiv { 
+	color: var(--grey-600);
+	margin-right: 2px;
+	margin-left: 2px;
+	opacity: 0.8;
+}

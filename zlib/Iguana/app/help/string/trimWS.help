@@ -1,0 +1,7 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">s:trimWS()\n</pre><ul><li><code><strong>s</strong></code>: The string to trim.</li></ul><p>Returns a new string with all leading and trailing whitespace removed. Internal spacing is preserved.</p><p><br></p><h3>Notes</h3><ul><li>Only leading and trailing whitespace are removed; spaces between words are not affected.</li><li>This function is equivalent to calling <code><a href=\"@string:gsub\" target=\"_blank\">string:gsub</a>(s, '^%s*(.-)%s*$', '%1')</code>.</li></ul><p><br></p><h3>Returns</h3><ul><li>A new string with whitespace trimmed from both ends. <u>(</u><em><u>string</u></em><u>)</u></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local S = '&nbsp; Trim me.&nbsp; '\nlocal T = S:trimWS()      -- T is now \"Trim me.\"\n</pre>",
+    "Name": "string:trimWS",
+    "Parameters": null,
+    "ParameterTable": false,
+    "SummaryLine": "Trims whitespace from the start and end of a string."
+}

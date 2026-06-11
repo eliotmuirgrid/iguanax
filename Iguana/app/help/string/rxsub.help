@@ -1,0 +1,28 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">s:rxsub(regex, sub [, n ] [, mods])\n</pre><ul><li><code><strong>s</strong></code>: The source string.</li><li><code><strong>regex</strong></code>:&nbsp;A PCRE-compatible regular expression pattern to search for.</li><li><code><strong>sub</strong></code>: The replacement value — can be a string, function, or table.</li><li><code><strong>n</strong></code> <em>(optional)</em>: Max number of replacements. Defaults to unlimited.</li><li><code><strong>mods</strong></code> <em>(optional)</em>: Modifier flags for regex matching behavior.</li></ul><p>Returns a modified string with substitutions applied and the number of replacements made.</p><p><br></p><h3>Notes</h3><ul><li>Behaves like <code><a href=\"@string:gsub\" target=\"_blank\">string:gsub</a></code>, but uses <strong>PCRE </strong>instead of Lua patterns.</li><li>If <code><strong>sub</strong></code> is a string, use:</li><li class=\"ql-indent-1\"><code>$n</code> or <code>\\n</code> to reference numbered capture groups.</li><li class=\"ql-indent-1\"><code>%n</code> to escape <code>%</code> as a literal.</li><li>If <code><strong>sub</strong></code> is a table: the first capture is used as the lookup key.</li><li>If <code><strong>sub</strong></code> is a function: it's called for every match and should return a string or number.</li><li><strong>Backslashes must be escaped</strong> (<code>\\\\</code>) when used in patterns (e.g., <code>\"\\\\w+\"</code>).</li><li>Supported modifiers include:</li><li class=\"ql-indent-1\"><code>m</code>: Multi-line anchoring mode</li><li class=\"ql-indent-1\"><code>s</code>: Dot matches newline</li><li class=\"ql-indent-1\"><code>i</code>: Case-insensitive</li><li class=\"ql-indent-1\"><code>x</code>: Extended mode (ignore whitespace)</li><li class=\"ql-indent-1\"><code>X</code>: Extra mode</li><li class=\"ql-indent-1\"><code>u</code>: Unicode mode</li><li class=\"ql-indent-1\"><code>U</code>: Lazy (ungreedy) matching</li><li class=\"ql-indent-1\"><code>A</code>: Anchored match</li><li class=\"ql-indent-1\"><code>J</code>: Allow duplicate subpattern names</li></ul><p>For more complex examples, see the additional <a href=\"http://help.interfaceware.com/using-rxmatch-and-rxsub-with-pcre-regex.html?v=6.0.0\" target=\"_blank\">rxsub examples</a> page.</p><p><br></p><h3>Returns</h3><ul><li>The resulting string with substitutions. <em><u>(string)</u></em></li><li>The number of substitutions made. <em><u>(integer)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Count\nlocal S = \"hello world from Lua and PCRE\"\nS, Count = S:rxsub(\"\\\\w+\", \"xxx\")\ntrace(Count..\" words were changed to xxx\")\n</pre>",
+    "Name": "string:rxsub",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> Regular expression to be matched.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string, function or table</u></em> The replacement value.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>integer</u></em> <em>(Optional)</em> Maximum number of substitutions to perform.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u></em> <em>(Optional)</em> Modifier characters that alter the regex behavior.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "String find and replace regular expression matches in a string."
+}

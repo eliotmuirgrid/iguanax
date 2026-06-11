@@ -1,0 +1,7 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">Socket:close()\n</pre><ul><li><code><strong>Socket</strong></code>: a tcp connection opened with <code><a href=\"@net.tcp.connect\" target=\"_blank\">net.tcp.connect</a></code></li></ul><p><br></p><h3>Notes</h3><ul><li>Close a socket opened using <code>net.tcp.connect</code>.</li></ul><p><br></p><h3><strong>Example</strong></h3><pre class=\"ql-syntax\" spellcheck=\"false\">local s = net.tcp.connect{host='127.0.0.1', port=7654}\ns:send(Data)\nlocal Ack = s:receive()\ns:close()\n</pre>",
+    "Name": "net.tcp:close",
+    "Parameters": null,
+    "ParameterTable": false,
+    "SummaryLine": "Close an open socket."
+}

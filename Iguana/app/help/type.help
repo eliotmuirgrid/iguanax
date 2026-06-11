@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">type(v)\n</pre><ul><li><code><strong>v</strong></code>: Any Lua value.</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>A string representing the type of the value. (<em><u>string)</u></em></li></ul><p><br></p><h4><strong>Possible Return Values</strong></h4><p>One of the following strings:</p><ul><li><code>\"nil\"</code></li><li><code>\"number\"</code></li><li><code>\"string\"</code></li><li><code>\"boolean\"</code></li><li><code>\"table\"</code></li><li><code>\"function\"</code></li><li><code>\"thread\"</code></li><li><code>\"userdata<span class=\"ql-cursor\">﻿﻿﻿ ﻿﻿</span></code> </li></ul><p>    Note: Node tree objects in Iguana are of the <code>userdata</code> type.</p><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">-- when the argument is not defined, returns nil\nlocal TypeName = type(number)\n &nbsp; &nbsp;\nlocal number = 1\nlocal string = \"asdf\"\nlocal table = {}\n&nbsp; &nbsp;\nTypeName = type(number)\nTypeName = type(string)\nTypeName = type(table)\n</pre>",
+    "Name": "type",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>any type</u></em> Value to check the type of. </p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Returns the type of its argument."
+}

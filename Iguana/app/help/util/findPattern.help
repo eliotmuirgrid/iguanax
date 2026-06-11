@@ -1,0 +1,23 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">util.findPattern{\n&nbsp; searchString = &lt;value&gt;,\n&nbsp; stringToSearch = &lt;value&gt;,\n&nbsp; exactMatch = &lt;true|false&gt;\n}\n</pre><ul><li><code><strong>searchString</strong></code>: The word or phrase to search for.</li><li><code><strong>stringToSearch</strong></code>: The source string to search within.</li><li><code><strong>exactMatch</strong></code>: If <code>true</code>, only whole-word matches are considered. If <code>false</code>, partial matches are allowed.</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>This function uses the same internal matching logic as the log search and component search features in the UI.</li><li>It is <em>not</em> a regular expression or pattern matcher.</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>The start and end positions (indices) of the first match.</li><li>Returns <code>nil</code> if no match is found.</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local startIndex, endIndex = util.findPattern{\n&nbsp; searchString = \"log\",\n&nbsp; stringToSearch = \"logging is enabled\",\n&nbsp; exactMatch = false\n}\n</pre>",
+    "Name": "util.findPattern",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The text or term to look for.</p>",
+            "Name": "searchString",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u></em> The target string to scan.</p>",
+            "Name": "stringToSearch",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>bool</u></em> Apply whole word matching.</p>",
+            "Name": "exactMatch",
+            "Required": true
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Searches for a substring within a string, using a simple keyword matching algorithm."
+}

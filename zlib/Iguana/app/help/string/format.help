@@ -1,0 +1,18 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">string.format(formatstring, string, ...)\n</pre><ul><li><code><strong>format</strong></code>: A string using C-style specifiers to define how each additional argument is formatted.</li><li><code><strong>...</strong></code>: Values (strings or numbers) that are formatted and inserted according to the specifiers.</li></ul><p><br></p><h3>Notes</h3><ul><li>Based on the C <code>printf</code> family, but Lua excludes these modifiers: <code>*</code>, <code>l</code>, <code>L</code>, <code>n</code>, <code>p</code>, <code>h</code>.</li><li>Adds Lua-specific specifier <code><strong>%q</strong></code>, which returns a string quoted and escaped for safe reuse in code.</li><li><strong>String method style (</strong><code><strong>s:format(...)</strong></code><strong>) is not supported</strong>; always use <code>string.format(...)</code>.</li><li>Conversion specifiers:</li><li class=\"ql-indent-1\">Expecting numbers: <code>c d E e f g G i o u X x</code></li><li class=\"ql-indent-1\">Expecting strings: <code>q s</code></li><li>Inputs containing embedded nulls (<code>\\0</code>) are <strong>not allowed</strong> unless used with <code>%q</code>.</li></ul><h4><br></h4><h3>Returns</h3><ul><li>A formatted result as a new string. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Pi&nbsp; &nbsp; &nbsp; = 3.14159\nlocal Message = \"world\"\n\nlocal text&nbsp; = string.format(\"Hello, %s! π ≈ %.2f\", Message, Pi)\nlocal quote = string.format(\"%q tells you \\\\o/\", \"Lua\")\n\ntrace(text)&nbsp; &nbsp;-- \"Hello, world! π ≈ 3.14\"\ntrace(quote)&nbsp; -- \"\\\"Lua\\\" tells you \\\\o/\"\n</pre>",
+    "Name": "string.format",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The <em>format string</em> containing conversion specifiers (<code>%d</code>, <code>%q</code>, <code>%.2f</code>, etc.).</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string or number</u></em> One or more values to substitute into the specifiers.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Formats values into a string."
+}

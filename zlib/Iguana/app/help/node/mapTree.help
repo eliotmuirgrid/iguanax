@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">Dest:mapTree(Source)\n</pre><ul><li><code><strong>Dest</strong></code>: The destination node tree to receive the mapped fields.</li><li><code><strong>Source</strong></code>: The source node tree from which to copy values and structure.</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>Copies all values and structure from the <code>Source</code> node into the <code>Dest</code> node.</li><li>This is a <strong>deep copy</strong>, meaning nested segments, fields, or subelements are also duplicated.</li><li>Commonly used to transfer data between parsed HL7, XML, or database node structures.</li></ul><p><br></p><h3>Returns</h3><ul><li>Nothing.</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local MsgIn&nbsp; = hl7.parse{vmd = 'demo.vmd', data = hl7_example}\nlocal MsgOut = hl7.message{vmd = 'demo.vmd', name = 'ADT'}\n\n-- Copy the full inbound message into the outbound structure\nMsgOut:mapTree(MsgIn)\n</pre><ul><li>This example maps the entire structure and values of an inbound HL7 message (<code>MsgIn</code>) into an outbound message object (<code>MsgOut</code>).</li></ul>",
+    "Name": "node:mapTree",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>node tree</u></em> The source node tree containing the data to be copied.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Maps fields from a source node to a destination node."
+}

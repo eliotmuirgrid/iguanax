@@ -1,0 +1,11 @@
+<channel name="DICOM_Mapping" guid="00000000000000000000000000000000" description="" start_automatically="false" logging_level="1" use_message_filter="false">
+   <to_mapper guid="00000000000000000000000000000000" use_most_recent_milestone="true" milestone="">
+      <dequeue_list>
+         <dequeue source_name="self" dequeue_guid="50E0F384C1C90B80AA0507B1B63BCDA2"></dequeue>
+      </dequeue_list>
+   </to_mapper>
+   <from_file file_type="ArbitraryText" prepend_file_info="false" eof_char="" poll_time="10000" max_message_size="15728640" source_dir="D:/iNTERFACEWARE-Iguana/dicom/outbound/" source_file_extension="xml" archive_processed_files="false" processed_dir="D:/SR/processed/" error_dir="D:/SR/processed/" ignored_segments="" segment_delimiter="0x0D" message_delimiter="0x0A" minimum_file_age="0" message_encoding="" escape_8bit="false" escape_char=" " ftp_server="" ftp_port="21" ftp_username="" ftp_password="wgl4gCdDIlhwtSaee9vfmw==" ftp_path="" ftp_protocol="ftp" sftp_private_key_file="" sftp_public_key_file="" ftps_private_key_file="" ftps_certificate_key_file="" ftps_verify_peer="false" ftps_certificate_authority_file="" ftp_unlimited_reconnect="false" ftp_max_reconnect="60" ftp_reconnect_interval="10000" ftp_delete_after_download="true" ftp_remote_downloaded_dir="" sftp_authentication_method="user_password" sftp_verify_host="false" sftp_host_fingerprint="" use_ftp="false" custom_header=""></from_file>
+   <message_filter filter_after_logging="true" log_pre_post_filter_message="true" filter_vmd_path="" transformation_mode="0" scripted_transformation_configuration_name="default" incoming_configuration_name="" outgoing_configuration_name="" error_handling="0" use_translator_filter="true" translator_guid="00000000000000000000000000000000" translator_milestone="" translator_use_most_recent_milestone="true">
+      <ignored_message message_name=""></ignored_message>
+   </message_filter>
+</channel>

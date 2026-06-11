@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">math.ceil(x)\n</pre><ul><li><code><strong>x</strong></code>: A numeric value. This function returns the smallest integer that is greater than or equal to <code>x</code>.</li></ul><p><br></p><h3>Returns</h3><ul><li>The smallest integer greater than or equal to <code>x</code>. <em><u>(number)</u></em></li></ul><h3><br></h3><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local R = math.ceil(4.5)\n</pre><ul><li>This example returns <code>5</code>.</li></ul><p><br></p><p>See also: <code><a href=\"@math.floor\" target=\"_blank\">math.floor</a></code></p>",
+    "Name": "math.ceil",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>number</u></em> The number to calculate the ceiling value from.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Calculates the smallest integer larger than or equal to a number."
+}

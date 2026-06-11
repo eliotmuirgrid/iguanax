@@ -1,0 +1,152 @@
+.EXPwindow .EXPmodal{
+   display: grid;
+   grid-template-columns: auto 1fr;
+   height: 100%;
+	overflow: hidden;
+}
+.EXPimportWindow .POPpopoutCard-content{
+	padding-top: 0px;
+}
+
+.EXPwindow .POPpopoutCard-content {
+	height: calc(100% - 61px);
+	padding: 0px;
+}
+.EXPwindow{
+   top: 50px;
+	height: calc(100% - 104px);
+}
+.EXPheader{
+   display: grid;
+   grid-template-rows: auto auto auto auto 1fr auto;
+   padding: 32px;
+   padding-top: 8px;
+   overflow: auto;
+    height: calc(100% - 40px);;
+}
+.EXPcode{
+   background: var(--grey-200);
+   border-left: 0px;
+   padding: 32px;
+   box-sizing: border-box;
+   display: grid;
+   grid-template-rows: auto 1fr auto;
+   row-gap: 24px;
+   height: 100%;
+   overflow: hidden;
+   border-left: 1px solid var(--grey-400);
+}
+.EXPheaderFont{
+   font-family: var(--font-buttons);
+   color: var(--grey-500);
+   font-weight: 500;
+   font-size: 11px;
+   letter-spacing: 0.05em;
+   margin-top: 24px;
+   margin-bottom: 18px;
+}
+.EXPfileDiv{
+   display: grid;
+   grid-template-columns: 1fr auto auto;
+   column-gap: 24px;
+   margin-top: auto;
+}
+.EXPinputDiv{
+   display: grid;
+   grid-template-rows: auto auto auto auto auto auto auto 1fr;
+}
+.EXPexportFeedback{
+   color: var(--red);
+}
+.EXPgenerateTitle{
+   display: inline-block;
+   color: var(--grey-500) !important;
+   padding-left: 2px;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   margin-top: 6px;
+}
+.EXPfile{
+   display: inline-block;
+   color: var(--grey-500);
+   padding-left: 4px;
+   overflow: hidden;
+   white-space: nowrap;
+   text-overflow: ellipsis;
+   margin-top: 6px;
+}
+
+.EXPfileDiv .EXPheaderFont{
+   margin: 0px;
+   margin-top: 7px;
+}
+.EXPgenerateRow{
+   display: grid;
+   grid-template-columns: 1fr auto;
+
+   margin-top: 12px;
+}
+.EXPbuttons{
+   justify-content: right;
+}
+.EXPsql{
+   padding: 8px;
+   padding-top: 24px;
+   padding-bottom: 24px;
+   background-color: var(--white);
+   border: 1px solid var(--grey-400);
+   border-radius: var(--border-radius);
+   overflow-y: auto;
+   /* max-height: 73vh; */
+}
+.EXPinputDivs{
+   margin-bottom: 24px;
+}
+.EXPcode .EXPheaderFont{
+   margin-top: 0px;
+   margin-bottom: 0px;
+}
+.EXPgenerateFeedback{
+   color: var(--red);
+}
+.EXPlocationRow{
+   display: grid;
+   grid-template-columns: 1fr auto;
+   column-gap: 8px;
+}
+.EXPpane{
+   position:relative;
+   height: 100%;
+   overflow: hidden;
+   max-width: 1070px;
+   min-width: 400px;
+}
+
+/* Splitter */
+.EXPresizeControl {
+   right: -6px;
+	top: 0;
+	bottom: 0;
+	width: 10px;
+	padding: 0;
+	border: 0;
+	position: absolute;
+	outline: none;
+	cursor: ew-resize;
+   background: transparent;
+   border-right: 1px solid black;
+}
+.EXPresizeShadow {
+   bottom: 0;
+	top: 0;
+	right: 4px;
+	pointer-events: none;
+	position: absolute;
+	width: 3px;
+	transition: 150ms ease-out;
+}
+.EXPresizeControl:hover .EXPresizeShadow {
+   background: var(--blue);
+	transition: 75ms ease-in;
+}

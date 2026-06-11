@@ -1,0 +1,246 @@
+.CORheaderGrid {
+   background: var(--blue-dark);
+}
+.CORpeerBorder {
+   border-left: 4px solid lime;
+}
+
+.CORpeerPadding {
+   height: 3em;
+}
+
+.CORheaderLogoStyle {
+   align-items: center;
+}
+.CORheaderLogoContainerStyle {
+   height: var(--main-toolbar-height);
+   align-items: center;
+   justify-content: center;
+}
+.CORheaderLogoImageStyle {
+   width: 48px;
+   height: 48px;
+   filter: drop-shadow(1px 2px 4px rgba(0,0,0,0.25));
+}
+.CORheaderGlobalNotificationContainerStyle{
+   visibility: hidden;
+}
+.CORheaderGlobalNotificationStyle {
+   background: var(--red);
+   border-radius: 12px;
+   align-items: center;
+   justify-content: center;
+   color: var(--red-lighter);
+   font-size: 8px;
+   font-weight: var(--bold);
+   padding-left: 5px;
+   padding-right: 5px;
+   padding-bottom: 2px;
+   box-shadow: 0px 1px rgba(var(---grey-800), 0.5);
+}
+.CORheaderNavStyle {
+   align-items: center;
+}
+.CORheaderNavLinkStyle {
+   align-items: center;
+   outline: none;
+   text-decoration: none;
+   margin-bottom: 16px;
+   color: var(--blue-light);
+   cursor: pointer;
+}
+.CORheaderNavLinkStyle .CORheaderNavIcon,
+.CORheaderNavLinkStyle .CORheaderNavTitleStyle {
+	opacity: 0.7;
+}
+.CORheaderNavTitleStyle {
+   font-weight: var(--semibold);
+   letter-spacing: 0.35px;
+   font-family: var(--font-buttons);
+   font-size: 8px;
+}
+.CORheaderNavLinkStyle:hover {
+   text-decoration: none;
+   color: var(--blue-lighter);
+}
+.CORheaderNavLinkStyle:hover .CORheaderNavIcon,
+.CORheaderNavLinkStyle:hover .CORheaderNavTitleStyle {
+   opacity: 0.85;
+   text-decoration: none;
+   color: var(--blue-lighter);
+}
+.CORheaderNavLinkStyle.selected {
+   color: var(--white) !important;
+   cursor: default;
+}
+.CORheaderNavLinkStyle.selected .CORheaderNavIcon,
+.CORheaderNavLinkStyle.selected .CORheaderNavTitleStyle {
+	opacity: 1;
+}
+
+.CORheaderNavLinkStyle.selected .CORheaderNavIcon {
+   fill: var(--white);
+   color: var(--white);
+}
+.CORheaderServerLabelContainerStyle {
+   width: 100%;
+   overflow: hidden;
+}
+.CORheaderServerLabelStyle {
+   font-family: var(--font-buttons);
+   font-weight: var(--semibold);
+   color: rgba(var(---blue-light), 0.5);
+   font-size: 18px;
+   font-weight: 500;
+   letter-spacing: 0.05em;
+   white-space: nowrap;
+   transform-origin: center left;
+   transform: rotate(270deg);
+   cursor: default;
+}
+.CORheaderUserStyle {
+   cursor: default;
+   justify-content: center;
+   margin: 32px 0px;
+}
+.CORheaderUserProfileStyle {
+   white-space: nowrap;
+   align-items: center;
+   color: var(--blue-light);
+   font-family: var(--font-buttons);
+   font-size: 12px;
+   font-weight: 500;
+}
+.CORheaderUserProfileIconStyle {
+   fill: var(--blue-light);
+}
+
+.CORheaderLogoutUserStyle {
+   text-decoration: none;
+   font-size: 10px;
+   font-family: var(--font-buttons);
+   font-weight: 500;
+   color: var(--grey-800);
+   padding: 6px 12px;
+   align-items: center;
+}
+.CORheaderLogoutUserIconStyle {
+   fill: var(--grey-800);
+   margin-right: 8px;
+}
+.CORheaderLogoutUserStyle:hover {
+   color: var(--blue-dark);
+	cursor: pointer;
+}
+.CORheaderLogoutUserStyle:hover .CORheaderLogoutUserIconStyle {
+   fill: var(--blue-dark);
+}
+.CORheaderUserNameStyle {
+   text-transform: none;
+   font-family: var(--font-buttons);
+   font-weight: var(--semibold);
+}
+
+.CORapp {
+   height: 100vh;
+   font-weight: var(--regular);
+   font-size: 12px;
+   line-height: 16px;
+   display: grid;
+   grid-template-columns: 80px 1fr;
+   margin : 0px;
+   padding : 0px;
+   overflow: hidden;
+}
+
+.CORwarningBanner {
+   position: fixed;
+   top: 0;
+   right: 0;
+   /*transform: translateX(-50%);*/
+   background-color: var(--blue-light);
+   padding: 4px;
+   width: 20%; /* Adjust the width as needed */
+   text-align: center;
+   z-index: 999;
+}
+
+.CORupdateRow{
+   display: grid;
+   grid-template-columns: auto 1fr;
+}
+
+.CORspinner {
+   border: 3px solid #f3f3f3;
+   border-top: 3px solid #3498db;
+   border-radius: 50%;
+   width: 12px;
+   height: 12px;
+   animation: CORspin 2s linear infinite;
+}
+
+@keyframes CORspin {
+   0% {
+      transform: rotate(0deg);
+   }
+   100% {
+      transform: rotate(360deg);
+   }
+}
+
+.CORloading {
+   color: var(--grey-500);
+   padding-left: 12px;
+}
+
+
+.CORheaderUser{
+   cursor: pointer;
+}
+
+.CORheaderTooltip {
+	padding: 0 !important;
+	max-height: 20px !important;
+	display: flex;
+	align-items: center;
+}
+
+.CORheaderLogoutUserStyle {
+	display: flex;
+	align-items: center;
+	gap: 8px;
+	padding: 0 12px;
+}
+.CORheaderLogoutUserIconStyle {
+	margin-bottom: 0 !important;
+}
+.CORheaderSeparator {
+   height: 1px;
+   background-color: rgba(255, 255, 255, 0.15); /* Low opacity white for subtle contrast on blue */
+   margin: 0px 16px 16px 16px; /* Spacing: Top, Right, Bottom, Left */
+   width: auto;
+}
+/* Update: Ensure the wrapper takes full height and uses flexbox */
+.CORheaderWrap {
+   display: flex;
+   flex-direction: column;
+   height: 100%;
+   /* Ensure it doesn't overflow if screen is small */
+   overflow-y: auto; 
+   overflow-x: hidden;
+}
+
+/* New Class: Pushes everything below it to the bottom */
+.CORheaderSpacer {
+   flex-grow: 1;
+   min-height: 20px; /* Optional: prevents sections from touching on very short screens */
+}
+
+/* New Class: Wrapper for the bottom utility icons (Help, etc) */
+.CORheaderFooterNav {
+   margin-bottom: 0;
+   padding-bottom: 16px; /* Add some breathing room at the bottom */
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}

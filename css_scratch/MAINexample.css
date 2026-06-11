@@ -1,0 +1,117 @@
+
+.MAIN > * {
+   font-family : Montserrat, Arial, Helvetica, sans-serif;
+}
+
+.MAIN h1{
+   color: rgb(0, 96, 159);
+   font-size: 20px;
+   font-weight : 300;
+   text-align: center;
+}
+
+.MAINblue{
+   background-color:rgb(0, 96, 159);
+}
+
+.MAINshrinkIcon{
+   width : 48px;
+   height : auto;
+}
+
+.MAINwhite{
+   color:#b3ddf5;
+}
+
+.MAINsmall{
+   font-size: 9px;
+}
+
+.MAINnavIcon{
+   fill: #b3ddf5b9;
+   width: 32px;
+   height: 32px;
+}
+
+/* Does this make sense? */
+.MAINnavIcon:hover{
+   fill : white;
+}
+
+.MAINpadder{
+   height : 20px;
+}
+
+.MAINcenter{
+   text-align: center;
+}
+
+.MAINdialog{
+   background-color: rgb(226, 225, 243);
+   top: 10%;
+   height: 75%;
+   width: 75%;
+   left: 10%;
+   padding : 2em;
+   position : absolute;
+}
+
+.MAINfloatTopLeft{
+   position: absolute;
+   right: 0px;
+   top: 0px;
+}
+
+.MAINfill{
+   width: 100%;
+}
+
+.MAINfloatRight{
+   position: absolute;
+   float: right;
+}
+
+.MAINborder{
+   border: 1px grey solid;
+}
+
+.MAINleft{
+   position : absolute;
+   left: 0;
+   width: 80px;
+   top :0px;
+   bottom: 0px;
+}
+
+.MAINcontent{
+   position : absolute;
+   float : right;
+   top: 0px;
+   bottom: 0px;
+}
+
+
+/*
+.MAINpath{
+   width : 90%;
+   margin: 5px;
+}
+
+.DASHpanel{
+   width : 200px;
+   box-sizing: border-box;
+   top :0px;
+   bottom: 0px;
+   border: grey solid;
+}
+
+.BUTbutton{
+   box-shadow :  0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+   border-radius : 5px;
+   padding: 5px;
+   margin: 2px;
+   background-color: #5cb533;
+   color: white;
+}*/
+
+

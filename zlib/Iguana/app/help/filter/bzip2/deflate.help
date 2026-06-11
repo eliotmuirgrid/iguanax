@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">filter.bzip2.deflate(data)\n</pre><ul><li><code><strong>data</strong></code>: The string to compress using BZIP2.</li></ul><p><br></p><h3>Returns</h3><ul><li>A BZIP2-compressed string. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Input = [[\nThis is a long story\nThat goes on and on\nTo said Fred\nAnd I\nAAAA\nAAAA\nAAA\nAAAA\nAAAA\n]]\n\nlocal Out = filter.bzip2.deflate(Input)\ntrace(#Out, #Input)\nlocal Input2 = filter.bzip2.inflate(Out)\n</pre><ul><li><code>Out</code> is the BZIP2-compressed version of <code>Input</code>.</li><li><code>Input2</code> is the decompressed result, which should match the original <code>Input</code>.</li></ul>",
+    "Name": "filter.bzip2.deflate",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The input string to compress.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Compress data using BZIP2 compression."
+}

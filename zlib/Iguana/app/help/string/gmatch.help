@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">s:gmatch(pattern)\n</pre><ul><li><code><strong>s</strong></code>: The source string to search within.</li><li><code><strong>pattern</strong></code>: The Lua pattern expression used to match portions of the string.</li></ul><p>Returns an <strong>iterator function</strong> that, each time it is called, yields the next capture from the pattern.</p><p>If the pattern has no capture groups, the full match is returned instead.</p><p><br></p><h3>Notes</h3><ul><li>This uses Lua’s built-in pattern matching, not PCRE.</li><li>Anchoring with <code>^</code> is not supported in the pattern; it will prevent iteration.</li><li>Alias: <code><a href=\"@string:gfind\" target=\"_blank\">string:gfind</a></code> is an old name for this function (from Lua 5.0).</li><li>Very useful for looping over all matches, such as extracting words, tokens, or key/value pairs.</li></ul><p><br></p><h3>Returns</h3><ul><li>An iterator function, returning one capture (or match) per call. <em><u>(iterator function)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local S = \"hello&nbsp; &nbsp; &nbsp;world&nbsp; &nbsp; of Lua gmatch\"\n\nfor Word in S:gmatch(\"%w+\") do\n&nbsp; &nbsp;trace(Word)\nend\n-- Traces: hello, world, of, Lua, gmatch\n</pre>",
+    "Name": "string:gmatch",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The Lua pattern to match.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Finds pattern matches and returns an iterator to loop through them."
+}

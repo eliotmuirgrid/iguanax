@@ -1,0 +1,181 @@
+.PINSrow,
+.PINSheader{
+   display: grid;
+   grid-template-columns: auto auto auto 35px;
+   border: 1px solid var(--grey-400);
+   border-bottom: 0px;
+   background: var(--grey-200);
+   align-items: center;
+   min-height: 28px;
+}
+.PINSrow{
+   border-bottom: 0px;
+}
+.PINSheader {
+   position: sticky;
+   top: 0;
+   z-index: 1;
+   background: var(--grey-200);
+   border-top-left-radius: var(--border-radius);
+   border-top-right-radius: var(--border-radius);
+}
+.PINSheader div {
+   padding: 6px 8px;
+   font-size: 9px;
+   font-family: var(--font-buttons);
+   color: var(--grey-600);
+   letter-spacing: 0.05em;
+   line-height: 1.25em;
+}
+.PINSerrorFeedback{
+   padding-top: 8px;
+   color: var(--red);
+   font-size: 10px;
+   line-height: 12px;
+   overflow: visible;
+}
+.PINSdelete,
+.PINSaddRow{
+   color: var(--blue);
+   text-decoration: none;
+   cursor: pointer;
+}
+.PINSdelete:hover{
+   text-decoration: underline;
+}
+.PINSaddRow{
+   border: 1px solid var(--grey-400);
+   padding: 6px;
+   background: var(--grey-200);
+   font-size: 11px;
+   font-family: var(--font-buttons);
+   font-weight: 500;
+   border-bottom-left-radius: var(--border-radius);
+   border-bottom-right-radius: var(--border-radius);
+}
+.PINSdelete{
+   color: var(--grey-600);
+   text-align: center;
+}
+.PINSselected{
+   font-weight: 600;
+   border: 1px solid rgba(0, 0, 0, .07) !important;
+   background-color: rgba(0, 0, 0, .07);
+   box-shadow: inset 0 2px 3px rgba(0, 0, 0, .25);
+   opacity: unset;
+}
+.PINSsaveConfigButton{
+   justify-content: end;
+   margin-left: auto;
+}
+.PINSrow .FORMinput{
+   border-radius: 0px;
+   border-left: 0px;
+   border-bottom: 0px;
+   border-top: 0px;
+}
+.PINStableContainer{
+   flex: 1 1 auto;
+   overflow-y: auto;
+}
+.PINStable{
+   border-bottom: 1px solid var(--grey-400);
+}
+.PINSmodal{
+   height: 100%;
+   max-height: 672px;
+   min-height: 0;
+   display: flex;
+   flex-direction: column;
+   overflow: hidden;
+}
+.PINSdeletetableCell {
+   text-align: left;
+   border-left: 0px;
+   border-right: 0px;
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+}
+.PINStable:last-child{
+   border-bottom: 0px;
+}
+.PINStable:first-child{
+   border-top: 0px;
+}
+
+.PINSheaderTitle{
+   font-family: var(--font-buttons);
+   color: var(--grey-500);
+   font-weight: 500;
+   font-size: 11px;
+   letter-spacing: 0.05em;
+   margin-bottom: 10px;
+}
+.PINScontainer{
+   background: var(--grey-200);
+   padding: 12px 18px;
+   border: 1px solid var(--grey-400);
+   border-radius: var(--border-radius);
+   margin-bottom: 10px;
+   color: var(--grey-600);
+   display: flex;
+   flex-direction: column;
+   flex: 1 1 auto;
+   min-height: 0;
+}
+.PINScontainer a{
+   color: var(--blue);
+   text-decoration: none;
+   padding-left: 2px;
+   padding-right: 2px;
+}
+.PINScontainer a:hover{
+   text-decoration: underline;
+}
+.PINSclearAll{
+   color: var(--blue);
+   text-decoration: none;
+   cursor: pointer;
+   text-align: right;
+}
+.PINSclearAll:hover{
+   text-decoration: underline;
+}
+.PINSclearAllContainer{
+   color: var(--grey-600);
+   text-align: right;
+   display: grid;
+   grid-template-columns: 1fr auto auto;
+   padding-top: 8px;
+   padding-bottom: 0;
+   padding-right: 2px;
+   gap: 2px;
+}
+.PINShelperText{
+   color: #1E40AF;
+   background: #EFF6FF;
+   border: none;
+   border-radius: 6px;
+   padding: 12px 16px;
+   font-size: 11px;
+   line-height: 1.4;
+   margin-bottom: 12px;
+}
+.PINShelperText a{
+   color: #1D4ED8;
+   text-decoration: none;
+}
+.PINShelperText a:hover{
+   text-decoration: underline;
+}
+.PINSrowsFooter{
+   margin-top: 0;
+}
+.PINSbottomRow{
+   margin-top: 10px;
+   display: grid;
+   grid-template-columns: 1fr auto;
+   align-items: start;
+   gap: 10px;
+}

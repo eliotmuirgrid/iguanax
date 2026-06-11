@@ -1,0 +1,275 @@
+.CARDtitle{
+	margin: unset;
+	font-weight: var(--bold);
+	font-size: 20px;
+	line-height: 32px;
+	color: var(--grey-700);
+	padding-bottom: 24px;
+	margin-bottom: 0px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.CARDaddEnvVar {
+	border-radius: 9999px;
+	height: 40px;
+	width: 40px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: pointer;
+	background-color: var(--grey-200);
+	color: var(--grey-600);
+	transition: 250ms ease-out;
+	float: right;
+	margin: 3px;
+	margin-right: 30px;
+}
+
+.CARDfieldTable {
+	display: grid;
+	border-collapse: separate;
+	box-sizing: border-box;
+	text-indent: initial;
+	border-spacing: 2px;
+	width: 100%;
+	border-radius: 4px;
+	border: 1px solid var(--grey-300);
+	border-bottom: 0px;
+	margin-bottom: 8px;
+}
+
+.CARDfieldTable>* {
+	border-bottom: 1px solid var(--grey-300);
+}
+
+.CARDfieldTableRow {
+	display: grid;
+	grid-template-columns: 32px 0.5fr 107px 1.5fr 32px 42px;
+	background: var(--white);
+	border-radius: var(--border-radius);
+	box-shadow: 0 1px 2px rgb(0 0 0 / 20%);
+	margin-top: 4px;
+}
+
+.CARDaddField {
+	cursor: pointer;
+	color: var(--blue);
+}
+
+.CARDfieldHeading {
+	font-weight: bold;
+	text-align: left;
+	border-left: 0px;
+	border-right: 0px;
+	padding: 8px 16px;
+}
+
+.CARDtableCell {
+	text-align: left;
+	border-left: 0px;
+	border-right: 0px;
+	padding: 2px;
+	margin: 4px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.CARDviewFields {
+	display: grid;
+	grid-template-columns: 150px 1fr auto;
+	margin-bottom: 12px;
+	column-gap: 8px;
+}
+
+.CARDfieldViewActions {
+	display: flex;
+	align-items: center;
+	gap: 4px;
+	white-space: nowrap;
+}
+
+.CARDeditFieldHeader{
+	display: grid;
+	grid-template-columns: 42px 0.5fr 107px 1.5fr 32px 42px;
+	margin-bottom: 12px;
+}
+
+.CARDviewFields:last-child {
+	margin-bottom: 0px;
+}
+
+.CARDrowName {
+	/* text-align: left;
+	border-left: 0px;
+	border-right: 0px;
+	padding: 4px;
+	margin: 4px;
+	display: inline-flex;
+	align-items: center; */
+	word-break: break-all;
+}
+
+.CARDrowType {
+	text-align: left;
+	border-left: 0px;
+	border-right: 0px;
+	padding: 4px;
+	padding-left: 12px;
+	margin: 4px;
+	display: inline-flex;
+	align-items: center;
+	overflow: auto;
+	color: var(--grey-600);
+	font-weight: var(--light);
+	font-style: italic;
+	text-align: center;
+}
+
+.CARDeditValueInPlace {
+	/* cursor: pointer;
+	text-align: right;
+	display: inline-flex;
+	align-items: center;
+	justify-content: right;
+	color: var(--grey-600);
+	margin: 4px;
+	padding: 4px; */
+	margin-top: -4px;
+	margin-bottom: -4px;
+}
+
+.CARDeditInline {
+	display: block;
+}
+
+.CARDinplaceActions {
+	display: flex;
+	justify-content: flex-end
+}
+
+.CARDeditMode .CARDcurrentValue,
+.CARDeditMode .CARDeditValueInPlace {
+	display: none;
+}
+
+.CARDcurrentValue {
+	/* text-align: left;
+	border-left: 0px;
+	border-right: 0px;
+	padding: 4px;
+	margin: 4px;
+	display: inline-flex;
+	align-items: center; */
+	font-family: var(--font-monospace);
+	color: var(--grey-600);
+	word-break: break-all;
+}
+.CARDcommitInfoMsg{
+	font-size: 11px;
+	padding-top: 8px;
+}
+
+.CARDdeleteRow {
+	z-index: 998;
+	background: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.CARDaddValue {
+	cursor: pointer;
+	color: #2590cd;
+	display: inline-flex;
+	align-items: center;
+}
+
+.CARDmoveRow {
+	border-radius: 4px;
+	border: 1px solid var(--grey-300);
+	background-color: var(--grey-200);
+	color: var(--grey-600);
+	margin-top: 8px;
+	margin-bottom: 8px;
+	margin-left: 8px;
+}
+
+.CARDhtmlBlockRow {
+	display: grid;
+	grid-template-columns: 0.25fr 0.9fr 80px;
+	margin-top: 4px;
+	margin-bottom: 4px;
+}
+
+.CARDhtmlBlockStyle {
+	text-align: left;
+	border-left: 0px;
+	border-right: 0px;
+	padding: 4px;
+	margin: 4px;
+	display: inline-flex;
+	align-items: center;
+}
+
+.CARDsaveConfigButton {
+	justify-content: right;
+}
+
+.CARDinformation {
+	font-weight: var(--regular);
+	font-size: 10px;
+	line-height: 16px;
+	color: var(--grey-600);
+}
+
+.CARDsaveFeedback {
+	text-align: right;
+	font-weight: var(--regular);
+	font-size: 10px;
+	line-height: 16px;
+	color: var(--grey-600);
+	margin: 8px;
+	margin-top: 0px;
+	color: var(--red);
+}
+.CARDfieldErrorLabel{
+	color: var(--red);
+}
+.CARDinplaceFeedbackWrap,
+.CARDeditFeedbackWrap {
+	display: none;
+	margin-top: 16px;
+}
+
+.CARDinplaceFeedback,
+.CARDeditFeedback {
+	display: flex;
+	justify-content: flex-end
+}
+
+.CARDaddFieldRow {
+	display: grid;
+	grid-template-columns: auto 1.0fr;
+}
+
+.CARDeditActionsWrap {
+	display: flex;
+	justify-content: space-between;
+	align-items: flex-start;
+	margin-top: 16px;
+	margin-bottom: -16px;
+}
+
+.CARDnotificationRedirect {
+	display: inline;
+	cursor:pointer;
+	color: var(--blue-dark);
+	text-decoration:underline;
+}
+.CARDfieldError{
+	color: var(--grey-600);
+	word-break: break-all;
+}

@@ -1,0 +1,92 @@
+/* Redo with namespaced classes */
+.SETversionPageLayout {
+	max-width: 1000px;
+	min-width: 500px;
+}
+
+.SETversionAboutIguana {
+	display: flex;
+	align-items: baseline;
+	padding-left: 4px;
+}
+
+.SETversionContainer {
+	font-weight: var(--bold);
+	font-size: 20px;
+	line-height: 32px;
+	color: var(--grey-700);
+	padding-bottom: 24px;
+	margin-bottom: 0px;
+	padding-left: 10px;
+}
+
+.SETversionContainer * {
+	position: relative;
+	font-size: 16px;
+	bottom: 32px;
+}
+
+.SETversionLabel {
+	font-size: 11px;
+	display: table-cell;
+	width: 11em;
+	font-weight: var(--semibold);
+}
+
+.SETversionDetail,
+.SETversionUpgrade {
+	font-size: 11px;
+	padding-top: 1px;
+	padding-bottom: 1px;
+	padding-left: 4px;
+	display: table-cell;
+}
+.STAgitInstalled,
+.STAsshPath,
+.STAkeygenPath,
+.STApathModal,
+.SETversionDetail{
+	font-family: var(--font-monospace);
+}
+
+.SETversion,
+.SETupdate,
+.SETautoUpdate,
+.SETmessage,
+.SETtime,
+.SETdebugSymbols,
+.SETdebug{
+	font-family: inherit;
+}
+
+.SETversionRow {
+	display: table-row;
+	line-height: 17px;
+	font-size: 11px;
+}
+
+.SETversionPanel {
+	background: var(--grey-100);
+	padding: 24px 36px;
+	border-radius: var(--border-radius);
+	margin-bottom: 24px;
+	border: 1px solid var(--grey-300);
+}
+
+.SETversionPanel:last-child {
+	margin-bottom: 0px;
+}
+
+.SETlink{
+	color: var(--blue);
+	text-decoration: unset;
+	padding-left: 4px !important;
+	padding-right: 4px !important;
+	cursor: pointer;
+}
+.SETlink:hover{
+	text-decoration: underline;
+}
+.SETversionPanel a:hover{
+	text-decoration: underline;
+}

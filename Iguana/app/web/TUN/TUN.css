@@ -1,0 +1,124 @@
+.TUNcontainer {
+   height: 100vh;
+   display: flex;
+   flex-direction: column;
+   background: var(--white);
+}
+
+.TUNheader {
+   border-bottom: solid 1px var(--grey-400);
+   background-color: #ebf3f6;
+   box-sizing: border-box;
+   height: 68px;
+   flex-shrink: 0;
+   padding: 8px 24px;
+   display: flex;
+   align-items: center;
+   column-gap: 16px;
+}
+
+.TUNheading {
+  font-family: var(--font-buttons);
+  color: var(--blue-dark);
+  font-size: 16px;
+  font-weight: 500;
+  flex-grow: 1;
+}
+
+.TUNbody{
+   padding: 1em;
+}
+
+.TUNinfo{
+   margin-top: 2em;
+}
+
+.TUNnameError,
+.TUNerror{
+	color: var(--red);
+	font-size: 10px;
+	line-height: 12px;
+	margin-top: 4px;
+  	overflow: visible;
+}
+
+.TUNpublicKeyCopy,
+.TUNpublicKey {
+	display: block;
+	border-radius: var(--border-radius);
+	border: 1px solid var(--grey-400);
+	background-color: var(--white);
+	font-weight: var(--regular);
+	font-size: 12px;
+   height: 8em;
+	/* line-height: 16px; */
+	padding: 6px 8px;
+	color: var(--grey-800);
+	width: 100%;
+	box-sizing: border-box;
+	font-family: var(--font-sans);
+	resize: none;
+	margin-top: 12px;
+}
+.TUNpublicKeyCopy{
+	padding: 12px;
+}
+.TUNpublicKey::placeholder {
+	color: var(--grey-400);
+}
+.TUNbuttonsRow{
+   display: grid;
+	grid-template-columns: auto auto;
+	justify-content: end;
+	margin-top: 36px;
+	margin-left: auto;
+}
+.TUNaddHeader{
+	font-family: var(--font-buttons);
+	color: var(--grey-500);
+	font-weight: 500;
+	font-size: 11px;
+	letter-spacing: 0.05em;
+}
+
+.TUNaddContainer{
+   background: var(--grey-200);
+	padding: 12px 18px;
+	border: 1px solid var(--grey-400);
+	border-radius: var(--border-radius);
+	margin-bottom: 12px;
+}
+.TUNinformation{
+	overflow-wrap: break-word;
+   color: var(--grey-600);
+   line-height: 1.75;
+   max-height: 100px;
+   overflow-y: auto;
+}
+.TUNconnectedDiv{
+   /* font-size: 11px; */
+   color: var(--grey-600);
+   border-top: solid 1px var(--grey-400);
+	background-color: var(--white);
+	height: 40px;
+	flex-shrink: 0;
+	display: flex;
+	align-items: center;
+	padding: 0 24px;
+}
+
+.TUNdisconnected::before,
+.TUNconnected::before {
+   content: '• ';
+   font-size: 20px;
+   font-weight: var(--bold);
+}
+.TUNdisconnected::before{
+   color: red;
+}
+.TUNconnected::before{
+   color: var(--green);
+}
+.TUNname{
+	/* margin-bottom: 12px; */
+}

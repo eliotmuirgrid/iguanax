@@ -1,0 +1,18 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">iguana6.date(&lt;format&gt;, &lt;time&gt;)\niguana6.date(&lt;format&gt;)\niguana6.date()\n</pre><ul><li><code><strong>format</strong></code>: Format string using C-style directives (see below).</li><li><code><strong>time</strong></code>: Unix timestamp to convert; defaults to <code><a href=\"@iguana6.time\" target=\"_blank\">iguana6.time</a></code>.</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>Returns Coordinated Universal Time (UTC) unless the environment is configured for local time.</li><li>Follows C’s <code>strftime</code> format syntax.</li><li>If no arguments are given, <code>iguana6.date()</code> returns a default human-readable representation of the current date and time.</li></ul><h4><strong>Common Format Specifiers</strong></h4><ul><li><code>%Y</code> – Year (4 digits)</li><li><code>%m</code> – Month (01–12)</li><li><code>%d</code> – Day of the month (01–31)</li><li><code>%H</code> – Hour (00–23)</li><li><code>%M</code> – Minute (00–59)</li><li><code>%S</code> – Second (00–59)</li><li><code>%c</code> – Date and time representation</li><li><code>%x</code> – Date only</li><li><code>%X</code> – Time only</li><li><code>%A</code> – Full weekday name</li><li><code>%a</code> – Abbreviated weekday name</li><li><code>%B</code> – Full month name</li><li><code>%b</code> – Abbreviated month name</li><li><code>%p</code> – AM/PM</li><li><code>%w</code> – Weekday (0–6, Sunday = 0)</li><li><code>%j</code> – Day of the year (001–366)</li><li><code>\"*t\"</code> – Returns a table with fields: <code>year</code>, <code>month</code>, <code>day</code>, <code>hour</code>, <code>min</code>, <code>sec</code>, <code>wday</code>, <code>yday</code>, <code>isdst</code>.</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>If <code>format</code> is <code>\"*t\"</code>, returns a date table with fields like <code>year</code>, <code>month</code>, <code>day</code>, etc. <em><u>(table)</u></em></li><li>Otherwise, returns a formatted date/time string. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local CurrentTimeStamp = iguana6.date()\n\n-- Return the time in a table\nlocal TimeInTable = iguana6.date(\"*t\", os.time())\n</pre><ul><li>The first example returns a formatted date string of the current time. The second returns a table containing detailed components of the current time.</li></ul>",
+    "Name": "iguana6.date",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> <em>(Optional)</em> A format string that specifies how the date/time should be represented.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>userdata / number</u></em> <em>(Optional)</em> A Unix epoch time in seconds to format. If omitted, the current time is used.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Returns a string or a table containing date and time."
+}

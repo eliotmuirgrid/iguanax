@@ -1,0 +1,24 @@
+<p>Encrypt and decrypt data using AES encryption.</p>
+<p>
+	<strong>Note: </strong>Both <strong>filter.aes.enc</strong> and <strong>filter.aes.dec</strong> meet the NIST standard (FIPS PUB 197).</p>
+<hr />
+<h3>
+	Recommended Best Practice</h3>
+<p>
+	The output produced by the <strong>aes</strong> function is essentially a binary string. As such, we recommend that you include an encoding/decoding function as part of your script so that your encrypted messages transmit and decrypt correctly:</p>
+<ul>
+	<li>
+		Apply an encoding step before transmitting the results of&nbsp;<strong>aes.filter.enc</strong> function calls.</li>
+	<li>
+		Apply a decoding step before applying the&nbsp;<strong>aes.filter.dec</strong> function to incoming encrypted messages.&nbsp;</li>
+</ul>
+<p>
+	There are several encoding/decoding functions available to you:</p>
+<ul>
+	<li>
+		<strong><a class="vb" href="default.asp?W448" rel="nofollow">filter.base64</a></strong></li>
+	<li>
+		<strong><a class="vb" href="default.asp?W457" rel="nofollow">filter.uuencode</a></strong></li>
+	<li>
+		<strong><a class="vb" href="default.asp?W450" rel="nofollow">filter.hex</a></strong></li>
+</ul>

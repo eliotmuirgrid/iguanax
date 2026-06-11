@@ -1,0 +1,26 @@
+
+.REPQselectMessage{
+   width: 100%;
+}
+.REPQcontrols{
+   margin-top: 10px;
+   margin-bottom: 10px;
+   display: grid;
+   grid-template-columns: auto 1fr;
+   grid-column-gap: 10px;
+   grid-row-gap: 5px;
+}
+.REPQfeedback, .REPQrepositionError{
+   color: red;
+}
+.REPQbuttonGroup{
+   display: flex;
+   justify-content: end;
+}
+.REPQmoreInfo{
+   height: 20px;
+	font-size: larger;
+}
+.REPQmoreInfo:hover{
+   color: var(--blue);
+}

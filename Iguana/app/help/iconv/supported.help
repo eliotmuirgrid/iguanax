@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">iconv.supported(encoding)\n</pre><ul><li>Checks whether the given encoding is supported by the iconv library.</li></ul><p><br></p><h3>Notes</h3><ul><li>An encoding being “supported” only means it is recognized by iconv.</li><li>This does not guarantee that conversion between it and other encodings will succeed.</li><li>Some encodings may be supported but still fail if specific characters can't be represented in the target encoding.</li></ul><p><br></p><h3>Returns</h3><ul><li><code>true</code> if the encoding is supported, <code>false</code> otherwise. <em><u>(bool)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">iconv.supported(\"ARABIC\")&nbsp; &nbsp;-- true\niconv.supported(\"KLINGON\")&nbsp; -- false (example of unsupported encoding)\n</pre>",
+    "Name": "iconv.supported",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The name of the encoding to check.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Checks whether or not a supplied encoding is supported."
+}

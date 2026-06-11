@@ -1,0 +1,28 @@
+native_modules
+
+This top-level module contains native modules that can be loaded into a Lua
+instance via "require". These native modules are arch and platform specific
+dynamic libraries that implement the Lua C-API to provide scripts with
+functionality contained within externalized C functions.
+
+See "HelloWorld" for an example of this functionality.
+
+In the interest of keeping things contained, each module is kept in a
+separate sub-directory, with a common Makefile that can be called to build
+all modules. The resulting dynamic library will be created in the common
+native_modules directory.
+
+To add your own module, create a subdirectory with the POSIX and/or Windows
+code and project file(s). Place module specific makefiles in this directory,
+and augment the main Makefile to call it directly.
+
+To build specific modules, you can run "make -f Makefile.MODULE_NAME", or
+open the VS solution file on Windows.
+
+On Windows, you will have to update the nmakefile to add the appropriate
+recipes to the right targets. build.bat should not have to be modified.
+This means that checkout should be able to find and build all native
+modules from the native_modules directory.
+
+Adding "native_modules" to a makelist should also do the right thing for
+building with checkout. 

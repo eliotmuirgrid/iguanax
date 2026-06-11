@@ -1,0 +1,58 @@
+.DOC2documentHeader {
+   background-color: #ebf3f6;
+   display: flex;
+   align-items: center;   
+   padding: 0 0.5em;
+   grid-row: 1;      
+   justify-content: space-between; 
+ }
+ 
+ .DOC2date {
+   flex: 0 0 auto;     
+ }
+ 
+ .DOC2titleSection{
+   display: flex;
+   align-items: center;   
+   padding: 0 0.5em; 
+   grid-row: 2;     
+ }
+ 
+ .DOC2title {
+   flex: 1 1 auto;  
+   padding-left: 1em;     
+   padding-right: 1em;
+ }
+ 
+ .DOC2button {
+   flex: 0 0 auto;        
+   display: inline-flex;
+   align-items: center;
+   justify-content: center;
+   width: 28px; height: 28px;
+   border: none;
+   background: transparent;
+   padding: 0;
+   color: #333;
+   cursor: pointer;
+   border-radius: 6px;
+ }
+ .DOC2button:hover { background: rgba(0,0,0,0.06); }
+ .DOC2button:active { transform: translateY(1px); }
+ .DOC2button:focus-visible { outline: 2px solid #2684ff; outline-offset: 2px; }
+ 
+ .DOC2icon {
+   display: block;
+ }
+ 
+ .DOC2tagBarTags{
+   font-size: x-small;
+ }
+ 
+ .DOC2editTags{
+   padding-left: .5em;
+ }
+ 
+ .DOC2tagsEditInput{
+   width : 90%;
+ }

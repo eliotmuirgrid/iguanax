@@ -1,0 +1,18 @@
+{
+    "Description": "<p> 🔄  <strong>Replacement:</strong> <code style=\"background-color: rgb(240, 240, 240); color: rgb(37, 144, 205);\"><a href=\"http://localhost:7654/@ui.setDashboardColumn\" target=\"_blank\">ui.setDashboardColumn</a></code>.  </p><p> ⚠️  <strong>Deprecated:</strong>    <code style=\"background-color: rgb(240, 240, 240);\">component.setColumn</code> will be removed in a future version.&nbsp;</p><p><br></p><h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">component.setColumn{name=\"\", value=\"\"}\n</pre><p><br></p><h3>Notes</h3><ul><li>This function is used to update the value of an existing custom column for a component on the dashboard.</li><li>If the column name does not exist (as defined by a previous <code>ui.addDashboardColumn</code> call), it will not be displayed.</li><li>Use this to show dynamic status, metrics, or any textual info relevant to the component's runtime behavior.</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">component.setColumn{name=\"test\", value=\"1\"}\n</pre>",
+    "Name": "component.setColumn",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The name of the dashboard column to set.</p>",
+            "Name": "name",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u></em> The value to display in the column.</p>",
+            "Name": "value",
+            "Required": true
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "*DEPRECATED* - Use ui.setDashboardColumn instead."
+}

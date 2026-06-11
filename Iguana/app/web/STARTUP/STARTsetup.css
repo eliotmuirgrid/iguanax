@@ -1,0 +1,72 @@
+.STARTUPbackground {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+	background: linear-gradient(0deg, rgba(0, 52, 101, 1) 0%, rgba(0, 100, 173, 1) 100%);
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.STARTUPelements {
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+	margin-top: -40px;
+}
+
+.STARTUPheading {
+	font-family: var(--font-buttons);
+	font-weight: 400;
+	color: var(--blue-light);
+	text-shadow: 0px 2px 4px rgba(0,0,0,0.25);;
+}
+
+.STARTUPlogContainer {
+   height: 40vh;
+   width: 75vw;
+	max-width: 900px;
+	border: 10px solid rgba(var(---blue-light), 0.75);
+	background: #ECF6FB;
+	border-radius: 4px;
+	overflow: hidden;
+	box-shadow: 0px 4px 8px rgba(0,0,0,0.25);
+	display: grid;
+	grid-template-rows: 1fr auto;
+	margin-top: 32px;
+	margin-bottom: 32px;
+}
+
+.STARTUPlogs {
+   height: 100%;
+   width: 100%;
+   overflow: auto;
+}
+
+.STARTUPlogs .LOGlogEntry:hover {
+   background: inherit;
+}
+
+.STARTUPstatus {
+	color: var(--blue-darker);
+	font-size: 12px;
+	margin-top: 15px;
+	background: rgba(var(---blue-light), 0.75);
+	width: 100%;
+	text-align: center;
+	font-family: var(--font-buttons);
+	padding: 12px 0px 2px 0px;
+}
+
+.STARTUPgoToLogin {
+	height: 40px;
+	padding: 0px 18px;
+	text-transform: uppercase;
+	font-size: 12px;
+	letter-spacing: 0.05em;
+}
+
+

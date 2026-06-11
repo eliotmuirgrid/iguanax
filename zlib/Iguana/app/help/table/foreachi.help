@@ -1,0 +1,7 @@
+{
+    "Description": "<p><strong>DEPRECATED - use a for loop with ipairs instead.</strong></p><p><br></p><p> 🔄  <strong>Replacement:</strong> <code style=\"background-color: rgb(240, 240, 240); color: rgb(37, 144, 205);\"><a href=\"@ipairs\" target=\"_blank\">ipairs</a></code><a href=\"@ipairs\" target=\"_blank\">. </a></p><p><a href=\"@ipairs\" target=\"_blank\"> ⚠</a>️  <strong>Deprecated:</strong>    <code>table.foreachi</code> has been deprecated.&nbsp;</p><p><br></p><h3>Status</h3><ul><li>The <code>table.foreachi</code> function has been <strong>deprecated</strong>.</li><li> It was previously used to iterate over tables with numeric indices in order, but the preferred approach is now a <code>for</code> loop with <code>ipairs</code>.</li></ul><p><br></p><h3>Notes</h3><ul><li><code>ipairs()</code> iterates in order over numeric indices starting from 1.</li><li>It stops at the first <code>nil</code> encountered, ensuring efficient and predictable iteration.</li><li>This change aligns with modern Lua best practices and avoids deprecated APIs.</li></ul><p><br></p><h3>Replacement</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local t = {\n&nbsp; &nbsp;[1] = \"INTERFACEWARE\",\n&nbsp; &nbsp;[2] = \"IguanaX\",\n&nbsp; &nbsp;[3] = \"value\",\n}\n\nfor i, v in ipairs(t) do\n&nbsp; &nbsp;trace(i, v)\nend\n</pre>",
+    "Name": "table.foreachi",
+    "Parameters": null,
+    "ParameterTable": false,
+    "SummaryLine": "*DEPRECATED* - Use a for loop with ipairs instead."
+}

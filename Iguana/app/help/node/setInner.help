@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">Node:setInner(content)\n</pre><ul><li><code><strong>Node</strong></code>: Must be an XML node tree (e.g., obtained via <code><a href=\"@xml.parse\" target=\"_blank\">xml.parse</a></code> or part of an existing parsed structure).</li><li><code><strong>content</strong></code>: The string value to parse and set as the inner content of the XML node.</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>This method only works on <strong>XML node trees</strong>, not on plain Lua tables or other data types.</li><li>It is used to <strong>update or replace the inner content</strong> of an existing XML node.</li><li>Any provided string must be valid XML or XML-parseable content (e.g., raw text, elements, or CDATA).</li></ul><p><br></p><h3>Returns</h3><ul><li>The modified XML node after its contents have been set. <em><u>(node tree)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local X = xml.parse(\"&lt;tag&gt;&lt;/tag&gt;\")\nX.tag:setInner(\"hello\")\ntrace(X)\n</pre><ul><li>This example creates an empty <code>&lt;tag&gt;</code> XML element and then sets its content to the string <code>\"hello\"</code>.</li></ul>",
+    "Name": "node:setInner",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> A string containing the XML content to be parsed and inserted.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Sets the contents of an XML node (works with XML only)."
+}

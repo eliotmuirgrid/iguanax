@@ -1,0 +1,18 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">debug.getupvalue(func, up)\n</pre><ul><li><code><strong>func</strong></code>: A Lua function whose upvalue is being accessed.</li><li><code><strong>up</strong></code>: An integer index (1-based) indicating which upvalue to retrieve.</li></ul><p><br></p><h3>Notes</h3><ul><li>This function allows inspection of a function's upvalues — variables that are referenced by nested functions but are not defined locally within them.</li><li>Upvalues are created when a nested function accesses a variable from its enclosing scope.</li><li>Each upvalue has a name and a value.</li><li>This mechanism is used to implement closures in Lua.</li><li>You can modify upvalues with <code><a href=\"@debug.setupvalue\" target=\"_blank\">debug.setupvalue</a></code>.</li></ul><p><br></p><h3>Returns</h3><ul><li>The name of the upvalue. <em><u>(string)</u></em></li><li>The value of the upvalue. <em><u>(any type)</u></em></li></ul><p>If there is no upvalue at the given index, returns <code>nil</code>. <em><u>(nil)</u></em></p><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local function outer()\n&nbsp; &nbsp;local secret = \"classified\"\n&nbsp; &nbsp;return function() return secret end\nend\n\nfunction main()\n&nbsp; &nbsp;local f = outer()\n\n&nbsp; &nbsp;local name, value = debug.getupvalue(f, 1)\n&nbsp; &nbsp;print(name)&nbsp; &nbsp;-- prints \"secret\"\n&nbsp; &nbsp;print(value)&nbsp; -- prints \"classified\"\nend\n</pre><ul><li>The example reveals that the inner function returned by <code>outer()</code> closes over the variable <code>secret</code>.</li></ul>",
+    "Name": "debug.getupvalue",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>function</u></em> The function to retrieve the upvalue from.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>integer</u></em> The numerical index of the upvalue to access.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Returns the name and the value of the upvalue with index up of the function func."
+}

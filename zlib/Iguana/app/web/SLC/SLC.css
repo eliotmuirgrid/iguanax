@@ -1,0 +1,61 @@
+.SLCtable{
+   display: grid;
+   grid-template-columns: 180px 1fr;
+   row-gap: 12px;
+}
+.SLCencryptionKeyBlock{
+   margin-top: 12px;
+}
+.SLCtable .FORMlabel {
+   margin-top: 12px;
+}
+
+.SLCconfirmButtons {
+   display: flex;
+   justify-content: end;
+   margin-top: 24px;
+}
+.SLCkeyHelpTextarea{
+   padding: 12px;
+   padding-left: 12px;
+   padding-right: 12px;
+   height: 6em !important;
+   resize: none;
+}
+.SLCkeyHelpDiv{
+   background-color: var(--grey-100);
+   color: var(--grey-500);
+   border: 1px solid var(--grey-300);
+   border-radius: 4px;
+   padding: 24px;
+   padding-bottom: 18px;
+   padding-top: 18px;
+}
+.SLCkeyHelpGrid{
+   display: grid;
+   grid-template-columns: 1fr auto;
+}
+.SLCkeyHelpText{
+   margin-top: 4px;
+}
+.SLCkeyHelpImportant{
+   color: var(--red);
+}
+.SLCencAck,
+.SLCencAck2{
+   height: 12px;
+   margin: 0px;
+   margin-right: 4px;
+}
+.SLCencAck2{
+   margin-top: 10px;
+}
+.SLCcheckboxContainer{
+   margin-top: 4px;
+   background: var(--grey-100);
+   padding: 25px;
+   padding-top: 14px;
+   border-radius: var(--border-radius);
+   margin-bottom: 24px;
+   border: 1px solid var(--grey-300);
+}

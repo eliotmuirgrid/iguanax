@@ -1,0 +1,23 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">table.insert(table [, pos], value)\n</pre><ul><li>Inserts <code>value</code> into <code>table</code> at the given <code>pos</code>.</li><li>If <code>pos</code> is omitted, the value is appended to the end of the table.</li></ul><p><br></p><h3>Notes</h3><ul><li>Inserting at a specific position shifts subsequent elements to the right.</li><li>Lua tables are 1-indexed (not 0-indexed).</li><li>This is useful for queue or list-like structures.</li></ul><p><br></p><h3>Returns</h3><ul><li><strong>Nothing</strong> (modifies the table in place).</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local T = {1, 2, 3}\ntable.insert(T, 1, 9)\ntrace(T) -- T is now {9, 1, 2, 3}\n</pre>",
+    "Name": "table.insert",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>table</u></em> The table to insert into.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>integer</u></em> The position at which to insert the value. Defaults to the end of the table (<code>#table + 1</code>).</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>any type</u></em> The value to insert.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Inserts an element into a table at a specified position."
+}

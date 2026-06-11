@@ -1,0 +1,18 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">os.fs.chmod(&lt;path&gt;, &lt;mode&gt;)\n</pre><ul><li><code><strong>path</strong></code>: Absolute or relative path to the target file.</li><li><code><strong>mode</strong></code>: Octal string representing the permission bits.</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>The permission mode <strong>must be specified in octal format</strong>.</li><li>Symbolic formats like <code>-rwxrwxrwx</code> are <strong>not supported</strong>.</li><li>This function is supported only on <strong>POSIX-compliant systems</strong> (e.g., Linux, macOS).</li><li><strong>Not available on Windows</strong> systems.</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">os.fs.chmod(\"/tmp/foo\", \"0777\")\n</pre><ul><li>This example applies full read, write, and execute permissions for all users on the file <code>/tmp/foo</code>.</li></ul>",
+    "Name": "os.fs.chmod",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The file path to apply permissions to.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u></em> The permission mode to apply, using octal format (e.g., <code>\"0777\"</code> or <code>\"755\"</code>).</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Change the permission mode of a file."
+}

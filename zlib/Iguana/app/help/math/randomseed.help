@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">math.randomseed(x)\n</pre><ul><li><code><strong>x</strong></code>: A numeric seed used to initialize the random number generator.</li></ul><p> \tUsing the same seed will produce the same sequence of numbers when calling <code><a href=\"@math.random\" target=\"_blank\">math.random</a></code>.</p><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">math.randomseed(os.time())&nbsp; -- Seed with current time for non-repetitive sequences\n\nlocal R1 = math.random()\nlocal R2 = math.random()\n</pre>",
+    "Name": "math.randomseed",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>number</u></em> The number to use as the \"seed\" for the pseudo-random generator.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Sets the \"seed\" for the pseudo-random generator."
+}

@@ -1,0 +1,7 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">file:flush()\n</pre><ul><li><code><strong>file</strong></code>: A valid file handle (typically returned by <code><a href=\"@io.open\" target=\"_blank\">io.open</a></code> or <code><a href=\"@io.popen\" target=\"_blank\">io.popen</a></code>).</li></ul><p><br></p><h3>Notes</h3><ul><li>This function causes any data written to the file to be immediately written to disk.</li><li>Lua may buffer file writes for performance reasons; <code>flush()</code> ensures those writes are committed.</li><li>Use <code>flush()</code> in long-running scripts to periodically persist buffered output without closing the file.</li><li>See also <code><a href=\"@io:setvbuf\" target=\"_blank\">io:setvbuf</a></code> to configure buffering behavior.</li></ul><p><br></p><h3>Returns</h3><ul><li><code>true</code> if the buffer was successfully flushed to disk. <em><u>(bool)</u></em></li><li><code>nil</code> and an error message if an error occurred while flushing. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local F = io.open(\"blah.txt\", \"w\");\nF:write(\"Life\");\nF:flush();  -- make sure data is written.\nF:write(\"MoreLife\");\nF:close();\n</pre>",
+    "Name": "io:flush",
+    "Parameters": null,
+    "ParameterTable": false,
+    "SummaryLine": "Immediately writes any buffered output to disk."
+}

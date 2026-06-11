@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">os.remove(filename)\n</pre><ul><li><code><strong>filename</strong></code>: Path to the file or directory to delete.</li></ul><p><br></p><h3>Notes</h3><ul><li>This function deletes the specified file or directory.</li><li>Directories must be empty before they can be removed.</li><li>On failure, the function returns <code>nil</code> and an error string explaining the cause.</li><li>This is commonly used for temporary file cleanup or to manage log/data rotations.</li></ul><p><br></p><h3>Returns</h3><ul><li><code>nil</code> if the function fails. <em><u>(nil)</u></em></li><li>A string describing the error, if applicable. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Success, Error, ErrorCode = os.remove('/tmp/foo')\n</pre><ul><li>This example attempts to delete the file <code>/tmp/foo</code> and captures the result and any error message.</li></ul>",
+    "Name": "os.remove",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The name or path of the file to delete.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Deletes the file or directory with the given name."
+}

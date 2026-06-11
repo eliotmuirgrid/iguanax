@@ -1,0 +1,34 @@
+.UNITtestContainer {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100%;
+}
+
+.UNITrun {
+    margin-top: 12px;
+}
+
+.UNITtestColumns {
+    display: flex;
+    width: 100%;
+    overflow: auto;
+    height: 90vh;
+    justify-content: space-between;
+}
+
+.UNITtestColumn {
+    width: 48%;
+}
+
+.UNITheader{
+    display: flex;
+    justify-content: center;
+    text-decoration: underline;
+}
+
+.UNITfail, .UNITsuccess {
+    white-space: break-spaces;
+    padding-left: 24px;
+    line-height: normal;
+}

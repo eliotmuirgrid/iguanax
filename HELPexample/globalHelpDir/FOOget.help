@@ -1,0 +1,20 @@
+{
+   "Description": "FOOget is really helpful.",
+   "Parameters": [
+      {
+         "Description": "Life is a good parameter.",
+         "Name": "life",
+         "Required": true
+      },
+      {
+         "Name": "url",
+         "Description": "The URL to fetch data from."
+      },
+      {
+         "Name": "timeout",
+         "Description": "The URL to fetch data from."
+      }
+   ],
+   "ParameterTable": true,
+   "SummaryLine": "local X = FOOget{life=\"fsdfsd\"}"
+}

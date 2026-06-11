@@ -1,0 +1,25 @@
+{
+    "cursor_position": 5,
+    "full_expression": "Do",
+    "help_file": "",
+    "line_number": 3,
+    "options": [
+        {
+            "dt": "<span class=\"ITSintellisenseSearchMatch\">do</span>file  <span class=\"ITSintellisenseOptionValue\">(<span    class='clrz_kw'>function</span>)</span>",
+            "ft": "dofile(",
+            "nt": 6,
+            "pt": 0,
+            "s": true
+        },
+        {
+            "dt": "<span class=\"ITSintellisenseSearchMatch\">Do</span>uble",
+            "ft": "Double",
+            "nt": 101,
+            "pt": 0,
+            "s": true
+        }
+    ],
+    "options_truncated": false,
+    "search_string": "Do",
+    "trimmed_expression": ""
+}

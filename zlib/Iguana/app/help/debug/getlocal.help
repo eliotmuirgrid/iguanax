@@ -1,0 +1,23 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">debug.getlocal([thread,] level, local)\n</pre><ul><li><code><strong>thread</strong></code> <em>(optional)</em>: The coroutine or thread to inspect. If omitted, the current thread is used.</li><li><code><strong>level</strong></code>: The stack level of the function call to inspect (1 is the function calling <code>debug.getlocal</code>).</li><li><code><strong>local</strong></code>: The index of the local variable (starts at 1 for the first parameter).</li></ul><p><br></p><h3>Notes</h3><ul><li>If the specified level is invalid, an error is raised.</li><li>Use <code>debug.getinfo</code> to check whether the level is valid before calling.</li><li>Variable names starting with <code>'('</code> represent internal or temporary variables (e.g., loop counters or C function locals).</li></ul><p><br></p><h3>Returns</h3><ul><li>Name of the local variable. If not found, returns <code>nil</code>. <em><u>(string)</u></em></li><li>Value of the local variable (only returned if variable is found). <em><u>(any type)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">function foo()\n&nbsp; &nbsp;local a = 42\n&nbsp; &nbsp;local name, value = debug.getlocal(2, 1)\n&nbsp; &nbsp;print(name, value)&nbsp; -- prints: 'a', 42\nend\n\nfunction main()\n&nbsp; &nbsp;foo()\nend\n</pre><ul><li>This accesses the first local variable (<code>a</code>) from within the <code>foo</code> function.</li></ul>",
+    "Name": "debug.getlocal",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>thread</u></em> <em>(Optional)</em> The thread to inspect.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>integer</u></em> Stack level index of the function.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>integer</u></em> Index of the variable in the function.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Returns the name and value of a variable from a function on the stack."
+}

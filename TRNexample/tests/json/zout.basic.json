@@ -1,0 +1,18 @@
+{
+    "cursor_position": 9,
+    "full_expression": "json.N",
+    "help_file": "",
+    "line_number": 2,
+    "options": [
+        {
+            "dt": "<span class=\"ITSintellisenseSearchMatch\">N</span>ULL <span class=\"ITSintellisenseOptionValue\">(json.NULL)</span>",
+            "ft": "json.NULL",
+            "nt": 7,
+            "pt": 0,
+            "s": false
+        }
+    ],
+    "options_truncated": false,
+    "search_string": "N",
+    "trimmed_expression": "json"
+}

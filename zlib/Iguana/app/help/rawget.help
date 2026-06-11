@@ -1,0 +1,18 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">rawget(table, index)\n</pre><ul><li><code><strong>table</strong></code>: A Lua table to retrieve the value from</li><li><code><strong>index</strong></code>: The index of the value</li></ul><p><br></p><h3>Notes</h3><ul><li><span style=\"color: rgb(68, 68, 68);\">Gets the real value of&nbsp;</span><code>table</code>[<code>index</code>]<span style=\"color: rgb(68, 68, 68);\">, without invoking any metamethod.&nbsp;</span></li><li><span style=\"color: rgb(68, 68, 68);\">As with all Lua tables,&nbsp;index&nbsp;may be any value.</span></li></ul><p><br></p><h3>Returns</h3><ul><li>Value from the specified field. <em>(<u>string)</u></em></li></ul><p><br></p><h3><strong>Example</strong></h3><pre class=\"ql-syntax\" spellcheck=\"false\">local T = { name=\"Jane\"}\nrawset(T, \"age\", 11);\nrawget(T, \"age\")\n</pre><ul><li>The value of this method is that it ignores the logic of the metatable.  </li></ul><p><br></p><p>See also: <code><a href=\"@rawset\" target=\"_blank\">rawset</a></code>.</p>",
+    "Name": "rawget",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u> </em>The table to fetch a value from.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>any type</u> </em>Index for table. </p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Gets the real value of a field from a table, without invoking any metamethod."
+}

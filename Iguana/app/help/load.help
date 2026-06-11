@@ -1,0 +1,18 @@
+{
+    "Description": "<h3 class=\"ql-align-justify\">Usage</h3><pre class=\"ql-syntax ql-align-justify\" spellcheck=\"false\">load(func [, chunkname])\n</pre><ul><li><code><strong>func</strong></code>: A function that returns successive pieces (strings) of the chunk.</li></ul><p>\tEach call to <code>func</code> must return a string to concatenate with previous results.</p><p>\tReturning an empty string, <code>nil</code>, or no value signals the end of the chunk.</p><ul><li class=\"ql-align-justify\"><code><strong>chunkname</strong></code><em> (optional)</em>: A string name used for error messages and debug info (defaults to <code>=(load)</code>).</li></ul><p class=\"ql-align-justify\"><br></p><h3>Notes</h3><ul><li>A chunk of Lua code is a sequence of Lua statements to be executed sequentially, in this case the combined pieces returned by <code>func</code>.  </li><li>The environment of the returned function is the global environment.</li><li>This function is useful for assembling code dynamically from multiple parts or sources.</li></ul><p class=\"ql-align-justify\"><br></p><h3 class=\"ql-align-justify\">Returns</h3><ul><li>On success: the compiled chunk as a function. <em><u>(function)</u></em></li><li>On failure: <code>nil</code> plus an error message string. <em>(<u>nil</u>)</em> and <em>(<u>string</u>)</em></li></ul><p class=\"ql-align-justify\"><br></p><h3 class=\"ql-align-justify\">Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local pieces = { \"print('Hello,') \", \"print('world!')\" }\nlocal index = 0\n\nlocal f = load(function()\n&nbsp; &nbsp; index = index + 1\n&nbsp; &nbsp; return pieces[index]\nend, \"example_chunk\")\n\nif f then\n&nbsp; &nbsp; f()\nelse\n&nbsp; &nbsp; print(\"Failed to load chunk\")\nend\n</pre>",
+    "Name": "load",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>function</u></em> Function to use to load chunk.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u></em> <em>(Optional)</em> Name of chunk to load.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Loads a chunk of Lua code using a function to get its pieces."
+}

@@ -1,0 +1,248 @@
+.LBRnameFeedback{
+   color: var(--red);
+	font-size: 10px;
+	/* line-height: 12px; */
+	/* margin-top: 4px; */
+	line-height: 0px;
+}
+.LBRheader{
+	font-family: var(--font-buttons);
+	color: var(--grey-500);
+	font-weight: 500;
+	font-size: 11px;
+	letter-spacing: 0.05em;
+}
+.LBRrepoFeedback,
+.LBRrepoDoesntExistFeedback,
+.LBRnameExistsFeedback,
+.LBRnameFeedback{
+   color: var(--red);
+	font-size: 10px;
+	line-height: 0px;
+	padding-left: 4px;
+	/* margin-top: 4px; */
+}
+.LBRrepoLinkHrefDiv,
+.LBRname{
+	margin-bottom: 12px;
+}
+.LBRtemplateDiv {
+	flex-grow: 1;
+	display: grid;
+	grid-template-rows: auto 40px 1fr;
+	border-radius: var(--border-radius);
+	min-height: 0;
+	overflow: hidden;
+}
+.LBRhidden{
+	display: none !important;
+}
+.LBRgitFeedback{
+   border: 1px solid var(--grey-400);
+   border-radius: var(--border-radius);
+   background: var(--grey-200);
+   padding: 24px 32px;
+}
+.LBRnoCollections{
+	color: var(--grey-600);
+	border: solid 1px var(--grey-200);
+	border-radius: var(--border-radius);
+   padding: 100px;
+	text-align: center;
+	height: 100%;
+}
+.LBRfilter {
+	background-image: url(/LBR/LBRiconFilter.svg);
+	background-repeat: no-repeat;
+	background-position: 6px center;
+	padding-left: 28px;
+	min-width: 120px;
+}
+.LBRheaderDiv{
+	border-bottom: 1px solid var(--grey-100);	
+	padding-right: 24px;
+}
+.LBRrepoLink{
+	display: flex;
+	height: 100% !important;
+	justify-content: center;
+	align-items: center;
+	margin-left: 6px;
+}
+.LBRopenLinkDiv{
+	content: url(/LBR/LBRiconNewWindow.svg);
+}
+.LBRrepoLink:hover .LBRopenLinkDiv,
+.LBRopenCollection:hover .LBRopenLinkDiv{
+	content: url(/LBR/LBRiconNewWindowHover.svg);
+}
+.LBRcardContent {
+	display: grid;
+	grid-gap: 12px;
+	grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+	padding-bottom: 4px;
+}
+
+.LBRcardLoading {
+	background-image: url(/TRANS/images/spinner.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 24px;
+	opacity: 0.5;
+	filter: alpha(opacity=5);
+	height: 100%;
+	width: 100%;
+}
+.LBRnoTemplatesDefined{
+	width: 100%;
+	color: var(--grey-400);
+	letter-spacing: 0.05em;
+	max-height: calc(100% - 24px);
+	font-size: 11px;
+	display: flex;
+	height: 100% !important;
+	justify-content: center;
+	align-items: center;
+}
+
+.LBRnewCardError{
+	color: red;
+   padding: 100px;
+}
+
+.LBRtemplateCard-visible {
+	opacity: 1;
+	animation: fadein .4s cubic-bezier(0.29, 1.29, 1, 1) forwards;
+}
+.LBRtemplateCard {
+	border-radius: var(--border-radius);
+	background-color: var(--white);
+	border: 1px solid var(--grey-400);
+	height: 142px;
+	text-align: left;
+	opacity: 0;
+	display: inline-block;
+	overflow: hidden;
+	padding: 20px;
+	box-sizing: border-box;
+	display: grid;
+	grid-template-rows: auto 1fr;
+}
+.LBRcached{
+	cursor: pointer;
+}
+.LBRtemplateCardSelected .DASHrenderHashtagInfoSymbol{
+	background-color: #F8FCFE !important;
+}
+.LBRcached:hover,
+.LBRtemplateCardSelected {
+	background-color: #F8FCFE;
+	border: 1px solid var(--blue);
+	box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
+}
+.LBRtemplateCard span {
+	font-size: 11px;
+	line-height: 1.6em;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+	color: var(--grey-600);
+	box-decoration-break: clone;
+}
+.LBRtemplateCardHeader {
+	display: flex;
+	justify-content: space-between;
+}
+.LBRcatalogueModalContainer {
+	height: calc(100% - 12px);
+}
+.LBRcardContainer {
+	overflow: auto;
+}
+.LBRcardContainer::-webkit-scrollbar {
+	display: none;
+}
+.LBRfilterContainer {
+	background: var(--grey-200);
+	padding: 24px;
+	padding-bottom: 8px;
+	border: 1px solid var(--grey-400);
+	border-radius: var(--border-radius);
+}
+.LBRrepoLinkHrefDiv{
+	display: grid;
+	grid-template-columns: 1fr 40px;	
+}
+.LBRbuttons {
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: end;
+	margin-top: 12px;
+	margin-right: 0;
+	margin-left: auto;
+}
+.LBRtopHeaderDiv{
+	display: grid;
+	grid-template-columns: 1fr 40px 40px 22px;	
+}
+.LBRnotCached{
+	background-color: var(--grey-200) !important;
+}
+.LBRbuttonsRow{
+	display: grid;
+	grid-template-columns: 1fr auto auto;
+	justify-content: end;
+	padding-right: 12px;
+	grid-column: span 3;
+}
+.LBRrefreshCacheGrid{
+	display: grid;
+	grid-template-columns: auto 1fr;
+	column-gap: 8px;
+	/* word-break: break-all; */
+	/* padding-left: 24px; */
+}
+.LBRrefreshCache{
+	color: var(--blue);
+	text-decoration: none;
+	word-break: break-all;
+	padding-left: 8px;
+}
+.LBRrefreshCacheInfo{
+	color: var(--grey-600);
+	text-decoration: none;
+}
+.LBRrefreshCacheInfoLink{
+	color: var(--blue);
+	text-decoration: none;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+.LBRrefreshCacheInfoLink:hover,
+.LBRrefreshCache:hover {
+	color: var(--blue);
+	text-decoration: underline;
+	cursor: pointer;
+}
+.LBRcollectionsSelect{
+	padding: 5px;
+}
+.LBRpaddingRight{
+	padding-right: 24px;
+}
+.LBRplainFolderGrid{
+	display: grid;
+	grid-template-columns: 1fr auto auto;
+	column-gap: 12px;
+}
+.LBRmodal{
+	row-gap: 36px;
+	height: calc(100% - 124px) !important;
+
+}
+.LBRcollectionCard:has(.LBRcollectionCheck:checked:disabled) {
+	border-color: #94a3b8;       /* e.g. slate-400 */
+	background-color: #f1f5f9;   /* e.g. slate-100 */
+	box-shadow: none;            /* up to you */
+	opacity: 0.7;                /* optional */
+	cursor: not-allowed;         /* optional */
+ }

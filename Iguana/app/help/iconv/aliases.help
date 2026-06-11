@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">iconv.aliases(encoding)\n</pre><ul><li><code><strong>encoding</strong></code>: The canonical name or any known alias of a character encoding (e.g., <code>\"UTF-8\"</code> or <code>\"CP1250\"</code>).</li></ul><p><br></p><h3>Notes</h3><ul><li>Aliases are alternate names for the same underlying character encoding.</li><li>Using different aliases with <code><a href=\"@iconv.convert\" target=\"_blank\">iconv.convert</a></code> produces the same conversion result.</li><li>This function helps you identify equivalent encoding names supported by the system.</li></ul><p><br></p><h3>Returns</h3><ul><li>A list of aliases for the supplied encoding. <em>(<u>table)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local AliasList = iconv.aliases('CP1250')\n</pre>",
+    "Name": "iconv.aliases",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The name of the encoding.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Lists all aliases for a given character encoding."
+}

@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">Node:remove(&lt;Index&gt;)\n</pre><ul><li><code><strong>Node</strong></code>: A node tree from which a child node will be removed.</li><li><code><strong>Index</strong></code>: The name (key) or numeric index of the child node to delete.</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>Removes a direct child node of the specified node.</li><li>Accepts either a string key or numeric index.</li><li>Useful for pruning unwanted elements from XML, HL7, or any structured node tree.</li><li><code>Node:remove(Index)</code> is equivalent to calling <code>node.remove(Node, Index)</code>.</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Msg = hl7.parse{vmd = 'demo.vmd', data = hl7_example}\n\n-- Remove the patient's phone number segment\nMsg.PID[7]:remove(1)\n\n-- Remove the entire 'PV1' segment from the message\nMsg:remove('PV1')\n</pre><h4>In this example:</h4><ul><li>A parsed HL7 message is stored in <code>Msg</code>.</li><li>The first line removes the first repetition of the <code>PID.7</code> field (e.g., a phone number).</li><li>The second line removes the entire <code>PV1</code> segment from the message.</li></ul>",
+    "Name": "node:remove",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The name or position of the child node to remove.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Removes a child node."
+}

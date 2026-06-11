@@ -1,0 +1,13 @@
+{
+    "Description": "<p> 🔄  <strong>Replacement:</strong> <code style=\"background-color: rgb(240, 240, 240); color: rgb(37, 144, 205);\"><a href=\"http://localhost:7654/@component.setStopOnError\" target=\"_blank\">component.setStopOnError</a></code><a href=\"http://localhost:7654/@component.setStopOnError\" target=\"_blank\">.</a> </p><p> ⚠️  <strong>Deprecated:</strong>    <code style=\"background-color: rgb(240, 240, 240);\">iguana.stopOnError</code> will be removed in a future version.&nbsp;</p><p><br></p><h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">iguana.stopOnError(stop)\n</pre><ul><li><code><strong>stop</strong></code>: A boolean flag.</li><li class=\"ql-indent-1\"><code>true</code>: Default. Errors will stop the component.</li><li class=\"ql-indent-1\"><code>false</code>: Errors will be logged, but the component will continue running.</li></ul><p><br></p><h3>Notes</h3><ul><li>By default, when a runtime error occurs, Iguana stops the component unless the error is caught with <code><a href=\"@pcall\" target=\"_blank\">pcall</a>()</code>.</li><li>This function allows overriding that behavior to log the error and continue processing.</li><li>Applies only to <em>program errors</em>, not to calls like <code><a href=\"@iguana.logError\" target=\"_blank\">iguana.logError</a>()</code>.</li><li>If you want to manually stop the component, use <code><a href=\"@error\" target=\"_blank\">error</a>()</code> instead.</li><li>This setting is useful in production environments to ensure continued message flow despite isolated script failures.</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">component.setStopOnError(false)\n-- Errors will be logged but will not stop the component\n</pre>",
+    "Name": "iguana.stopOnError",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>bool</u></em> If false, errors will not stop the component (default = true).</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "*DEPRECATED* - Use component.setStopOnError instead."
+}

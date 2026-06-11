@@ -1,0 +1,23 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">Conn:list{\n    remote_path = &lt;path&gt;,\n    raw = &lt;true|false&gt;, \n    debug = &lt;true|false&gt;\n}\n</pre><ul><li><code><strong>remote_path</strong></code>: The full path to the file on the remote server.</li><li><code><strong>raw</strong></code> <em>(optional)</em>: Whether to return the raw response from the remote server</li><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>debug</strong></code> <em>(optional)</em>: Enable debug log. </li></ul><p><br></p><h3>Notes</h3><ul><li>Use <code><a href=\"@net.ftp.init\" target=\"_blank\">net.ftp.init</a></code> to create a connection object.</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>An array of {filename, is_retrievable} values. <em>(<u>table)</u></em></li><li>Debug information (if requested). (<em><u>string)</u></em></li></ul><p><br></p><h3><strong>Example</strong></h3><pre class=\"ql-syntax\" spellcheck=\"false\">local FtpConn = net.ftp.init{\n  server='example', \n  username='user', \n  password='password'\n}\n\nFtpConn:list{remote_path=''}          -- users home directory\nFtpConn:list{remote_path='/'}         -- ftp root directory\n\n-- Return the listing of /fox_out/ in raw form, with debug enabled\nFtpConn:list{\n  remote_path='/fox_out/', \n  raw=true, \n  debug=true \n}\n</pre>",
+    "Name": "net.ftp:list",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u> </em>The directory path on the remote server to list the contents for. </p>",
+            "Name": "remote_path",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>bool</u> </em>When true return the raw response from the remote server (default is <code style=\"background-color: rgb(240, 240, 240);\">false</code>).</p>",
+            "Name": "raw",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>bool</u> </em>When true return verbose debug information, errors thrown will also contain debug information (default is <code style=\"background-color: rgb(240, 240, 240);\">false</code>). </p>",
+            "Name": "debug",
+            "Required": false
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "List the contents of a remote path."
+}

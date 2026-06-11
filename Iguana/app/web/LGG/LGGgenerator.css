@@ -1,0 +1,55 @@
+.LGGgeneratorContainer {
+   height: 100vh;
+   display: grid;
+   grid-template-rows: auto 1fr;
+   background: #D2E4EC;
+	color: var(--grey-800);
+}
+.LGGgeneratorContent {
+   background: #D2E4EC;
+	padding: 24px;
+}
+.LGGgeneratorContentInner {
+	border-radius: 4px;
+	border: solid 1px var(--grey-400);
+	background-color: var(--white);
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+	border: none;
+	max-width: 1000px;
+	padding: 32px;
+}
+.LGGgeneratorConfig {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	grid-column-gap: 16px;
+	grid-row-gap: 16px;
+	margin-top: 24px;
+	margin-bottom: 16px;
+}
+.LGGgeneratorConfig * {
+	font-size: 14px;
+	display: flex;
+	align-items: center;
+}
+
+.LGGgeneratorConfig * {
+	font-size: 12px;
+	display: flex;
+	align-items: center;
+}
+
+.LGGgeneratorConfig *:nth-child(2n) {
+	max-width: 240px;
+}
+
+.LGGgeneratorProgress{
+	padding-top: 12px;
+	padding-bottom: 12px;
+}
+.LGGgeneratorContentInner a{
+	color: var(--blue);
+	text-decoration: none;
+}
+.LGGgeneratorContentInner a:hover{
+	text-decoration: underline;
+}

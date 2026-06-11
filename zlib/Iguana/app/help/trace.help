@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">trace(&lt;value&gt;, ...)\n</pre><ul><li><code><strong>value</strong></code>: The value to trace</li><li><code><strong>...</strong></code>: Any additional values to trace</li></ul><h4><br></h4><h3><strong>Notes</strong></h3><ul><li>Displays any number of arguments as annotations when viewed in the script editor.</li><li><code>trace</code> is purely a development tool—it does <strong>not</strong> affect program output or data flow. <code>trace</code> does nothing when running the component outside of translator</li><li>Annotations appear only when running code inside the Iguana editor (or equivalent environment).</li><li>Unlike <code><a href=\"@print\" target=\"_blank\">print</a></code> or <code><a href=\"@iguana.logInfo\" target=\"_blank\">iguana.logInfo</a></code>, <code>trace</code> does <strong>not</strong> write to the server logs.</li></ul><h4><br></h4><h3><strong>Returns</strong></h3><ul><li>Nothing. This function is for debugging visibility only.</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">trace(\"This is\", \"Helpful\", Data)\n</pre>",
+    "Name": "trace",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>any type</u></em> One or more values to trace.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Display one or more values as annotations in the editor."
+}

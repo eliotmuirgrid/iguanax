@@ -1,0 +1,23 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">hl7.parse{\n&nbsp; &nbsp;vmd&nbsp; = &lt;vmd&gt;,\n&nbsp; &nbsp;data = &lt;hl7_message&gt;,\n&nbsp; &nbsp;name = &lt;optional_message_name&gt;\n}\n</pre><ul><li><code><strong>vmd</strong></code>: Name of the VMD file that defines the message schema.</li><li><code><strong>data</strong></code>: HL7 or EDI/X12 message string to parse.</li><li><code><strong>name</strong></code><em> (optional)</em>: Specifies the message name in the VMD, if needed to disambiguate formats.</li></ul><p><br></p><h3>Notes</h3><ul><li>Converts a raw HL7/EDI/X12 message into a data tree based on the VMD file’s grammar.</li><li>The <strong>name</strong> field helps disambiguate the message type when multiple are defined in the VMD.</li><li>You can return the parsed message node tree alone, or also include the message type name and a table of warnings/errors highlighting any missing segments marked as required in the grammar.</li></ul><p><br></p><h3>Returns</h3><ul><li>The parsed message as a data tree. <u>(</u><em><u>HL7 node tree)</u></em></li><li>The name of the message type. <em><u>(string)</u></em></li><li>A list of any warnings or errors encountered. <em><u>(table)</u></em></li></ul><p><br></p><h3>Example</h3><p>To run this example: </p><ul><li>Create a new vmd file called <code style=\"background-color: rgb(240, 240, 240);\">a04</code>, and use the dropdown to ensure a vmd file is selected (the extension will be automatically added). </li><li>Select the file in the filetree. This brings up the vmd in the right pane. </li><li>Click <code style=\"background-color: rgb(240, 240, 240);\">EDIT</code> and then use the vmd importer feature to import the <code>ADTA04</code> definition from the leftmost pane and press <code>IMPORT</code> then <code style=\"background-color: rgb(240, 240, 240);\">DONE</code>. </li><li>See <a href=\"https://docs.interfaceware.com/docs/IguanaX_Documentation_Home/Development/Interfaces/HL7_Health_Level_Seven_/HL7_2FX12_Schema_File__2A_2Evmd_/Creating_a_VMD_2645065729?_highlight=vmd\" target=\"_blank\" style=\"color: rgb(37, 144, 205);\">documentation</a> for more on vmd creation.</li></ul><pre class=\"ql-syntax\" spellcheck=\"false\">local Hl7Message = [[MSH|^~\\&amp;|EPIC|EPICADT|iFW|SMSADT|199912271408|CHARRIS|ADT^A04|1817457|D|2.5|\nPID||0493575^^^2^ID 1|454721||DOE^JOHN^^^^|DOE^JOHN^^^^|19480203|M||B|254 MYSTREET AVE^^MYTOWN^OH^44123^USA||(216)123-4567|||M|NON|400003403~1129086|\nNK1||ROE^MARIE^^^^|SPO||(216)123-4567||EC|||||||||||||||||||||||||||\nPV1||O|168 ~219~C~PMA^^^^^^^^^||||277^ALLEN MYLASTNAME^BONNIE^^^^|||||||||| ||2688684|||||||||||||||||||||||||199912271408||||||002376853]]\n&nbsp; &nbsp;\nlocal Msg = hl7.parse{vmd=\"a04.vmd\", data=Hl7Message}\nMsg.PID[5][1][1][1] = \"Muir\"&nbsp; -- Set the last name of the patient to Muir\n</pre><p>To capture the message name and warnings:</p><pre class=\"ql-syntax\" spellcheck=\"false\">local Msg, Name, Warnings = hl7.parse{vmd=\"a04.vmd\", data=Hl7Message}\n</pre>",
+    "Name": "hl7.parse",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> VMD schema file name.</p>",
+            "Name": "vmd",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u></em> Message to be parsed.</p>",
+            "Name": "data",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u></em> <em>(Optional)</em> Message name (to disambiguate formats).</p>",
+            "Name": "name",
+            "Required": false
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Parses an HL7/EDI/X12 message."
+}

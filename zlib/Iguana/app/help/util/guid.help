@@ -1,0 +1,13 @@
+{
+    "Description": "<p> 🔄  <strong>Replacement:</strong> <code style=\"background-color: rgb(240, 240, 240); color: rgb(37, 144, 205);\"><a href=\"http://localhost:7654/@util.generateGUID\" target=\"_blank\">util.generateGUID</a></code>. </p><p> ⚠️  <strong>Deprecated:</strong>    <code style=\"background-color: rgb(240, 240, 240);\">util.guid</code> will be removed in a future version.&nbsp;</p><p><br></p><h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">util.guid(Size)\n</pre><ul><li><code><strong>Size</strong></code>: An integer value indicating the bit-length of the generated GUID. Valid values start from <code>128</code> and must be divisible by <code>8</code>.</li></ul><p><br></p><h3>Notes</h3><ul><li>This function will be <strong>removed in a future version</strong>.</li><li>Use <code><a href=\"@util.generateGUID\" target=\"_blank\">util.generateGUID</a>()</code> instead for GUID generation.</li><li>GUIDs are useful for generating unique values for records, messages, and system identifiers.</li></ul><p><br></p><h3>Returns</h3><ul><li>A new GUID, returned as a string. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Guid = util.guid(128);\n</pre>",
+    "Name": "util.guid",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>integer</u></em> The size of the GUID in bits.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "*DEPRECATED* - Use util.generateGUID instead."
+}

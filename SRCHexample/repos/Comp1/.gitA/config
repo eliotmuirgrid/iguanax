@@ -1,0 +1,11 @@
+[core]
+	bare = false
+	filemode = true
+	ignorecase = true
+	logallrefupdates = true
+	precomposeunicode = true
+	repositoryformatversion = 0
+[pull]
+	rebase = false
+[push]
+	autoSetupRemote = true

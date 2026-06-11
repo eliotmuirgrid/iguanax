@@ -1,0 +1,28 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">FtpsConn:get{\n   remote_path = &lt;path&gt;,\n   local_path = &lt;path&gt;,\n   overwrite = &lt;true|false&gt;,\n   debug = &lt;true|false&gt;\n}\n</pre><ul><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>remote_path</strong></code>: The full path to the file on the remote server.</li><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>local_path</strong></code> <em>(optional)</em>: <span style=\"color: rgb(68, 68, 68);\">Save the file using this name instead of returning it as a string</span>.</li><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>overwrite</strong></code> <em>(optional)</em>: <span style=\"color: rgb(68, 68, 68);\">Allow the file </span><code style=\"background-color: rgb(240, 240, 240);\"><strong>local_path</strong></code> <span style=\"color: rgb(68, 68, 68);\">to be overwritten if it already exists</span>.</li><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>debug</strong></code> <em>(optional)</em>: Enable debug log. </li></ul><p><br></p><h3><strong>Notes:</strong> </h3><ul><li>Use <code><a href=\"@net.ftps.init\" target=\"_blank\">net.ftps.init</a></code> to create a connection object.</li><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>local_path</strong></code> may either be an absolute path or one that's relative to the Iguana working directory.</li><li>The file type is detected and the correct transfer mode, 'ascii' (text) or 'binary', is chosen automatically.</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li><span style=\"color: rgb(68, 68, 68);\">The contents of the file if </span><code style=\"background-color: rgb(240, 240, 240);\"><strong>local_path</strong></code> is not set. <em>(<u>string)</u></em></li><li><code style=\"background-color: rgb(240, 240, 240);\">true</code> if the file is successfully saved to the provided<span style=\"color: rgb(68, 68, 68);\"> </span><code style=\"background-color: rgb(240, 240, 240);\"><strong>local_path</strong></code>. <em>(<u>bool</u></em>)</li><li>Debug information (if requested). <em>(<u>string)</u></em></li></ul><p><br></p><h3><strong>Example</strong></h3><h4>Basic Example</h4><pre class=\"ql-syntax\" spellcheck=\"false\">-- Connect to a server and get a file.\nlocal FtpsConn = net.ftps.init{\n  server='example', \n  username='user',\n  password='password'\n}\n\nFtpsConn:get{remote_path='/fox_out/test.png'}\n</pre><h4>A More Complex Example</h4><pre class=\"ql-syntax\" spellcheck=\"false\">-- A file is downloaded and the success is logged. \n-- The destination file downloads/example_local.txt will \n-- be overwritten if it already exists.\nlocal FtpsConn = net.ftps.init{\n&nbsp; &nbsp;server = \"ftp.example.com\",\n  &nbsp;username = \"myuser\",\n&nbsp; &nbsp;password = \"mypassword\"\n}    \n\nlocal Success, DebugInfo = FtpsConn:get{\n&nbsp; &nbsp;remote_path = \"/remote/dir/example.txt\",\n&nbsp; &nbsp;local_path&nbsp; = \"downloads/example_local.txt\",\n&nbsp; &nbsp;overwrite&nbsp; &nbsp;= true,      \n&nbsp; &nbsp;debug&nbsp; &nbsp; &nbsp; &nbsp;= true\n}      \n\nif Success then\n&nbsp; &nbsp;iguana.logInfo(\"File successfully downloaded.\")\nelse\n&nbsp; &nbsp;iguana.logWarning(\"File download failed.\")\n   iguana.logWarning(DebugInfo)\nend\n</pre>",
+    "Name": "net.ftps:get",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u> </em>The full path to the file on the remote server.</p>",
+            "Name": "remote_path",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u></em> The local path to save the file to.</p>",
+            "Name": "local_path",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>bool</u> </em>Allow local_path to be overwritten if it already exists (default is <code style=\"background-color: rgb(240, 240, 240);\">false</code>).</p>",
+            "Name": "overwrite",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>bool</u></em> Enable debug log (default is <code style=\"background-color: rgb(240, 240, 240);\">false</code>).</p>",
+            "Name": "debug",
+            "Required": false
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Get a single file from the FTPS server."
+}

@@ -1,0 +1,13 @@
+{
+    "Description": "<p> 🔄  <strong>Replacement:</strong> <code style=\"background-color: rgb(240, 240, 240); color: rgb(37, 144, 205);\"><a href=\"http://localhost:7654/@ui.setStatusLight\" target=\"_blank\">ui.setStatusLight</a></code>. </p><p> ⚠️  <strong>Deprecated:</strong>    <code style=\"background-color: rgb(240, 240, 240);\">component.setLight</code> will be removed in a future version.&nbsp;</p><p><br></p><h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">component.setLight{color=''}\n</pre><ul><li><code>'green'</code>: Indicates normal operation (default when component is running properly).</li><li><code>'yellow'</code>: Indicates a warning or intermediate state (e.g., waiting for retry, partial failure).</li></ul><p><br></p><h3>Notes</h3><ul><li><strong>Only </strong><code><strong>'green'</strong></code><strong> and </strong><code><strong>'yellow'</strong></code><strong> are supported.</strong></li><li>Green means “all systems go.”</li><li>Yellow may be used during retry loops or when the component is in a degraded but not failed state.</li><li><strong>The light remains yellow until explicitly changed</strong> or the component is stopped.</li><li>Make sure to reset the light to <code>'green'</code> once the situation is resolved.</li></ul><p><br></p><h3><strong style=\"color: rgb(68, 68, 68);\">Example</strong></h3><pre class=\"ql-syntax\" spellcheck=\"false\">component.setLight{color='yellow'}\n</pre>",
+    "Name": "component.setLight",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The color to set the status light to. Must be either <code>'yellow'</code> or <code>'green'</code>.</p>",
+            "Name": "color",
+            "Required": true
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "*DEPRECATED* - Use ui.setStatusLight instead."
+}

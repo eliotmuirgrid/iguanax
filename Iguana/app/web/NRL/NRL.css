@@ -1,0 +1,80 @@
+.NRLdescription {
+	display: block;
+	border-radius: var(--border-radius);
+	border: 1px solid var(--grey-400);
+	background-color: var(--white);
+	font-weight: var(--regular);
+	font-size: 12px;
+	line-height: 16px;
+	padding: 6px 8px;
+	color: var(--grey-800);
+	width: 100%;
+	box-sizing: border-box;
+	font-family: var(--font-sans);
+	resize: none;
+	margin-top: 12px;
+}
+.NRLdescription::placeholder {
+	color: var(--grey-400);
+}
+.NRLbottomRow{
+	margin-top: 10px;
+	display: grid;
+	grid-template-columns: auto auto;
+}
+.NRLworking{
+	display: flex;
+	align-items: center;
+}
+.NRLspinner{
+	margin-left: 6px;
+}
+.NRLbuttonsRow{
+   display: grid;
+	grid-template-columns: auto auto;
+	justify-content: end;
+	margin-left: auto;
+}
+.NRLheader{
+	font-family: var(--font-buttons);
+	color: var(--grey-500);
+	font-weight: 500;
+	font-size: 11px;
+	letter-spacing: 0.05em;
+}
+.NRLcontainer {
+	background: var(--grey-200);
+	padding: 12px 18px;
+	border: 1px solid var(--grey-400);
+	border-radius: var(--border-radius);
+	margin-bottom: 12px;
+}
+.NRLeditableCheck{
+	height: 14px;
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+.NRLrepoFeedback,
+.NRLnameExistsFeedback{
+	color: var(--red);
+	font-size: 10px;
+	line-height: 12px;
+	margin-top: 4px;
+  	overflow: visible;
+}
+.NRLeditable{
+	display: grid;
+	grid-template-columns: auto 40px 1fr 80px;	
+}
+.NRLeditableLabel{
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+.NRLtags{
+	margin-top: 12px;
+}
+.NRLbranch,
+.NRLname{
+	margin-top: 12px;
+}
+

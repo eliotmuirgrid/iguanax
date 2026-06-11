@@ -1,0 +1,18 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">math.pow(x, y)\n</pre><ul><li><code><strong>x</strong></code>: The base number.</li><li><code><strong>y</strong></code>: The exponent.</li></ul><p>You can also use the expression <code>x^y</code> as a shorthand for the same result.</p><h3><br></h3><h3>Returns</h3><ul><li>The result of raising <code>x</code> to the power <code>y</code>. <em><u>(number)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local x, y = 4, 5\nlocal R = math.pow(x, y)\nlocal R2 = x^y\nassert(R == R2)\n</pre><ul><li>This function is useful for any mathematical computation involving exponentiation.</li></ul>",
+    "Name": "math.pow",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>number</u></em> The base number to raise to a power.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>number</u></em> The exponent to raise the base number to.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Raises a number to a power."
+}

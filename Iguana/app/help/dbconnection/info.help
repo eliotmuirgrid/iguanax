@@ -1,0 +1,7 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">conn:info()\n</pre><ul><li><code><strong>conn</strong></code>: The database connection object.</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>The returned table typically includes details such as the API type, host, database name, username, and other configuration values provided during connection setup.</li><li>Useful for logging, diagnostics, or dynamically inspecting connection properties.</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>A table containing the database connection parameters. <em><u>(table)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Info = conn:info()\n</pre><ul><li>This example retrieves the connection metadata and stores it in the <code>Info</code> table for inspection or further use.</li></ul>",
+    "Name": "db:info",
+    "Parameters": null,
+    "ParameterTable": false,
+    "SummaryLine": "Returns a table with the database connection parameters."
+}

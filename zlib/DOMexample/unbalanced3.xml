@@ -1,0 +1,27 @@
+﻿<patient>
+  <name>
+    <first>Good</first>
+    <last>
+      Good
+
+      <name>
+        <first>
+          Bad
+          <last>Good</last>
+
+          <name>
+            <first>
+              Bad
+              <last>
+                Good
+                <x>X
+
+
+              <a hat="good"/>
+              <b>
+                Bad
+                <c>Good</c>
+                <dob>
+                  Bad
+                  <d>Good</d>
+                

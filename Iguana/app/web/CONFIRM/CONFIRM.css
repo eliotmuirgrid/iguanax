@@ -1,0 +1,23 @@
+.CONFIRMmodal{
+	max-width: 500px;
+}
+
+.CONFIRMbuttonGroup {
+	margin-top: 24px;
+	justify-content: flex-end;
+}
+
+.CONFIRMmodal .CONFIRMactionButtonDestructive {
+	background-color: var(--red);
+	color: var(--white);
+}
+
+.CONFIRMmodal .CONFIRMactionButtonDestructive:hover {
+	background-color: var(--red-dark);
+	color: var(--white);
+}
+
+.CONFIRMmodal .CONFIRMactionButtonDestructive:active {
+	background-color: #7f1f1f;
+	color: var(--white);
+}

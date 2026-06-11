@@ -1,0 +1,18 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">util.safeCall(action, cleanup)\n</pre><ul><li><code><strong>action</strong></code>: The function to run. Can return values or raise an error.</li><li><code><strong>cleanup</strong></code>: A function that always runs after <code>action</code>, even if <code>action</code> fails. It receives the results of <code>pcall(action)</code>.</li></ul><p><br></p><h3>Notes</h3><ul><li>The <code>cleanup</code> function is always executed and is passed the success flag and return values from <code>action</code> (just like <code>pcall</code>).</li><li>The cleanup function is allowed at least <strong>one minute</strong> to complete, even if the script has a shorter timeout.</li><li>You can extend the execution window using <code><a href=\"@component.setScriptTimeout\" target=\"_blank\">component.setScriptTimeout</a></code>, but the extra time only applies locally to <code>cleanup()</code>.</li></ul><p><br></p><h3>Returns</h3><ul><li>All return values from <code>action</code>. (<em>any type)</em></li><li>If either function throws an error, it will be rethrown via <code>util.safeCall</code>.</li><li>If both throw, the error from <code>cleanup</code> takes precedence. (<em>any type)</em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">util.safeCall(\n&nbsp; &nbsp;function()\n&nbsp; &nbsp; &nbsp; -- Attempt something risky\n&nbsp; &nbsp; &nbsp; trace(\"Execute some logic and/or call a function\")\n&nbsp; &nbsp;end,\n&nbsp; &nbsp;function(success, ...)\n&nbsp; &nbsp; &nbsp; -- Cleanup logic\n&nbsp; &nbsp; &nbsp; if not success then\n&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;trace(\"Execute logic on failure here\")\n&nbsp; &nbsp; &nbsp; end\n&nbsp; &nbsp; &nbsp; trace(\"Execute logic on success here\")\n&nbsp; &nbsp;end\n)\n</pre>",
+    "Name": "util.safeCall",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>function</u></em> The main function to execute.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>function</u></em> The function to run after <code>action</code>, regardless of outcome.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Execute action() then cleanup(), even if action() fails with an error, timeout or interupt."
+}

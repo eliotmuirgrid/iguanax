@@ -1,0 +1,92 @@
+<!-- ICON (16px) SPRITE PAGE -->
+
+
+<!--
+RESOURCES
+SVG minimizer: https://jakearchibald.github.io/svgomg/ 
+
+REFERENCES
+https://css-tricks.com/svg-sprites-use-better-icon-fonts/
+https://fvsch.com/svg-icons/
+https://www.webdesignerdepot.com/2017/05/how-to-create-and-manage-svg-sprites/
+https://24ways.org/2014/an-overview-of-svg-sprite-creation-techniques/
+https://hub.appirio.com/tech-blog/svg-sprites
+-->
+
+
+<svg xmlns="http://www.w3.org/2000/svg">
+   
+   <symbol id="expand-arrow-up" viewBox="0 0 16 16">
+      <path d="M7.4 5.2c.3-.3.8-.3 1.1 0l4.3 4.7c.2.2.2.6 0 .8l-.1.1c-.3.2-.7.2-1-.1L8 6.6l-3.7 4.1c-.3.3-.7.3-1 .1-.3-.1-.4-.5-.2-.8v-.1l4.3-4.7z" fill-rule="evenodd" clip-rule="evenodd"/>
+   </symbol>
+
+   <symbol id="expand-arrow-down" viewBox="0 0 16 16">
+      <path d="M7.4 10.8c.3.3.8.3 1.1 0L12.8 6c.2-.2.2-.6 0-.8l-.1-.1c-.3-.2-.7-.2-1 .1L8 9.4 4.3 5.2c-.3-.2-.7-.3-1-.1-.3.2-.4.6-.2.9v.1l4.3 4.7z" fill-rule="evenodd" clip-rule="evenodd"/>
+   </symbol>
+   
+   <symbol id="next-up" viewBox="0 0 16 16">
+     <path fill-rule="evenodd" d="M8 4l-6 8.5h12L8 4z"/>
+   </symbol>
+   
+   <symbol id="next-down" viewBox="0 0 16 16">
+     <path fill-rule="evenodd" id="a" d="M8 12.5L14 4H2z"/>
+   </symbol>
+   
+   <symbol id="next-up-end" viewBox="0 0 16 16">
+     <path fill-rule="evenodd" id="a" d="M14 4H2V2h12v2zm0 10H2l6-8.5 6 8.5z"/>
+   </symbol>
+   
+   <symbol id="next-down-end" viewBox="0 0 16 16">
+     <path fill-rule="evenodd" id="a" d="M2 12h12v2H2v-2zM2 2h12l-6 8.5L2 2z"/>
+   </symbol>
+   
+   <symbol id="close" viewBox="0 0 16 16">
+     <path fill-rule="evenodd" d="M12.95 1.636l1.414 1.414L9.414 8l4.95 4.95-1.414 1.414L8 9.414l-4.95 4.95-1.414-1.414L6.586 8l-4.95-4.95L3.05 1.636 8 6.586z"/>
+   </symbol>
+   
+   <symbol id="pop-out" viewBox="0 0 16 16">
+     <g fill-rule="evenodd">
+       <path d="M3 13V4h4V2H3a2 2 0 0 0-2 2v9a2 2 0 0 0 2 2h9c1.1 0 2-.9 2-2V9h-2v4H3z"/>
+       <path d="M9 3h2.59L4.76 9.83l1.41 1.41L13 4.41V7h2V1H9z"/>
+     </g>
+   </symbol>
+   
+   <symbol id="related-msgs" viewBox="0 0 16 16">
+      <g>
+         <path d="M14,6v4H4V6H14z M13,7H5v2h8V7z M14,1v4H4V1H14z M13,2H5v2h8V2z M14,11v4H4v-4H14z M13,12H5v2h8V12z"/>
+         <rect x="5.5" y="2.5" class="st0" width="1" height="1"/>
+         <rect x="5.5" y="7.5" class="st0" width="1" height="1"/>
+         <rect x="5.5" y="12.5" class="st0" width="1" height="1"/>
+         <path d="M4,2.5H2.7C1.9,2.5,1.2,3.2,1.2,4v8c0,0.8,0.7,1.5,1.5,1.5H4v-1H2.7c-0.3,0-0.5-0.2-0.5-0.5V4c0-0.3,0.2-0.5,0.5-0.5H4V2.5
+            z"/>
+         <polygon points="1.7,8.5 4,8.5 4,7.5 1.7,7.5 	"/>
+      </g>
+   </symbol>
+   
+   <symbol id="search" viewBox="0 0 16 16">
+     <path d="M11 9.81h-.64l-.22-.22a5.22 5.22 0 10-.56.56l.22.22V11l4 4 1.2-1.19-4-4zm-4.75-.06a3.5 3.5 0 113.5-3.5 3.49 3.49 0 01-3.5 3.5z" fill-rule="evenodd"/>
+   </symbol>
+   
+  <symbol id="minimap" viewBox="0 0 16 16">
+    <path d="M15 2a1 1 0 011 1v10a1 1 0 01-1 1H1a1 1 0 01-1-1V3a1 1 0 011-1zm0 1H1v10h14z" fill-rule="evenodd"/>
+    <path d="M2 4h12v2H2zM2 7h12v2H2zM2 10h12v2H2z"/>
+  </symbol> 
+
+  <symbol id="help-circle" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M7.3,12.2 L8.7,12.2 L8.7,10.8 L7.3,10.8 L7.3,12.2 L7.3,12.2 Z M8,1 C4.136,1 1,4.136 1,8 C1,11.864 4.136,15 8,15 C11.864,15 15,11.864 15,8 C15,4.136 11.864,1 8,1 L8,1 Z M8,13.6 C4.913,13.6 2.4,11.087 2.4,8 C2.4,4.913 4.913,2.4 8,2.4 C11.087,2.4 13.6,4.913 13.6,8 C13.6,11.087 11.087,13.6 8,13.6 L8,13.6 Z M8,3.8 C6.453,3.8 5.2,5.053 5.2,6.6 L6.6,6.6 C6.6,5.83 7.23,5.2 8,5.2 C8.77,5.2 9.4,5.83 9.4,6.6 C9.4,8 7.3,7.825 7.3,10.1 L8.7,10.1 C8.7,8.525 10.8,8.35 10.8,6.6 C10.8,5.053 9.547,3.8 8,3.8 L8,3.8 Z"/>
+  </symbol>  
+  
+  <symbol id="edit" viewBox="0 0 16 16">
+    <path d="M3 8.917V11h2.083l6.145-6.145-2.083-2.083L3 8.917zM14 13v1H2v-1h12zM10.756 1.16a.553.553 0 01.783 0l1.3 1.3a.553.553 0 010 .784l-1.017 1.017L9.74 2.178z" fill-rule="evenodd"/>
+  </symbol>
+
+  <symbol id="new-folder" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M6.6 2L8 3.4h5.6c.777 0 1.4.623 1.4 1.4v7c0 .777-.623 1.4-1.4 1.4H2.4c-.777 0-1.4-.623-1.4-1.4l.007-8.4c0-.777.616-1.4 1.393-1.4h4.2zm4.15 3h-1.5v2.25H7v1.5h2.25V11h1.5V8.75H13v-1.5h-2.25V5z"/>
+  </symbol>
+   
+  <symbol id="expand-all" viewBox="0 0 16 16">
+    <path fill-rule="evenodd" d="M10.293 9l2.622 2.622L15 9.537V15H9.537l2.085-2.085L9 10.293 10.293 9zM5.707 9L7 10.293l-2.622 2.622L6.463 15H1V9.537l2.085 2.085L5.707 9zM15 1v5.463l-2.085-2.085L10.293 7 9 5.707l2.622-2.622L9.537 1H15zM6.463 1L4.378 3.085 7 5.707 5.707 7 3.085 4.378 1 6.463V1h5.463z"/>
+  </symbol>
+
+
+</svg>

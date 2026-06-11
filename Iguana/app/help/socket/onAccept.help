@@ -1,0 +1,18 @@
+{
+    "Description": "<p>&nbsp;🔄 <strong>Replacement:</strong> <code style=\"background-color: rgb(240, 240, 240); color: rgb(37, 144, 205);\"><a href=\"@net.tcpAsync.listen\" target=\"_blank\">net.tcpAsync.listen</a></code><a href=\"http://localhost:7654/@ipairs\" target=\"_blank\" style=\"color: rgb(37, 144, 205);\">. </a></p><p><a href=\"http://localhost:7654/@ipairs\" target=\"_blank\" style=\"color: rgb(37, 144, 205);\"> ⚠</a>️ <strong>Deprecated:</strong> <code style=\"background-color: rgb(240, 240, 240);\">socket.onAccept</code> has been deprecated.&nbsp;</p><p><br></p><h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">socket.onAccept(Address, Id)\n</pre><ul><li><code><strong>Address</strong></code>: IP address of the connecting client.</li><li><code><strong>Id</strong></code>: Numeric identifier assigned to the accepted connection.</li></ul><p><br></p><h3>Notes</h3><ul><li>This function is invoked when a new client connection is successfully accepted by the server socket.</li><li>Common uses include logging, initialization of session state, or sending welcome messages.</li><li><strong>Deprecated</strong>: Will be removed in a future release. Use <code>net.tcpAsync.listen</code> for handling new connection events going forward.</li></ul><p><br></p><h3>Returns</h3><ul><li>This function does not return a value. It is a callback handler.</li></ul>",
+    "Name": "socket.onAccept",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The IP address of the incoming client.</p>",
+            "Name": "Address",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>integer</u></em> The ID of the newly established connection.</p>",
+            "Name": "Id",
+            "Required": true
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "*DEPRECATED* - Use net.tcpAsync.listen instead."
+}

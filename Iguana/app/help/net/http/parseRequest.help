@@ -1,0 +1,18 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">net.http.parseRequest{data=&lt;value&gt; [, headers_format=&lt;value&gt;]}&nbsp;or&nbsp;net.http.parseRequest(&lt;value&gt;)\n</pre><ul><li><code><strong>data</strong></code>: The web request to parse.</li><li><code><strong>headers_format</strong></code> <em>(optional)</em>: Specifies the output format of the headers.</li><li class=\"ql-indent-1\"><code>default</code> - a table of key/value pairs where the value is the last value for the given header key </li><li class=\"ql-indent-1\"><code>raw</code> - a table containing every line of every header</li><li class=\"ql-indent-1\"><code>multiple</code> - a table of key/value pairs of the form {HeaderKey = {Values={Val1,LastVal},Value=LastVal}}.</li></ul><p><br></p><h3>Notes</h3><ul><li>Parses a string representing a web request.</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>The parsed form of the request as a table with the following entries <em><u>(table)</u></em>: </li><li class=\"ql-indent-1\"><code>body</code> - the body of the request</li><li class=\"ql-indent-1\"><code>cookies</code> - a table of cookie values</li><li class=\"ql-indent-1\"><code>get_params</code> - a table of GET variables</li><li class=\"ql-indent-1\"><code>headers</code> - a table containing the request headers</li><li class=\"ql-indent-1\"><code>location</code> - the location of the request (e.g., '/services')</li><li class=\"ql-indent-1\"><code>method</code> - the method of the request (e.g., 'GET')</li><li class=\"ql-indent-1\"><code>params</code> - a table containing both GET and POST variables</li><li class=\"ql-indent-1\"><code>post_params</code> - a table of POST variables, if the request was a POST with form encoded data. </li></ul><p><br></p><h3><strong>Example</strong></h3><pre class=\"ql-syntax\" spellcheck=\"false\">net.http.parse{data=MyWebRequest}\n</pre>",
+    "Name": "net.http.parseRequest",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u> </em>Web request to parse.</p>",
+            "Name": "data",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>table</u> </em>Specifies the output format of the headers. See Usage.</p>",
+            "Name": "headers_format",
+            "Required": false
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Parses a string representing a web request."
+}

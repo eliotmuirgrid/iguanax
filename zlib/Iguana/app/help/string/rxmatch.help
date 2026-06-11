@@ -1,0 +1,18 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">s:rxmatch(regex [, mods])\n</pre><ul><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>s</strong></code>: The source string.</li><li><code><strong>regex</strong></code>: A PCRE (Perl-Compatible Regular Expression) pattern to search for.</li><li><code><strong>mods</strong></code> (<em>optional</em>): A string of modifier characters used to change how the pattern is matched.</li></ul><p>Returns an iterator that, each time it is called, yields the next match or capture group(s).</p><p>If the pattern includes captures, those values are returned; otherwise, the whole match is.</p><p><br></p><h3>Notes</h3><ul><li>Fully supports PCRE syntax, including anchors (<code>^</code>, <code>$</code>) and token shorthands (e.g., <code>\\\\s</code>, <code>\\\\d</code>, etc.).</li><li>If no captures are defined in the pattern, the entire match is returned for each iteration.</li><li>Supported modifiers:</li><li class=\"ql-indent-1\"><code>m</code>: Multi-line anchoring mode</li><li class=\"ql-indent-1\"><code>s</code>: Single-line mode (dot matches newline)</li><li class=\"ql-indent-1\"><code>i</code>: Case-insensitive matching</li><li class=\"ql-indent-1\"><code>x</code>: Ignore pattern whitespace/comments (extended mode)</li><li class=\"ql-indent-1\"><code>X</code>: Extra mode</li><li class=\"ql-indent-1\"><code>u</code>: Unicode support mode</li><li class=\"ql-indent-1\"><code>U</code>: Lazy (ungreedy) matching</li><li class=\"ql-indent-1\"><code>A</code>: Match must start at the beginning (anchored)</li><li class=\"ql-indent-1\"><code>J</code>: Allow duplicate subpattern names</li><li>Be sure to <strong>escape backslashes</strong> (e.g., <code>\\\\w</code>) when writing patterns in Lua string literals.</li><li>For a complete guide, visit the additional <a href=\"http://help.interfaceware.com/using-rxmatch-and-rxsub-with-pcre-regex.html?v=6.0.0\" target=\"_blank\">rxmatch examples</a> page.</li></ul><p><br></p><h3>Returns</h3><ul><li>An iterator function that yields matches or capture groups from the regex. <em><u>(iterator function)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local S = \"hello world from Lua and PCRE\"\nfor K in S:rxmatch(\"\\\\w+\") do\n&nbsp; &nbsp;trace(K)\nend\n</pre>",
+    "Name": "string:rxmatch",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The Perl-compatible regular expression (PCRE) to match.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u></em> (Optional) Modifier characters to alter regex behavior (e.g., case-insensitive).</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Finds regular expression matches and returns an iterator to loop through them."
+}

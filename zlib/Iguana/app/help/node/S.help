@@ -1,0 +1,7 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">Node:S()\n</pre><ul><li><code><strong>Node</strong></code>:&nbsp;Any node tree (e.g., XML, HL7, or custom parsed node structures). This method serializes the entire node structure into a string.</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>Works with any node tree, including XML, HL7, or other parsed formats</li><li>This is a convenience method equivalent to <code><a href=\"@tostring\" target=\"_blank\">tostring</a>(Node)</code>.</li><li>Useful for debugging, logging, or outputting the full XML structure.</li><li>To extract just the text value of a node (excluding tags), use <code><a href=\"@node:nodeValue\" target=\"_blank\">node.nodeValue</a>()</code> instead.</li></ul><p><br></p><h3>Returns</h3><ul><li>The node converted to a string. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Xml = xml.parse{data=\"&lt;patient&gt;&lt;/patient&gt;\"}\nlocal AsString = Xml:S();\nlocal AsString = tostring(Xml);\n</pre><ul><li>This example shows how to convert a parsed XML node to its string representation using both <code>S()</code> and <code>tostring()</code>.</li></ul>",
+    "Name": "node:S",
+    "Parameters": null,
+    "ParameterTable": false,
+    "SummaryLine": "Converts a node to a string."
+}

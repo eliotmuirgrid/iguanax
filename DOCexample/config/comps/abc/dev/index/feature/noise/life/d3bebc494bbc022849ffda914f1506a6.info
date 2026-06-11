@@ -1,0 +1,17 @@
+{
+    "created": "68e8c8ea",
+    "id": "d3bebc494bbc022849ffda914f1506a6",
+    "relations": [
+        {
+            "created": "",
+            "id": "4567",
+            "relation": "email chain",
+            "title": ""
+        }
+    ],
+    "source": "email",
+    "tags": [
+        "feature_noise_life"
+    ],
+    "title": "A title of life1760086250"
+}

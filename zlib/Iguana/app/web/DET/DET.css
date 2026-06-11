@@ -1,0 +1,898 @@
+.DETrelatedMessagesLink{
+	color: var(--blue);
+	cursor: pointer;
+	text-decoration: none;
+}
+.DETrelatedMessagesLink:hover{
+	text-decoration: underline;
+}
+.DETrelatedModalInfo{
+	margin-bottom: 15px;
+}
+.DETmessageList{
+	height: 450px;
+	overflow-y: auto;
+}
+.DETmodal {
+	overflow: hidden;
+	column-gap: 24px;
+	row-gap: 18px;
+	display: grid;
+	grid-template-rows: 1fr;
+	row-gap: 14px;
+}
+.DETlistView{
+	display: grid;
+	grid-template-rows: 1fr 1fr;
+	row-gap: 24px;
+	position: relative;
+	height: 100%;
+	z-index: 1;
+	width: 440px; 
+	overflow: hidden;
+	padding-left: 0px;
+}
+.DETtitle {
+	font-family: var(--font-buttons);
+	font-weight: 500;
+	color: var(--grey-600) !important;
+	letter-spacing: 0.05em;
+	font-size: 11px;
+	user-select: none;
+	margin-top: 6px;
+}
+.DETcomponentRowFlex > *{
+	display: flex;
+ }
+
+.DETcomponentRow{
+	display: grid;
+	grid-template-columns: 1fr auto;
+	column-gap: 18px;
+	padding: 8px;
+	padding-top: 7px;
+}
+.DETswitchTarget{
+	display: grid;
+	grid-template-columns: auto 1fr;
+	padding-left: 4px;
+	padding-top: 6px;
+}
+.DETswitchTarget .TOGswitchDiv{
+	margin-left: 0px;
+}
+.DETswitchRow{
+	display: grid;
+	grid-template-columns: auto 1fr;
+}
+.DETtimeBox{
+	border: 1px solid var(--grey-400);
+	border-radius: var(--border-radius);
+}
+.DETrowBox{
+	padding: 12px;
+	padding-right: 24px;
+	background: var(--white);
+	border: 1px solid var(--grey-400);
+	border-radius: var(--border-radius);
+}
+.DETcomponentName{
+	color: var(--grey-600);
+	font-weight: 500;
+	font-size: 14px;
+	text-decoration: unset;
+	font-family: var(--font-monospace);
+	height: 16px;
+}
+.DETcomponentName:hover{
+	color: var(--blue);
+	text-decoration: underline;
+}
+.DETactionsGrid{
+	display: grid;
+	grid-template-rows: auto 42px auto auto auto auto auto 1fr;
+	row-gap: 12px;
+}
+.DETlogSizeGrid{
+	display: grid;
+	grid-template-columns: 1fr auto;
+	column-gap: 12px;
+	padding: 4px;
+	padding-bottom: 8px;
+	padding-top: 12px;
+}
+.DETiconTimePair {
+	display: grid;
+	grid-template-rows: auto 1fr;
+	row-gap: 6px;
+	padding-left: 4px;
+	padding-top: 4px;
+}
+.DETviewRow{
+	display: grid;
+	grid-template-columns: 1fr 116px 113px;
+	column-gap: 12px;
+	padding-left: 4px;
+}
+.DETviewBox{
+	display: grid;
+	grid-template-columns: 1fr auto;
+	padding: 4px;
+}
+.DETdiv{
+	display: grid;
+	border: 1px solid var(--grey-400);
+	border-radius: var(--border-radius);
+	margin-bottom: 24px;
+}
+.DETiconTimeDiv{
+	display: grid;
+	grid-template-columns: auto auto 1fr;
+	padding: 6px;
+}
+.DETcontainingDiv{
+	padding: 2px;
+	padding-left: 8px;
+	padding-right: 8px;
+	border: 1px solid var(--grey-400);
+	border-radius: var(--border-radius);
+	margin-bottom: 24px;
+	background-color: white;
+}
+.DETtime {
+	font-family: var(--font-monospace);
+	color: var(--blue-dark);
+	padding-top: 8px;
+}
+.DEThidden{
+	display: none !important;
+}
+.DETheader{
+	font-size: 11px;
+	display: grid;
+	grid-template-columns: auto auto  1fr auto;
+	align-items: center;
+	column-gap: 16px;
+   border-bottom: solid 1px var(--grey-400);
+	padding-left: 16px;
+	padding-right: 24px;
+}
+.DETfooter .DETtitle{
+   font-size: 10px;
+}
+.DETfooter {
+   font-size: 11px;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	align-items: center;
+	column-gap: 16px;
+   border-top: solid 1px var(--grey-400);
+	padding: 6px;
+	padding-top: 2px;
+	padding-left: 18px;
+	padding-right: 12px;
+}
+.DETfooterContents {
+	display: flex;
+	align-items: baseline;
+	column-gap: 8px;
+}
+.DETlocation{
+	color: var(--grey-600);
+}
+.DETcomponentLink{
+   content : url("../LOG/icons/NewWindow.svg");
+   display :inline;
+	opacity: 0.6;
+	width: 40px;
+	user-select: none;
+ }
+ .DETcomponentLink:hover {
+   cursor: pointer;
+	opacity: 1;
+ }
+ .DETnoRelated{
+	color: var(--grey-400);
+	text-align: center;
+ }
+ .DETupstreamHeader{
+	display : grid;
+   grid-template-columns: 1fr auto;
+	column-gap: 12px;
+   border-bottom: solid 1px var(--grey-300);
+ }
+
+.RELlogEntry,
+.DETlogEntry{
+   display : grid;
+   grid-template-columns: auto 1fr;
+	padding: 8px;
+	cursor: pointer;
+	user-select: none;
+}
+ .DETentrySelected{
+	background-color: rgba(var(---blue-light), 0.7) !important;
+	border-radius: var(--border-radius);
+	box-sizing: border-box;
+ }
+ .RELlogEntry:hover,
+ .DETlogEntry:hover {
+   background-color: rgba(var(---blue-light), 0.5) !important;
+	border-radius: var(--border-radius);
+	box-sizing: border-box;
+ }
+.DETentrySelected.DETupstreamEntry:hover,
+.RELentrySelected.RELlogEntry:hover,
+.DETentrySelected.DETlogEntry:hover{
+   background-color: rgba(var(---blue-light), 0.9) !important;
+ }
+ .DETlistDiv{
+	background: var(--white);
+	border: 1px solid var(--grey-400);
+	border-radius: var(--border-radius);
+	margin-top: 12px;
+	overflow: auto;
+ }
+.RELlistDiv .RELlogEntry:nth-child(odd),
+.DETlistDiv .DETlogEntry:nth-child(odd) {
+	background-color: var(--grey-200); /* Background color for even items */
+ }
+ /* Style the odd items (2nd, 4th, 6th, etc.) */
+.RELlistDiv .RELlogEntry:nth-child(even),
+.DETlistDiv .DETlogEntry:nth-child(even) {
+	background-color: var(--white); /* Background color for odd items */
+ }
+ .DETupstreamMessagesContainer,
+ .DETrelatedMessagesContainer{
+	overflow: hidden;
+	height: 100%;
+	display: grid;
+	grid-template-rows: auto 1fr;
+ }
+ .DETlayout{
+	display: grid;
+	grid-template-rows: 1fr auto;
+	height: 100%;
+ }
+.DETwindow .POPpopoutCard-content{
+	height: calc(100% - 60px);
+	box-sizing: border-box;
+	padding : 24px;
+	padding-left : 32px;
+	padding-right : 32px;
+	padding-top: 14px;
+	background: var(--grey-200);
+}
+
+.DETdetailedHeader{
+	display: grid;
+	grid-template-rows: 1fr auto;
+	background-color: var(--grey-200) !important;
+}
+.DETdetailedDiv{
+	display: grid;
+	grid-template-columns: 244px 1fr ;
+	column-gap: 18px;
+	overflow: hidden;
+	height: 100%;
+}
+.DETdetailPrev{
+}
+.DETdetailContentGrid {
+	font-family: var(--font-monospace);
+	background-color: var(--white);
+	border: 1px solid var(--grey-400);
+	border-radius: var(--border-radius);
+	overflow: hidden;
+}
+.DETdetailContentGrid .LOGdetailTypeIcon{
+	position: sticky;
+	top: 0;
+}
+.DETdetailContentDiv{
+	/* padding-top: 12px; */
+	/* padding-bottom: 12px; */
+}
+.DETmessageDiv{
+	padding: 2px;
+}
+.DETdetailContent{
+	padding: 18px;
+	padding-top: 12px;
+	padding-left: 2px;
+	display: grid;
+	grid-template-columns: auto 1fr;
+	white-space: pre;
+	overflow: auto;
+	line-height: 16px;
+	margin-bottom: 18px;
+	margin-top: 12px;
+}
+.DETheaderGrid{
+	display: grid;
+	grid-template-rows: 1fr auto;
+	column-gap: 12px;
+}
+.DETstatusRow{
+	padding: 8px;
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+.DETstatusRow .DETtitle{
+	margin-top: 0px;
+}
+.DETstringView{
+	padding-bottom: 4px;
+	height: 42px !important;
+	padding-left: 40px !important;
+	color: var(--grey-600) !important;
+}
+.DETstringView.FORMselectBox:hover{
+	color: var(--blue)  !important;
+}
+.DETrelated,
+.DETdownloadLink{
+	text-decoration: none;
+}
+
+.DETnoBorder{
+	border: none !important;
+}
+.DETarrowsGrid{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	background-color: var(--grey-200) !important;
+	column-gap: 12px;
+}
+.DETarrowFont{
+	font-size: 16px;
+}
+.DETmodal .TOGbutton{
+	background-color: var(--white);
+}
+.DETarrow{
+	cursor: pointer;
+	text-decoration: none;
+	user-select: none;
+	background-color: var(--white);
+	padding: 12px;
+	margin-top: 2px;
+	border: 1px solid var(--grey-300) !important;
+	border-radius: var(--border-radius);
+}
+.DETdetailContentGrid{
+	display: grid;
+	grid-template-rows: auto 1fr auto;
+}
+.DETrightSide{
+	display: grid;
+	grid-template-rows: auto 1fr;
+	row-gap: 14px;
+	overflow: hidden;
+}
+.DETcellPreview{
+   white-space : nowrap;
+   overflow: hidden;
+	color: var(--grey-800);
+ }
+ .DETcellTime,
+ .DETcellPreview {
+	font-family: var(--font-monospace);
+	margin-top: 6px;
+	margin-bottom: 4px;
+	text-align: left;
+ }
+ .DETtime{
+	min-width: 90px;
+ }
+ .DETrowBox,
+.DETarrow,
+.DETexport,
+.DETreposition,
+.DETresubmit,
+.DETresubmitOrig,
+.DETdownloadLink,
+.DETwrap {
+	display: flex;
+	align-items: center;
+	font-family: var(--font-buttons);
+	column-gap: 12px;
+	cursor: pointer;
+	color: var(--grey-600);
+}
+.DETrelated:hover *,
+.DETrelated:hover,
+.DETrelatedMessages:hover,
+.DETarrow:hover *,
+.DETexport:hover,
+.DETexport:hover .DETtoolbarIcon,
+.DETreposition:hover,
+.DETreposition:hover .DETtoolbarIcon,
+.DETresubmit:hover,
+.DETresubmitOrig:hover,
+.DETresubmitOrig:hover .DETtoolbarIcon,
+.DETresubmit:hover .DETtoolbarIcon,
+.DETdownloadLink:hover,
+.DETdownloadLink:hover .DETtoolbarIcon,
+.DETwrap:hover,
+.DETwrap:hover .DETtoolbarIcon{
+	color: var(--blue);
+}
+
+.DETmodalReposition,
+.DETmodalExport {
+	max-width: 650px;
+}
+.DETbuttons{
+   display: grid;
+	grid-template-columns: auto auto;
+	justify-content: end;
+	margin-top: 32px;
+	margin-right: 0;
+	margin-left: auto;
+}
+.DETexportModal .DETbuttons{
+	margin-top: 18px;
+}
+.DETtoComponent {
+	margin-bottom: 16px;
+}
+.DETdisabled.RELlink{
+	color: var(--grey-600) !important;
+	text-decoration: none !important;
+}
+.DETdisabled {
+	opacity: 0.5;
+}
+.DETdisabled * {
+	color: var(--grey-600) !important;
+}
+.DETdisabled:hover {
+	color: var(--grey-600) !important;
+	cursor: default;
+}
+
+.DETlogEditor {
+	border: 1px solid var(--grey-400);
+	border-radius: var(--border-radius);
+	overflow-y: auto;
+	height: 100%;
+	box-sizing: border-box;
+}
+.DETmodalResubmit .POPpopoutCard-content{
+	box-sizing: border-box;
+	height: calc(100% - 61px);
+}
+.DETmodalExportEditable .POPpopoutCard-content{
+	box-sizing: border-box;
+	height: calc(100% - 61px);
+	padding: 0;
+	overflow: hidden;
+}
+.DETmodalExportEditable .DETexportModal{
+	display: grid;
+	grid-template-rows: auto auto minmax(0, 1fr) auto auto;
+	height: 100%;
+	padding: 24px;
+	box-sizing: border-box;
+	row-gap: 12px;
+}
+.DETexportComponentCard,
+.DETexportEditorCard,
+.DETexportNameCard{
+	border: 1px solid var(--grey-300);
+	border-radius: var(--border-radius);
+	background-color: var(--grey-100);
+	padding: 24px;
+}
+.DETexportComponentCard,
+.DETexportEditorCard{
+	padding-top: 16px;
+}
+.DETexportLabel{
+	font-size: 12px;
+	color: var(--grey-500);
+	margin-bottom: 14px;
+	margin-left: 4px;
+}
+.DETexportComponentCard .DETtoComponent{
+	margin-bottom: 0;
+}
+.DETphiMaskTypeInline{
+	display: inline-flex;
+	align-items: center;
+	column-gap: 8px;
+}
+.DETphiMaskTypeInlineLabel{
+	font-family: var(--font-buttons);
+	color: var(--grey-600);
+	font-size: 11px;
+	letter-spacing: 0.02em;
+}
+.DETphiMaskTypeInline .DETphiMaskType{
+	margin-bottom: 0;
+	width: 92px;
+	height: 24px;
+}
+.DETexportNameCard .DETexportName{
+	margin-bottom: 0;
+}
+.DETexportNameCardTight{
+	padding-top: 10px;
+	padding-bottom: 10px;
+}
+.DETexportNameCardTight .DETexportLabel{
+	margin-bottom: 6px;
+}
+.DETexportEditorDiv{
+	display: flex;
+	flex-direction: column;
+	min-height: 0;
+}
+.DETexportEditorCard{
+	display: flex;
+	flex-direction: column;
+	min-height: 0;
+}
+.DETexportEditorRow{
+	display: grid;
+	grid-template-columns: 1fr auto;
+	align-items: center;
+	margin-bottom: 10px;
+}
+.DETexportEditorControls{
+	display: flex;
+	align-items: center;
+	flex-wrap: wrap;
+	column-gap: 12px;
+	row-gap: 8px;
+}
+.DETexportControlGroup{
+	display: inline-flex;
+	align-items: center;
+	column-gap: 10px;
+	padding: 4px 8px;
+	border: 1px solid var(--grey-300);
+	border-radius: var(--border-radius);
+	background-color: var(--white);
+}
+.DETexportControlGroupMask{
+	padding-right: 10px;
+}
+.DETexportControlGroupLfd{
+	padding-right: 6px;
+}
+.DETanonymizeButtonTarget{
+	display: flex;
+	align-items: center;
+}
+.DETanonymizeButtonTarget .DETanonymize{
+	height: 24px;
+	display: inline-flex;
+	align-items: center;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.DETundoAnonymizeButtonTarget{
+	display: flex;
+	align-items: center;
+}
+.DETundoAnonymizeButtonTarget .DETundoAnonymize{
+	height: 24px;
+	display: inline-flex;
+	align-items: center;
+	padding-left: 10px;
+	padding-right: 10px;
+}
+.DETmodalExportEditable .DETexportEditorCard,
+.DETmodalExportEditable .DETexportEditorDiv,
+.DETmodalExportEditable .DETexportMessageEditor{
+	min-width: 0;
+}
+.DETexportLFDButtons{
+	display: flex;
+	align-items: center;
+	column-gap: 8px;
+	margin-right: 0;
+}
+.DETexportEditorDiv .DETexportLabel{
+	padding-top: 4px;
+}
+.DETmodalExportEditable .LFDlineFeedSelect{
+	height: 24px;
+	margin-right: 0;
+	width: 80px;
+}
+.DETexportEditorDiv{
+	height: 100%;
+}
+.DETexportMessageEditor{
+	overflow: auto;
+	flex: 1 1 auto;
+	min-height: 0;
+	background-color: var(--white);
+	padding-top: 4px;
+	padding-left: 2px;
+}
+.DETexportMessageEditor .CodeMirror{
+	height: 100%;
+	width: 100%;
+	max-width: 100%;
+}
+.DETexportMessageEditor .CodeMirror-lines{
+	padding-bottom: 0;
+}
+.DETmodalExportEditable .DETbuttons{
+	justify-content: flex-end;
+	margin-top: 0;
+	padding-bottom: 6px;
+}
+.LOGeditorDiv{
+	overflow: hidden;
+}
+
+.DETmessageLoading{
+   background: transparent url(/DET/DETspinner.gif) repeat-y top left;
+   /* content: url(/DET/DETspinner.gif); */
+}
+
+.DETdateTime{
+	text-align: left !important;
+	padding: 12px !important;
+	height: 16px;
+	border-bottom: 0px !important;
+ }
+ .DETtitleDiv{
+	padding: 12px;
+	padding-left: 4px;
+	padding-top: 24px;
+	font-size: 14px;
+	font-weight: 500;
+ }
+ .DETcomponentHeader{
+	display: grid;
+	grid-template-columns: auto 1fr;
+	column-gap: 12px;
+	padding-top: 2px;
+ }
+.DETgrey{
+	color: var(--grey-500);
+	display: inline;
+	padding-left: 4px;
+	margin-right: 12px;
+	margin-top: 8px;
+	margin-left: 0px;
+	height: 27px;
+ }
+ .DETviewAsRow{
+	display: grid;
+	grid-template-columns: auto 1fr;
+	column-gap: 24px;
+	height: 42px;
+	padding-left: 4px;
+}
+
+.DETerrorFeedback{
+	margin-top: 8px;
+	height: 16px;
+	color: var(--red);
+}
+
+.DETphiMaskModal{
+	display: grid;
+	row-gap: 16px;
+}
+.DETphiMaskModal .BUTTONgroup{
+	justify-content: flex-end;
+}
+.DETphiMaskHelp{
+	color: var(--grey-700);
+	line-height: 20px;
+}
+.DETphiMaskUrlRow{
+	display: grid;
+	grid-template-columns: auto 1fr;
+	column-gap: 12px;
+	background: var(--grey-100);
+	border: 1px solid var(--grey-300);
+	border-radius: var(--border-radius);
+	padding: 10px 12px;
+}
+.DETphiMaskUrlLabel{
+	font-family: var(--font-buttons);
+	color: var(--grey-600);
+}
+.DETphiMaskUrlValue{
+	font-family: var(--font-monospace);
+	color: var(--blue-dark);
+	word-break: break-all;
+}
+
+.DETsegmentInfo {
+	white-space: nowrap;
+}
+
+.DETinfoHide {
+	display: none !important;
+}
+
+.DETvmdBrowser {
+	width: 600px;
+}
+
+.DETcontainerWrapper {
+	position: relative;
+}
+
+.DETmessageDiv .emptyNodeDropdown {
+	position: relative;
+	top: 0;
+	left: 0;
+	width: fit-content;
+	background-color: #eaeaea;
+	border: solid 1px #CCCCCC;
+	border-top: 0;
+	color: #555555;
+	cursor: pointer;
+	margin-top: 10px;
+	min-height: 0;
+	line-height: normal;
+	box-sizing: border-box;
+	height: auto;
+}
+
+.DETcontainerWrapper div.emptyNodeDropdown label {
+	display: flex;
+	align-items: center;
+	justify-content: flex-start;
+	gap: 2px;
+	white-space: nowrap;
+	line-height: 1;
+	padding: 2px 3px;
+	height: auto;
+	box-sizing: border-box;
+	margin-top: 10px;
+	float: left;
+}
+
+.DETcontainerWrapper div.emptyNodeDropdown input[type="checkbox"] {
+	margin: 0;
+	padding: 0;
+}
+
+.DETshowMessageContainer {
+	background-color: /*#f9fdcb;*/ #eaeaea;
+	border: solid 1px #CCCCCC;
+	border-top: 0;
+	right: 16px;
+	font-size: 11px;
+	color: #555555;
+	padding: 1px 4px 1px 1px;
+	width: fit-content;
+	margin-top: 10px;
+	margin-bottom: 10px;
+}
+
+.DETshowMessageContainer *{
+	cursor: pointer;
+}
+
+.DETshowMessageCheckbox {
+	margin-right: 5px;
+}
+
+.DETshowMessage {
+	margin-top: 10px;
+	padding: 10px;
+	background-color: #f5f5f5;
+	border: 1px solid #ddd;
+	white-space: pre-wrap;
+}
+.DETsegmentToggle {
+	margin-bottom: 10px;
+}
+
+.DETshowMessageContainer *,
+.DETsegmentToggle *,
+.DETdefaultVmdToggle * {
+	cursor: pointer;
+}
+
+.DETtoggleContainer {
+	gap: 10px;
+}
+.DETdateTimeSearchRow {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	/* align-items: center; */
+	/* justify-content: space-between; */
+	background-color: var(--grey-300);
+	gap: 12px;
+}
+
+.DETsearchInput {
+	padding: 4px 8px;
+	font-size: 12px;
+	width: 140px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin: 8px;
+	margin-right: 0px;
+}
+.DETsearchNumber{
+	padding: 2px 6px;
+	font-size: 12px;
+	border: 1px solid #ccc;
+	border-radius: 4px;
+	margin: 8px;
+	width: 32px;
+}
+
+.DETsearchPrev, .DETsearchNext {
+	padding: 2px 6px;
+	font-size: 20px;
+}
+.DETdateTimeSearchBox {
+	display: grid;
+	grid-template-columns: 1fr auto auto auto auto auto;
+}
+.DETsearchNumber{
+}
+.DETsearchSlash,
+.DETsearchResultsCount{
+	/* padding: 8px; */
+}
+.DETsearchSlash{
+	padding-left: 4px;
+	padding-right: 8px;
+	padding-top: 11px;
+}
+.DETsearchResultsCount{
+	padding-left: 0px;
+	padding-top: 11px;
+	width: 60px;
+	margin-right: 8px;
+}
+.DETsearchIndexDown{
+	margin-right: 12px;
+}
+.DETsearchIndexUp,
+.DETsearchIndexDown{
+	text-align: center;
+	height: 18px;
+	width: 24px;
+	border-radius: var(--border-radius);
+	user-select: none;
+	cursor: pointer;
+	margin-top: 11px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+.DETsearchIndexUp:hover,
+.DETsearchIndexDown:hover{
+	background: var(--white);
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.25);
+}
+.DETsearchIndexUp:active,
+.DETsearchIndexDown:active{
+	background: var(--white);
+	box-shadow: none;
+	margin-top: 12px;
+}
+.DETsearchIndexUp{
+	margin-right: 4px;
+}
+.DETselected{
+	background-color: orange !important;
+}
+.DETmodal .LOGtags{
+	align-items: end;
+	/* margin-top: 4px; */
+	max-width: unset;
+	justify-content: flex-start;
+	gap: 12px 10px;
+}
+.DETmodal .LOGtag{
+	padding: 4px 8px;
+}

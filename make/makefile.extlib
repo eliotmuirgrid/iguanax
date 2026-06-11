@@ -1,0 +1,84 @@
+# Variables for including/linking against third party libraries
+
+ifeq ($(OS),Windows_NT) # Windows
+    PLATFORM := Windows
+else # POSIX
+    UNAME_S := $(shell uname -s)
+    ifeq ($(UNAME_S),Linux) # Linux
+        PLATFORM := Linux
+    else ifeq ($(UNAME_S),Darwin) # macOS
+        PLATFORM := macOS
+    else # Unsupported
+        $(error "Current platform not supported")
+    endif
+endif
+
+ifeq ($(PLATFORM),Windows)
+    SCRIPT_DIR   := ..\make\extlib_scripts
+    SCRIPT_EXT   := bat
+    PARTY_DIR    := C:/ProgramData/ThirdParty
+    EXT_LIB      := $(PARTY_DIR)/OK
+    OPENSSL_PATH := $(PARTY_DIR)/installed/OpenSSL
+    LIBCURL_PATH := $(PARTY_DIR)/installed/libcurl
+    LIBSSH2_PATH := $(PARTY_DIR)/installed/libssh2
+    ZLIB_PATH    := $(PARTY_DIR)/installed/zlib
+else
+    SCRIPT_DIR := ../make/extlib_scripts/
+    SCRIPT_EXT   := sh
+    PARTY_DIR    := $(HOME)/ThirdParty
+    EXT_LIB      := $(PARTY_DIR)/OK
+    OPENSSL_PATH := $(PARTY_DIR)/installed/OpenSSL
+    LIBCURL_PATH := $(PARTY_DIR)/installed/libcurl
+    LIBSSH2_PATH := $(PARTY_DIR)/installed/libssh2
+    ZLIB_PATH    := $(PARTY_DIR)/installed/zlib
+endif
+
+# In case this make file is included before the 'all' target in makefile.core,
+# we use an alias target for 'all' to make sure default make still makes 'all'.
+all_party_alias: all
+
+# These scripts must be run before any of our libraries are built if thirdparty libraries are required
+# This can be done by calling make thirdparty before the usual make -j
+
+
+
+$(EXT_LIB):
+	$(SCRIPT_DIR)\CheckForTools.$(SCRIPT_EXT)
+	$(SCRIPT_DIR)\opensslInstall.$(SCRIPT_EXT)
+	$(SCRIPT_DIR)\zlibInstall.$(SCRIPT_EXT)
+	$(SCRIPT_DIR)\libssh2Install.$(SCRIPT_EXT)
+	$(SCRIPT_DIR)\libcurlInstall.$(SCRIPT_EXT)
+	$(SCRIPT_DIR)\gitInstall.$(SCRIPT_EXT)
+	@echo Built any thirdparty libraries that needed to be built
+	@touch $(EXT_LIB)
+
+# the ordering of ifeq blocks matters for Linux. libcurl depends on OpenSSL, so -lssl and -lcrypto must come after -lcurl
+
+# Include library's CFLAGS and LDFLAGS if it appears in the THIRDPARTY variable
+ifeq (libcurl, $(findstring libcurl,$(THIRDPARTY)))
+    ifeq ($(PLATFORM),Windows)
+        LIB_CFLAGS  += -I$(LIBCURL_PATH)\include -I$(LIBSSH2_PATH)\include -I$(LIBSSH2_PATH)\include
+        LIB_LDFLAGS += /LIBPATH:"$(LIBCURL_PATH)\lib" libcurl.lib
+    else
+        LIB_CFLAGS  += -I$(LIBCURL_PATH)/include -I$(LIBSSH2_PATH)/include -I$(ZLIB_PATH)/include
+        LIB_LDFLAGS += -L$(LIBCURL_PATH)/lib -lcurl -L$(LIBSSH2_PATH)/lib -lssh2  -L$(ZLIB_PATH)/lib -lz
+        ifeq ($(PLATFORM),macOS)
+            LIB_LDFLAGS += -framework CoreFoundation -framework SystemConfiguration
+        endif
+    endif
+endif
+
+# Include library's CFLAGS and LDFLAGS if it appears in the THIRDPARTY variable
+ifeq (openssl, $(findstring openssl,$(THIRDPARTY)))
+    ifeq ($(PLATFORM),Windows)
+        LIB_CFLAGS  += -I$(OPENSSL_PATH)\include
+        LIB_LDFLAGS += /LIBPATH:"$(OPENSSL_PATH)\lib" libssl.lib libcrypto.lib crypt32.lib
+    else
+        LIB_CFLAGS  += -I$(OPENSSL_PATH)/include
+        LIB_LDFLAGS += -L$(OPENSSL_PATH)/lib -lssl -lcrypto
+    endif
+endif
+
+# Only delete the thirdparty directory for the architecture called to not incur more wait time than necessary
+cleanall: clean
+	rm -rf $(base_path)

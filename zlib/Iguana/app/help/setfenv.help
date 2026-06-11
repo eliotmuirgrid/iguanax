@@ -1,0 +1,18 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">setfenv(f, table)\n</pre><ul><li><code><strong>f</strong></code>: A Lua function, or an integer specifying a function by stack level.</li><li class=\"ql-indent-1\"><code>1</code> refers to the function calling <code>setfenv</code>.</li><li class=\"ql-indent-1\"><code>0</code> changes the environment of the current thread (in which case no value is returned).</li><li><code><strong>table</strong></code>: The new environment to assign to the function.</li></ul><p><br></p><h3>Notes</h3><ul><li>All global variables are stored as fields in Lua tables, known as <em>environment tables</em>.</li><li>A Lua function has its own reference to an environment, inherited from the environment of the function that created it.</li><li>Changing the environment affects which globals the function sees.</li><li>If <code>f</code> is <code>0</code>, the environment of the running thread is changed, and no value is returned.</li><li><strong>C functions</strong> share the common global environment <code>_G</code> and cannot have unique environments.</li><li>For retrieving the environment of a function, use <code><a href=\"@getfenv\" target=\"_blank\">getfenv</a></code>.</li></ul><p><br></p><h3>Returns</h3><ul><li>The same function passed in as the first argument.<strong> </strong><em><u>(function)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">-- change function environment and then compare to global environment\nmain()\n&nbsp; myFunc(_G)\nend\n\nfunction myFunc(env)\n&nbsp; if (getfenv(myFunc) == _G) then print('Match') end -- \"Match\" to environment for myFunc (this function)\n\n&nbsp; -- change the environment for this function\n&nbsp; setfenv(myFunc, {my_getfenv = _G.getfenv, my_print = _G.print, myFunc = _G.myFunc})\n\n&nbsp; -- compare to global environment (_G passed as parameter \"env\") now fails\n&nbsp; if (my_getfenv(2) == env) then my_print('No Match') end -- \"No Match\" to environment for this function\n&nbsp; if (my_getfenv(myFunc) == env) then my_print('No Match') end -- \"No Match\" to environment for myFunc (this function)\nend\n</pre>",
+    "Name": "setfenv",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>function or integer</u></em> The function (or stack level) whose environment is being set.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>table</u></em> The new environment table to assign.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Sets the environment to be used by the given function."
+}

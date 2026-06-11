@@ -1,0 +1,18 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">message.send{data = &lt;message&gt;, id = &lt;component_id&gt;}\n-- or\nmessage.send(&lt;message&gt;, &lt;component_id&gt;)\n</pre><ul><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>data</strong></code>: The message payload to send.</li><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>id</strong></code>: The target component’s unique identifier.</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>Sends the message directly to the target component’s <code style=\"background-color: rgb(240, 240, 240);\">main</code> function, skipping the queue.</li><li>Unlike <code style=\"background-color: rgb(240, 240, 240); color: rgb(37, 144, 205);\"><a href=\"http://localhost:7654/@queue.push\" target=\"_blank\">queue.push</a></code>, this does not store the message or pass it through normal queue handling.</li><li>Useful for real-time message delivery while the target component is actively running.</li></ul><h4><strong>Prerequisites</strong></h4><ul><li>The target component must exist.</li><li>The target component must be actively running.</li></ul><h4><strong>Important Considerations</strong></h4><ul><li>Use <code style=\"background-color: rgb(240, 240, 240); color: rgb(37, 144, 205);\"><a href=\"http://localhost:7654/@iguana.components\" target=\"_blank\">iguana.components</a></code> to see a list of components and dynamically access the component IDs.</li><li>If the Custom component is renamed, any hardcoded references must be updated.</li></ul><h4><strong>Development Mode Behavior</strong></h4><ul><li><code style=\"background-color: rgb(240, 240, 240);\">message.send()</code> only sends messages in production mode.</li><li>In development mode, this function does nothing (no-op).</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>Nothing.</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">message.send{data = \"hello\", id = iguana.components()[\"Custom Blank\"]}\n</pre><ul><li>This example demonstrates pushing a message directly to a component named \"Custom Blank\" by dynamically referencing its ID.</li><li>You may have to change the \"Custom Blank\" to a name of one of your existing components to get the example to work. </li></ul>",
+    "Name": "message.send",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The message to be sent.</p>",
+            "Name": "data",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u></em> The ID of the target component.</p>",
+            "Name": "id",
+            "Required": true
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Sends a message to a component."
+}

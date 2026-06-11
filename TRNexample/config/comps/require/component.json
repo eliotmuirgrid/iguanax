@@ -1,0 +1,15 @@
+{
+    "description": "Component for annotation/require test.",
+    "fields": {},
+    "guid": "require",
+    "name": "require",
+    "run_commit": "",
+    "run_comp": "",
+    "run_repo": "",
+    "sources": [],
+    "tags": [
+        "#blank",
+        "#project"
+    ],
+    "template": false
+}     

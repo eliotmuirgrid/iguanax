@@ -1,0 +1,135 @@
+<p style="line-height: 18px">
+	The db module contains the Iguana Translator script functions that interact with databases. Functions exist to create local database tables, merge them with external databases, and perform queries on external databases.</p>
+<p>
+	It is recommended best practice to use the new style database methods. They are easier to use and offer improved database transaction handling.</p>
+<h3>
+	Advantages of the new style connection objects:</h3>
+<ul>
+	<li>
+		Connections are not pooled, resulting in safer transactions:
+		<ul>
+			<li>
+				Create dedicated connections using <strong><code>db.connect()</code></strong></li>
+			<li>
+				Legacy connections are pooled so it is possible (rarely) to receive a different connection and rollback a transaction<br />
+				<strong>Note</strong>: If network connectivity to the database is lost, a rollback will occur with new and legacy connections<br />
+				&nbsp;</li>
+		</ul>
+	</li>
+	<li>
+		NEW! The ability to check a connection to confirm that the database is still available:
+		<ul>
+			<li>
+				Use the <strong><code>conn:check()</code></strong> method to test a connection</li>
+		</ul>
+	</li>
+</ul>
+<p>
+	<strong>Note:</strong> it is important to understand the behaviour of the live flag for db.connect&nbsp; and how it affects the execution the new style database methods in the Iguana editor:</p>
+<ul>
+	<li>
+		By default the connection handle returned from db.connect is live (live = true).</li>
+	<li>
+		If db.connect live = true (the default) connection methods will run in the editor (based on their default or live setting).</li>
+	<li>
+		If db.connnect live = false it means that all database operations are <strong>always non-live</strong>.</li>
+</ul>
+<p>
+	For more information on how Iguana Translator scripts work with databases, see <a class="vb" href="default.asp?W311" rel="nofollow">Mapping To/From Databases</a>.</p>
+
+<p>The db page below describes the old style database functions. Functions exist to create local database tables, merge them with external databases, and perform queries on external databases.</p>
+
+<p>
+	Every function in the db namespace in Translator scripts now accepts a &quot;use_unicode&quot; flag that allows you to control whether or not database connections from Iguana are configured to use Unicode. This flag may be necessary if you are dealing with information that contains international characters.</p>
+<p>
+	The &quot;use_unicode&quot; flag is set to false by default in order to maintain backwards compatibility with older versions of Iguana 5.0.x</p>
+<h3>
+	<a name="db.begin"></a>Database codes used for supported databases</h3>
+<table class="Basic" style="width:100%">
+	<tbody>
+		<tr>
+			<td style="text-align: center">
+				<strong>Supported Database</strong></td>
+			<td style="text-align: center">
+				<strong>Database code to use with the api parameter</strong></td>
+		</tr>
+		<tr>
+			<td>
+				My SQL</td>
+			<td>
+				db.MY_SQL</td>
+		</tr>
+		<tr>
+			<td>
+				Oracle OCI</td>
+			<td>
+				db.ORACLE_OCI</td>
+		</tr>
+		<tr>
+			<td>
+				Oracle ODBC</td>
+			<td>
+				db.ORACLE_ODBC</td>
+		</tr>
+		<tr>
+			<td>
+				SQL Lite</td>
+			<td>
+				db.SQLITE</td>
+		</tr>
+		<tr>
+			<td>
+				Microsoft SQL Server</td>
+			<td>
+				db.SQL_SERVER</td>
+		</tr>
+		<tr>
+			<td>
+				Postgres</td>
+			<td>
+				db.POSTGRES</td>
+		</tr>
+		<tr>
+			<td>
+				DB2</td>
+			<td>
+				db.DB2</td>
+		</tr>
+		<tr>
+			<td>
+				Informix</td>
+			<td>
+				db.INFORMIX</td>
+		</tr>
+		<tr>
+			<td>
+				Interbase</td>
+			<td>
+				db.INTERBASE</td>
+		</tr>
+		<tr>
+			<td>
+				Filemaker</td>
+			<td>
+				db.FILEMAKER</td>
+		</tr>
+		<tr>
+			<td>
+				Sybase ASA</td>
+			<td>
+				db.SYBASE_ASA</td>
+		</tr>
+		<tr>
+			<td>
+				Sybase ASE</td>
+			<td>
+				db.SYBASE_ASE</td>
+		</tr>
+		<tr>
+			<td colspan="1">
+				MS Access</td>
+			<td colspan="1">
+				db.ACCESS</td>
+		</tr>
+	</tbody>
+</table>

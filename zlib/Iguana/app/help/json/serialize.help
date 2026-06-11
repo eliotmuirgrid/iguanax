@@ -1,0 +1,23 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">json.serialize{\n&nbsp; &nbsp;data = &lt;table&gt;,\n&nbsp; &nbsp;compact = true | false,&nbsp; &nbsp; -- optional (default: false)\n&nbsp; &nbsp;alphasort = true | false&nbsp; &nbsp;-- optional (default: false)\n}\n</pre><ul><li><code><strong>data</strong></code>: The Lua table to serialize into JSON.</li><li><code><strong>compact</strong></code> <em>(optional)</em>: If <code>true</code>, the output will be compact (no pretty-printing). Default is <code>false</code>.</li><li><code><strong>alphasort</strong></code> <em>(optional)</em>: If <code>true</code>, the table keys will be sorted alphabetically in the output. Default is <code>false</code>.</li></ul><p><br></p><h3>Notes</h3><ul><li>The output is a JSON-formatted string that can be used for storage, transmission, or APIs.</li><li>If <code>compact</code> is <code>false</code>, the output will be human-readable (pretty-printed JSON).</li><li>Alphabetical sorting (<code>alphasort = true</code>) can be helpful for consistent key ordering, which is useful in testing or diffing JSON output.</li></ul><h3><br></h3><h3>Returns</h3><ul><li>The serialized JSON string. <em><u>(string)</u></em></li></ul><p><br></p><h3><strong>Example</strong></h3><pre class=\"ql-syntax\" spellcheck=\"false\">local T = { age = 52, name = \"Fred\" }\n\n-- Serialize the table in compact form\nlocal JSON = json.serialize{\n&nbsp; &nbsp;data = T,\n&nbsp; &nbsp;compact = true\n}\n\ntrace(JSON)\n-- Output: {\"age\":52,\"name\":\"Fred\"}\n</pre>",
+    "Name": "json.serialize",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>table</u></em> The Lua table to serialize into JSON.</p>",
+            "Name": "data",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>bool</u></em> Minify JSON output.</p>",
+            "Name": "compact",
+            "Required": false
+        },
+        {
+            "Description": "<p><em style=\"color: rgb(68, 68, 68);\"><u>bool</u></em><span style=\"color: rgb(68, 68, 68);\"> </span>Sort JSON keys alphabetically<span style=\"color: rgb(68, 68, 68);\">.</span></p>",
+            "Name": "alphasort",
+            "Required": false
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Serializes a Lua table as a JSON-formatted string."
+}

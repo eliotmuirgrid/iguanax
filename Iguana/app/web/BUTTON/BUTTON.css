@@ -1,0 +1,101 @@
+/* .BUTTONaction is a green button for like Save or Edit */
+/* BUTTONcancel is a grey button for like Cancel */
+
+.BUTTONaction,
+.BUTTONcancel,
+.BUTTONdefault,
+.BUTTONdisabled {
+	font-family: var(--font-buttons);
+	font-weight: var(--semibold);
+	font-size: 10px;
+	line-height: 10px;
+	letter-spacing: 0.25px;
+	border-radius: var(--border-radius);
+	border: none;
+	cursor: pointer;
+	transition: 250ms ease-out;
+	/* Means that the hover style goes away a little slower */
+}
+
+.BUTTONaction {
+	background-color: var(--green);
+	color: var(--white);
+}
+
+.BUTTONaction:hover {
+	background-color: var(--green-hover);
+	transition: 70ms ease-in;
+	/* Means that the hover style comes in a gradual way */
+}
+
+.BUTTONaction:active {
+	background-color: var(--green-active);
+}
+
+.BUTTONcancel,
+.BUTTONdefault {
+	background-color: var(--grey-200);
+	color: var(--grey-600);
+}
+
+.BUTTONcancel:hover,
+.BUTTONdefault:hover {
+	background-color: var(--grey-300);
+	transition: 70ms ease-in;
+	/* Means that the hover style comes in a gradual way */
+}
+
+/*  When the mouse button is depressed */
+.BUTTONcancel:active,
+.BUTTONdefault:active {
+	background-color: var(--grey-400);
+}
+
+/* BUTTONwarning is used in conjunction with a grey button, but turns it red on hover and when pressed */
+/* Useful for buttons with actions that are destructive in nature */
+.BUTTONwarning:hover {
+	color: var(--red);
+	background-color: var(--red-lighter);
+	transition: 70ms ease-in;
+	/* Means that the hover style comes in a gradual way */
+	cursor: pointer;
+}
+
+/*  When the mouse button is depressed */
+.BUTTONwarning:active {
+	color: var(--red-dark);
+	background-color: var(--red-light);
+}
+
+.BUTTONdisabled {
+	background-color: var(--grey-200) !important;
+	color: var(--grey-300) !important;
+	cursor: not-allowed !important;
+}
+
+.BUTTONstandard {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	height: 28px;
+	width: fit-content;
+	padding: 0px 12px;
+	box-sizing: border-box;
+	text-decoration: none;
+	user-select: none;
+}
+
+/* Group multiple buttons in a div.BUTTONgroup to add spacing between buttons */
+.BUTTONgroup {
+	display: flex;
+	user-select: none;
+}
+
+.BUTTONgroup .BUTTONstandard {
+	margin-right: 8px;
+}
+
+.BUTTONgroup .BUTTONstandard:last-child {
+	margin-right: 0px;
+}
+

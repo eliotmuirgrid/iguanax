@@ -1,0 +1,19 @@
+{
+    "created": "659c06f9",
+    "id": "4b753e592dad95df72d785955b187c4f",
+    "relations": [
+        {
+            "created": "",
+            "id": "4567",
+            "relation": "email chain",
+            "title": ""
+        }
+    ],
+    "source": "email",
+    "tags": [
+        "legal_medium_conflict",
+        "customer_important_dash",
+        "customer_important_life"
+    ],
+    "title": "A title of life1704724217"
+}

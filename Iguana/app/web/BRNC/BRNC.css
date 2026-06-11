@@ -1,0 +1,108 @@
+/* BRNC (RPO-based) */
+
+/* ===== Layout + spacing ===== */
+.BRNCmodal .BRNCintro{ margin: 4px 0 14px; }
+.BRNCmodal .RPOheader{ margin: 0 0 6px; }
+
+.BRNCmodal .RPOcomponentDiv{
+  margin: 8px 0 12px;
+}
+.BRNCmodal .RPOcomponentDiv:last-of-type{
+  margin-bottom: 0;
+}
+
+/* Extra spacing between rows inside a panel (Branch vs Repo) */
+.BRNCmodal .RPOrepoRow + .RPOrepoRow{
+  margin-top: 10px;
+}
+
+/* ===== Rows (override RPOrepoRow: 2 columns) ===== */
+.BRNCmodal .RPOrepoRow{
+  grid-template-columns: 104px 1fr;
+}
+.BRNCmodal .RPOrepoRow > div:nth-child(2){
+  min-width: 0;
+}
+.BRNCmodal .RPOrepoRow > div:nth-child(3){
+  display: none; /* if markup still includes spacer cell */
+}
+
+/* ===== Inputs ===== */
+.BRNCinputCol{
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  min-width: 0;
+  max-width: 640px;
+}
+.BRNCinputCol .FORMinput{
+  width: 100%;
+  box-sizing: border-box;
+}
+.BRNCbranchRow .FORMlabel{
+  margin-top: 4px;
+}
+
+/* ===== Copy / hints ===== */
+.BRNCintro .RPOdescription{
+  padding-left: 4px;
+}
+.BRNCintroDetail{
+  margin-top: 6px;
+}
+.BRNCdefaultHint{
+  font-size: 12px;
+  opacity: 0.75;
+  line-height: 16px;
+}
+.BRNCswitchNotice{
+  font-size: 12px;
+  line-height: 16px;
+  color: var(--grey-600);
+}
+.BRNCmode{
+  opacity: 0.65;
+  font-size: 12px;
+  margin-left: 6px;
+  white-space: nowrap;
+}
+.BRNCcode{
+  white-space: nowrap;
+  font-family: ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", monospace;
+  padding: 0 4px;
+  border-radius: 3px;
+  background: rgba(0,0,0,0.06);
+}
+
+/* ===== Buttons ===== */
+.BRNCbuttons{
+  justify-content: flex-end;
+  margin-top: 12px;
+}
+
+/* ===== Links ===== */
+.BRNCmodal a,
+.BRNCmodal a:visited{
+  color: var(--blue);
+  text-decoration: none;
+}
+.BRNCmodal a:hover{
+  text-decoration: underline;
+}
+
+.BRNCerror{
+  margin-top: 8px;
+  padding: 8px 10px;
+  border-radius: 4px;
+  border: 1px solid rgba(220, 53, 69, 0.35);
+  background: rgba(220, 53, 69, 0.08);
+  color: rgba(160, 0, 0, 0.95);
+  font-size: 12px;
+  line-height: 16px;
+  white-space: pre-line;
+}
+.BRNCerror.BRNCwarning{
+  border-color: rgba(245, 155, 35, 0.45);
+  background: rgba(245, 155, 35, 0.10);
+  color: rgba(120, 75, 0, 0.98);
+}

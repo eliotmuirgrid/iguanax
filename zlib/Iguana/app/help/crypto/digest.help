@@ -1,0 +1,18 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">crypto.digest{data&nbsp;= &lt;data&gt;, algorithm = &lt;algorithm&gt;}\n</pre><ul><li><code><strong>data</strong></code>: The input string to compute the checksum for.</li><li><code><strong>algorithm</strong></code>: The hashing algorithm to use (such as <code>'sha1'</code> or <code>'sha256'</code>).</li></ul><h4><br></h4><h3>Returns</h3><ul><li>The checksum of the input data, as a binary-encoded string. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local BinaryChecksum = crypto.digest{data = \"hello\", algorithm = \"sha1\"}\n</pre>",
+    "Name": "crypto.digest",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The data to checksum. </p>",
+            "Name": "data",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u></em> The name of the message digest algorithm to use (e.g., <code>'sha1'</code>, <code>'sha256'</code>).</p>",
+            "Name": "algorithm",
+            "Required": true
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Produces checksums of input data using the specified hashing algorithm."
+}

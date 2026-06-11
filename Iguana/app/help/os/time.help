@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">os.time([table])\n</pre><ul><li><code><strong>table</strong></code> <em>(optional)</em>: Table with date/time fields. Must contain <code>year</code>, <code>month</code>, and <code>day</code>. May include <code>hour</code>, <code>min</code>, <code>sec</code>, and <code>isdst</code>.</li></ul><p><br></p><h3>Consider Using</h3><ul><li>For times before Jan 1, 1970 (before epoch), use <code style=\"background-color: rgb(240, 240, 240); color: rgb(37, 144, 205);\"><a href=\"http://localhost:7654/@iguana6.time\" target=\"_blank\">iguana6.time</a></code>.</li></ul><p>   This function handles pre-epoch dates correctly and avoids undefined behavior.</p><p><br></p><h3>Notes</h3><ul><li>Returns the current time as a Unix Epoch timestamp if no table is passed.</li><li>The result can be used with <code><a href=\"@os.date\" target=\"_blank\">os.date</a></code> or <code><a href=\"@os.difftime\" target=\"_blank\">os.difftime</a></code>.</li><li>Avoid directly subtracting timestamps—use <code>os.difftime</code> instead, as it correctly handles time zones and daylight saving.</li><li>Invalid or incomplete fields in the table may result in incorrect or undefined behavior.</li></ul><p><br></p><h3>Returns</h3><ul><li>A numeric timestamp (Unix time). <em><u>(custom format: user data)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">-- get current date/time\nlocal now = os.time()\n\n-- specify date with mandatory fields\nlocal d1 = os.time{year=1999, month=12, day=1}\n\n-- specify full date/time\nlocal d2 = os.time{year=1999, month=12, day=1, hour=22, min=23, sec=24}\n</pre><ul><li>These examples demonstrate using <code>os.time</code> with and without a date table.</li></ul>",
+    "Name": "os.time",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>table</u></em> A table containing date and time fields to be formatted.</p>",
+            "Name": "table",
+            "Required": false
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Returns the current time when called without arguments, or a specified date/time if a table is provided."
+}

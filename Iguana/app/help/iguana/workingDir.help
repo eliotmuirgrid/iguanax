@@ -1,0 +1,7 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">iguana.workingDir()\n</pre><p><br></p><h3>Notes</h3><ul><li>Get the current working directory where the configuration files are located.</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>The directory name. <em>(<u>string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Dir = iguana.workingDir()\n</pre>",
+    "Name": "iguana.workingDir",
+    "Parameters": null,
+    "ParameterTable": false,
+    "SummaryLine": "Get the current working directory where the configuration files are located."
+}

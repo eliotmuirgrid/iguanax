@@ -1,0 +1,109 @@
+/* TODO - understand how this gets injected */
+.cm-s-ifware span.cm-delim {color: #c508c5;}
+.cm-s-ifware span.cm-keyword {color: var(--blue); font-weight: 600;}
+.cm-s-ifware span.cm-atom {color: #219;}
+.cm-s-ifware span.cm-number {color: var(--green); font-weight: 600;}
+.cm-s-ifware span.cm-def {color: #00f;}
+.cm-s-ifware span.cm-variable {color: var(--grey-700);}
+.cm-s-ifware span.cm-variable-2 {color: #05a;}
+.cm-s-ifware span.cm-variable-3 {color: #0a5;}
+.cm-s-ifware span.cm-property {color: black;}
+.cm-s-ifware span.cm-operator {color: black;}
+.cm-s-ifware span.cm-comment {
+    color: #C5980D !important;
+    font-style: italic;
+}
+.cm-s-ifware span.cm-string {color: #A626A4;}
+.cm-s-ifware span.cm-string-2 {color: #f50;}
+.cm-s-ifware span.cm-meta {color: #555;}
+.cm-s-ifware span.cm-error {color: #f00;}
+.cm-s-ifware span.cm-qualifier {color: #555;}
+.cm-s-ifware span.cm-builtin {color: #139493;}
+.cm-s-ifware span.cm-bracket {color: #cc7;}
+.cm-s-ifware span.cm-tag {color: #170;}
+.cm-s-ifware span.cm-attribute {color: #00c;}
+.cm-s-ifware div.CodeMirror-selected {background: #B3D7FF;}
+
+/* Force jQuery dialog to not show it's scrollbars in the Sample Data Editor
+ * floating dialog */
+.editor-wrapper .ui-dialog-content { overflow: hidden !important; }
+
+.CodeMirror-gutters {
+    border-right: none;
+    background-color: #FFF;
+}
+
+.TRANSreadOnlyClass .CodeMirror-gutters {
+	background-color: var(--grey-200) !important;
+}
+
+.CodeMirror *{
+	font-family:  var(--font-monospace);
+}
+
+div.CodeMirror-scroll {
+    margin-bottom: 0px;
+    margin-right: 0px;
+	 padding-bottom: 0px;
+	 overflow-x: hidden !important; /* remove the horizontal scrollbar from the line numbers column */
+}
+
+/* Hide scrollbar for Chrome, Safari and Opera */
+.CodeMirror-scroll::-webkit-scrollbar {
+	display: none;
+ }
+
+ /* Hide scrollbar for IE, Edge and Firefox */
+ .CodeMirror-scroll {
+	-ms-overflow-style: none;  /* IE and Edge */
+	scrollbar-width: none;  /* Firefox */
+ }
+
+.CodeMirror-gutter.dirty {
+	background: none; /* erase the yellow bit that shows at the bottom of the editor next to the line numbers */
+}
+
+/* This is used to artificially increase the width of the annotation blocks, so that there is still some right padding when you scroll all the way to the right. */
+.ANNblock::after {
+	content: " ";
+	position: absolute;
+	right: -24px;
+	display: block;
+}
+
+.CodeMirror-vscrollbar{
+    --scrollbarBG: #FFFFFF;
+    --thumbBG: #D2DDE8;
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+.CodeMirror-hscrollbar {
+    --scrollbarBG: #FFFFFF;
+    --thumbBG: #D2DDE8;
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+.CodeMirror-vscrollbar::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+}
+.CodeMirror-hscrollbar::-webkit-scrollbar {
+    width: 16px;
+    height: 16px;
+}
+.CodeMirror-vscrollbar::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+}
+.CodeMirror-hscrollbar::-webkit-scrollbar-track {
+    background: var(--scrollbarBG);
+}
+.CodeMirror-vscrollbar::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    border-radius: 8px;
+    border: 5px solid var(--scrollbarBG);
+}
+.CodeMirror-hscrollbar::-webkit-scrollbar-thumb {
+    background-color: var(--thumbBG) ;
+    border-radius: 8px;
+    border: 5px solid var(--scrollbarBG);
+}

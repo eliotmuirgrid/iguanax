@@ -1,0 +1,7 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">conn:close();\n</pre><ul><li><code><strong>conn</strong></code>: The database connection object to be closed.</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>Once closed, the connection handle becomes invalid.</li><li>Any attempt to use the connection after calling <code>:close()</code> will raise an error.</li><li>Always close your database connections after use to free resources and avoid connection pool exhaustion.</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local conn = db.connect{\n&nbsp; &nbsp;api = db.MY_SQL,\n&nbsp; &nbsp;name = 'test@localhost',\n&nbsp; &nbsp;user = 'root',\n&nbsp; &nbsp;password = 'secret'\n}\n\nlocal res = conn:query{sql = 'SHOW TABLES'}\n\nconn:close()\n</pre><ul><li>This safely opens a connection, performs a query, and then explicitly closes the connection.</li></ul>",
+    "Name": "db:close",
+    "Parameters": null,
+    "ParameterTable": true,
+    "SummaryLine": "Closes the active database connection."
+}

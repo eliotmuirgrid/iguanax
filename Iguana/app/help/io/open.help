@@ -1,0 +1,18 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">io.open(filename [, mode])\n</pre><ul><li><code><strong>filename</strong></code>: The path to the file to be opened.</li><li><code><strong>mode</strong></code> <em>(optional)</em>: A string specifying how the file should be opened. Defaults to <code>\"r\"</code> (read mode).</li></ul><p><br></p><h4>Modes</h4><p>The <code>mode</code> string follows the same format as C’s <code>fopen()</code> and can be:</p><ul><li><code>\"r\"</code> – read mode (default)</li><li><code>\"w\"</code> – write mode</li><li><code>\"a\"</code> – append mode</li><li><code>\"r+\"</code> – update mode (read/write), preserves existing data</li><li><code>\"w+\"</code> – update mode (read/write), clears existing data</li><li><code>\"a+\"</code> – update mode (read/write), writes only at end of file</li></ul><p>The mode may also include <code>\"b\"</code> at the end for binary mode (e.g. <code>\"rb\"</code>), which prevents line-ending translations on some platforms.</p><p><br></p><h3>Returns</h3><ul><li>A file handle object if the file is opened successfully. <em><u>(file handle object)</u></em></li><li><code>nil</code> and an error message <code>string</code> if the file could not be opened. <em><u>(nil)</u></em> and <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">-- Open file for write\nlocal W, E = io.open(\"myFile.txt\", \"w\")\nif not W then\n&nbsp; &nbsp;iguana.logError(\"Failed to open file for write: \" .. E)\n&nbsp; &nbsp;return\nend\nW:write(\"The answer to life is \", 42)\nW:close()\n\n-- Open file for read\nlocal R = io.open(\"myFile.txt\")\nlocal Content = R:read(\"*a\")\nR:close()\n</pre><ul><li>This demonstrates both writing to and reading from a file using <code>io.open</code>.</li></ul><p><br></p><p>See also: <code><a href=\"@io.popen\" target=\"_blank\">io.popen</a></code></p>",
+    "Name": "io.open",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The name of the file to open.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u></em> <em>(Optional)</em> Mode to open the file.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Opens a file."
+}

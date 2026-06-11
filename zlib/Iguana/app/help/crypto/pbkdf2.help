@@ -1,0 +1,28 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">crypto.pbkdf2{\n&nbsp; &nbsp;password&nbsp;  = &lt;password&gt;,\n&nbsp; &nbsp;salt&nbsp; &nbsp; &nbsp;  = &lt;salt&gt;,\n&nbsp; &nbsp;iterations = &lt;number&gt;,\n&nbsp; &nbsp;algorithm  = &lt;algorithm&gt;\n}\n</pre><ul><li><code><strong>password</strong></code>: The password string to derive the encryption key from.</li><li><code><strong>salt</strong></code>: A binary-encoded salt value used to randomize the hashing.</li><li><code><strong>iterations</strong></code> <em>(optional)</em>: The number of times to apply the hashing process. Increasing this strengthens security by making brute-force attempts slower.</li><li><code><strong>algorithm</strong></code> <em>(optional)</em>:<em> </em>The hash algorithm name to use (e.g., <code>'sha1'</code>, <code>'sha256'</code>).</li></ul><p><br></p><h3>Notes</h3><ul><li>This function derives a secure encryption key using PBKDF2 (Password-Based Key Derivation Function 2).</li><li>The resulting key is deterministic: using the same password, salt, iterations, and algorithm always produces the same result.</li><li>The salt does not need to be kept secret — it is only meant to make brute-force attacks harder.</li><li>The derived key is computationally expensive to calculate, making it suitable for securely storing passwords or strengthening weak keys.</li><li>To store or transmit the key safely, you may want to encode it (for example, using <code><a href=\"@filter.hex.enc\" target=\"_blank\">filter.hex.enc</a></code>).</li></ul><p><br></p><h3>Returns</h3><ul><li>The derived secure key as a binary-encoded string. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local key = crypto.pbkdf2{\n&nbsp; &nbsp;password&nbsp; = 'password',\n&nbsp; &nbsp;salt&nbsp; &nbsp; &nbsp; = '12345678',\n&nbsp; &nbsp;iterations = 2048,\n&nbsp; &nbsp;algorithm = 'sha1'\n}\n\nlocal keyHex = filter.hex.enc(key)\ntrace(keyHex)\n\n-- Example output:\n-- 647F7D6E22097DD71D1338592943185A91DA4E7548CB71C5ED0001876797536E0FAE3744616903A35E9D675E5E8F93CE85D63236FE3730123A8C940A74094924\n</pre>",
+    "Name": "crypto.pbkdf2",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The input password used to derive the key.</p>",
+            "Name": "password",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u></em> A random, binary-encoded salt used to increase security against brute-force attacks.</p>",
+            "Name": "salt",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>integer</u></em> The number of hash calculation cycles to apply (default: 2048).</p>",
+            "Name": "iterations",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u></em> The name of the hash algorithm to use (default: <code>'sha1'</code>).</p>",
+            "Name": "algorithm",
+            "Required": false
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Derives a secure key from an input password."
+}

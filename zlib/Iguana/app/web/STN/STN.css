@@ -1,0 +1,87 @@
+.STNlimitEditDiv{
+   display: grid;
+   grid-template-columns: 1fr 70px;
+   column-gap: 8px;
+}
+.STNruleRow{
+   display : grid;
+   box-sizing: border-box;
+	padding: 12px 16px;
+	align-items: center;
+	border-bottom: 1px solid var(--grey-300);
+	color: var(--grey-800);
+}
+.STNrulesBox,
+.STNrules{
+   border-radius: var(--border-radius);
+   border: 1px solid var(--grey-300);
+   background-color: var(--grey-100);
+   overflow: hidden;
+   width: 100%;
+   /* padding-left: 12px; */
+   /* padding-right: 12px; */
+}
+.STNrulesHeading,
+.STNrules,
+.STNrulesRow{
+   display : grid;
+   grid-template-columns: minmax(120px, 3fr) 130px minmax(170px, 4fr) 120px 160px 84px;
+}
+.STNrulesHeading >*,
+.STNrulesRow > *,
+.STNrules > *{
+   padding-left : 12px;
+   padding-right : 12px;
+}
+.STNpadLeft{
+   padding-left: 24px;
+}
+.STNheading{
+   padding-top: 16px;
+   padding-bottom: 16px;
+	min-height: 32px;
+	box-sizing: border-box;
+   border-bottom: 2px solid var(--grey-300);
+	font-weight: var(--semibold);
+	color: var(--grey-800);
+	background-color: var(--grey-200);
+
+}
+.STNcriteria{
+   display: grid;
+   grid-template-columns: auto auto auto 1fr;
+   column-gap: 4px;
+}
+.STNcontainsRow{
+   display: grid;
+   grid-template-columns: auto 1fr;
+}
+.STNrules a{
+   color: var(--blue);
+   text-decoration: none;
+}
+.STNrules a:hover{
+   text-decoration: underline;
+}
+.STNgt{
+   padding-left: 4px;
+   padding-right: 12px;
+   padding-top: 6px;
+}
+.STNtagMatching{
+   margin-top: 6px;
+   padding-left: 24px;
+}
+.STNthreshold{
+   min-width: 36px;
+   color: unset;
+}
+.STNdeleteDiv{
+   padding-right: 24px;
+}
+.STNeditTarget{
+   margin-left: auto;
+}
+.STNhidden{
+   display: none;
+}

@@ -1,0 +1,7 @@
+{
+    "Description": "<p> 🔄  <strong>Replacement:</strong> <code style=\"background-color: rgb(240, 240, 240); color: rgb(37, 144, 205);\"><a href=\"http://localhost:7654/@net.tcp.receive\" target=\"_blank\">net.tcp.receive</a></code>. </p><p> ⚠️  <strong>Deprecated:</strong>    <code style=\"background-color: rgb(240, 240, 240);\">net.tcp.recv</code> will be removed in a future version.&nbsp;</p><p><br></p><h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">Socket:recv()\n</pre><ul><li><code><strong>Socket</strong></code>: The function is called on a socket object and does not take any arguments.</li></ul><p><br></p><h3>Notes</h3><ul><li>This function is a shorthand for:</li></ul><pre class=\"ql-syntax\" spellcheck=\"false\">net.tcp.recv(Socket)\n</pre><ul><li>It will block until data is received or the socket is closed.</li><li>Deprecated in favor of <code>net.tcp.receive</code> which provides the same functionality.</li></ul><p><br></p><h3>Returns</h3><ul><li>A <code>string</code> containing the received data.</li><li>Returns <code>nil</code> if the connection was closed.</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local s = net.tcp.connect('hostname:8086')\ns:send(Data)\n\nlocal Ack = s:recv()\n-- which is shorthand for:\n-- local Ack = net.tcp.recv(s)\n\ns:close()\n</pre>",
+    "Name": "net.tcp.recv",
+    "Parameters": null,
+    "ParameterTable": false,
+    "SummaryLine": "*DEPRECATED* - Use net.tcp.receive instead."
+}

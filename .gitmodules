@@ -1,0 +1,24 @@
+[submodule "OpenSSL/openssl"]
+	path = OpenSSL/openssl
+	url = https://github.com/openssl/openssl.git
+[submodule "libssh2/libssh2"]
+	path = libssh2/libssh2
+	url = https://github.com/libssh2/libssh2.git
+[submodule "libcurl/curl"]
+	path = libcurl/curl
+	url = https://github.com/curl/curl.git
+[submodule "zlib/zlib"]
+	path = zlib/zlib
+	url = https://github.com/madler/zlib.git
+[submodule "Nghttp2/nghttp2"]
+	path = Nghttp2/nghttp2
+	url = https://github.com/nghttp2/nghttp2.git
+[submodule "libxml2/libxml2"]
+	path = libxml2/libxml2
+	url = https://gitlab.gnome.org/GNOME/libxml2.git
+[submodule "libxslt/libxslt"]
+	path = libxslt/libxslt
+	url = https://gitlab.gnome.org/GNOME/libxslt.git
+[submodule "xmlsec/xmlsec"]
+	path = xmlsec/xmlsec
+	url = https://github.com/lsh123/xmlsec.git

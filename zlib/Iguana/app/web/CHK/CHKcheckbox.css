@@ -1,0 +1,39 @@
+.CHKcheckbox { 
+   position: absolute;
+   visibility: visible;
+   opacity: 0; 
+}
+.CHKcheckbox + label {
+   display: inline-block;
+   font-weight: var(--regular);
+   position: relative;
+   padding-left: 24px;
+   padding-top: 0px;
+   min-height: var(--inputSize);
+}
+.CHKcheckbox + label:hover { 
+   cursor: pointer; 
+}
+.CHKcheckbox + label:before{
+   content:"";
+   height: var(--inputSize);
+   width: var(--inputSize);
+   position: absolute;
+   left: 0;
+   top: 0;
+   background-repeat: no-repeat;
+}
+.CHKcheckbox[disabled] + label:before { 
+   opacity: 0.4; 
+   cursor: not-allowed;
+}
+.CHKcheckbox[disabled] + label { 
+   color: var(--grey-300); 
+   cursor: not-allowed;
+}
+.CHKcheckbox:checked + label:before { 
+   background: var(--checkbox-true); 
+}
+.CHKcheckbox + label:before { 
+   background-image: var(--checkbox-false); 
+}

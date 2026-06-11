@@ -1,0 +1,10 @@
+# This is the suppression file for address and leak sanitizer enable by the "-fsanitize=address" compiler option
+# For more information, see https://interfaceware.atlassian.net/browse/IX-2410
+# Ref: https://github.com/google/sanitizers/wiki/AddressSanitizerLeakSanitizer
+#
+# Suppressing the intentional memory leak in COLlog
+leak:COLlog
+# Suppressing the dlopen leak in ARM Linux
+leak:dlopenWrapper
+# Suppressing the SDBmessage leaks due to the SDBserviceLog global
+leak:SDBlogService

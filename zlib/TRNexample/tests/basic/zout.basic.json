@@ -1,0 +1,18 @@
+{
+    "cursor_position": 5,
+    "full_expression": "Da",
+    "help_file": "",
+    "line_number": 3,
+    "options": [
+        {
+            "dt": "<span class=\"ITSintellisenseSearchMatch\">Da</span>ta  <span class=\"ITSintellisenseOptionValue\">(<span    class='clrz_str'>''</span>)</span>",
+            "ft": "Data",
+            "nt": 4,
+            "pt": 0,
+            "s": true
+        }
+    ],
+    "options_truncated": false,
+    "search_string": "Da",
+    "trimmed_expression": ""
+}

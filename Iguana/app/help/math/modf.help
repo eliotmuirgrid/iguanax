@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">math.modf(x)\n</pre><ul><li><code><strong>x</strong></code>: The floating-point number to decompose.</li></ul><p><br></p><h3>Returns</h3><ul><li>The integral part of <code>x</code>. <em><u>(integer)</u></em></li><li>The fractional part of <code style=\"background-color: rgb(240, 240, 240);\">x</code>. <em><u>(number)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Int, Fraction = math.modf(10.5)\n-- Int = 10, Fraction = 0.5\n</pre><ul><li>This function is useful when you need both the whole number and the decimal portion of a value.</li></ul>",
+    "Name": "math.modf",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>number</u></em> The number to split into its integral and fractional components.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Calculates the integral and the fractional parts of a number."
+}

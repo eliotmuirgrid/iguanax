@@ -1,0 +1,172 @@
+/* =============================================================================
+   CLD tooltip (repo/branch popover)
+   - Two-column layout: left content + Copy on the right
+   - Source line ellipsizes, actions wrap
+   ========================================================================== */
+
+.CLDmodal {
+	padding: 10px 12px;
+}
+
+.CLDpad {
+	padding: 8px 10px;
+}
+
+/* Outer layout: left block + Copy */
+.CLDgrid {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) auto;
+	grid-template-rows: auto auto;
+	align-items: start;
+	gap: 4px;
+	column-gap: 0px;
+	font-size: 11px;
+	font-family: unset;
+}
+
+.CLDgrid>* {
+	min-width: 0;
+}
+
+/* Left block: label column + content column */
+.CLDsourceBlock {
+	grid-column: 1;
+	grid-row: 1 / span 2;
+
+	display: grid;
+	grid-template-columns: auto minmax(0, 1fr);
+	column-gap: 8px;
+	row-gap: 4px;
+	min-width: 0;
+}
+
+.CLDtitle {
+	grid-column: 1;
+	font-weight: 600;
+	opacity: 0.85;
+	line-height: 13px;
+	margin-top: 0;
+}
+
+/* CARD fragments align to column 2 */
+.CLDmodal .CARDcurrentRepoGrid {
+	grid-column: 2;
+	margin: 0;
+	min-width: 0;
+}
+
+.CLDmodal .CARDrepoSourceRow {
+	min-width: 0;
+}
+
+/* Repo/branch line: single-line + ellipsis (force block in case CARD sets flex) */
+.CLDmodal .CARDrepoBranchRow {
+	display: block;
+	min-width: 0;
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+}
+
+/* Actions: wrap (prevents overflow under Copy) */
+.CLDactions {
+	grid-column: 2;
+	display: flex;
+	flex-wrap: wrap;
+	column-gap: 4px;
+	row-gap: 6px;
+	white-space: normal;
+	line-height: 16px;
+}
+
+.CLDaction {
+	cursor: pointer;
+	color: var(--blue);
+}
+
+.CLDaction:hover {
+	text-decoration: underline;
+}
+
+.CLDsep {
+	padding: 0 2px;
+	opacity: 0.55;
+}
+
+/* Copy button sits in right column spanning both rows */
+.CLDcopyButton {
+	grid-column: 2;
+	grid-row: 1 / span 2;
+	align-self: start;
+
+	width: 62px;
+	min-height: 24px;
+	padding: 0 8px;
+	margin-top: -2px;
+
+	display: flex;
+	align-items: center;
+	justify-content: center;
+
+	position: relative;
+}
+
+.CLDcopyButtonCopied,
+.CLDcopyButton.CLDcopied {
+	opacity: 0.7;
+}
+
+/* "Copied!" overlay without reflow */
+.CLDcopyButton.CLDcopied {
+	color: transparent;
+}
+
+.CLDcopyButton.CLDcopied::after {
+	content: "Copied!";
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+	white-space: nowrap;
+}
+
+/* .CLDactions{ column-gap: 12px; } */
+/* Single-row layout (no actions): shrink-wrap so it feels centered */
+.CLDgrid.CLDsingleRow {
+	grid-template-columns: auto auto;
+	/* instead of 1fr auto */
+	grid-template-rows: auto;
+	/* collapse the 2-row grid */
+	align-items: center;
+	column-gap: 10px;
+	/* space between content and Copy */
+}
+
+.CLDgrid.CLDsingleRow .CLDsourceBlock {
+	grid-row: 1;
+	/* override span-2 */
+}
+
+.CLDgrid.CLDsingleRow .CLDcopyButton {
+	grid-row: 1;
+	/* override span-2 */
+	align-self: center;
+	margin-top: 0;
+	/* remove the -2px nudge */
+}
+
+.CLDactions .CLDaction:last-child {
+	margin-right: 16px;
+}
+
+.CLDsingleRow .CLDactions .CLDaction:last-child {
+	margin-right: 0px;
+}
+
+/* Generic disabled action/link styling */
+.CLDdisableLink {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+  color: grey;
+}

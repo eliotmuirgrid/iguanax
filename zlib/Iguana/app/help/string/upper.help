@@ -1,0 +1,7 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">s:upper()\n</pre><ul><li><code><strong>s</strong></code>: The string to convert to uppercase.</li></ul><p>Returns a new string with all lowercase letters in <code>s</code> converted to uppercase. Other characters remain unchanged.</p><p><br></p><h3>Notes</h3><ul><li>The result depends on the <strong>current locale</strong>—what counts as \"lowercase\" may vary.</li><li>The original string is <strong>not modified</strong>; a <strong>new</strong> uppercase string is returned.</li></ul><p><br></p><h3>Returns</h3><ul><li>A copy of the string with all lowercase letters changed to uppercase. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local S = 'mr. fred'\nlocal U = S:upper()&nbsp; -- U is now \"MR. FRED\"\n</pre>",
+    "Name": "string:upper",
+    "Parameters": null,
+    "ParameterTable": false,
+    "SummaryLine": "Converts a string to uppercase."
+}

@@ -1,0 +1,562 @@
+body {
+	font-size: 11px;
+	font-family: Verdana, Arial, Helvetica, Geneva, Lucida, sans-serif;
+	color: #555555;
+	margin: 0px;
+	padding: 0px;
+}
+
+h1, h2 {
+	font-size: 22px;
+	font-family: Verdana, Arial, Helvetica, Geneva, Lucida, sans-serif;
+	color: #2067AC;
+	font-weight: normal;
+	line-height: 26px;
+}
+
+h3 {
+	font-size: 16px;
+	font-family: Verdana, Arial, Helvetica, Geneva, Lucida, sans-serif;
+	color: #2067AC;
+	font-weight: normal;
+	line-height: 22px;
+}
+
+h4 {
+	font-size: 9px;
+	font-family: Verdana, Arial, Helvetica, Geneva, Lucida, sans-serif;
+	color: #51667B;
+	font-weight: normal;
+	text-transform: uppercase;
+	border-bottom: 1px solid #CCCCCC; 
+}
+
+ul {
+	list-style-type: square;
+}
+
+hr {
+	margin-top: 5px;
+	margin-bottom: 5px;
+	height: 1px;
+	border-top: 1px solid #ccc;
+	border-bottom: 1px solid #efefef;
+}
+
+img {
+	border: none;
+}
+
+a:link, a:visited {
+	color: #2067AC;
+	text-decoration: none;
+}
+
+a:hover, a:active {
+	color: #0088FF;
+	text-decoration: none;
+	background: url("images/bg-nav-diag.gif");
+}
+
+a:link.no_decoration, a:visited.no_decoration, a:hover.no_decoration, a:active.no_decoration {
+	border: none;
+}
+
+p.intro {
+	color: #095AA5;
+}
+
+input.submit_button
+{
+	cursor:pointer;
+	border:outset 1px #444;
+	border-bottom: 1px solid #777;
+	border-right: 1px solid #777;
+	background:#999;
+	color:#505050;
+	font-size: 10px;
+	font-family: Verdana;
+	padding: 4px 10px 4px 10px;
+	background:url(images/formbg.gif) repeat-x left top;
+}
+
+input.submit_button:hover
+{
+	cursor:pointer;
+	border:outset 1px #333;
+	border-bottom: 1px solid #666;
+	border-right: 1px solid #666;
+	background:#999;
+	color:#314d5b;
+	font-size: 10px;
+	font-family: Verdana;
+	padding: 4px 10px 4px 10px;
+	background:url(images/formbg_hover.gif) repeat-x left top;
+}
+
+input.submit_button_disabled, input.submit_button_disabled:hover
+{
+    cursor:default;
+    border:outset 1px #444;
+    border-bottom: 1px solid #777;
+    border-right: 1px solid #777;
+    background:#999;
+    color:#505050;
+    font-size: 10px;
+    font-family: Verdana;
+    padding: 4px 10px 4px 10px;
+    background:url(images/formbg.gif) repeat-x left top;
+}
+
+/* ----------------------------------------------- */
+
+/* LAYOUT CONTAINERS */
+
+#container {
+	margin: 0 auto; 
+	width: 950px;
+}
+
+#main_container {
+	position: absolute;
+	top: 100px;
+	width: 950px;
+}
+
+#content_container {
+	/*float: right !important;*/
+	/*width: 830px !important;*/
+	position: relative;
+	/*top: -20px;*/
+}
+
+/* ----------------------------------------------- */
+
+#content, #HeaderInfo {
+	width: 950px !important;
+	margin: 0px 45px 0px 15px;
+	font-size: 11px;
+	font-weight: normal;
+	font-family: Verdana, Arial, Helvetica, Geneva, Lucida, sans-serif;
+	color: #555;
+	line-height: 18px;
+}
+
+#content {
+	padding-bottom: 20px;
+}
+
+#content h4 {
+	margin: 0px 0px 8px 0px;
+	line-height: 18px;
+}
+
+/* ----------------------------------------------- */
+
+/* FOOTER */
+
+#footer {
+	float: right;
+	width: 100%;
+	margin-top: 15px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-top: 1px dotted #D0D0D0; 
+	text-align: center;
+	font-size: 9px;
+	line-height: 16px;
+}
+
+
+/* ----------------------------------------------- */
+
+/* MEMBERS LOGIN and ONLINE MANUAL BUTTONS */
+
+#tabs {
+	position: relative;
+	margin: 0 auto;
+	top: 37px;
+	height: 24px;
+	width: 860px;
+	text-align: right;
+	font-size: 9px;
+	color: #B5CEE0;
+	z-index: 100;
+}
+
+#tabs a {
+	text-decoration: none;
+	border: none;
+}
+
+
+a.manual_button {
+	background: transparent url("images/t-manual.gif") no-repeat 0 0;
+	display: block;
+	height: 24px;
+	width: 103px;
+	float: right;
+	margin-left: 5px;
+}
+
+a.manual_button span {
+	display: none;
+}
+
+a.manual_button:hover {
+    background: transparent url("images/t-manual.gif") no-repeat 0 0;
+    background-position: 0 -24px;
+}
+
+
+a.members_button {
+	background: transparent url("images/t-members.gif") no-repeat 0 0;
+	display: block;
+	height: 24px;
+	width: 103px;
+	float: right;
+	margin-left: 5px;
+}
+
+a.members_button span {
+	display: none;
+}
+
+a.members_button:hover {
+    background: transparent url("images/t-members.gif") no-repeat 0 0;
+    background-position: 0 -24px;
+}
+
+
+a.homepage_button {
+	background: transparent url("images/t-home.gif") no-repeat 0 0;
+	display: block;
+	height: 24px;
+	width: 103px;
+	float: right;
+	margin-left: 5px;
+}
+
+a.homepage_button span {
+	display: none;
+	
+}
+
+a.homepage_button:hover {
+    background: transparent url("images/t-home.gif") no-repeat 0 0;
+    background-position: 0 -24px;
+}
+
+/* ----------------------------------------------- */
+
+/* INTERFACEWARE LOGO */
+
+h1.swap {
+	background-repeat: no-repeat;
+}
+
+h1.swap span {display:none;}
+
+
+h1#members_account {
+	margin-top: 0px;
+	margin-left: 0px;
+	position: absolute;
+	top: 74px;
+	left: 255px;
+	height:24px;
+	width: 258px;
+	background-image:url("images/title_members.gif");
+	background-repeat: no-repeat;
+}
+
+/* ----------------------------------------------- */
+
+/* TABLE STYLES */
+
+
+table.border 
+
+{
+
+   border: 1px solid #cccccc;
+	background-color: #ededed;
+
+   padding: 0px;
+
+}
+
+td
+{
+	font-size: 11px;
+}
+
+
+td.header
+
+{
+   font-size: 10px;
+   font-weight: bold;
+   font-family: Verdana, Arial, Helvetica, Geneva, Lucida, sans-serif;
+   letter-spacing: 0.15em;
+   color: #666666;
+   background-color: #ededed;
+   padding-top: 8px;
+   padding-bottom: 8px;
+}
+
+td.columnheader
+{
+    background-color: #c5d8e6;
+    font-weight: bold;
+    white-space: nowrap;
+}
+
+td.form
+
+{
+
+   font-family: Verdana, Arial, Helvetica, Geneva, Lucida, sans-serif;
+
+   border: none;
+
+   padding: 4px;
+
+   font-size: 10px;
+
+}
+
+.license_entitlement td
+{
+   padding-top:3px;
+   padding-bottom:3px;
+}
+
+td.light,
+tr.light
+{
+   background-color: #f0f0ff;
+}
+
+td.dark,
+tr.dark
+{
+   background-color: #dce8f1;
+}
+
+tr.darker
+{
+   background-color: #d4e0e8;
+}
+
+tr.error_row
+{
+   background-color: #FFDCDB;
+}
+
+table#registration_codes_table
+{
+   border: 1px solid #CCCCCC;
+   background: #FFFFFF;
+   width: 90%;
+   padding: 10px;
+}
+
+table#registration_codes_table tr.license_row td.column
+{
+   cursor: pointer;
+}
+
+table.all_license_info_table
+{
+   width: 100%;
+}
+
+table.all_license_info_table tr td
+{
+   padding-right: 15px;
+}
+
+table.all_license_info_table tr th
+{
+   vertical-align: top;
+   text-align: right;
+   padding-right: 5px;
+}
+
+table.license_description_table tr th
+{
+    vertical-align: top;
+    text-align: left;
+    padding-right: 5px;
+}
+
+table.license_description_table tr th
+{
+   padding-left: 3px;
+}
+
+td.all_license_info div
+{
+   border: 1px solid #CCCCCC;
+   padding: 5px;
+   background-color: #FFFFFF;
+}
+
+td.align_top
+{
+   vertical-align: top;
+}
+
+td.expand_contract_column
+{
+   width: 16px;
+   cursor: pointer;
+}
+
+td.contract
+{
+   vertical-align: top;
+   padding-top: 8px;
+}
+
+table#edit_license_table
+{
+   border: 1px solid #CCCCCC;
+   background: #FFFFFF;
+   width: 90%;
+   padding: 10px;
+}
+
+table#edit_license_table tr th,
+table.new_code_table tr th
+{
+   text-align: right;
+   white-space: nowrap;
+}
+
+table.new_code_table tr td
+{
+   text-align: left;
+}
+
+table.license_summary_table
+{
+   border: none;
+   width: 100%;
+}
+
+table.license_summary_table tr th
+{
+   text-align: right;
+   vertical-align: top;
+   white-space: nowrap;
+   padding-left: 10px;
+}
+
+table.license_summary_table tr td
+{
+   width: 100%;
+   text-align: left;
+}
+
+
+
+
+/* ----------------------------------------------- */
+
+
+.registration_title
+{
+   font-weight: bold;
+}
+
+textarea.registration_code
+{
+   margin: 0px;
+   border: 1px solid #CCCCCC;
+   color: #555555;
+   font-size: 11;
+}
+
+table.warning
+
+{
+
+   border: none;
+
+}
+
+
+td.warning
+
+{
+
+   background-color: #fff7c5; 
+
+}
+
+
+td.warning_bottom_line
+
+{
+
+   background-color: #cda52b; 
+
+}
+
+span.disabled_hyperlink
+{
+   color :#b0b0b0;
+}
+
+a.license_entitlement_link
+{
+   text-decoration: underline;
+}
+
+a.export_link
+{
+   font-weight: bold;
+}
+
+.error_text
+{
+   font-weight: bold;
+   color: red;
+}
+
+.error_text img
+{
+   position: relative;
+   top: 2px;
+}
+
+/* For DataTables drill-down display. */
+div.innerDetails {
+    display: none;
+    border: 1px solid #CCCCCC;
+    padding: 5px;
+    background-color: #FFFFFF;
+}
+
+
+/* Highlight activation listing row so it looks expandable */
+.ClickableTable tr:hover.odd { background-color: #d5daff; }
+.ClickableTable tr:hover.even { background-color: #edefff; }
+.ClickableTable tr:hover.odd td.sorting_1 { background-color: #c3cbff; }
+.ClickableTable tr:hover.odd td.sorting_2 { background-color: #cad0ff; }
+.ClickableTable tr:hover.odd td.sorting_3 { background-color: #d1d6ff; }
+.ClickableTable tr:hover.even td.sorting_1 { background-color: #dde2ff; }
+.ClickableTable tr:hover.even td.sorting_2 { background-color: #eaeeff; }
+.ClickableTable tr:hover.even td.sorting_3 { background-color: #eff2ff; }
+
+.ClickableTable tr:hover.odd td,
+.ClickableTable tr:hover.even td
+{
+    cursor:pointer;
+}
+
+a.clickable {
+    cursor: pointer;
+}

@@ -1,0 +1,14 @@
+# Set the default behaviour, in case people don't have core.autocrlf set.
+* text=auto
+
+*.cpp text
+*.c text
+*.h text
+
+# We need to make shell files have unix style line feeds
+
+*.sh     text eol=lf
+makefile text eol=lf
+
+*.png binary
+*.jpg binary

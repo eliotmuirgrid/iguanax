@@ -1,0 +1,39 @@
+.TRGTblueDot::after{
+	content: "";
+	display: block;
+	height: 8px;
+	width: 8px;
+	background: var(--blue);
+	position: relative;
+	top: 3px;
+	left: 16px;
+	border-radius: 9999px;
+}
+.TRGTcommit {
+	background-image: url("/TRGT/images/TRGTcommitSvg.svg");
+}
+.TRGTgitPullRemote{
+	background-image: url("/TRGT/images/TRGTpullRemoteSvg.svg");
+}
+.TRGTgitPushRemote{
+	background-image: url("/TRGT/images/TRGTpushRemoteSvg.svg");
+}
+.TRGTrepoButton2,
+.TRGTrepoButton {
+	background-image: url("/TRGT/images/TRGTrepoSvg.svg");
+}
+.TRGTgitBranchButton {
+	background-image: url("/TRANS/images/toolbar/button_git_branch.svg");
+}
+.TRGTgitTerminalButton {
+	background-image: url("/TRANS/images/toolbar/button_terminal.svg");
+}
+.TRANSaiButton{
+	background-image: url("/TRANS/images/toolbar/button_ai.svg");
+}
+.TRGTlibraryUsage{
+	background-image: url("/TRANS/images/toolbar/button_library.svg");
+}
+.TRGTbranchButton{
+	background-image: url("/TRGT/images/TRGTbranchSvg.svg");
+}

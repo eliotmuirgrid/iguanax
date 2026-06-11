@@ -1,0 +1,28 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">crypto.aes.encrypt{\n&nbsp;  data = &lt;data&gt;,\n&nbsp; &nbsp;key = &lt;secret&gt;,\n&nbsp;  iv = &lt;random&gt;,\n&nbsp;  blockcipher = &lt;blockcipher&gt;\n}\n</pre><ul><li><code><strong>data</strong></code>: The string to encrypt.</li><li><code><strong>key</strong></code>: The shared secret key, in binary encoding.</li><li><code><strong>iv</strong></code>: The initialization vector, in binary encoding.</li><li><code><strong>blockcipher</strong></code>: The AES block-cipher mode. Must be one of: <code>ecb</code>, <code>cbc</code>, <code>cfb</code>, <code>ofb</code>, or <code>ctr</code>.</li></ul><h3><br></h3><h3>Notes</h3><ul><li>This function encrypts data using AES encryption. The same key, IV, and block-cipher mode are required to decrypt the data.</li><li>The key size determines the block size:</li><li class=\"ql-indent-1\">Use 16 bytes (128 bits) for AES-128.</li><li class=\"ql-indent-1\">Use 24 bytes (192 bits) for AES-192.</li><li class=\"ql-indent-1\">Use 32 bytes (256 bits) for AES-256.</li><li>The IV acts like a salt and should be randomized for each encryption to prevent pattern detection. It does not need to be kept secret.</li></ul><p><br></p><h3>Returns</h3><p>The encrypted message, in binary encoding. <em><u>(string)</u></em></p><p><br></p><h3><strong>Example</strong></h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Encrypted = crypto.aes.encrypt{\n&nbsp; &nbsp; data = 'hello world',\n&nbsp; &nbsp; key = '1234567890123456',\n&nbsp; &nbsp; iv = '1234567890123456',\n&nbsp; &nbsp; blockcipher = 'cbc'\n}\n\nlocal EncryptedHex = filter.hex.enc(Encrypted)\ntrace(EncryptedHex)\n-- Output: 60C87D1E15455FFE12316DA57CFC669\n</pre>",
+    "Name": "crypto.aes.encrypt",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The input data to encrypt.</p>",
+            "Name": "data",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u></em> The shared secret key, in binary encoding. </p>",
+            "Name": "key",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u></em> The randomly generated initialization vector (IV), in binary encoding. </p>",
+            "Name": "iv",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u></em> The AES block-cipher mode, one of: <code>ecb</code>, <code>cbc</code>, <code>cfb</code>, <code>ofb</code>, or <code>ctr</code>.</p>",
+            "Name": "blockcipher",
+            "Required": true
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Encrypts data using AES (Advanced Encryption Standard)."
+}

@@ -1,0 +1,477 @@
+.HLPcontent{
+   display: grid;
+	grid-template-columns: auto 1fr;
+   height: 100%;
+   overflow: hidden;
+}
+
+.HLPhidden {
+   opacity: 0;
+}
+
+.HLPstrong {
+   font-weight: bold;
+	color: black !important;
+}
+
+.HLPindexContainer {
+   margin-right: 4px;
+}
+
+.HLPresizeControl {
+	right: -6px;
+	top: 0;
+	bottom: 0;
+	width: 10px;
+	padding: 0;
+	border: 0;
+	position: absolute;
+	outline: none;
+	cursor: ew-resize;
+	background-color: transparent;
+}
+
+.HLPresizeShadow {
+	bottom: 0;
+	top: 0;
+	right: 4px;
+	pointer-events: none;
+	position: absolute;
+	width: 3px;
+	transition: 150ms ease-out;
+   background-color: var(--grey-300);
+}
+
+.HLPresizeControl:hover{
+	background: var(--blue);
+	transition: 75ms ease-in;
+}
+
+.HLPindexContainer {
+	min-width: 180px;
+	position: relative;
+   overflow: hidden;
+}
+
+.HLPindexPane {
+   height: 100%;
+	position: relative;
+   padding: 4px;
+}
+
+.HLPlistBody {
+	position: relative;
+   overflow-y: auto;
+	height: calc(100% - 120px);
+	margin-top: 6px;
+}
+
+.HLPrightPane {
+   overflow: auto;
+	height: 100%;
+}
+
+.HLPsearch {
+   padding: 6px;
+   margin-top: 8px;
+   margin-bottom: 10px;
+   width: 1fr;
+}
+
+.HLPcontainer {
+   padding-top: 0;
+   position: relative;
+	color: var(--grey-800);
+	padding: 10px;
+}
+
+.HLPheaderSection {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: start;
+	position: sticky;
+	top: 0;
+	background: var(--white);
+	min-height: 56px;
+	padding: 16px 4px;
+	z-index: 2;
+	width: 100%;
+}
+
+.HLPheaderSection > div:first-child {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.HLPheaderSection > div:nth-child(2) {
+	overflow: hidden;
+	white-space: normal;
+}
+.HLPeditButton{
+	margin-top: 12px;
+	margin-right: 12px;
+}
+
+.HLPbuttonGroup{
+	margin-top: 8px;
+}
+
+.HLPheading {
+	flex-shrink: 0;
+   margin-right: 24px;
+	color: var(--blue-dark) !important;
+	font-weight: 400;
+	font-size: 18px;
+}
+
+.HLPsummary {
+	color: var(--grey-600);
+	font-weight: 400;
+	font-size: 13px;
+	margin-right: 48px;
+	overflow-wrap: break-word;
+	white-space: pre-wrap;
+}
+
+.HLPeditSummary, .HLPeditName {
+	font-weight: 400;
+	font-size: 13px;
+	margin-right: 48px;
+}
+
+.HLPeditSummary {
+	flex-grow: 1;
+}
+
+.HLPeditName {
+	width: 20%;
+}
+
+.HLPlink{
+	font-size: 13px;
+   margin-top: 3px;
+   color: var(--black);
+}
+
+.HLPlink:hover {
+   cursor: pointer;
+   color: var(--blue-dark);
+   text-decoration: underline;
+}
+
+.HLPdragging {
+   opacity: 0.25;
+}
+
+.HLPfunctionName{
+   cursor: pointer;
+   color: var(--blue-dark);
+}
+
+.HLPviewTableParameters {
+	grid-template-columns: 120px 3fr;
+}
+
+.HLPeditTableParameters {
+	grid-template-columns: 32px 40px 120px 1fr 32px;
+}
+
+.HLPviewListParameters {
+	grid-template-columns: 40px 3fr;
+}
+
+.HLPeditListParameters {
+	grid-template-columns: 32px 3fr 32px;
+}
+
+.HLProwHeader.HLPdescriptionHeader {
+   border-bottom: 0;
+}
+.HLProwHeader:first-child{
+	margin-top: 0;
+}
+.HLProwHeader {
+	margin-top: 24px;
+	display: grid;
+	border: 1px solid var(--grey-400);
+	background: var(--grey-200);
+	color: var(--grey-600);
+	font-size: 10px;
+   text-align: left;
+}
+
+.HLPheaderSection + .HLProwHeader {
+   margin-top: 1px;
+}
+
+.HLProwSubHeader {
+	display: grid;
+	border: 1px solid var(--grey-400);
+   border-top: 0;
+	background: var(--grey-100);
+	color: var(--grey-600);
+	font-size: 9px;
+}
+
+.HLProwHeader div,
+.HLProwSubHeader div {
+	padding: 6px 8px;
+	font-size: 9px;
+	font-family: var(--font-buttons);
+	letter-spacing: 0.05em;
+}
+
+.HLProw {
+	display: grid;
+	min-height: 32px;
+}
+
+.HLProw .HLPcell {
+	border: 1px solid var(--grey-400);
+	border-left: 1px solid rgba(var(---grey-300), 0.65);
+   border-top: 0;
+   border-right: 0;
+	background: var(--white);
+}
+
+.HLProw .HLPcell {
+   padding: 6px 8px;
+	align-items: center;
+}
+
+.HLPview {
+   overflow: hidden;
+   resize: none;
+}
+
+.HLPedit {
+   height: 12em;
+}
+
+.HLProwHeaderWithToggle {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+.HLPparameterSwitcherToggle {
+	display: grid;
+	grid-template-columns: 1fr 30px;
+	align-items: center;
+}
+.HLPparameterSwitcherToggle .TOGtoggle {
+	height: 12px;
+	width: 28px;
+	padding: 0px;
+	margin-left: 4px;
+}
+
+.HLPparameterSwitcherToggle .TOGtoggle .TOGswitch {
+	padding: 0px !important;
+}
+
+.HLPinput {
+   color: inherit;
+   font: inherit;
+   padding: 0.5rem;
+}
+
+.HLProw > div:first-child {
+	border-left: 1px solid var(--grey-400);
+}
+
+.HLProw > div:last-child {
+	border-right: 1px solid var(--grey-400);
+}
+
+.HLPvalue {
+	word-break: break-word;
+}
+
+.HLPblankRow{
+	color: var(--grey-600) !important;
+}
+
+.HLPsaveButtonDisabled,
+.HLPsaveButtonDisabled:hover {
+   background-color: var(--green-light);
+   color: var(--white);
+   cursor: not-allowed;
+}
+
+.HLPeditButtonDisabled,
+.HLPeditButtonDisabled:active,
+.HLPeditButtonDisabled:hover {
+	background-color: var(--grey-300) !important;
+   cursor: not-allowed;
+}
+
+.HLPeditButton.BUTTONstandard,
+.HLPsaveButton,
+.HLPcancelButton {
+	height: 24px;
+	padding: 0px 12px;
+}
+
+.HLPcheckBox {
+   justify-content: center;
+   text-align: center;
+}
+
+.HLPindex {
+   text-align: center;
+}
+
+.HLPdeleteRow {
+	background: none;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.HLPmoveRow,
+.HLPdeleteRow {
+	border: 1px solid var(--grey-400);
+	border-bottom: 0px;
+	border-right: 1px solid rgba(var(--grey-300), 0.65);
+	background-color: var(--grey-100) !important;
+	color: var(--grey-600);
+   justify-content: center;
+}
+
+.HLPcheckBox input,
+.HLPdeleteRow {
+   cursor: pointer;
+}
+
+.HLPmoveRow {
+   cursor: move;
+}
+
+.HLPaddRow {
+   cursor: pointer;
+	color: var(--blue);
+	font-family: var(--font-buttons);
+	font-weight: 500;
+}
+
+/* Add shadow to row upon "move row" icon hover */
+ .HLPmoveRow:hover,
+ .HLPmoveRow:hover ~ * {
+	box-shadow: 0 3px 8px rgb(0 0 0 / 25%);
+	clip-path: inset(-5px 0px -11px 0px);
+}
+
+ .HLPmoveRow:hover {
+	clip-path: inset(-5px 0px -11px -8px);
+}
+
+ .HLPmoveRow:hover ~ .HLPcell:last-child {
+	clip-path: inset(-5px -8px -11px 0px);
+}
+
+.HLPvalue a {
+	color: var(--blue);
+	text-decoration: none;
+}
+
+.HLPvalue a:hover {
+	text-decoration: underline;
+}
+.HLPicon::before{
+	content: url(/HLP/HLPicon.svg) !important;
+	margin-right: 6px;
+	height: 16px;
+	width: 16px;
+}
+.PRJicon-file-untracked.HLPicon::before{
+	content: url(/HLP/HLPiconUntracked.svg) !important;
+}
+.PRJicon-file-renamed.HLPicon::before,
+.PRJicon-file-modified.HLPicon::before{
+	content: url(/HLP/HLPiconModified.svg) !important;
+}
+
+.HLPparameterDesc .ql-editor {
+   padding: 0 !important;
+}
+.HLPparameterDesc .ql-tooltip {
+   z-index: 5;
+}
+
+.HLPwindowIcon {
+	background-image: url("/HLP/HLPtoolbarHelpIcon.svg");
+}
+
+.HLPheadingContainer{
+	display: grid;
+	grid-template-rows: auto auto;
+	flex-grow: 1;
+}
+
+.HLPdep {
+	color: #888;
+}
+
+.HLPhide {
+	display: none;
+}
+
+.HLPdepToggle *{
+	cursor: pointer;
+}
+
+.HLPnavButtons {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	margin-top: 10px;
+	padding-left: 4px;
+	padding-right: 4px;
+	user-select: none;
+}
+
+.HLPprev, 
+.HLPnext {
+	color: var(--blue);
+}
+.HLPprev:hover, 
+.HLPnext:hover {
+	cursor: pointer;
+	text-decoration: underline;
+}
+.HLPnext{
+	text-align: right;
+}
+.HLPnavButtonDisabled.HLPprev:hover, 
+.HLPnavButtonDisabled.HLPnext:hover{
+	text-decoration: none;
+	cursor: default;
+}
+.HLPnavButtonDisabled {
+	color: var(--grey-400);
+}
+.HLPdepToggle input{
+	margin-left: 0 !important;
+	margin-right: 6px !important;
+}
+.HLPdepToggle.BUTTONdefault{
+	padding-left: 10px !important;
+}
+
+.HLPsearchWrapper {
+	position: relative;
+	display: inline-block;
+	width: 100%;
+ }
+ 
+.HLPsearch {
+	padding-right: 28px;
+}
+ 
+ .HLPsearchClear {
+	z-index: 998;
+	background: none;
+	position: absolute;
+	right: 8px;
+	bottom: 16px;
+}

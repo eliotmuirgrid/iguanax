@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">component.runAsUser{user = &lt;username&gt;}\n</pre><ul><li><code><strong>user</strong></code> <em>(optional)</em>:</li><li class=\"ql-indent-1\">If provided, sets the Iguana user the component will run as.</li><li class=\"ql-indent-1\">If omitted, returns the currently set RunAs user (or <code>nil</code> if none is set).</li></ul><p><br></p><h3>Notes</h3><ul><li>Required when using Translator functions like <code><a href=\"http://localhost:7654/@iguana.callComponentFunction\" target=\"_blank\">iguana.callComponentFunction</a></code>, which need an Iguana user context.</li><li>This function allows dynamically switching the user context or checking the current user at runtime.</li></ul><p><br></p><h3>Returns</h3><ul><li>The currently set RunAs user or <code>nil</code> if no user is set. <em><u>(string)</u></em> or <em><u>(nil)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">-- Get the current RunAs user (will return nil initially)\ncomponent.runAsUser()&nbsp;&nbsp;\n\n-- Set the component to run as 'admin' user\ncomponent.runAsUser{user = 'admin'}&nbsp;&nbsp;\n\n-- Get the current RunAs user again (now returns 'admin')\ncomponent.runAsUser()&nbsp;&nbsp;\n</pre>",
+    "Name": "component.runAsUser",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> A valid Iguana username.</p>",
+            "Name": "user",
+            "Required": false
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Runs the component as a specified Iguana user or returns the current RunAs user."
+}

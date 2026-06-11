@@ -1,0 +1,25 @@
+{
+    "cursor_position": 5,
+    "full_expression": "R.",
+    "help_file": "",
+    "line_number": 5,
+    "options": [
+        {
+            "dt": "Number of Rows  <span class=\"ITSintellisenseOptionValue\">(<span    class='clrz_num'>1</span>)</span>",
+            "ft": "#R",
+            "nt": 3,
+            "pt": 0,
+            "s": true
+        },
+        {
+            "dt": "1 <span class=\"ITSintellisenseOptionValue\">(<span    class='clrz_num'>11</span>, <span    class='clrz_str'>'Eliot'</span>, <span    class='clrz_str'>'Muir'</span>, <span    class='clrz_str'>'Friend'</span>)</span>",
+            "ft": "R[1]",
+            "nt": 2,
+            "pt": 20,
+            "s": false
+        }
+    ],
+    "options_truncated": false,
+    "search_string": "",
+    "trimmed_expression": "R"
+}

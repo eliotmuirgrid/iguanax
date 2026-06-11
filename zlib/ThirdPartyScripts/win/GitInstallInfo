@@ -1,0 +1,11 @@
+[Setup]
+Lang=default
+Dir=C:\ProgramData\ThirdParty\installed\git
+Group=Git
+NoIcons=0
+SetupType=default
+Components=
+Tasks=
+PathOption=Cmd
+SSHOption=OpenSSH
+CRLFOption=CRLFAlways

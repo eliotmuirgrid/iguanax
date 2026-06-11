@@ -1,0 +1,321 @@
+.SETaddRow {
+	border-radius: 9999px;
+	font-family: var(--font-buttons);
+	font-weight: var(--semibold);
+	font-size: 10px;
+	line-height: 10px;
+	letter-spacing: 0.25px;
+	cursor: pointer;
+	display: flex;
+	align-items: center;
+	height: 28px;
+	width: fit-content;
+	padding: 0 12px 0px 8px;
+	box-sizing: border-box;
+	background-color: var(--grey-200);
+	color: var(--grey-600);
+	transition: 250ms ease-out;
+	margin: 16px auto 0px auto;
+	user-select: none;
+}
+
+.SETaddRow:hover {
+	background-color: var(--grey-300);
+	text-decoration: none;
+	transition: 75ms ease-in;
+}
+
+.SETtitle{
+	margin: unset;
+	font-weight: var(--bold);
+	font-size: 20px;
+	line-height: 32px;
+	color: var(--grey-700);
+	padding-bottom: 24px;
+	margin-bottom: 0px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.SETgitTitle {
+	margin: unset;
+	font-weight: var(--bold);
+	font-size: 20px;
+	line-height: 32px;
+	color: var(--grey-700);
+	padding-bottom: 24px;
+	margin-bottom: 0px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 10px;
+}
+
+.SETgitCollectionView .SETcatalogueTable {
+	display: grid;
+	grid-template-columns: minmax(auto, 1.5fr) 1fr 1.5fr auto;
+	border: 1px solid var(--grey-300);
+	background-color: var(--grey-100);
+	border-radius: var(--border-radius);
+	overflow-x: auto;
+}
+
+.SETgitCollectionEdit .SETcatalogueTable {
+	display: grid;
+	grid-template-columns: 1fr auto;
+	border: 1px solid var(--grey-300);
+	background-color: var(--grey-100);
+	border-radius: var(--border-radius);
+	overflow-x: auto;
+}
+
+.SETgitCollectionEdit .SETcatalogueTable .SETcatalogueTableHeading {
+	grid-column: 1/-1;
+}
+
+.SETcatalogueRow,
+.SETcatalogueHeading {
+	/* display: grid;
+  grid-template-columns: 3fr 1fr 2fr 1fr 1fr 1fr;
+  border-collapse: separate;
+  text-indent: initial;
+  align-items: center; */
+	display: contents;
+}
+.SETcatalogueRow>div{
+	box-sizing: border-box;
+	min-height: 40px;
+	padding: 12px 16px;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid var(--grey-300);
+	color: var(--grey-800);
+}
+.SETcatalogueHeading>div {
+	border-bottom: 2px solid var(--grey-300);
+	font-weight: var(--semibold);
+	color: var(--grey-800);
+	background-color: var(--grey-200);
+}
+.SETcatalogueTableHeading {
+	font-weight: var(--semibold);
+	color: var(--grey-800);
+	text-align: left;
+	border-left: 0px;
+	border-right: 0px;
+	padding: 8px 16px;
+	user-select: none;
+}
+
+.SETpurgeRuleData,
+.SETcatalogueData {
+	text-align: left;
+	border-left: 0px;
+	border-right: 0px;
+	padding: 16px;
+	color: var(--grey-800);
+	white-space: nowrap;         /* Prevents text from wrapping onto a new line */
+	overflow: hidden;            /* Hides any overflowing text */
+	display: inline-block;       /* Keeps the element inline while respecting width */
+
+}
+.SETcatalogueData{
+	text-overflow: ellipsis;     /* Adds "..." to indicate clipping (if needed) */
+}
+.SETcatalogueDataName{
+	filter: grayscale(1);
+}
+.STGpurgeDaysText{
+	width:25px;
+}
+.SEThidden{
+	display: none !important;
+}
+
+.STGpurgeDaysText,
+.STGpurgeDaysCount{
+	visibility: hidden;
+}
+.STGpurgeDaysText.SETnotificationVisible ,
+.STGpurgeDaysCount.SETnotificationVisible * {
+	visibility: visible;
+}
+
+.SETcatalogueData img {
+	height: 24px;
+	width: 24px;
+}
+
+.SETcatalogueTable>* {
+	border-bottom: 1px solid var(--grey-300);
+}
+
+.SETcatalogueWaiting {
+	background-image: url(/TRANS/images/spinner.gif);
+	opacity: 0.5;
+	/* Standard style for transparency */
+	filter: alpha(opacity=5);
+	/* For IE */
+	height: 16px;
+	width: 16px;
+}
+
+.SETdefaultRepoRef {
+	font-weight: var(--regular);
+	font-size: 11px;
+	line-height: 16px;
+	margin-top: 24px;
+	color: var(--grey-600);
+	padding-top: 16px;
+	border-top: 1px solid var(--grey-300);
+}
+
+.SEThideButton {
+	display: none;
+}
+
+
+/* Styling for GIT Host settings page */
+
+.GITHgitHost input,
+.GITHgitHost select {
+	margin-bottom: 16px;
+	max-width: 400px;
+}
+
+.SETbitbucketHint {
+	font-weight: var(--regular);
+	font-size: 10px;
+	line-height: 16px;
+	color: var(--grey-600);
+}
+
+.SETnotificationWarning {
+   color : red;
+}
+.SETeditCollection{
+	margin-right: 8px;
+}
+.SETeditCollection,
+.STNtest {
+   cursor: pointer;
+   color:var(--blue) !important;
+   text-decoration:none;
+}
+.SETeditCollection:hover,
+.STNtest:hover{
+   text-decoration:underline;
+}
+
+.SETpageDescription{
+	align-items: center;
+	padding: 8px;
+	padding-left: 16px;
+	margin-bottom: 16px;
+	border-radius: 4px;
+	border: 1px solid var(--grey-300);
+	color: var(--grey-600);
+}
+.SETrefreshCacheInfoLink,
+.SETcreateAndAddCollection,
+.SETrefreshCache{
+	color: var(--blue);
+	text-decoration: none;
+	word-break: break-all;
+}
+.SETrefreshCacheInfoLink{
+	padding-left: 2px;
+	padding-right: 2px;
+}
+.SETrefreshCacheGrid{
+	display: grid;
+	grid-template-columns: auto 1fr;
+	column-gap: 8px;
+}
+.SETrefreshCacheInfo{
+	color: var(--grey-600);
+	text-decoration: none;
+}
+.SETrefreshCacheInfoLink:hover,
+.SETcreateAndAddCollection:hover,
+.SETrefreshCache:hover {
+	color: var(--blue);
+	text-decoration: underline;
+	cursor: pointer;
+}
+.SETtitleLink{
+   text-decoration: none;
+   color : inherit;
+   all : unset;
+	cursor: pointer;
+	user-select: none;
+}
+
+.SETtitleLink.selected{
+   font-weight: var(--bold);
+}
+.SETpageDescription a{
+	text-decoration: unset;
+	color: var(--blue);
+	padding-left: 2px;
+	padding-right: 2px;
+}
+.SETpageDescription a:hover{
+	text-decoration: underline;
+}
+
+.SETnotificationsTable a,
+.SETselectNotificationComponent a{
+	text-decoration: unset;
+	color: var(--blue);
+}
+.SETnotificationsTable a:hover,
+.SETselectNotificationComponent a:hover{
+	text-decoration: underline;
+}
+.STCnoAddCollection{
+	display: block !important;
+	padding-left: 0px !important;
+}
+.SETcontentAsideHeader{
+	height: 66px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 12px;
+	padding-left: 24px;
+	padding-right: 24px;
+	user-select: none;
+	/* background-color: #ebf3f6; */
+	border-bottom: 1px solid var(--grey-300);
+	box-sizing: border-box;
+}
+.SETheading{
+	font-family: var(--font-buttons);
+	color: var(--blue-dark);
+	font-size: 16px;
+	font-weight: 500;
+}
+.SETdefaultLink{
+	color: var(--blue);
+	text-decoration: none;
+	cursor: pointer;
+}
+.SETdefaultLink:hover{
+	text-decoration: underline;
+}
+.SETresetGrid{
+	display: grid;
+	grid-template-columns: 1fr auto auto auto;
+	color: var(--grey-600);
+	column-gap: 4px;
+	margin-bottom: 4px;
+}
+.SETdatabaseTableData{
+	line-height: 28px;
+}
+.SETlicenseTableRow .SETlicenseTableData:nth-child(2) {
+	justify-content: end;
+
+ }

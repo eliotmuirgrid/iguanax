@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">require(modname)\n</pre><ul><li><code><strong>modname</strong></code>: The name of the module to load. In Lua, directory paths within module names are written using dots (<code style=\"background-color: rgb(240, 240, 240);\">.</code>), not slashes or backslashes</li></ul><h3>Notes</h3><ul><li>Used to include external files, libraries, or modules into a Lua program.</li><li><code>require</code> caches loaded modules, so repeated calls do not reload the file but return the cached result.</li><li>To force reload a module, you can clear it from <code>package.loaded</code> before requiring again.</li></ul><p><br></p><h3>Returns</h3><ul><li>The final value of <code>package.loaded[modname]</code>, typically a <em><u>(table)</u></em> or a <em>(<u>bool)</u></em>.</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">require \"CHK.CHKutility\"\n</pre>",
+    "Name": "require",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> Name of the module to load.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Loads the given module."
+}

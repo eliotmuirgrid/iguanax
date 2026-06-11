@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">ui.setStatusMessage{data = &lt;html_string&gt;}\n</pre><ul><li><code><strong>data</strong></code>: A string containing valid HTML that will display in the component’s status message area on the detail card.</li></ul><p><br></p><h3>Notes</h3><ul><li>This function allows components to display custom status information using an HTML section on the detail card.</li><li>You can include any HTML markup you want, such as <code>&lt;p&gt;</code>, <code>&lt;ul&gt;</code>, or styled text.</li><li>Useful for surfacing dynamic messages, progress updates, or custom visual cues.</li><li>If the component has the tag #autostart, the html will persist on restart.</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">ui.setStatusMessage{data = \"&lt;p&gt;Hello World!&lt;/p&gt;\"}\n</pre>",
+    "Name": "ui.setStatusMessage",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> An HTML block to be injected into the component’s detail card.</p>",
+            "Name": "data",
+            "Required": true
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Sets component status with an HTML block."
+}

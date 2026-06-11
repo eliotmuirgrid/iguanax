@@ -1,0 +1,62 @@
+.TOGtoggle {
+   position: relative;
+   top: 0px;
+   left: 0px;
+   width: 32px;
+   height: 16px;
+   border-radius: 100px;
+   background-color: var(--grey-400);
+   overflow: hidden;
+}
+.TOGtoggle:first-child {
+   margin-top: 0px;
+}
+.TOGtoggle--float-left {
+   float: left;
+   margin-right: 24px;
+}
+.TOGcheck {
+   position: absolute;
+   display: block;
+   cursor: pointer;
+   top: 0;
+   left: 0;
+   width: 100%;
+   height: 100%;
+   opacity: 0;
+   z-index: 6;
+}
+.TOGcheck:checked ~ .TOGtrack {
+   background-color: var(--blue);
+}
+.TOGcheck:checked ~ .TOGswitch {
+   right: 2px;
+   left: 18px;
+   transition: .35s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+   transition-property: left, right;
+   transition-delay: .05s, 0s;
+}
+.TOGswitch {
+   display: block;
+   position: absolute;
+   left: 2px;
+   top: 2px;
+   bottom: 2px;
+   right: 18px;
+   background-color: var(--white);
+   border-radius: 100px;
+   z-index: 1;
+   transition: .35s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+   transition-property: left, right;
+   transition-delay: 0s, .05s;
+}
+.TOGtrack {
+   display: block;
+   position: absolute;
+   left: 0;
+   top: 0;
+   right: 0;
+   bottom: 0;
+   transition: .35s cubic-bezier(0.785, 0.135, 0.150, 0.860);
+   border-radius: 100px;
+}

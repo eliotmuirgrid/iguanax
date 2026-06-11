@@ -1,0 +1,23 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">s:find(pattern [, init [, plain]])\n</pre><ul><li><code><strong>s</strong></code>: The string to search within.</li><li><code><strong>pattern</strong></code>: Lua pattern to match (or exact string if <code>plain = true</code>).</li><li><code><strong>init</strong></code> <em>(optional)</em>: Start index for the search (default = 1).</li><li><code><strong>plain</strong></code> <em>(optional)</em>: If true, disables pattern matching and searches for a literal substring.</li></ul><p><br></p><h3>Notes</h3><ul><li>Lua’s pattern matching is not full regex, but has similar operators (e.g., <code>%d</code>, <code>.</code>).</li><li>Negative <code>init</code> values count from the end of the string.</li><li>Use the optional <code>plain</code> flag to treat the pattern as a literal string and disable Lua pattern matching.</li></ul><p><br></p><h3>Returns</h3><ul><li>The start and end <strong>indices</strong> of the first match. <em><u>(integer, integer)</u></em></li><li>If no match is found, returns <code>nil</code>.</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local S = \"The quick brown fox jumped over\"\n\nlocal Start, End = S:find(\"fox\")\n-- Start = 17, End = 19\n\nlocal S = \"The %D is important.\"\nlocal Start, End = S:find(\"%D\", 1, true)\n-- Matches literal \"%D\" instead of pattern\n</pre>",
+    "Name": "string:find",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The Lua pattern to search for in the string.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u></em> <em>(Optional)</em> Position to begin the search (defaults to 1). Can be negative to count from the end.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>bool</u></em> <em>(Optional) </em>If <code>true</code>, disables pattern matching and matches the string literally. Defaults to <code>false</code>.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Finds the first match to the supplied pattern and returns the position."
+}

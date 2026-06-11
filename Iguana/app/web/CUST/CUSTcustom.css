@@ -1,0 +1,39 @@
+/* Setting up CSS rules that are safe to use in custom component scripts 
+   This gives custom scripts some insulation from our CSS implementation 
+   Eliot*/
+
+.CUSTerror {
+  color : red;
+}
+
+.CUSTvalue {
+   /* margin-top: 4px; */
+   text-align: left;
+   border-left: 0px;
+   border-right: 0px;
+   display: inline-flex;
+   align-items: center;
+   color: var(--grey-600);
+}
+
+.CUSTlabel{
+   /* margin-top: 4px; */
+   text-align: left;
+   border-left: 0px;
+   border-right: 0px;
+   display: inline-flex;
+   align-items: center;
+   font-weight: var(--semibold);
+}
+
+.CUSTrow{
+   display: grid;
+   grid-template-columns: auto 1fr;
+   column-gap: 24px;
+   margin-top: 8px;
+   margin-bottom: 8px;
+}
+
+.CUSTrow:last-of-type{
+   padding-bottom: 12px;
+}

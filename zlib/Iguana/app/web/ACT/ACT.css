@@ -1,0 +1,156 @@
+.ACTnewFileExt,
+.ACTfileExt{
+	margin-left: 4px;
+	width: 220px !important;
+}
+
+.ACTaddRequire {
+	display: inline-block;
+	align-items: center;
+	vertical-align: middle;
+}
+
+.ACTaddRequire input[type="checkbox"] {
+	vertical-align: middle;
+}
+
+.ACTcurrentFileName{
+   background-color: #f5f5f5 !important;
+}
+
+.ACTnameInput {
+   cursor: text !important;
+   height: 100% !important;
+   padding: 2px 4px !important;
+}
+
+.ACTbuttonWarning {
+   background-color: var(--red);
+   color: var(--white);
+}
+
+.ACTbuttonWarning:hover {
+	background-color: var(--red-dark);
+	transition: 70ms ease-in;
+}
+
+.ACTbuttonWarning:active {
+	background-color: var(--red-darker);
+}
+
+.ACTuploadFile {
+	position: absolute;
+	z-index: -1;
+	top: 4px;
+	left: 16px;
+	font-size: 12px;
+	padding-top: 0 !important;
+	color: var(--grey-600);
+	font-family: var(--font-sans);
+	visibility: hidden;
+}
+
+.ACTuploadFileFeedback {
+	color: var(--grey-600);
+	margin-top: 5px;
+	margin-left: 12px;
+	font-size: 11px;
+}
+
+.ACTtab {
+	overflow: hidden;
+	border: 1px solid var(--grey-300);
+	border-top: none;
+	background-color: var(--grey-200);
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	width: 100%;
+}
+ 
+.ACTtabLink {
+	background-color: var(--grey-200);
+	float: left;
+	border-right: 1px solid var(--grey-300);
+	outline: none;
+	cursor: pointer;
+	padding: 6px 32px;
+}
+ 
+.ACTtabLink:hover {
+	background-color: var(--grey-300);
+}
+
+.ACTselectedTab {
+	background-color: white;
+ }
+ 
+ .ACTnewFileContent,
+ .ACTuploadContent {
+	padding: 24px 4px 12px;
+}
+.ACTdeleteDirMargin{
+	margin-top: -8px
+}
+.ACTbreak {
+	word-wrap: break-word;
+}
+.ACTerror{
+	color: red;
+}
+.ACTmodalReplaceFile {
+   background-color: var(--red) !important;
+   color: var(--white) !important;
+}
+
+.ACTmodalReplaceFile:hover {
+	background-color: var(--red-dark) !important;
+	transition: 70ms ease-in !important;
+}
+
+.ACTmodalReplaceFile:active {
+	background-color: var(--red-darker) !important;
+}
+.ACTfileInfo a{
+	color: var(--blue);
+	text-decoration: none;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+.ACTfileInfo a:hover{
+	text-decoration: underline;
+}
+.ACTbuttons,
+.ACTdeleteButtons{
+	justify-content: end;
+}
+.ACThide{
+	display: none;
+}
+
+.ACTfolderNameDiv{
+	display: grid;
+	grid-template-columns: auto 1fr;
+	flex-grow: 1;
+	border: 1px solid var(--grey-400);
+	border-radius: var(--border-radius);
+	padding: 1px;
+	background-color: var(--grey-100);
+}
+.ACTfolderNameDiv input{
+	border: unset;
+	border-left: 1px solid var(--grey-400);
+	border-top-left-radius: unset;
+	border-bottom-left-radius: unset;
+}
+.ACTfolderNamePrefix{
+	height: 27px;
+	font-weight: var(--regular);
+	font-size: 12px;
+	line-height: 16px;
+	padding: 6px 12px;
+	color: var(--grey-600);
+	width: 100%;
+	box-sizing: border-box;
+	font-family: var(--font-sans);
+}

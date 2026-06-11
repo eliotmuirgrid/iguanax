@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 55.1 (78136) - https://sketchapp.com -->
+    <title>Icon/16px/expand_more</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <path d="M4.41043101,5.76317254 C4.69338915,6.07717905 5.22463936,6.07931243 5.51100486,5.76730596 L9.83670894,1.0500081 C10.0873713,0.777069108 10.0445573,0.372927391 9.74189574,0.146922702 C9.43864165,-0.0786819775 8.99020485,-0.0401478448 8.74013503,0.23279115 L4.97916206,4.35941009 L1.26396609,0.236924569 C1.01626661,-0.0380144672 0.568422387,-0.0797486663 0.262797964,0.143722636 C-0.0420857309,0.366660594 -0.0884553114,0.770802311 0.159244173,1.04587468 L4.41043101,5.76317254 Z" id="path-1"></path>
+    </defs>
+    <g id="Symbols" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="select-/-placeholder" transform="translate(-176.000000, -26.000000)">
+            <g id="Input-Field" transform="translate(0.000000, 20.000000)">
+                <g id="Icon/16px/expand_more" transform="translate(179.000000, 11.000000)">
+                    <mask id="mask-2" fill="white">
+                        <use xlink:href="#path-1"></use>
+                    </mask>
+                    <use id="expand_more" fill="#C9D0D5" transform="translate(5.000000, 3.000000) scale(1, -1) rotate(-180.000000) translate(-5.000000, -3.000000) " xlink:href="#path-1"></use>
+                    <g id="colour-/-greyscale-/-grey-400" mask="url(#mask-2)" fill="#C9D0D5">
+                        <g transform="translate(-4.000000, -6.000000)">
+                            <rect x="0" y="0" width="18" height="18"></rect>
+                        </g>
+                    </g>
+                </g>
+            </g>
+        </g>
+    </g>
+</svg>

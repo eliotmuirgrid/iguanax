@@ -1,0 +1,16 @@
+{
+ "tables":{
+ "bar":{
+  "desc":"",
+  "columns":[
+   {"type":"string",  "name":"col1","desc":""},
+   {"type":"string",  "name":"col2","desc":""}]},
+ "foo":{
+  "desc":"",
+  "columns":[
+   {"type":"string",  "name":"id", "desc":""},
+   {"type":"string",  "name":"val","desc":""}]}
+},
+ "export":{
+   "datasource": "baz.db"
+}}

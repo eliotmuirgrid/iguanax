@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.Cocoa.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="MacOSX.Cocoa" propertyAccessControl="none" useAutolayout="YES" customObjectInstantitationMethod="direct">
+    <dependencies>
+        <deployment identifier="macosx"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.CocoaPlugin" version="8191"/>
+    </dependencies>
+    <objects>
+        <customObject id="-2" userLabel="File's Owner" customClass="NSApplication">
+            <connections>
+                <outlet property="delegate" destination="Voe-Tx-rLC" id="GzC-gU-4Uq"/>
+            </connections>
+        </customObject>
+        <customObject id="-1" userLabel="First Responder" customClass="FirstResponder"/>
+        <customObject id="-3" userLabel="Application" customClass="NSObject"/>
+        <customObject id="Voe-Tx-rLC" customClass="AppDelegate">
+            <connections>
+                <outlet property="statusMenu" destination="bc2-FG-bmN" id="Sth-UM-llc"/>
+                <outlet property="window" destination="QvC-M9-y7g" id="gIp-Ho-8D9"/>
+            </connections>
+        </customObject>
+        <customObject id="YLy-65-1bz" customClass="NSFontManager"/>
+        <window title="IguanaController" allowsToolTipsWhenApplicationIsInactive="NO" autorecalculatesKeyViewLoop="NO" restorable="NO" hasShadow="NO" releasedWhenClosed="NO" showsToolbarButton="NO" visibleAtLaunch="NO" animationBehavior="default" id="QvC-M9-y7g">
+            <windowPositionMask key="initialPositionMask" leftStrut="YES" rightStrut="YES" topStrut="YES" bottomStrut="YES"/>
+            <rect key="contentRect" x="335" y="390" width="0.0" height="0.0"/>
+            <rect key="screenRect" x="0.0" y="0.0" width="2560" height="1417"/>
+            <view key="contentView" id="EiT-Mj-1SZ">
+                <rect key="frame" x="-46" y="3" width="0.0" height="0.0"/>
+                <autoresizingMask key="autoresizingMask"/>
+            </view>
+            <point key="canvasLocation" x="-76" y="301"/>
+        </window>
+        <menu id="bc2-FG-bmN">
+            <items>
+                <menuItem title="Start Iguana" id="fU6-Ec-haD">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="startIguana:" target="Voe-Tx-rLC" id="6Pr-Oj-Or7"/>
+                    </connections>
+                </menuItem>
+                <menuItem title="Stop Iguana" id="C3b-0K-UF3">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="stopIguana:" target="Voe-Tx-rLC" id="j4e-ML-SPs"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="DtS-g8-QHZ"/>
+                <menuItem title="Iguana Dashboard" id="hAx-dV-ei3">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="launchDashboard:" target="Voe-Tx-rLC" id="1k1-yh-LP9"/>
+                    </connections>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="5at-hp-rZ5"/>
+                <menuItem title="Iguana Help" id="IGV-pL-X7c">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <menu key="submenu" title="Iguana Help" id="qS4-md-44i">
+                        <items>
+                            <menuItem title="Knowledge Base" id="wQG-OC-SQe">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="launchKnowledgeBase:" target="Voe-Tx-rLC" id="pLb-RG-Pl9"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="API Reference" id="6R8-z4-YGQ">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="launchIguanaApiReference:" target="Voe-Tx-rLC" id="zaM-fj-Xm7"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Code Repository" id="OcV-l0-0BY">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="launchIguanaCodeRepository:" target="Voe-Tx-rLC" id="OBv-ia-0ht"/>
+                                </connections>
+                            </menuItem>
+                            <menuItem title="Forums" id="OAj-jP-23h">
+                                <modifierMask key="keyEquivalentModifierMask"/>
+                                <connections>
+                                    <action selector="launchIguanaForums:" target="Voe-Tx-rLC" id="BEV-Az-HxI"/>
+                                </connections>
+                            </menuItem>
+                        </items>
+                    </menu>
+                </menuItem>
+                <menuItem isSeparatorItem="YES" id="yHh-ge-QmW"/>
+                <menuItem title="Quit" id="POx-ly-w5j">
+                    <modifierMask key="keyEquivalentModifierMask"/>
+                    <connections>
+                        <action selector="quitIguanaController:" target="Voe-Tx-rLC" id="tTc-b7-qiy"/>
+                    </connections>
+                </menuItem>
+            </items>
+            <point key="canvasLocation" x="317" y="125.5"/>
+        </menu>
+        <menuItem title="Item" id="Mmj-mv-ObC">
+            <modifierMask key="keyEquivalentModifierMask"/>
+        </menuItem>
+    </objects>
+</document>

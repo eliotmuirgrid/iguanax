@@ -1,0 +1,55 @@
+/* ==========================================================================
+   AUP.css
+   - Authorized Peers specific pane styles
+========================================================================== */
+
+.AUPauthorizedPeersPane {
+   max-width: 1260px;
+   min-width: 760px;
+}
+
+.AUPauthorizedPeersHeader {
+   margin-bottom: 2px;
+}
+
+.AUPauthorizedPeersHeader .SETgitTitle {
+   width: 100%;
+   box-sizing: border-box;
+   padding-bottom: 10px;
+   gap: 12px;
+   flex-wrap: wrap;
+}
+
+.AUPauthorizedPeersHeader .SETgitTitle > span {
+   white-space: nowrap;
+   margin-right: auto;
+}
+
+.AUPauthorizedPeersHeaderActions {
+   display: flex;
+   align-items: center;
+   gap: 10px;
+   margin-left: auto;
+   flex: 0 0 auto;
+}
+
+.AUPauthorizedPeersShareBtn,
+.AUPauthorizedPeersEditBtn {
+   flex: 0 0 auto;
+   white-space: nowrap;
+}
+
+.AUPauthorizedPeersShareBtn span {
+   white-space: nowrap;
+}
+
+.AUPauthorizedPeersHeaderActions .AUPauthorizedPeersShareBtn {
+   min-width: 132px;
+   justify-content: center;
+}
+
+.AUPauthorizedPeersHeaderActions .AUPauthorizedPeersEditBtn {
+   margin-left: 0;
+   min-width: 116px;
+   justify-content: center;
+}

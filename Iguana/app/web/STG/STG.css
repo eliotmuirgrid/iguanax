@@ -1,0 +1,263 @@
+.STGtestPurgeContent{
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+}
+
+.STGpurgeTestTable {
+	display: flex;
+	height: 100%;
+	flex-direction: column;
+	row-gap: 18px;
+}
+
+.STGtestPurgeTableContainer{
+	flex-grow: 1;
+	overflow: hidden;
+}
+
+.STGpurgeTestCard .POPpopoutCard-content{
+	height: calc(100% - 61px - 32px - 32px);
+	overflow: hidden;
+}
+
+.STGtestPurgeTable{
+   display: grid;
+	max-height: calc(100% - 2px);
+	border: 1px solid var(--grey-300);
+	background-color: var(--grey-100);
+	border-radius: var(--border-radius);
+	overflow-x: auto;
+	overflow-y: auto;
+	/* grid-template-columns: minmax(max-content, auto) 240px 180px 180px; */
+	grid-template-columns: minmax(max-content, auto) 220px 160px 160px auto auto;
+}
+
+.STGtestPurgeBottom{
+	display: grid;
+	grid-template-columns: auto max-content max-content;
+}
+
+.STGtotalPurged{
+	margin: 5px;
+}
+
+.STGtestPurgeTableLoading{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.STGtestPurgeHeader{
+	cursor: pointer;
+	display: contents;
+	position: sticky;
+	z-index: 100;
+	top: 0;
+}
+
+.STGtestPurgeHeading {
+	padding: 8px 16px;
+	min-height: 32px;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+   border-bottom: 2px solid var(--grey-300);
+	font-weight: var(--semibold);
+	color: var(--grey-800);
+	background-color: var(--grey-200);
+	position: sticky;
+	top: 0;
+	user-select: none;
+}
+
+.STGtestPurgeRows {
+	display: contents;
+	position: sticky;
+}
+
+.STGtestPurgeTableValue {
+	box-sizing: border-box;
+	min-height: 40px;
+	padding: 12px 16px;
+	display: flex;
+	align-items: center;
+	border-bottom: 1px solid var(--grey-300);
+	color: var(--grey-800);
+}
+
+.STGtestPurgeSummary{
+	margin-bottom: 5px;
+}
+
+.STGlogUsageData {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	column-gap: 16px;
+	margin-bottom: 24px;
+}
+.STGlogSizeDirectoryStats{
+	grid-template-columns: auto minmax(0, 1fr);
+}
+.STGlogSizeDirectoryStats,
+.STGdiskUsageStats {
+	background: var(--grey-100);
+	border: 1px solid var(--grey-300);
+	border-radius: var(--border-radius);
+	padding: 12px 16px;
+	display: grid;
+	column-gap: 8px;
+	row-gap: 4px;
+	color: var(--grey-800);
+}
+.STGdiskUsageStats {
+	grid-template-rows: auto auto auto;
+}
+
+.STGlogSizeDirectoryStats > *,
+.STGdiskUsageStats > * {
+	display: flex;
+	align-items: flex-start;
+}
+
+.STGlogSizeDirectoryStats > .FORMlabel,
+.STGdiskUsageStats > .FORMlabel {
+	white-space: nowrap;
+}
+
+.STGdirectoryUrl {
+	overflow-wrap: anywhere;
+}
+
+.STGdiskUsageContainer {
+	display: inline-block;
+}
+
+.STGbar {
+	background-color: var(--blue-lighter);
+	border: 1px solid var(--grey-500);
+	width: 100%;
+	min-width: 150px;
+	height: 15px;
+	position: relative;
+	overflow: hidden;
+	border-radius: 3px;
+}
+
+.STGusage {
+	background-color: var(--blue);
+	height: 100%;
+	width: 0;
+	color: white;
+	line-height: 30px;
+	position: absolute;
+	text-align: center;
+}
+
+.STGspace {
+	margin-top: 4px;
+}
+
+.STGlogUsagePage{
+	display: flex;
+	overflow: hidden;
+	/* max-height: 100vh; */
+	flex-direction: column;
+}
+
+.STGsortAsc::after {
+	content: url("/DASH/DASHiconSortUp.svg");
+	margin-top: 0px;
+	margin-left: 6px;
+ }
+
+ .STGsortDsc::after {
+	content: url("/DASH/DASHiconSortDown.svg");
+	margin-top: 0px;
+	margin-left: 6px;
+ }
+.SETpurgeRuleData a{
+	color: var(--blue);
+	text-decoration: none;
+}
+.SETpurgeRuleData a:hover{
+	text-decoration: underline;
+}
+.STGtitle{
+	margin: unset;
+	font-weight: var(--bold);
+	font-size: 20px;
+	line-height: 32px;
+	color: var(--grey-700);
+	padding-bottom: 24px;
+	margin-bottom: 0px;
+	display: grid;
+	grid-template-columns: 1fr auto;
+	align-items: center;
+}
+.STGruleHeading,
+.STGruleRow{
+	display: grid;
+	grid-template-columns: 1fr 1fr 84px;
+}
+.STGruleHeading{
+	border-bottom: 1px solid var(--grey-300);
+}
+.STGruleHeading>div{
+	font-weight: var(--semibold);
+	color: var(--grey-800);
+	background-color: var(--grey-200);
+}
+.STGpaddingRight{
+	padding-right: 24px !important;
+}
+.STGpaddingLeft{
+	padding-left: 24px !important;
+}
+.STGheading{
+	padding-left: 12px;
+	padding-right: 12px;
+}
+.STGruleTable{
+	border-radius: var(--border-radius);
+	border: 1px solid var(--grey-300);
+	background-color: var(--grey-100);
+	overflow: hidden;
+	width: 100%;
+}
+.STGheading{
+	min-height: 32px;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+	padding-top: 16px;
+	padding-bottom: 16px;
+}
+.STGruleData{
+	text-align: left;
+	border-left: 0px;
+	border-right: 0px;
+	padding: 16px;
+	color: var(--grey-800);
+	border-top: 1px solid var(--grey-300);
+}
+.STGruleRow{
+	border-top: 1px solid var(--grey-300);
+}
+.STGruleVal{
+	display : grid;
+   box-sizing: border-box;
+	padding: 12px 16px;
+	align-items: center;
+	/* border-bottom: 1px solid var(--grey-300); */
+	color: var(--grey-800);
+}
+.STGdaysRow{
+	display: grid;
+	grid-template-columns: 1fr 80px;
+	column-gap: 24px;
+}
+
+.STGtestPurgeSpinnerText{
+	margin-right: 12px;
+}

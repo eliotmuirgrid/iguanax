@@ -1,0 +1,1285 @@
+.LOGcontainer {
+	height: 100%;
+	display: grid;
+	grid-template-columns: 370px 1fr;
+	background: #D2E4EC;
+	overflow: auto;
+ }
+ .LOGsearchLoadMore{
+	margin-left: 4px;
+	margin-right: 4px;
+ }
+.LOGmodal{
+	height: 100vh;
+	overflow: hidden;
+}
+.LOGlistView{
+	display: flex;
+	flex-direction: column;
+	position: relative;
+	background-color: #ebf3f6;
+	border-right: 1px solid var(--grey-400);
+	height: 100%;
+	overflow: hidden;
+	z-index: 1;
+}
+.LOGcomponentRow{
+	display: grid;
+	grid-template-columns: auto 1fr auto;
+	column-gap: 12px;
+	width: 100%;
+}
+.LOGswitchTarget .TOGswitchDiv{
+	margin-left: 0px;
+}
+.LOGstorageRow{
+	display: grid;
+	grid-template-columns: 1fr auto   auto;
+}
+.LOGstorageDiv{
+	padding: 20px;
+	padding-left: 16px;
+	padding-right: 16px;
+	flex-grow: 1;
+}
+.LOGtopRow.LOGclearAllRow{
+	margin-bottom: 8px;
+}
+.LOGactionsDiv{
+	display: grid;
+	grid-template-columns: 1fr auto auto;
+}
+.LOGclearAllRow{
+	display: grid;
+	grid-template-columns: 1fr auto auto;
+	margin-bottom: 12px;
+}
+.LOGtypeRow{
+	display: grid;
+	grid-template-columns: auto 1fr;
+	column-gap: 20px;
+}
+.LOGcomponentRow:hover{
+	/* background-color: #F8FCFE; */
+	/* box-shadow: 0 2px 4px rgb(0 0 0 / 10%); */
+}
+.LOGfilterCriteriaDiv{
+	/* padding: 16px; */
+	display: flex;
+	flex-direction: column;
+}
+.LOGcomponentDiv{
+	border-bottom: 1px solid var(--grey-300);
+	height: 64px;
+	padding-left: 16px;
+	padding-right: 16px;
+	display: flex;
+	align-items: center;
+	flex-shrink: 0;
+	/* padding: 16px;
+	padding-top: 24px;
+	padding-bottom: 24px; */
+}
+.LOGsearchIndexUp,
+.LOGsearchIndexDown{
+	text-align: center;
+	height: 18px;
+	width: 28px;
+	border-radius: var(--border-radius);
+	user-select: none;
+	cursor: pointer;
+	margin-top: 1px;
+	margin-right: 1px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	margin-bottom: 2px;
+	border: 1px solid var(--grey-400);
+	background-color: var(--grey-200);
+}
+.LOGsearchIndexUp:hover,
+.LOGsearchIndexDown:hover{
+	background: var(--white);
+	box-shadow: 0px 1px 2px rgba(0,0,0,0.25);
+}
+.LOGsearchIndexUp:active,
+.LOGsearchIndexDown:active{
+	background: var(--white);
+	box-shadow: none;
+	margin-top: 2px;
+	margin-bottom: 0px;
+}
+.LOGsearchNavRow{
+	display: grid;
+	grid-template-columns: 120px auto auto;
+	column-gap: 4px;
+	font-family: var(--font-buttons);
+	font-weight: 500;
+	color: var(--grey-600) !important;
+	letter-spacing: 0.05em;
+	font-size: 11px;
+}
+.LOGdateTimeDiv{
+	overflow: hidden;
+	display: grid;
+	grid-template-rows: 1fr auto;
+}
+.LOGbulkEnd{
+	margin-bottom: 10px;
+}
+.LOGstartTime,
+.LOGendTime {
+	color: var(--grey-600);
+	cursor: text;
+}
+.LOGendTime{
+	/* margin-bottom: 4px; */
+}
+.LOGcomponentRowFlex{
+	width: 100%;
+}
+.LOGcomponentRowFlex > *{
+	display: flex; /* Use flexbox */
+	justify-content: center; /* Center horizontally */
+	align-items: center; /* Center vertically */
+}
+.LOGwrapper {
+	background: var(--white);
+	border-radius: var(--border-radius);
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+	margin-bottom: 0px;
+	overflow: hidden;
+	display: flex;
+   flex-direction: column;
+	overflow: hidden;
+}
+
+ .LOGheader {
+    border-bottom: solid 1px var(--grey-400);
+	 background-color: #ebf3f6;
+	 box-sizing: border-box;
+	 height: 68px;
+	 flex-shrink: 0;
+	 padding: 8px 24px;
+	 display: flex;
+	 align-items: center;
+	 column-gap: 16px;
+ }
+
+ .LOGheading {
+	font-family: var(--font-buttons);
+	color: var(--blue-dark);
+	font-size: 16px;
+	font-weight: 500;
+	flex-grow: 1;
+}
+.LOGdateRow{
+	border-bottom: 1px solid var(--grey-400);
+}
+.LOGbottomBanner,
+.LOGtoolBarBottom{
+	border-top: 1px solid var(--grey-400);
+	border-bottom: unset !important;
+}
+.LOGtoolbar {
+	border-bottom: 1px solid var(--grey-400);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	height: 48px;
+	flex-shrink: 0;
+	background: var(--grey-200);
+	padding: 0 24px;
+}
+.LOGdateRowGrid{
+	display: grid;
+	grid-template-columns: auto auto auto auto auto auto auto;
+	column-gap: 36px;
+}
+
+.LOGtoolbarLeft {
+	display: grid;
+	grid-template-columns: 1fr auto 270px auto auto auto auto;
+	column-gap: 24px;
+	width: 100%;
+}
+
+.LOGfilter {
+	display: flex;
+	align-items: center;
+	column-gap: 16px;
+	position: relative;
+}
+.LOGbulkDiv{
+	/* border-bottom: unset !important; */
+}
+
+.LOGsearchSection,
+.LOGbulkDiv,
+.LOGdateTimeDiv,
+.LOGtypeDiv,
+.LOGsearchContainerDiv{
+	border-bottom: 1px solid var(--grey-300);
+	padding: 16px;
+}
+.LOGdateTimeDiv{
+	padding-top: 12px;
+}
+.LOGsearchSection{
+	padding-top: 10px;
+	padding-bottom: 8px;
+}
+.LOGsearchContainerDiv{
+	padding-top: 12px;
+	padding-bottom: 8px;
+}
+.LOGsearchFooterRow{
+	display: grid;
+	grid-template-columns: 1fr auto;
+	row-gap: 12px;
+	padding-left: 4px;
+	padding-right: 4px;
+	height: 21px;
+	/* margin-top: 8px; */
+	margin-bottom: 8px;
+}
+.LOGsearchFooterRow div{
+	display: flex;
+	align-items: center;
+}
+.LOGsearchFooterRowTop{
+	display: grid;
+	grid-template-columns: auto 1fr;
+	column-gap: 24px;
+	height: 21px;
+	/* padding-right: 8px; */
+	padding-left: 2px;
+	margin-top: 10px;
+}
+.LOGsearchContainer{
+	position: relative;
+   height: inherit;
+   width: inherit;
+   border-radius: inherit;
+}
+.LOGsearchHeader{
+	display: flex;
+	justify-content: space-between;
+	align-items: baseline;
+}
+.LOGsearchStatus{
+	color: var(--grey-600);
+	font-size: 10.5px;
+	white-space: nowrap;
+	/* margin-top: 6px; */
+}
+.LOGtagsBox,
+.LOGsearch {
+	position: relative;
+}
+.LOGbulkEnd,
+.LOGendTime,
+.LOGtagsInput{
+	border-top-left-radius: unset !important;
+	border-top-right-radius: unset !important;
+	border-top: unset !important;
+}
+.LOGbulkStart,
+.LOGstartTime,
+.LOGsearchInput{
+	border-bottom-left-radius: unset !important;
+	border-bottom-right-radius: unset !important;
+	border-bottom: solid 1px var(--grey-300) !important;
+}
+.LOGsearchInput2 {
+	width: 100%;
+	height: 28px;
+	border-radius: var(--border-radius);
+	background-color: transparent;
+	font-weight: var(--regular);
+	font-size: 12px;
+	box-sizing: border-box;
+ }
+ .LOGsearchCount{
+	text-align: right;
+	margin-right: 12px !important;
+	/* display: flex; */
+	align-items: center;
+	column-gap: 2px;
+ }
+ 
+ .LOGsearchIndexInput {
+	width: 30px;
+	height: 16px;
+	border: 1px solid var(--grey-400);
+	border-radius: 3px;
+	text-align: center;
+	font-size: 11px;
+	padding: 0 2px;
+	background: var(--white);
+	-moz-appearance: textfield; /* Firefox */
+ }
+
+ .LOGsearchIndexInput::-webkit-outer-spin-button,
+ .LOGsearchIndexInput::-webkit-inner-spin-button {
+	-webkit-appearance: none;
+	margin: 0;
+ }
+ 
+ .LOGsearchTotal {
+	font-size: 11px;
+	color: var(--grey-600);
+	margin-left: 4px;
+	white-space: nowrap;
+ }
+.LOGtitleFooter{
+	font-family: var(--font-buttons);
+	font-weight: 500;
+	color: var(--grey-600) !important;
+	letter-spacing: 0.05em;
+	font-size: 10px;
+ }
+.LOGtitle {
+	font-family: var(--font-buttons);
+	font-weight: 500;
+	color: var(--grey-700) !important;
+	letter-spacing: 0.05em;
+	font-size: 10px;
+}
+.LOGbulkTitle{
+	margin-bottom: 14px;
+}
+.LOGbulkRow{
+	display: grid;
+	grid-template-columns: auto 1fr;
+}
+.LOGtagsInput::placeholder,
+.LOGsearchInput::placeholder{
+   color: var(--grey-400);
+}
+.LOGtagsInput,
+.LOGsearchInput {
+	height: 24px;
+	min-width: 150px;
+	border-color: var(--grey-500);
+	border: solid 1px var(--grey-400);
+   border-radius: var(--border-radius);
+   caret-color: var(--grey-700);
+   font-family: var(--font-sans);
+   color: var(--grey-600);
+	font-size: 12px;
+	padding: 6px 32px 6px 6px;
+   width: inherit;
+   height: inherit;
+   max-width: 100%;
+   max-height: 100%;
+   position: absolute;
+   top: 0;
+   left: 0;
+   white-space: pre;
+   background: var(--white);
+   box-sizing: border-box;
+}
+.LOGfilterCheckbox {
+	display: flex;
+	align-items: center;
+	flex-shrink: 0;
+	color: var(--grey-600);
+	font-size: 10px;
+	user-select: none;
+	column-gap: 4px;
+	color: var(--grey-600) !important;
+}
+.LOGfilterCheckbox:hover{
+	text-decoration: underline;
+}
+.LOGfilterCheckbox input{
+	margin-bottom: 2px;
+}
+.LOGbody {
+	/* cursor: pointer; */
+	flex-grow: 1;
+	overflow: auto;
+	/* margin: 24px 0px; */
+	text-align: center;
+	scrollbar-width: none;
+}
+
+.LOGbody::-webkit-scrollbar {
+	width: 0em;
+ }
+
+ .LOGbody::-webkit-scrollbar-thumb {
+	background-color: rgba(0, 0, 0, 0);
+ }
+ .LOGcomponentSelect{
+	width: 100%;
+   height: 28px;
+   border-radius: var(--border-radius);
+   border: 1px solid var(--grey-400);
+   background-color: var(--white);
+	color: var(--grey-800);
+   font-weight: var(--regular);
+   font-size: 12px;
+   line-height: 16px;
+   /*color: var(--grey-800);*/
+   font-family: var(--font-sans);
+   cursor: pointer;
+   padding: 0px 32px 0px 8px;
+   appearance: none;
+   background-image: url(/FORM/FORMselectBoxArrow.svg);
+   background-repeat: no-repeat, repeat;
+   background-position: right 8px top 50%, 0 0;
+	/* width: 192px; */
+}
+
+ .LOGcomponentLink{
+   content : url("../LOG/icons/NewWindow.svg");
+   display :inline;
+	opacity: 0.6;
+	width: 40px;
+ }
+
+ .LOGcomponentLink:hover {
+   cursor: pointer;
+	opacity: 1;
+ }
+
+.LOGcellPreview {
+	overflow: hidden;
+	width: 100%;
+	color: var(--grey-800);
+	white-space: break-spaces;
+}
+.LOGselectingEnd .LOGtimeColumn,
+.LOGselectingStart .LOGtimeColumn{
+	display : grid;
+   grid-template-columns: auto auto;
+}
+.LOGtimeColumn{
+	/* border-right: 1px solid var(--grey-200); */
+}
+.LOGlogHeader{
+	display : grid;
+   grid-template-columns: auto 1fr auto auto;
+	column-gap: 8px;
+	cursor: pointer;
+	width: 100%;
+	/* height: 20px; */
+}
+.LOGentryBody{
+	display : grid;
+   grid-template-rows: 1fr auto;
+}
+ .LOGlogEntry{
+   display : grid;
+   grid-template-columns: auto auto 1fr auto auto auto; 
+	/* column-gap: 12px; */
+	cursor: pointer;
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding-right: 16px;
+ }
+ .LOGcellPreview a{
+	text-decoration: unset;
+	color: var(--blue);
+ }
+ .LOGcellPreview a:hover{
+	text-decoration: underline;
+ }
+ .LOGnavButton{
+	padding: 4px;
+	text-align: center;
+	cursor: pointer;
+	color: var(--grey-500);
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+ }
+ .LOGnavButton:hover {
+	background: var(--grey-200);
+	color: var(--grey-800);
+; }
+.LOGnavButton:active {
+	background: var(--grey-300);
+	padding-top: 5px;
+	padding-bottom: 3px;
+; }
+.LOGloadNewer,
+.LOGloadNewest {
+	border-bottom: 1px solid var(--grey-300);
+ }
+ .LOGloadOlder{
+	border-top: 1px solid var(--grey-300);
+ }
+ .LOGloadOldest {
+	border-bottom: 1px solid var(--grey-300);
+	transform: rotate(180deg);
+ }
+ .LOGentrySelected{
+	background-color: rgba(var(---blue-light), 0.7) !important;
+	box-sizing: border-box;
+ }
+ .LOGlogEntry:hover {
+   background-color: rgba(var(---blue-light), 0.5) !important;
+	box-sizing: border-box;
+ }
+
+ .LOGentrySelected.LOGlogEntry:hover{
+   background-color: rgba(var(---blue-light), 0.9) !important;
+ }
+ .LOGcellIcon img {
+	height: 28px;
+	padding-right: 12px;
+	padding-left: 6px;
+	padding-top: 4px;
+ }
+
+ .LOGcellTime {
+	color: var(--blue-dark);
+	font-weight: 500;
+ }
+
+ .LOGcellTime,
+ .LOGcellPreview {
+	font-family: var(--font-monospace);
+	/* padding-top: 8px; */
+	line-height: 20px;
+	/* margin-bottom: 4px; */
+	text-align: left;
+ }
+
+.LOGdetailContainer {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.LOGdetailHeader {
+	 padding: 0 24px;
+	 background-color: var(--grey-100);
+	 border-bottom: 1px solid var(--grey-400);
+
+}
+
+.LOGdetailHeaderContents {
+	height: 68px;
+	flex-shrink: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.LOGdetailHeaderToolbarLeft,
+.LOGdetailHeaderToolbarRight {
+	display: flex;
+	align-items: center;
+	column-gap: 16px;
+}
+
+.LOGdetailFooter {
+	flex-shrink: 0;
+	height: 40px;
+   background-color: var(--white);
+   display: flex;
+   padding: 0 24px;
+	border-top: 1px solid var(--grey-400);
+	display: flex;
+	align-items: center;
+	color: var(--grey-800);
+	column-gap: 8px;
+}
+
+.LOGdetailHeaderText {
+    text-align: left;
+    flex: 1;
+}
+
+
+
+.LOGlight {
+   display: inline-block;
+}
+
+.LOGfooterContents {
+	display: flex;
+	align-items: baseline;
+	column-gap: 8px;
+	color: var(--grey-600);
+}
+
+.LOGfooterIcon {
+	color: var(--grey-500);
+	fill: currentColor;
+}
+
+
+.LOGlabelValuePair {
+	display: flex;
+	align-items: baseline;
+	column-gap: 8px;
+}
+
+.LOGlabel {
+   font-family: var(--font-buttons);
+	font-weight: 500;
+	font-size: 10px;
+	text-transform: uppercase;
+	letter-spacing: 0.075em;
+	margin-left: 24px;
+	color: var(--grey-700);
+}
+.LOGlabel:first-child {
+	margin-left: 0px;
+}
+
+.LOGvalue{
+	text-align: right;
+	font-size: 11px;
+	padding-left: 12px;
+}
+
+.DETtoolbarIcon {
+	color: var(--grey-600);
+	fill: currentColor;
+}
+.LOGtoolBarBottom{
+	user-select: text !important;
+}
+
+.LOGdetailHeaderDivider {
+	width: 1px;
+	height: 32px;
+	background-color: var(--grey-300);
+}
+
+.LOGdetailScan {
+    display: flex;
+    align-items: center;
+	 column-gap: 4px;
+}
+
+.LOGdetailPrev, .LOGdetailNext {
+    background-color: #fff;
+    border: none;
+    border-radius: 50%;
+    width: 24px;
+    height: 24px;
+    cursor: pointer;
+    position: relative;
+}
+
+.LOGdetailPrev:hover, .LOGdetailNext:hover {
+	background-color: var(--blue-lighter);
+}
+
+.LOGdetailLeftArrow, .LOGdetailRightArrow{
+    width: 6px;
+    height: 6px;
+    border: solid var(--grey-800);
+    border-width: 0 2px 2px 0;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.LOGdetailLeftArrow {
+    transform: translate(-50%, -70%) rotate(45deg);
+}
+
+.LOGdetailRightArrow {
+    transform: translate(-50%, -35%) rotate(-135deg);
+}
+
+
+
+.LOGdetailTypeIcon {
+   /* padding-right: 4px; */
+}
+
+.LOGtoTranslatorLink,
+.LOGreposition,
+.LOGresubmit,
+.LOGdownloadLink {
+	display: flex;
+	align-items: center;
+	font-family: var(--font-buttons);
+	text-transform: uppercase;
+	text-decoration: none;
+	font-size: 10px;
+	font-weight: 500;
+	letter-spacing: 0.05em;
+	column-gap: 6px;
+	cursor: pointer;
+	color: var(--grey-600);
+}
+
+.LOGtoTranslatorLink:hover,
+.LOGtoTranslatorLink:hover .DETtoolbarIcon,
+.LOGreposition:hover,
+.LOGreposition:hover .DETtoolbarIcon,
+.LOGresubmit:hover,
+.LOGresubmit:hover .DETtoolbarIcon,
+.LOGdownloadLink:hover,
+.LOGdownloadLink:hover .DETtoolbarIcon {
+	color: var(--blue);
+}
+
+
+.LOGdetailComponentName {
+	font-family: var(--font-buttons);
+	color: var(--blue-dark);
+	font-size: 14px;
+}
+
+
+
+.LOGmodalDelete {
+	max-width: 450px;
+}
+
+.LOGactionDescription,
+.LOGtoComponentDescription {
+	margin-top: 0px;
+	font-size: 13px;
+	line-height: 1.5em;
+	color: var(--grey-800);
+}
+
+.LOGresubmitPanel{
+   position: absolute;
+   width: 100%;
+   height: 4em;
+   bottom : -100%;
+   z-index: 1000;
+   border-top: solid black 1px;
+   background-color: var(--grey-200);
+}
+
+.LOGresubmitComponent{
+   width : 26em;
+}
+
+.LOGresubmitInfo {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	color: #78d958;
+}
+
+.LOGresubmitInfo.error {
+	color: red;
+}
+
+.LOGpullToRefresh{
+	position: absolute;
+	top: 50px; /* Off-screen position to hide it initially */
+	left: 50%;
+	transform: translateX(-50%);
+}
+.LOGtruncated{
+	color: var(--grey-600) !important;
+}
+.LOGhidden{
+	display: none !important;
+}
+.LOGlistDiv .LOGlogEntry:nth-child(even) {
+	background-color: var(--grey-200); /* Background color for even items */
+ }
+
+ /* Style the odd items (2nd, 4th, 6th, etc.) */
+ .LOGlistDiv .LOGlogEntry:nth-child(odd) {
+	background-color: var(--white); /* Background color for odd items */
+ }
+ .LOGcurrentDate{
+	text-align: left !important;
+	font-weight: 600;
+	padding-left: 12px !important;
+ }
+ .LOGdateRow{
+	padding: 8px;
+	padding-right: 12px;
+	padding-left: 16px;
+	/* color: var(--blue-dark); */
+	font-family: var(--font-monospace);
+	text-align: left;
+	background-color: var(--grey-300);
+ }
+ .LOGclearStart,
+ .LOGclearEnd,
+ .LOGclearTags,
+.LOGclearSearch{
+	z-index: 998;
+	background: none;
+	position: absolute;
+	right: 12px;
+	bottom: 6px;
+}
+.LOGcancelBulk,
+.LOGclearBulk,
+.LOGclearLogs,
+.LOGbeginSearchHere,
+.LOGshowNewLogs,
+.LOGmanageStorage,
+.LOGsearchLoadMore,
+.LOGclearDateFilters,
+.LOGclearSearchFilters,
+.LOGfilterLoadMore{
+	color: var(--blue);
+	cursor: pointer;
+	display: inline-block;
+	text-decoration: none;
+	font-family: var(--font-buttons);
+	/* text-transform: uppercase; */
+	font-weight: 500;
+	font-size: 9.5px;
+	letter-spacing: 0.08em;
+}
+.LOGbeginSearchHere,
+.LOGfilterLoadMore{
+	padding-left: 4px !important;
+	padding-right: 4px !important;
+}
+.LOGbulkButtonDiv,
+.LOGbulkTitleDiv,
+.LOGendTimeTitleDiv{
+	display: grid;
+	grid-template-columns: 1fr auto;
+}
+.LOGendTimeTitleDiv{
+	margin-bottom: 12px;
+}
+.LOGbulkButtonDiv{
+	column-gap: 12px;
+}
+.LOGclearTags,
+.LOGtitleFooter,
+.LOGcomponentLink,
+.LOGclearSearch,
+.LOGheading,
+.LOGtitle{
+	user-select: none;
+}
+.LOGcancelBulk:hover,
+.LOGclearBulk:hover,
+.LOGshowNewLogs:hover,
+.LOGsearchLoadMore:hover,
+.LOGfilterLoadMore:hover,
+.LOGmanageStorage:hover,
+.LOGclearLogs:hover,
+.LOGclearDateFilters:hover,
+.LOGclearSearchFilters:hover{
+	text-decoration: underline;
+}
+.LOGlayout{
+	display: grid;
+	grid-template-columns: 40px 1fr;
+	grid-template-rows: 1fr auto;
+	column-gap: 12px;
+	padding-right: 18px;
+	padding: 12px;
+	overflow: hidden;
+}
+.LOGscrollbar{
+	height: 100%;
+	width: 100%;
+	background: var(--white);
+	border-radius: var(--border-radius);
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+	cursor: pointer;
+	position: relative;
+}
+.LOGscrollbar{
+	display: grid;
+	grid-template-rows: auto auto 1fr auto auto;
+}
+.LOGscrollbarLineSelected{
+	width: 100%;
+	height: 3px;
+	background-color: red;
+	position: absolute;
+	transition: top 0.5s ease;
+	overflow: hidden;
+	z-index: 15;
+}
+.LOGscrollbarLine{
+	width: 100%;
+	height: 3px;
+	background-color: var(--grey-400);
+	position: absolute;
+	transition: top 0.5s ease;
+	overflow: hidden;
+	z-index: 14;
+}
+.LOGunknownTop,
+.LOGunknownBottom{
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	transition: top 0.5s ease;
+	overflow: hidden;
+	background-color:var(--grey-300);
+	overflow: hidden;
+}
+.LOGknownArea,
+.LOGscrollbarBox{
+	width: 100%;
+	height: 100%;
+	position: relative;
+	background-color:var(--white);
+	overflow: hidden;
+}
+.LOGtoolbarWrapper{
+	display: grid;
+	grid-template-columns: 1fr;
+}
+
+.LOGscrollbarLineTop,
+.LOGscrollbarLineBottom{
+	width: 100%;
+	height: 4px;
+	background-color: var(--grey-400);
+	position: absolute;
+	transition: top 0.5s ease;
+	overflow: hidden;
+	z-index: 10;
+	cursor: pointer;
+}
+
+.LOGscrollbarLine:hover{
+	height: 5px;
+}
+.LOGscrollbarLineBottom.LOGlineSelected,
+.LOGscrollbarLineTop.LOGlineSelected{
+	background-color: var(--blue) !important;
+}
+.LOGscrollbarLineTop:hover,
+.LOGscrollbarLineBottom:hover{
+	height: 4px;
+	background-color: var(--grey-500);
+}
+.LOGscrollbarHoverLine{
+	width: 100%;
+	height: 3px;
+	background-color: var(--grey-500);
+	opacity: 50%;
+	position: absolute;
+	overflow: hidden;
+	cursor: pointer;
+	z-index: 8;
+}
+.LOGblurEntry{
+	opacity: 40%;
+}
+.LOGscrollbarPopout{
+	white-space: nowrap; /* Prevent text from wrapping */
+	overflow: hidden;    /* Hide overflowing content */
+	text-overflow: ellipsis;
+	width: 152px;
+}
+.LOGhighlight{
+	background-color: yellow;
+}
+
+.LOGclearButton {
+	color: var(--grey-500);
+	margin-top: -2px;
+	opacity: 0.8;
+	padding-left: 6px;
+}
+.LOGclearButtonStats{
+	padding-left: 12px !important;
+}
+.LOGclearButton:hover,
+.LOGclearButton:active {
+	opacity: 1;
+}
+.LOGdisabled{
+	color: grey !important;
+	text-decoration: unset !important;
+	cursor: not-allowed;
+}
+.LOGdetails{
+	color: var(--blue);
+	text-decoration: none;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+.LOGdetails:hover{
+	text-decoration: underline;
+}
+.LOGgrey{
+	color: var(--grey-500);
+	display: inline;
+	margin-left: 8px;
+	/* margin-top: 8px; */
+	/* margin-left: 0px; */
+}
+.LOGmodal .TOGbutton{
+	background-color: var(--white);
+}
+.LOGsideHeader{
+	height: 66px !important;
+	flex-shrink: 0;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 0 12px;
+	padding-left: 24px;
+	padding-right: 24px;
+	user-select: none;
+	background-color: #ebf3f6;
+	border-bottom: 1px solid var(--grey-300);
+	box-sizing: border-box;
+}
+.LOGsideHeaderTitle{
+	font-family: var(--font-buttons);
+	color: var(--blue-dark);
+	font-size: 16px;
+	font-weight: 500;
+}
+.LOGselectingEnd .LOGtypeDiv,
+.LOGselectingEnd .LOGdateTimeDiv,
+.LOGselectingEnd .LOGsearchContainerDiv,
+.LOGselectingEnd .LOGbulkDiv > *,
+.LOGselectingEnd .LOGstorageDiv,
+.LOGselectingEnd .LOGcomponentDiv,
+.LOGselectingEnd .LOGsideHeader,
+.LOGselectingStart .LOGtypeDiv,
+.LOGselectingStart .LOGdateTimeDiv,
+.LOGselectingStart .LOGsearchContainerDiv,
+.LOGselectingStart .LOGbulkDiv > *,
+.LOGselectingStart .LOGstorageDiv,
+.LOGselectingStart .LOGcomponentDiv,
+.LOGselectingStart .LOGsideHeader{
+	opacity: 0.3;
+}
+.LOGbulkTitleDiv,
+.LOGselectingEnd .LOGbulkRowEnd,
+.LOGselectingStart .LOGbulkRowStart{
+	opacity: unset !important;
+}
+.LOGselect{
+	display: none;
+}
+.LOGselectingEnd .LOGselect,
+.LOGselectingStart .LOGselect{
+	display: unset;
+}
+.LOGselect .BUTTONstandard{
+	margin-top: 4px;
+	margin-left: 8px;
+}
+.LOGselect .BUTTONstandard:hover{
+	background-color: var(--green-lighter);
+}
+.LOGselectingEnd .LOGendDot::before,
+.LOGselectingStart .LOGstartDot::before{
+	display: block;
+   content: '';
+   width: 8px;
+   height: 8px;
+   border-radius: 50%;
+   background-color: var(--blue);
+   margin-right: 12px;
+   margin-top: 9px;
+}
+.LOGselectingEnd .LOGclearDateDiv,
+.LOGselectingStart .LOGclearDateDiv{
+	display: none;
+}
+.LOGcancelDateDiv{
+	display: none;
+}
+.LOGselectingEnd .LOGcancelDateDiv,
+.LOGselectingStart .LOGcancelDateDiv{
+	display: unset;
+}
+
+.LOGrowGapEntry{
+	display: grid;
+	grid-template-rows: auto auto;
+	row-gap: 4px;
+	background-color: var(--red-lighter);
+	border: 1px solid var(--red);
+	border-left: 1px solid var(--red-light);
+	border-right: 1px solid var(--red-light);
+	/* border-radius: var(--border-radius); */
+	padding: 48px;
+	padding-right: 12px;
+	padding-left: 16px;
+	font-family: var(--font-monospace);
+	text-align: center;
+}
+.LOGgapButtons{
+	display: grid;
+	grid-template-columns: 1fr auto auto auto 1fr;
+}
+.LOGfixDiff{
+	color: var(--blue);
+	cursor: pointer;
+	padding-left: 4px;
+	padding-right: 4px;
+}
+.LOGfixDiff:hover{
+	text-decoration: underline;
+}
+.LOGtags{
+	/* margin-top: 8px; */
+	/* display: flex;
+	flex-wrap: wrap;
+	max-width: 120px;
+	text-align: left; */
+}
+ /* Shared tag look */
+ .LOGerror,
+ .LOGmessage {
+	display: inline-block;        /* shrink to content width */
+	border-radius: 4px;
+	padding: 0.14rem 0.56rem;
+	font: 500 0.70rem/16px system-ui, sans-serif; /* 16px line-height centers text */
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+ 
+	color: #fff !important;
+	border: none !important;
+ 
+	/* Right alignment — choose ONE approach: */
+	margin-left: auto;            /* works with the flex parent above */
+	/* float: right; */           /* use this ONLY if you can't use flex */
+ 
+	height: 16px;            /* remove fixed height to avoid clipping */
+	margin-right: 12px;           /* right gutter */
+	margin-left: 12px;            /* space from preceding content */
+ }
+ /* Specific colors */
+ .LOGmessage {
+	background-color: rgb(56, 105, 156) !important;  /* blue msg */
+	opacity: 0.5;                /* 0–1, not 85% */
+}
+.RELupstreamEntry:hover .LOGmessage,
+.RELentrySelected .LOGmessage,
+.RELlogEntry:hover .LOGmessage,
+.LOGentrySelected .LOGmessage,
+.DETmodal .LOGmessage,
+.LOGlogEntry:hover .LOGmessage{
+	opacity: 0.8;
+}
+.LOGerror {
+	background-color: rgb(200, 60, 60) !important;   /* red error */
+	opacity: 0.8;                /* 0–1, not 85% */
+}
+.RELentrySelected .LOGerror,
+.RELlogEntry:hover .LOGerror,
+.LOGentrySelected .LOGerror,
+.DETmodal .LOGerror,
+.LOGlogEntry:hover .LOGerror{
+	opacity: 1;
+}
+.LOGtimeTypeColumn{
+	display: grid;
+	grid-template-rows: auto auto;
+	row-gap: 4px;
+	padding-left: 26px;
+}
+.LOGemptyGap{
+	margin-left: 12px;
+	width: 28px;
+	margin-right: 12px;
+}
+/* .LOGtag{
+	font-size: 0.65rem;
+	padding: 1px 4px;
+	line-height: 1;
+	border-radius: 3px;
+	height: 14px;
+} */
+ .LOGtags{
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-end;
+	gap: 4px;
+	min-height: 22px;  /* match 1-line height */
+	max-width: 200px;
+	align-content: baseline;
+	padding-right: 2px;
+	margin-left: 8px;
+ }
+.LOGtag{
+	display: inline-block;
+	height: 16px;              /* consistent micro height */
+	line-height: 16px;         /* centers text vertically */
+	padding: 0 6px;            /* tight horizontal space */
+	border-radius: 6px;        /* soft but not pillowy */
+ 
+	font-size: 11px;           /* ~0.6875rem */
+	font-weight: 600;
+	letter-spacing: .02em;
+ 
+	color: rgb(var(--tag-rgb));
+ 
+	white-space: nowrap;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	text-decoration: none;
+	margin: 0;
+	opacity: 0.7;
+	/* min-height: 28px;  consistent total row height */
+ }
+ 
+ input + .dropdown-arrow,
+ button.dropdown-toggle {
+	display: none !important;
+ }
+ .LOGdateTimeDiv .LOGsearchGrid{
+	margin-bottom: 8px;
+ }
+ .LOGsearchGrid{
+	display: grid;
+	grid-template-columns: 1fr 80px;
+	column-gap: 8px;
+ }
+ .LOGbulkConfirm{
+	border-radius: var(--border-radius);
+	border: 1px solid var(--grey-400);
+ }
+.LOGsearchButton{
+	width: 100%;
+	margin-top: 4px;
+	margin-bottom: 8px;
+	/* margin-bottom: 8px; */
+}
+.LOGtoFromGrid{
+	display: grid;
+	grid-template-columns: 44px 1fr;
+	column-gap: 12px;
+}
+.LOGtoFromGrid .LOGtitle{
+	display: flex;
+	align-items: center;
+	/* justify-content: center; */
+	padding-left: 4px;
+}
+.LOGdateWrapper {
+	position: relative;
+	display: inline-block;
+ }
+ 
+ .LOGinputDate {
+	padding-right: 32px; /* room for clear icon */
+ }
+
+.LOGbulkAction {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	background-image: none;
+}
+
+/* For Internet Explorer */
+.LOGbulkAction::-ms-expand {
+	display: none;
+}

@@ -1,0 +1,42 @@
+.HAmodal{
+	max-width: 900px !important;
+}
+
+.HAtitle {
+	margin: unset;
+	font-weight: var(--bold);
+	font-size: 20px;
+	line-height: 32px;
+	color: var(--grey-700);
+	padding: 0px 4px 24px;
+	margin-bottom: 0px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 10px;
+}
+
+.HAbox {
+	border-radius: var(--border-radius);
+	border: solid 1px var(--grey-300);
+	padding: 32px;
+	padding-top: 24px;
+	padding-bottom: 24px;
+	margin-bottom: 16px;
+	overflow: hidden;
+	background: var(--grey-100);
+	display: grid;
+	grid-template-columns: 200px 1fr;
+	column-gap: 10px;
+	row-gap: 10px;
+}
+
+.HAsharedDirGroup {
+	width: 100%;
+}
+
+.HAsharedDirGroup .HAsharedDirInput {
+	flex: 1;
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}

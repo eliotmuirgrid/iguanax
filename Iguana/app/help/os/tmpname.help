@@ -1,0 +1,7 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">os.tmpname()\n</pre><ul><li>Returns a string with a file name that can be used for a temporary file.</li></ul><p><br></p><h3>Notes</h3><ul><li>The file must be explicitly opened before use and explicitly removed when no longer needed.</li><li>On some systems (e.g., macOS), the file may be created immediately to avoid security risks. You are still responsible for opening and deleting the file even if it's not used.</li></ul><p><br></p><h3>Returns</h3><ul><li>A file name for a temporary file. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local FileName = os.tmpname()\n</pre>",
+    "Name": "os.tmpname",
+    "Parameters": null,
+    "ParameterTable": false,
+    "SummaryLine": "Creates a temporary file and returns the name of the file."
+}

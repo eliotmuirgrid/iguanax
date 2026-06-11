@@ -1,0 +1,7 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">s:len()\n</pre><ul><li><code><strong>s</strong></code>: The string to measure.</li></ul><p>Returns the number of characters in the string, including any special characters or embedded null bytes (<code>\\0</code>).</p><p><br></p><h3>Notes</h3><ul><li>An empty string (<code>\"\"</code>) has a length of 0.</li><li>Embedded zero bytes <strong>are counted</strong>: e.g., <code>\"a\\000bc\\000\"</code> has a length of 5.</li><li>This is equivalent to using the length operator <code>#s</code>.</li></ul><p><br></p><h3>Returns</h3><ul><li>The number of characters in the string. <em><u>(integer)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local S = \"fred\"\nS:len()&nbsp; &nbsp;-- returns 4\ntrace(#S)\nlocal count = #S&nbsp;-- also returns 4\n</pre>",
+    "Name": "string:len",
+    "Parameters": null,
+    "ParameterTable": false,
+    "SummaryLine": "Returns the length of a string."
+}

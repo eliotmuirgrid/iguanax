@@ -1,0 +1,7 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">Node:compactWS()\n</pre><ul><li><code><strong>Node</strong></code>: A node containing a string value in which multiple whitespace characters will be reduced to a single space.</li></ul><p><br></p><h3>Notes</h3><ul><li>This is a convenience method that wraps <code><a href=\"@string:compactWS\" target=\"_blank\">string:compactWS</a></code>.</li><li>Only affects the node’s value; original node remains unchanged.</li><li>Useful for normalizing user-entered text, e.g., patient names or addresses.</li><li>Whitespace includes spaces, tabs, and similar characters.</li></ul><p><br></p><h3>Returns</h3><ul><li>A new string with consecutive whitespace reduced to single spaces.</li><li>The number of replacements made. <em><u>(string, integer)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Xml = xml.parse{data = [[&lt;patient name='Fred&nbsp; &nbsp; Smith&nbsp; &nbsp; &nbsp;Winston'/&gt;]]}\nlocal Result, Count = Xml.patient.name:compactWS()\ntrace(Result)&nbsp; -- 'Fred Smith Winston'\ntrace(Count)&nbsp; &nbsp;-- 2\n</pre><ul><li>This example parses a name with extra spacing, removes the redundant whitespace, and returns the cleaned string along with the number of replacements performed.</li></ul>",
+    "Name": "node:compactWS",
+    "Parameters": null,
+    "ParameterTable": false,
+    "SummaryLine": "Replaces multiple consecutive spaces in a string node with a single space."
+}

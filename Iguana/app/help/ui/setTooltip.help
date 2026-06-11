@@ -1,0 +1,18 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">ui.setTooltip{data = &lt;html_content&gt;, compact = &lt;true/false&gt;}\n</pre><ul><li><code><strong>data</strong></code>: The HTML string to display inside the tooltip.</li><li><code><strong>compact</strong></code> <em>(optional)</em>: Controls whether the HTML string will have any whitespace between tags removed</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>This function expects valid HTML.</li><li>Use helper functions from the <code>STAT</code> library (e.g., <code>STATrow(Label, Value)</code>) for structured layouts.</li><li>Tooltip styles rely on dashboard-defined classes like <code>CUSTrow</code>, <code>CUSTlabel</code>, and <code>CUSTvalue</code>. Avoid using arbitrary or non-global class names.</li><li>If the component has the tag #autostart, the tooltip will persist on restart.</li></ul><h4><br></h4><h3>Example</h3><h4>Simple Example</h4><pre class=\"ql-syntax\" spellcheck=\"false\">ui.setTooltip{data = \"&lt;p&gt;Hello World!&lt;/p&gt;\"}\n</pre><h4>Styled Example with Label/Value Rows</h4><pre class=\"ql-syntax\" spellcheck=\"false\">local Label = \"Listening on port\"\nlocal Value = \"514\"\n\nui.setTooltip{\n&nbsp; data = [[\n&nbsp; &nbsp; &lt;div class='CUSTrow'&gt;\n&nbsp; &nbsp; &nbsp; &lt;div class='CUSTlabel'&gt;]]..Label..[[:&lt;/div&gt;\n&nbsp; &nbsp; &nbsp; &lt;div class='CUSTvalue'&gt;]]..Value..[[&lt;/div&gt;\n&nbsp; &nbsp; &lt;/div&gt;\n&nbsp; ]]\n}\n</pre><ul><li>This layout uses predefined CSS classes to present tooltip data in a structured row format.</li><li>Alternatively, you can use the below after importing the STAT library:</li></ul><pre class=\"ql-syntax\" spellcheck=\"false\">ui.setTooltip{data = STATrow(\"Listening on port\", \"514\")}\n</pre>",
+    "Name": "ui.setTooltip",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The HTML content to be set as the component tooltip.</p>",
+            "Name": "data",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>bool</u></em> Whether the HTML content should be compacted (default = true)</p>",
+            "Name": "compact",
+            "Required": false
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Set the HTML content for a tooltip within a component’s list view."
+}

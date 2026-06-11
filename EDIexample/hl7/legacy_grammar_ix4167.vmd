@@ -1,0 +1,2537 @@
+<engine version="1.0">
+   <strict_grammar_checking>False</strict_grammar_checking>
+   <java_use_native_double>False</java_use_native_double>
+   <use_passthrough_mapping>False</use_passthrough_mapping>
+   <current_config>0</current_config>
+   <incoming_config>0</incoming_config>
+   <outgoing_config>0</outgoing_config>
+   <vmd_description></vmd_description>
+   <use_dotnet_properties>True</use_dotnet_properties>
+   <global name="global">
+      <message name="Message1">
+         <description>Admit/visit notification</description>
+         <table_grammar name="Message1">
+            <type>group</type>
+         </table_grammar>
+      </message>
+   </global>
+   <config name="default">
+      <date_time name="DateTime">
+         <description>DTM DateTime</description>
+         <fields_required>False</fields_required>
+         <mask>YYYY</mask>
+         <mask>MM</mask>
+         <mask>DD</mask>
+         <mask>HH</mask>
+         <mask>mm</mask>
+         <mask>SS</mask>
+         <mask>.SSSS</mask>
+         <mask>+/-ZZZZ</mask>
+      </date_time>
+      <date_time name="Date">
+         <description>DT Date</description>
+         <fields_required>False</fields_required>
+         <mask>YYYY</mask>
+         <mask>MM</mask>
+         <mask>DD</mask>
+      </date_time>
+      <composite name="MSG">
+         <description>Message Type</description>
+         <field>
+            <name>Message Code</name>
+            <max_length>-1</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Trigger Event</name>
+            <max_length>-1</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Message Structure</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+      </composite>
+      <composite name="ID">
+         <description>Coded Values For Hl7 Tables</description>
+         <field>
+            <name>Value</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>String</data_type>
+         </field>
+      </composite>
+      <composite name="XON">
+         <description>Extended Composite Name and Identification Number for Organizations</description>
+         <field>
+            <name>Organization Name</name>
+            <max_length>50</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Organization Name Type Code</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CWE</composite_ref>
+         </field>
+         <field>
+            <name>ID Number</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Identifier Check Digit</name>
+            <max_length>4</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>NM</composite_ref>
+         </field>
+         <field>
+            <name>Check Digit Scheme</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Assigning Authority</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>HD</composite_ref>
+         </field>
+         <field>
+            <name>Identifier Type Code</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Assigning Facility</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>HD</composite_ref>
+         </field>
+         <field>
+            <name>Name Representation Code</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Organization Identifier</name>
+            <max_length>20</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+      </composite>
+      <composite name="CWE">
+         <description>Coded with Exceptions</description>
+         <field>
+            <name>Identifier</name>
+            <max_length>20</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Text</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Name of Coding System</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Alternate Identifier</name>
+            <max_length>20</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Alternate Text</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Name of Alternate Coding System</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Coding System Version ID</name>
+            <max_length>10</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Alternate Coding System Version ID</name>
+            <max_length>10</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Original Text</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Second Alternate Identifier</name>
+            <max_length>20</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Second Alternate Text</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Name of Second Alternate Coding System</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Second Alternate Coding System Version ID</name>
+            <max_length>10</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Coding System OID</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Value Set OID</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Value Set Version ID</name>
+            <max_length>8</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>DTM</composite_ref>
+         </field>
+         <field>
+            <name>Alternate Coding System OID</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Alternate Value Set OID</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Alternate Value Set Version ID</name>
+            <max_length>8</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>DTM</composite_ref>
+         </field>
+         <field>
+            <name>Second Alternate Coding System OID</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Second Alternate Value Set OID</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Second Alternate Value Set Version ID</name>
+            <max_length>8</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>DTM</composite_ref>
+         </field>
+         <field>
+            <name>custom</name>
+            <max_length>0</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>PL</composite_ref>
+         </field>
+      </composite>
+      <composite name="ST">
+         <description>String Data</description>
+         <field>
+            <name>Value</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>String</data_type>
+         </field>
+      </composite>
+      <composite name="IS">
+         <description>Coded Value For User-defined Tables</description>
+         <field>
+            <name>Value</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>String</data_type>
+         </field>
+      </composite>
+      <composite name="HD">
+         <description>Hierarchic Designator</description>
+         <field>
+            <name>Namespace ID</name>
+            <max_length>20</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>IS</composite_ref>
+         </field>
+         <field>
+            <name>Universal ID</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Universal ID Type</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+      </composite>
+      <composite name="DTM">
+         <description>Date/Time</description>
+         <field>
+            <name>Value</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>DateTime</data_type>
+            <datetime_ref>DateTime</datetime_ref>
+         </field>
+      </composite>
+      <composite name="NM">
+         <description>Numeric</description>
+         <field>
+            <name>Value</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Double</data_type>
+         </field>
+      </composite>
+      <composite name="EI">
+         <description>Entity Identifier</description>
+         <field>
+            <name>Entity Identifier</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Namespace ID</name>
+            <max_length>20</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>IS</composite_ref>
+         </field>
+         <field>
+            <name>Universal ID</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Universal ID Type</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+      </composite>
+      <composite name="PT">
+         <description>Processing Type</description>
+         <field>
+            <name>Processing ID</name>
+            <max_length>-1</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Processing Mode</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+      </composite>
+      <composite name="VID">
+         <description>Version Identifier</description>
+         <field>
+            <name>Version ID</name>
+            <max_length>-1</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Internationalization Code</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CWE</composite_ref>
+         </field>
+         <field>
+            <name>International Version ID</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CWE</composite_ref>
+         </field>
+      </composite>
+      <composite name="TX">
+         <description>Text Data</description>
+         <field>
+            <name>Value</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>String</data_type>
+         </field>
+      </composite>
+      <composite name="ED">
+         <description>Encapsulated Data</description>
+         <field>
+            <name>Source Application</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>HD</composite_ref>
+         </field>
+         <field>
+            <name>Type of Data</name>
+            <max_length>-1</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Data Subtype</name>
+            <max_length>32</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Encoding</name>
+            <max_length>-1</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Data</name>
+            <max_length>-1</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>TX</composite_ref>
+         </field>
+      </composite>
+      <composite name="XCN">
+         <description>Extended Composite ID Number and Name for Persons</description>
+         <field>
+            <name>Person Identifier</name>
+            <max_length>15</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Family Name</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>FN</composite_ref>
+         </field>
+         <field>
+            <name>Given Name</name>
+            <max_length>30</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Second and Further Given Names or Initials Thereof</name>
+            <max_length>30</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Suffix (e.g., JR or III)</name>
+            <max_length>20</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Prefix (e.g., DR)</name>
+            <max_length>20</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Degree (e.g., MD)</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Source Table</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CWE</composite_ref>
+         </field>
+         <field>
+            <name>Assigning Authority</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>HD</composite_ref>
+         </field>
+         <field>
+            <name>Name Type Code</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Identifier Check Digit</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Check Digit Scheme</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Identifier Type Code</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Assigning Facility</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>HD</composite_ref>
+         </field>
+         <field>
+            <name>Name Representation Code</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Name Context</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CWE</composite_ref>
+         </field>
+         <field>
+            <name>Name Validity Range</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Name Assembly Order</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Effective Date</name>
+            <max_length>8</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>DTM</composite_ref>
+         </field>
+         <field>
+            <name>Expiration Date</name>
+            <max_length>8</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>DTM</composite_ref>
+         </field>
+         <field>
+            <name>Professional Suffix</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Assigning Jurisdiction</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CWE</composite_ref>
+         </field>
+         <field>
+            <name>Assigning Agency or Department</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CWE</composite_ref>
+         </field>
+         <field>
+            <name>Security Check</name>
+            <max_length>4</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Security Check Scheme</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+      </composite>
+      <composite name="FN">
+         <description>Family Name</description>
+         <field>
+            <name>Surname</name>
+            <max_length>50</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Own Surname Prefix</name>
+            <max_length>20</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Own Surname</name>
+            <max_length>50</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Surname Prefix from Partner/Spouse</name>
+            <max_length>20</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Surname from Partner/Spouse</name>
+            <max_length>50</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+      </composite>
+      <composite name="XAD">
+         <description>Extended Address</description>
+         <field>
+            <name>Street Address</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>SAD</composite_ref>
+         </field>
+         <field>
+            <name>Other Designation</name>
+            <max_length>120</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>City</name>
+            <max_length>50</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>State or Province</name>
+            <max_length>50</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Zip or Postal Code</name>
+            <max_length>12</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Country</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Address Type</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Other Geographic Designation</name>
+            <max_length>50</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>County/Parish Code</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CWE</composite_ref>
+         </field>
+         <field>
+            <name>Census Tract</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CWE</composite_ref>
+         </field>
+         <field>
+            <name>Address Representation Code</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Address Validity Range</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Effective Date</name>
+            <max_length>8</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>DTM</composite_ref>
+         </field>
+         <field>
+            <name>Expiration Date</name>
+            <max_length>8</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>DTM</composite_ref>
+         </field>
+         <field>
+            <name>Expiration Reason</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CWE</composite_ref>
+         </field>
+         <field>
+            <name>Temporary Indicator</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Bad Address Indicator</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Address Usage</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Addressee</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Comment</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Preference Order</name>
+            <max_length>2</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>NM</composite_ref>
+         </field>
+         <field>
+            <name>Protection Code</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CWE</composite_ref>
+         </field>
+         <field>
+            <name>Address Identifier</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>EI</composite_ref>
+         </field>
+      </composite>
+      <composite name="SAD">
+         <description>Street Address</description>
+         <field>
+            <name>Street or Mailing Address</name>
+            <max_length>120</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Street Name</name>
+            <max_length>50</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Dwelling Number</name>
+            <max_length>12</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+      </composite>
+      <composite name="SI">
+         <description>Sequence ID</description>
+         <field>
+            <name>Value</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>String</data_type>
+         </field>
+      </composite>
+      <composite name="XPN">
+         <description>Extended Person Name</description>
+         <field>
+            <name>Family Name</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>FN</composite_ref>
+         </field>
+         <field>
+            <name>Given Name</name>
+            <max_length>30</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Second and Further Given Names or Initials Thereof</name>
+            <max_length>30</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Suffix (e.g., JR or III)</name>
+            <max_length>20</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Prefix (e.g., DR)</name>
+            <max_length>20</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Degree (e.g., MD)</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Name Type Code</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Name Representation Code</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Name Context</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CWE</composite_ref>
+         </field>
+         <field>
+            <name>Name Validity Range</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Name Assembly Order</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Effective Date</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>DTM</composite_ref>
+         </field>
+         <field>
+            <name>Expiration Date</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>DTM</composite_ref>
+         </field>
+         <field>
+            <name>Professional Suffix</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Called By</name>
+            <max_length>30</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+      </composite>
+      <composite name="XTN">
+         <description>Extended Telecommunication Number</description>
+         <field>
+            <name>Telephone Number</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Telecommunication Use Code</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Telecommunication Equipment Type</name>
+            <max_length>-1</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Communication Address</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Country Code</name>
+            <max_length>3</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>SNM</composite_ref>
+         </field>
+         <field>
+            <name>Area/City Code</name>
+            <max_length>3</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>SNM</composite_ref>
+         </field>
+         <field>
+            <name>Local Number</name>
+            <max_length>9</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>SNM</composite_ref>
+         </field>
+         <field>
+            <name>Extension</name>
+            <max_length>5</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>SNM</composite_ref>
+         </field>
+         <field>
+            <name>Any Text</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Extension Prefix</name>
+            <max_length>4</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Speed Dial Code</name>
+            <max_length>6</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Unformatted Telephone number</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Effective Start Date</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>DTM</composite_ref>
+         </field>
+         <field>
+            <name>Expiration Date</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>DTM</composite_ref>
+         </field>
+         <field>
+            <name>Expiration Reason</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CWE</composite_ref>
+         </field>
+         <field>
+            <name>Protection Code</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CWE</composite_ref>
+         </field>
+         <field>
+            <name>Shared Telecommunication Identifier</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>EI</composite_ref>
+         </field>
+         <field>
+            <name>Preference Order</name>
+            <max_length>2</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>NM</composite_ref>
+         </field>
+      </composite>
+      <composite name="SNM">
+         <description>String of Telephone Number Digits</description>
+      </composite>
+      <composite name="CX">
+         <description>Extended Composite ID with Check Digit</description>
+         <field>
+            <name>ID Number</name>
+            <max_length>15</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Identifier Check Digit</name>
+            <max_length>4</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Check Digit Scheme</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Assigning Authority</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>HD</composite_ref>
+         </field>
+         <field>
+            <name>Identifier Type Code</name>
+            <max_length>-1</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Assigning Facility</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>HD</composite_ref>
+         </field>
+         <field>
+            <name>Effective Date</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>DT</composite_ref>
+         </field>
+         <field>
+            <name>Expiration Date</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>DT</composite_ref>
+         </field>
+         <field>
+            <name>Assigning Jurisdiction</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CWE</composite_ref>
+         </field>
+         <field>
+            <name>Assigning Agency or Department</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CWE</composite_ref>
+         </field>
+         <field>
+            <name>Security Check</name>
+            <max_length>4</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Security Check Scheme</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+      </composite>
+      <composite name="DT">
+         <description>Date</description>
+         <field>
+            <name>Value</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>DateTime</data_type>
+            <datetime_ref>Date</datetime_ref>
+         </field>
+      </composite>
+      <composite name="DR">
+         <description>Date/Time Range</description>
+         <field>
+            <name>Range Start Date/Time</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>DTM</composite_ref>
+         </field>
+         <field>
+            <name>Range End Date/Time</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>DTM</composite_ref>
+         </field>
+      </composite>
+      <composite name="CNE">
+         <description>Coded with No Exceptions</description>
+         <field>
+            <name>Identifier</name>
+            <max_length>20</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Text</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Name of Coding System</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Alternate Identifier</name>
+            <max_length>20</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Alternate Text</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Name of Alternate Coding System</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Coding System Version ID</name>
+            <max_length>10</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Alternate Coding System Version ID</name>
+            <max_length>10</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Original Text</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Second Alternate Identifier</name>
+            <max_length>20</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Second Alternate Text</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Name of Second Alternate Coding System</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Second Alternate Coding System Version ID</name>
+            <max_length>10</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Coding System OID</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Value Set OID</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Value Set Version ID</name>
+            <max_length>8</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>DTM</composite_ref>
+         </field>
+         <field>
+            <name>Alternate Coding System OID</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Alternate Value Set OID</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Alternate Value Set Version ID</name>
+            <max_length>8</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>DTM</composite_ref>
+         </field>
+         <field>
+            <name>Second Alternate Coding System OID</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Second Alternate Value Set OID</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Second Alternate Value Set Version ID</name>
+            <max_length>8</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>DTM</composite_ref>
+         </field>
+      </composite>
+      <composite name="PL">
+         <description>Person Location</description>
+         <field>
+            <name>Point of Care</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>HD</composite_ref>
+         </field>
+         <field>
+            <name>Room</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>HD</composite_ref>
+         </field>
+         <field>
+            <name>Bed</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>HD</composite_ref>
+         </field>
+         <field>
+            <name>Facility</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>HD</composite_ref>
+         </field>
+         <field>
+            <name>Location Status</name>
+            <max_length>20</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>IS</composite_ref>
+         </field>
+         <field>
+            <name>Person Location Type</name>
+            <max_length>20</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>IS</composite_ref>
+         </field>
+         <field>
+            <name>Building</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>HD</composite_ref>
+         </field>
+         <field>
+            <name>Floor</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>HD</composite_ref>
+         </field>
+         <field>
+            <name>Location Description</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Comprehensive Location Identifier</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>EI</composite_ref>
+         </field>
+         <field>
+            <name>Assigning Authority for Location</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>HD</composite_ref>
+         </field>
+      </composite>
+      <composite name="JCC">
+         <description>Job Code/Class</description>
+         <field>
+            <name>Job Code</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CWE</composite_ref>
+         </field>
+         <field>
+            <name>Job Class</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CWE</composite_ref>
+         </field>
+         <field>
+            <name>Job Description Text</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>TX</composite_ref>
+         </field>
+      </composite>
+      <composite name="DLD">
+         <description>Discharge to Location and Date</description>
+         <field>
+            <name>Discharge to Location</name>
+            <max_length>-1</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CWE</composite_ref>
+         </field>
+         <field>
+            <name>Effective Date</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>DTM</composite_ref>
+         </field>
+      </composite>
+      <composite name="FC">
+         <description>Financial Class</description>
+         <field>
+            <name>Financial Class Code</name>
+            <max_length>-1</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CWE</composite_ref>
+         </field>
+         <field>
+            <name>Effective Date</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>DTM</composite_ref>
+         </field>
+      </composite>
+      <composite name="CP">
+         <description>Composite Price</description>
+         <field>
+            <name>Price</name>
+            <max_length>-1</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>MO</composite_ref>
+         </field>
+         <field>
+            <name>Price Type</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>From Value</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>NM</composite_ref>
+         </field>
+         <field>
+            <name>To Value</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>NM</composite_ref>
+         </field>
+         <field>
+            <name>Range Units</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CWE</composite_ref>
+         </field>
+         <field>
+            <name>Range Type</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+      </composite>
+      <composite name="MO">
+         <description>Money</description>
+         <field>
+            <name>Quantity</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>NM</composite_ref>
+         </field>
+         <field>
+            <name>Denomination</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+      </composite>
+      <composite name="AUI">
+         <description>Authorization Information</description>
+         <field>
+            <name>Authorization Number</name>
+            <max_length>30</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Date</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>DT</composite_ref>
+         </field>
+         <field>
+            <name>Source</name>
+            <max_length>199</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+      </composite>
+      <composite name="PTA">
+         <description>Policy Type and Amount</description>
+         <field>
+            <name>Policy Type</name>
+            <max_length>-1</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CWE</composite_ref>
+         </field>
+         <field>
+            <name>Amount Class</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CWE</composite_ref>
+         </field>
+         <field>
+            <name>Money or Percentage Quantity</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Money or Percentage</name>
+            <max_length>-1</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>MOP</composite_ref>
+         </field>
+      </composite>
+      <composite name="MOP">
+         <description>Money or Percentage</description>
+         <field>
+            <name>Money or Percentage Indicator</name>
+            <max_length>-1</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Money or Percentage Quantity</name>
+            <max_length>-1</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>NM</composite_ref>
+         </field>
+         <field>
+            <name>Monetary  Denomination</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+      </composite>
+      <composite name="DDI">
+         <description>Daily Deductible Information</description>
+         <field>
+            <name>Delay Days</name>
+            <max_length>3</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>NM</composite_ref>
+         </field>
+         <field>
+            <name>Monetary Amount</name>
+            <max_length>-1</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>MO</composite_ref>
+         </field>
+         <field>
+            <name>Number of Days</name>
+            <max_length>4</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>NM</composite_ref>
+         </field>
+      </composite>
+      <composite name="RMC">
+         <description>Room Coverage</description>
+         <field>
+            <name>Room Type</name>
+            <max_length>-1</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CWE</composite_ref>
+         </field>
+         <field>
+            <name>Amount Type</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CWE</composite_ref>
+         </field>
+         <field>
+            <name>Coverage Amount</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Money or Percentage</name>
+            <max_length>-1</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>MOP</composite_ref>
+         </field>
+      </composite>
+      <composite name="ICD">
+         <description>Insurance Certification Definition</description>
+         <field>
+            <name>Certification Patient Type</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CWE</composite_ref>
+         </field>
+         <field>
+            <name>Certification Required</name>
+            <max_length>-1</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Date/Time Certification Required</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>DTM</composite_ref>
+         </field>
+      </composite>
+      <composite name="DTN">
+         <description>Day Type and Number</description>
+         <field>
+            <name>Day Type</name>
+            <max_length>-1</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CWE</composite_ref>
+         </field>
+         <field>
+            <name>Number of Days</name>
+            <max_length>3</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>NM</composite_ref>
+         </field>
+      </composite>
+      <composite name="OSP">
+         <description>Occurrence Span Code and Date</description>
+         <field>
+            <name>Occurrence Span Code</name>
+            <max_length>-1</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CNE</composite_ref>
+         </field>
+         <field>
+            <name>Occurrence Span Start Date</name>
+            <max_length>8</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>DT</composite_ref>
+         </field>
+         <field>
+            <name>Occurrence Span Stop Date</name>
+            <max_length>8</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>DT</composite_ref>
+         </field>
+      </composite>
+      <composite name="OCD">
+         <description>Occurrence Code and Date</description>
+         <field>
+            <name>Occurrence Code</name>
+            <max_length>-1</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CNE</composite_ref>
+         </field>
+         <field>
+            <name>Occurrence Date</name>
+            <max_length>8</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>DT</composite_ref>
+         </field>
+      </composite>
+      <composite name="UVC">
+         <description>UB Value Code and Amount</description>
+         <field>
+            <name>Value Code</name>
+            <max_length>-1</max_length>
+            <is_required>True</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CWE</composite_ref>
+         </field>
+         <field>
+            <name>Value Amount</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>MO</composite_ref>
+         </field>
+         <field>
+            <name>Non-Monetary Value Amount / Quantity</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>NM</composite_ref>
+         </field>
+         <field>
+            <name>Non-Monetary Value Amount / Units</name>
+            <max_length>-1</max_length>
+            <is_required>False</is_required>
+            <is_length_restricted>False</is_length_restricted>
+            <data_type>Composite</data_type>
+            <composite_ref>CWE</composite_ref>
+         </field>
+      </composite>
+      <segment id="0">
+         <name>MSH</name>
+         <description>Message Header</description>
+         <has_delimiters>True</has_delimiters>
+         <field>
+            <name>Field Separator</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Encoding Characters</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Sending Application</name>
+            <max_repeats>0</max_repeats>
+            <is_required>False</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>HD</composite_ref>
+         </field>
+         <field>
+            <name>Sending Facility</name>
+            <max_repeats>0</max_repeats>
+            <is_required>False</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>HD</composite_ref>
+         </field>
+         <field>
+            <name>Receiving Application</name>
+            <max_repeats>0</max_repeats>
+            <is_required>False</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>HD</composite_ref>
+         </field>
+         <field>
+            <name>Receiving Facility</name>
+            <max_repeats>0</max_repeats>
+            <is_required>False</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>HD</composite_ref>
+         </field>
+         <field>
+            <name>Date/Time of Message</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>DTM</composite_ref>
+         </field>
+         <field>
+            <name>Security</name>
+            <max_repeats>0</max_repeats>
+            <is_required>False</is_required>
+            <width>40</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Message Type</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>MSG</composite_ref>
+         </field>
+         <field>
+            <name>Message Control ID</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Processing ID</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>PT</composite_ref>
+         </field>
+         <field>
+            <name>Version ID</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>VID</composite_ref>
+         </field>
+         <field>
+            <name>Sequence Number</name>
+            <max_repeats>0</max_repeats>
+            <is_required>False</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>NM</composite_ref>
+         </field>
+         <field>
+            <name>Continuation Pointer</name>
+            <max_repeats>0</max_repeats>
+            <is_required>False</is_required>
+            <width>180</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Accept Acknowledgment Type</name>
+            <max_repeats>0</max_repeats>
+            <is_required>False</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Application Acknowledgment Type</name>
+            <max_repeats>0</max_repeats>
+            <is_required>False</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Country Code</name>
+            <max_repeats>0</max_repeats>
+            <is_required>False</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Character Set</name>
+            <max_repeats>-1</max_repeats>
+            <is_required>False</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Principal Language Of Message</name>
+            <max_repeats>0</max_repeats>
+            <is_required>False</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>CWE</composite_ref>
+         </field>
+         <field>
+            <name>Alternate Character Set Handling Scheme</name>
+            <max_repeats>0</max_repeats>
+            <is_required>False</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ID</composite_ref>
+         </field>
+         <field>
+            <name>Message Profile Identifier</name>
+            <max_repeats>-1</max_repeats>
+            <is_required>False</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>EI</composite_ref>
+         </field>
+         <field>
+            <name>Sending Responsible Organization</name>
+            <max_repeats>0</max_repeats>
+            <is_required>False</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>XON</composite_ref>
+         </field>
+         <field>
+            <name>Receiving Responsible Organization</name>
+            <max_repeats>0</max_repeats>
+            <is_required>False</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>XON</composite_ref>
+         </field>
+         <field>
+            <name>Sending Network Address</name>
+            <max_repeats>0</max_repeats>
+            <is_required>False</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>HD</composite_ref>
+         </field>
+         <field>
+            <name>Receiving Network Address</name>
+            <max_repeats>0</max_repeats>
+            <is_required>False</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>HD</composite_ref>
+         </field>
+      </segment>
+      <segment id="1">
+         <name>EVN</name>
+         <description>Event Type</description>
+         <has_delimiters>True</has_delimiters>
+         <field>
+            <name>Event Type Code</name>
+            <max_repeats>0</max_repeats>
+            <is_required>False</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>ST</composite_ref>
+         </field>
+         <field>
+            <name>Recorded Date/Time</name>
+            <max_repeats>0</max_repeats>
+            <is_required>True</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>DTM</composite_ref>
+         </field>
+         <field>
+            <name>Date/Time Planned Event</name>
+            <max_repeats>0</max_repeats>
+            <is_required>False</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>DTM</composite_ref>
+         </field>
+         <field>
+            <name>Event Reason Code</name>
+            <max_repeats>0</max_repeats>
+            <is_required>False</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>CWE</composite_ref>
+         </field>
+         <field>
+            <name>Operator ID</name>
+            <max_repeats>-1</max_repeats>
+            <is_required>False</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>XCN</composite_ref>
+         </field>
+         <field>
+            <name>Event Occurred</name>
+            <max_repeats>0</max_repeats>
+            <is_required>False</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>DTM</composite_ref>
+         </field>
+         <field>
+            <name>Event Facility</name>
+            <max_repeats>0</max_repeats>
+            <is_required>False</is_required>
+            <width>-1</width>
+            <in_equation><![CDATA[]]></in_equation>
+            <out_equation><![CDATA[]]></out_equation>
+            <composite_ref>HD</composite_ref>
+         </field>
+      </segment>
+      <match msg="Message1">
+      </match>
+      <message name="Message1">
+         <ignore_unknown_segments>True</ignore_unknown_segments>
+         <ignore_segment_order>False</ignore_segment_order>
+         <in_equation><![CDATA[]]></in_equation>
+         <out_equation><![CDATA[]]></out_equation>
+         <message_grammar id="0">
+            <name>Message</name>
+            <is_optional>False</is_optional>
+            <is_repeating>False</is_repeating>
+            <ignore_segment_order>False</ignore_segment_order>
+            <max_repeats>0</max_repeats>
+            <type>group</type>
+            <message_grammar id="1">
+               <name>MSH</name>
+               <is_optional>False</is_optional>
+               <is_repeating>False</is_repeating>
+               <ignore_segment_order>False</ignore_segment_order>
+               <max_repeats>0</max_repeats>
+               <type>segment</type>
+               <segment_ref>0</segment_ref>
+            </message_grammar>
+            <message_grammar id="2">
+               <name>EVN</name>
+               <is_optional>False</is_optional>
+               <is_repeating>False</is_repeating>
+               <ignore_segment_order>False</ignore_segment_order>
+               <max_repeats>0</max_repeats>
+               <type>segment</type>
+               <segment_ref>1</segment_ref>
+            </message_grammar>
+         </message_grammar>
+         <identifier>
+            <segment_ref>MSH</segment_ref>
+            <value>ADT</value>
+            <node_address>
+               <pair>
+                  <node_index>8</node_index>
+                  <repeat_index>0</repeat_index>
+               </pair>
+               <pair>
+                  <node_index>0</node_index>
+                  <repeat_index>0</repeat_index>
+               </pair>
+            </node_address>
+         </identifier>
+         <identifier>
+            <segment_ref>MSH</segment_ref>
+            <value>A01</value>
+            <node_address>
+               <pair>
+                  <node_index>8</node_index>
+                  <repeat_index>0</repeat_index>
+               </pair>
+               <pair>
+                  <node_index>1</node_index>
+                  <repeat_index>0</repeat_index>
+               </pair>
+            </node_address>
+         </identifier>
+         <table_grammar name="Message1">
+            <type>group</type>
+            <grammar_field_index>-1</grammar_field_index>
+            <grammar_root_ref>0</grammar_root_ref>
+         </table_grammar>
+      </message>
+      <app_settings>
+         <config name="default">
+            <eom_char>0</eom_char>
+            <octal_escape_char>48</octal_escape_char>
+            <escape_default>92</escape_default>
+            <escape_escape_char>69</escape_escape_char>
+            <escape_position>6</escape_position>
+            <stub_file_dir><![CDATA[c:\temp]]></stub_file_dir>
+            <stub_file_language></stub_file_language>
+            <stub_file_prefix>HL7</stub_file_prefix>
+            <output_trailing_separators>True</output_trailing_separators>
+            <parse_separator_chars>True</parse_separator_chars>
+            <lowest_unescaped_char>32</lowest_unescaped_char>
+            <highest_unescaped_char>255</highest_unescaped_char>
+            <preset_config>HL7</preset_config>
+            <main_equation><![CDATA[]]></main_equation>
+            <parse_complete_equation><![CDATA[]]></parse_complete_equation>
+            <postprocess_equation><![CDATA[]]></postprocess_equation>
+            <main_out_equation><![CDATA[]]></main_out_equation>
+            <postprocess_out_equation><![CDATA[]]></postprocess_out_equation>
+            <output_segment_line_feed>False</output_segment_line_feed>
+            <xml_delimiter>46</xml_delimiter>
+            <xml_translation_type>TABLE - Short Tags</xml_translation_type>
+            <use_segment_checker3>False</use_segment_checker3>
+            <xml_schema_single_file>True</xml_schema_single_file>
+            <header_fields_to_skip>3</header_fields_to_skip>
+            <disable_untyped_tree_in_exception>False</disable_untyped_tree_in_exception>
+            <maximum_repeat_mapping_limit>2</maximum_repeat_mapping_limit>
+            <database_equation_on>False</database_equation_on>
+            <disable_python_none>True</disable_python_none>
+            <header_segment>MSH</header_segment>
+            <last_message_matches_all>False</last_message_matches_all>
+            <parser_version>2</parser_version>
+            <separator_info>
+               <sep_char_default>13</sep_char_default>
+               <repeat_char_default>0</repeat_char_default>
+               <sep_char_escape>0</sep_char_escape>
+               <repeat_char_escape>0</repeat_char_escape>
+               <sep_char_position>-1</sep_char_position>
+               <repeat_char_position>-1</repeat_char_position>
+            </separator_info>
+            <separator_info>
+               <sep_char_default>124</sep_char_default>
+               <repeat_char_default>126</repeat_char_default>
+               <sep_char_escape>70</sep_char_escape>
+               <repeat_char_escape>82</repeat_char_escape>
+               <sep_char_position>3</sep_char_position>
+               <repeat_char_position>5</repeat_char_position>
+            </separator_info>
+            <separator_info>
+               <sep_char_default>94</sep_char_default>
+               <repeat_char_default>0</repeat_char_default>
+               <sep_char_escape>83</sep_char_escape>
+               <repeat_char_escape>0</repeat_char_escape>
+               <sep_char_position>4</sep_char_position>
+               <repeat_char_position>-1</repeat_char_position>
+            </separator_info>
+            <separator_info>
+               <sep_char_default>38</sep_char_default>
+               <repeat_char_default>0</repeat_char_default>
+               <sep_char_escape>84</sep_char_escape>
+               <repeat_char_escape>0</repeat_char_escape>
+               <sep_char_position>7</sep_char_position>
+               <repeat_char_position>-1</repeat_char_position>
+            </separator_info>
+            <escape_data_for_xml_to_hl7>True</escape_data_for_xml_to_hl7>
+            <validate_data_for_xml_to_hl7>True</validate_data_for_xml_to_hl7>
+         </config>
+      </app_settings>
+   </config>
+</engine>

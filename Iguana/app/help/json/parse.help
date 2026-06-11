@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">json.parse{data = &lt;json_string&gt;}\n</pre><ul><li><code><strong>data</strong></code>: The JSON-formatted string you want to parse.</li></ul><p><br></p><p>You can also call it as:</p><pre class=\"ql-syntax\" spellcheck=\"false\">json.parse(&lt;json_string&gt;)\n</pre><p><br></p><h3>Returns</h3><ul><li>A Lua table containing the parsed data. <em><u>(table)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Data = [[ { \"age\": 52, \"name\": \"Fred\" } ]];\nlocal T = json.parse{data = Data}\n</pre><ul><li>This will parse the JSON string into a Lua table so you can access <code>T[1].age</code> or <code>T[1].name</code>.</li></ul>",
+    "Name": "json.parse",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> A string containing the JSON to be parsed.</p>",
+            "Name": "data",
+            "Required": true
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Parses a JSON document."
+}

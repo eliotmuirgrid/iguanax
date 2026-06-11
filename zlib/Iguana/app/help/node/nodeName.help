@@ -1,0 +1,7 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">Node:nodeName()\n</pre><ul><li><code><strong>Node</strong></code>: The node whose name you want to retrieve.</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>Returns the actual tag or segment name (e.g., <code>\"PID\"</code>, <code>\"OBX\"</code>, <code>\"patient\"</code>, <code>\"name\"</code>, etc.).</li><li>Especially useful when working with dynamic or unknown structures where the node's name must be identified programmatically.</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>The name of the node. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Xml = xml.parse{data = \"&lt;patient&gt;&lt;name&gt;Jane&lt;/name&gt;&lt;/patient&gt;\"}\nlocal nodeName = Xml.name:nodeName()\n-- Returns: 'name'\n</pre><ul><li>This example retrieves the name of the <code>&lt;name&gt;</code> child node inside the <code>&lt;patient&gt;</code> XML element.</li></ul>",
+    "Name": "node:nodeName",
+    "Parameters": null,
+    "ParameterTable": false,
+    "SummaryLine": "Returns the name of a node."
+}

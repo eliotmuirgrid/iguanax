@@ -1,0 +1,77 @@
+.AULhelp {
+   background: #e8eefb;
+   color: #2749af;
+   border-radius: var(--border-radius);
+   padding: 14px 16px;
+   font-family: var(--font-sans);
+   font-weight: var(--regular);
+   font-size: 12px;
+   line-height: 16px;
+   margin-bottom: 14px;
+}
+
+.AULtagsRow {
+   margin-top: 8px;
+   display: flex;
+   align-items: center;
+   flex-wrap: wrap;
+   gap: 6px;
+   height: 36px !important;
+   min-height: 28px;
+   padding: 3px 8px;
+   box-sizing: border-box;
+   background: var(--white);
+}
+
+.AULtagToken {
+   display: inline-flex;
+   align-items: center;
+   height: 20px;
+   border-radius: 9999px;
+   border: 1px solid #7ea0ec;
+   color: #1f4eca;
+   background: #f4f7ff;
+   font-size: 11px;
+   line-height: 11px;
+   padding: 0 9px;
+   white-space: nowrap;
+}
+
+.AULtagsExtra {
+   border: none;
+   outline: none;
+   background: transparent;
+   color: var(--grey-800);
+   font-size: 12px;
+   min-width: 120px;
+   flex: 1;
+   font-family: var(--font-sans);
+}
+
+.AULtagsExtra::placeholder {
+   color: var(--grey-400);
+}
+
+.AULbottomRow {
+   margin-top: 10px;
+   display: flex;
+   align-items: center;
+}
+
+.AULworking {
+   display: none;
+   align-items: center;
+}
+
+.AULworking.AULworkingActive {
+   display: flex;
+}
+
+.AULspinner {
+   margin-left: 6px;
+}
+
+.AULbuttonsRow {
+   display: flex;
+   margin-left: auto;
+}

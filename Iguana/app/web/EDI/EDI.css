@@ -1,0 +1,515 @@
+.EDIcomposite.EDIchildrenDiv{
+   display: grid;
+	grid-template-columns: 0.7fr 1.4fr 50px;
+}
+.EDIchildrenDiv{
+   display: grid;
+	grid-template-columns: 0.7fr 1.4fr 50px 50px;
+	border-left: 1px solid var(--grey-400);
+}
+.EDIopen,
+.EDIclosed,
+.EDInodeValue{
+   cursor: pointer;
+	flex-grow: 1;
+}
+.EDIvmdFile::before{
+	content: url(/EDI/images/EDIschemaHL7.svg) !important;
+}
+.EDImatchingRule::before{
+	content: url(/EDI/images/EDImessageDefId.svg) !important;
+}
+.PRJicon-file-untracked.EDIvmdFile::before{
+	content: url(/EDI/images/EDIschemaHL7Untracked.svg) !important;
+}
+.PRJicon-file-renamed.EDIvmdFile::before,
+.PRJicon-file-modified.EDIvmdFile::before{
+	content: url(/EDI/images/EDIschemaHL7Modified.svg) !important;
+}
+.EDIsegmentDefinitions::before{
+	content:url(/TREE/images/EDIiconFolderRepeating.svg);
+	margin-right: 6px;
+	height: 16px;
+	width: 16px;
+}
+.WNDtitleIcon.EDIsegmentDefinitions::before{
+	content: url(/TREE/images/EDIiconFolderRepeating.svg);
+}
+.EDIclosed > .EDInameNode > .EDIsegmentDefinitions::before,
+.EDIclosed > .EDIsegmentDefinitions::before{
+	content: url(/TREE/images/EDIiconFolderRepeating.svg);
+}
+.EDImessageDef::before{
+	content: url(/TREE/images/EDIiconMessage.svg);
+	margin-right: 6px;
+	height: 16px;
+	width: 16px;
+}
+.EDIcompositeDef::before{
+	content: url(/TREE/images/EDIiconComposite.svg);
+	margin-right: 6px;
+	height: 16px;
+	width: 16px;
+}
+.EDIsegmentDef::before{
+	content: url(/TREE/images/EDIiconSegment.svg);
+	margin-right: 6px;
+	height: 16px;
+	width: 16px;
+}
+.EDIchildlist{
+   padding-left: 24px;
+}
+.EDIclosed > .EDIchildrenDiv,
+.EDIclosed > .EDIparentDiv,
+.EDIclosed > .EDIrowDiv,
+.EDIclosed > .EDInodeRowDiv,
+.EDIclosed .EDIchildlist{
+   display: none;
+}
+.EDInameNode,
+.EDIchildDescription,
+.EDIcell,
+.EDInodeValue{
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	min-width: 8px;
+}
+.EDIcell{
+	border: 1px solid var(--grey-400);
+	border-left: 1px solid rgba(var(---grey-300), 0.65);
+   border-top: 0;
+   border-right: 0;
+	background: var(--white);
+	padding: 6px 8px;
+	display: flex;
+	align-items: center;
+}
+.EDIcell:first-child {
+	border-left: 1px solid var(--grey-400);
+}
+.EDIcell:last-child {
+	border-right: 1px solid var(--grey-400);
+}
+.EDIopenNode svg {
+	width: 10px;
+	height: 10px;
+	opacity: 0.6;
+	padding-left: 4px;
+}
+.EDIopenNode:hover svg{
+	opacity: 1;
+}
+.EDInodeRowDiv,
+.EDIrowDiv{
+	display: contents;
+}
+.EDIsegmentgroupFolder *,
+.EDImessageFolder *,
+.EDIsegmentFolder *,
+.EDIcompositeFolder *,
+.EDIsectionTitle *,
+.EDInameNode *{
+	display: inline-block;
+}
+.EDIbuttonGroup,
+.EDIdoneEditList,
+.EDIeditListWindow,
+.EDIeditMatchingWindow,
+.EDIeditNodeWindow{
+	float: right;
+}
+.EDInodeWindowClass{
+	display: flex;
+}
+.EDIeditBanner{
+	display: flex;
+	align-items: center;
+	position: sticky;
+	top: 0px;
+	height: 42px;
+	z-index: 10;	
+	background: var(--white);
+	margin-bottom: 8px;
+	padding-left: 8px;
+}
+.EDInodeName{
+	flex-shrink: 1;
+	margin-right: 12px;
+	color: var(--blue-dark);
+	font-weight: 400;
+	font-size: 16px;
+	white-space: nowrap;
+}
+.EDInodeDescription{
+	flex-grow: 1;
+	color: var(--grey);
+	font-weight: 400;
+	font-size: 12px;
+	margin-right: 12px;
+}
+.EDIcomposite .EDIchildRow {
+	display: grid;
+	grid-template-columns: 32px 32px 1fr 1fr 50px 32px;
+}
+.EDIchildRow {
+	display: grid;
+	grid-template-columns: 32px 32px 1fr 1fr 50px 50px 32px;
+	cursor: default;
+}
+.EDImatchingHeaders,
+.EDImatchingRow{
+	display: grid;
+	grid-template-columns: 32px 1fr 1fr 32px;
+	width: 100%;
+	cursor: default;
+}
+.EDIparentTableDiv{
+	display: grid;
+	grid-template-columns: 1fr 2fr;
+	border-left: 1px solid var(--grey-400);
+
+}
+.EDImoveRow {
+	border: 1px solid var(--grey-400);
+	border-bottom: 0px;
+	border-right: 1px solid rgba(var(--grey-300), 0.65);
+	background-color: var(--grey-100);
+	color: var(--grey-600);
+	cursor: move;
+}
+.EDIeditCell {
+	text-align: left;
+	border-left: 0px;
+	border-right: 0px;
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+}
+.EDIeditCell .FORMinput,
+.EDIeditCell .FORMselectBox {
+	height: 32px;
+	border-radius: 0px;
+	border-left: 0px;
+	border-right: 1px solid rgba(var(---grey-300), 0.65);
+	border-bottom: 0px;
+}
+.EDIeditCell .FORMinput:focus,
+.EDIeditCell .FORMselectBox:focus {
+	outline: none;
+	border: 2px solid var(--blue);
+}
+/* "Delete row" column */
+.EDIeditCell:first-child {
+	border: 1px solid var(--grey-400);
+	border-bottom: 0px;
+	border-right: 0px;
+	background: var(--grey-100);
+}
+.EDInumber {
+	border: 1px solid var(--grey-400);
+	border-left: 0px;
+	border-bottom: 0px;
+	background: var(--grey-100);
+}
+.EDIeditCell:last-child {
+	border: 1px solid var(--grey-400);
+	border-bottom: 0px;
+	border-left: none;
+	background: var(--grey-100);
+}
+.EDIaddRowMatching,
+.EDIaddChild{
+	grid-column: 2/3;
+	padding: 0px 8px;
+	font-size: 9px;
+	font-family: var(--font-buttons);
+	font-weight: 500;
+	cursor: pointer;
+	color: var(--blue);
+}
+.EDIaddMatchingRow,
+.EDIaddEditRow{
+	display: grid;
+	grid-template-columns: 32px 1.0fr;
+	border: 1px solid var(--grey-400);
+	background: var(--grey-100);
+	align-items: center;
+	height: 24px;
+}
+.EDIlistRow{
+	display: flex;
+	align-items: center;
+}
+.EDIaddListItem{
+	padding-top: 4px;
+	font-size: 10px;
+	font-family: var(--font-buttons);
+	font-weight: 500;
+	cursor: pointer;
+	color: var(--blue);
+}
+.EDImessageWarning,
+.EDIcannotDeleteListItem,
+.EDIdeleteListItem{
+	display: inline;
+	cursor: pointer;
+	text-align: right;
+	padding-right: 16px;
+}
+.EDImessageWarning{
+   color: var(--grey-800);
+}
+.EDIcannotDeleteListItem{
+   color: var(--grey-400);
+}
+.EDIcontent > div:hover{
+	background-color: rgba(179, 221, 245, 0.25);
+}
+.EDIleafNode{
+	content: url(/EDI/images/EDIitem.svg);
+}
+.EDIfolderNode{
+	content: url(/EDI/images/EDIfolderOpen.svg);
+}
+.EDItrayClosed .EDIfolderNode,
+.EDIclosed .EDIfolderNode{
+	content: url(/EDI/images/EDIfolderClosed.svg);
+}
+.EDIaccordian{
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	overflow: auto;
+	cursor: pointer;
+}
+.EDIwindow *{
+	-webkit-user-select: none;
+	-moz-user-select: none;  
+	-ms-user-select: none;     
+	user-select: none;          
+ }
+.EDIsegmentgroupFolder,
+.EDImessageFolder,
+.EDIsegmentFolder,
+.EDIcompositeFolder {
+  height: 30px;
+  min-height: 30px;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  background-color: white;
+}
+.EDImessageFolder {
+	position: sticky;
+	top: 0px;
+	bottom: 90px;
+ }
+ .EDIsegmentgroupFolder {
+	position: sticky;
+	top: 29px;
+	bottom: 60px;
+ }
+ .EDIsegmentFolder {
+	position: sticky;
+	top: 59px;
+	bottom: 30px;
+ }
+ .EDIcompositeFolder {
+	position: sticky;
+	top: 89px;
+	bottom: 0px;
+ }
+.EDIcontent.EDItrayClosed{
+	 display: none;
+ }
+.EDIcontent.EDItrayOpen{
+	padding-left: 24px;
+}
+.EDIhidden{
+	display: none;
+}
+.EDInameMainEditHint{
+	color: var(--red);
+	font-size: 10px;
+	line-height: 12px;
+	padding-bottom: 8px;
+}
+.EDImatchingOrderLink{
+	color: var(--blue);
+}
+.EDIheaderTitle{
+	display: flex;
+	width: 100%;
+}
+.EDItitle{
+	flex-grow: 1;
+	padding-left: 8px;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+}
+.EDImatchingRulesContainer{
+	height: calc( 100% - 52px);
+	overflow: auto;
+}
+.EDImatchingRulesTable{
+	display: grid;
+	grid-template-columns: 24px 1fr 2fr;
+	border-left: 1px solid var(--grey-400);
+}
+.EDImatchingRulesTable *{
+	font-family: var(--font-monospace);
+}
+.EDIparentTableDiv .EDImatchingHeader,
+.EDImatchingRulesTable .EDImatchingHeader,
+.EDIchildrenDiv .EDImatchingHeader{
+	padding: 2px 4px;
+	font-size: 9px;
+	font-family: var(--font-buttons);
+	color: var(--grey-600);
+	letter-spacing: 0.05em;
+	background: var(--grey-200);
+	border-top: 1px solid var(--grey-400);
+	border-bottom: 1px solid var(--grey-400);
+	border-right: 1px solid var(--grey-400);
+}
+.EDImatchingValueEnd,
+.EDImatchingValue{
+	border: 1px solid var(--grey-400);
+	border-left: 0px;
+	border-top: 0px;
+	padding: 2px 4px;
+	display: flex;
+	align-items: center;
+	font-size: 11px;
+}
+.EDImatchingValue{
+	border-right: 1px solid rgba(var(---grey-300), 0.65);
+}
+.EDImatchingValueEnd{
+	border-right: 1px solid rgba(var(---grey-400), 0.65);
+}
+.EDImessageRow *{
+	display: inline-block;
+}
+.EDIaddMatchingRow{
+	position: sticky;
+	bottom : 38px;
+}
+.EDImatchingHint,
+.EDIaddEditRow{
+	position: sticky;
+	bottom : 0px;
+}
+.EDImatchingHeaders,
+.EDIchildHeaders{
+	position: sticky;
+	top : 0px;
+	border: 1px solid var(--grey-400);
+	background: var(--grey-200);
+	align-items: center;
+	min-height: 28px;
+	box-sizing: border-box;
+}
+.EDImatchingHeaders div,
+.EDIchildHeaders div{
+	padding: 6px 8px;
+	font-size: 9px;
+	font-family: var(--font-buttons);
+	color: var(--grey-600);
+	letter-spacing: 0.05em;
+	line-height: 1.25em;
+}
+.EDIwindowInner{
+	height: calc(100% - 50px);
+	overflow: auto;
+}
+.EDIwindow{
+	height: 100%;
+	overflow: hidden;
+	/* padding: 4px; */
+	padding-left: 8px;
+	padding-right: 8px;
+}
+.EDIsaveEditGroup{
+	flex-shrink: 0;
+}
+.EDInameMainEdit{
+	width: auto !important;
+	min-width: 50px;
+}
+.EDIdescriptionMainEdit{
+	width: auto !important;
+	min-width: 70px;
+}
+.EDInodeWindow{
+	height: calc(100% - 58px);
+	overflow: auto;
+}
+.EDIparentType,
+.EDInameNode *{
+	font-family: Monospace;
+}
+.EDInameNode{
+	display: flex;
+}
+.EDInodeType{
+	flex-grow: 1;
+	overflow: hidden;
+	text-overflow: ellipsis;
+	white-space: nowrap;
+	display: flex;
+	align-items: center;
+}
+.EDIopenNode{
+	flex-grow: 0;
+}
+.EDIboolValue{
+	text-align: center;
+	justify-content: center;
+}
+.FORMinput.EDIboolValue input{
+	cursor: pointer !important;
+}
+.EDImatchingRulesDiv{
+	margin-right: 12px;
+	color: var(--blue-dark);
+	font-weight: 400;
+	font-size: 16px;
+}
+.EDImatchingFile{
+	flex-grow: 1;
+	font-family: var(--font-monospace);
+	margin-right: 12px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;	
+}
+.EDImatchingHint{
+	font-family: var(--font-sans);
+	font-size: 11px;
+	color: var(--grey-600);
+	padding-top: 6px;
+	background-color: white;
+	overflow: hidden;
+}
+.EDIcontent > div,
+.EDIlistRow > div{
+	display: flex;
+	align-items: center;
+}
+.EDIlistTitle{
+	padding-left: 8px;
+}
+.EDIaccordian{
+	height: calc(100% - 52px);
+}
+.EDImatchOrderDiv{
+	white-space: nowrap;
+}
+.EDInodeValue{
+	font-family: var(--font-monospace);
+	padding: 2px 0px;
+}

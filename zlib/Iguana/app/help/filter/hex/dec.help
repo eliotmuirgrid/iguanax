@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">filter.hex.dec(data)\n</pre><ul><li><code><strong>data</strong></code>: A Base16-encoded string to decode.</li></ul><p><br></p><h3>Returns</h3><ul><li>A decoded string. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Input = [[\nThis is a long story\n]]\n\nlocal Out = filter.hex.enc(Input)\ntrace(#Out, #Input)\n\nlocal Input2 = filter.hex.dec(Out)\n</pre><ul><li><code>Out</code> is the hex-encoded version of <code>Input</code>.</li><li><code>Input2</code> is the restored version of the original string.</li></ul>",
+    "Name": "filter.hex.dec",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> A string previously encoded in hex.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Decodes data encoded as Hex (Base16)."
+}

@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local tables = db.tables{vdb = &lt;vdb_file&gt;}\n</pre><ul><li><code><strong>vdb</strong></code>: The name of the <code>.vdb</code> schema file to load tables from. Legacy <code>.vmd</code> XML files are also accepted, though converting them to <code>.vdb</code> is recommended.</li></ul><p><br></p><h3>Returns</h3><ul><li>A table collection node tree containing the set of empty record tables. <em><u>(table)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local T = db.tables{vdb = 'tables.vdb'}\n-- Populate table data\nT.Patient[1].LastName = 'Smith'\n-- Then merge with the database connection object\nconn:merge{data = T}\n</pre>",
+    "Name": "db.tables",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The file name of the <code>.vdb</code> file containing the table schema.</p>",
+            "Name": "vdb",
+            "Required": true
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Creates a set of empty record tables, which can be used with db.merge."
+}

@@ -1,0 +1,711 @@
+{
+    "cursor_position": 7,
+    "full_expression": "H.Ep",
+    "help_file": "",
+    "line_number": 5,
+    "options": [
+        {
+            "dt": "MSH<span class=\"ITSintellisenseLevelDivider\"></span>1 Field S<span class=\"ITSintellisenseSearchMatch\">ep</span>arator <span class=\"ITSintellisenseOptionValue\">(<span    class='clrz_str'>|</span>)</span>",
+            "ft": "H.MSH[1]",
+            "nt": 6,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "MSH<span class=\"ITSintellisenseLevelDivider\"></span>3 Sending Application<span class=\"ITSintellisenseLevelDivider\"></span>1 Namespace ID <span class=\"ITSintellisenseOptionValue\">(<span    class='clrz_str'><span class=\"ITSintellisenseSearchMatch\">Ep</span>ic</span>)</span>",
+            "ft": "H.MSH[3][1]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "MSH<span class=\"ITSintellisenseLevelDivider\"></span>15 Acc<span class=\"ITSintellisenseSearchMatch\">ep</span>t Acknowledgment Type <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.MSH[15]",
+            "nt": 6,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "PD1<span class=\"ITSintellisenseLevelDivider\"></span>9 S<span class=\"ITSintellisenseSearchMatch\">ep</span>arate Bill <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PD1[9]",
+            "nt": 6,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "PV1<span class=\"ITSintellisenseLevelDivider\"></span>53 Service <span class=\"ITSintellisenseSearchMatch\">Ep</span>isode Description <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PV1[53]",
+            "nt": 6,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "PV1<span class=\"ITSintellisenseLevelDivider\"></span>54 Service <span class=\"ITSintellisenseSearchMatch\">Ep</span>isode Identifier <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PV1[54]",
+            "nt": 6,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "DRG<span class=\"ITSintellisenseLevelDivider\"></span>30 Status S<span class=\"ITSintellisenseSearchMatch\">ep</span>aration Mode <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.DRG[30]",
+            "nt": 6,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "UB1<span class=\"ITSintellisenseLevelDivider\"></span>4 Blood R<span class=\"ITSintellisenseSearchMatch\">ep</span>laced-Pints <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.UB1[4]",
+            "nt": 6,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "UB1<span class=\"ITSintellisenseLevelDivider\"></span>5 Blood Not R<span class=\"ITSintellisenseSearchMatch\">ep</span>laced-Pints <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.UB1[5]",
+            "nt": 6,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "MSH<span class=\"ITSintellisenseLevelDivider\"></span>22 Sending Responsible Organization<span class=\"ITSintellisenseLevelDivider\"></span>9 Name R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.MSH[22][9]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "MSH<span class=\"ITSintellisenseLevelDivider\"></span>23 Receiving Responsible Organization<span class=\"ITSintellisenseLevelDivider\"></span>9 Name R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.MSH[23][9]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "PID<span class=\"ITSintellisenseLevelDivider\"></span>18 Patient Account Number<span class=\"ITSintellisenseLevelDivider\"></span>10 Assigning Agency or D<span class=\"ITSintellisenseSearchMatch\">ep</span>artment <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PID[18][10]",
+            "nt": 7,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "PD1<span class=\"ITSintellisenseLevelDivider\"></span>1 Living D<span class=\"ITSintellisenseSearchMatch\">ep</span>endency<span class=\"ITSintellisenseLevelDivider\"></span>1 Living D<span class=\"ITSintellisenseSearchMatch\">ep</span>endency <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PD1[1][1]",
+            "nt": 6,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "PV1<span class=\"ITSintellisenseLevelDivider\"></span>5 Preadmit Number<span class=\"ITSintellisenseLevelDivider\"></span>10 Assigning Agency or D<span class=\"ITSintellisenseSearchMatch\">ep</span>artment <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PV1[5][10]",
+            "nt": 7,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "PV1<span class=\"ITSintellisenseLevelDivider\"></span>19 Visit Number<span class=\"ITSintellisenseLevelDivider\"></span>10 Assigning Agency or D<span class=\"ITSintellisenseSearchMatch\">ep</span>artment <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PV1[19][10]",
+            "nt": 7,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "PV1<span class=\"ITSintellisenseLevelDivider\"></span>50 Alternate Visit ID<span class=\"ITSintellisenseLevelDivider\"></span>10 Assigning Agency or D<span class=\"ITSintellisenseSearchMatch\">ep</span>artment <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PV1[50][10]",
+            "nt": 7,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "PV1<span class=\"ITSintellisenseLevelDivider\"></span>54 Service <span class=\"ITSintellisenseSearchMatch\">Ep</span>isode Identifier<span class=\"ITSintellisenseLevelDivider\"></span>10 Assigning Agency or D<span class=\"ITSintellisenseSearchMatch\">ep</span>artment <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PV1[54][10]",
+            "nt": 7,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "DRG<span class=\"ITSintellisenseLevelDivider\"></span>12 Name of Coder<span class=\"ITSintellisenseLevelDivider\"></span>8 Name R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.DRG[12][8]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "GT1<span class=\"ITSintellisenseLevelDivider\"></span>GT1<span class=\"ITSintellisenseLevelDivider\"></span>33 Living D<span class=\"ITSintellisenseSearchMatch\">ep</span>endency <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.GT1[1][33]",
+            "nt": 6,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "ACC<span class=\"ITSintellisenseLevelDivider\"></span>7 Entered By<span class=\"ITSintellisenseLevelDivider\"></span>15 Name R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.ACC[7][15]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "ACC<span class=\"ITSintellisenseLevelDivider\"></span>7 Entered By<span class=\"ITSintellisenseLevelDivider\"></span>23 Assigning Agency or D<span class=\"ITSintellisenseSearchMatch\">ep</span>artment <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.ACC[7][23]",
+            "nt": 7,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "ACC<span class=\"ITSintellisenseLevelDivider\"></span>11 Accident Address<span class=\"ITSintellisenseLevelDivider\"></span>11 Address R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.ACC[11][11]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "PDA<span class=\"ITSintellisenseLevelDivider\"></span>5 Death Certified By<span class=\"ITSintellisenseLevelDivider\"></span>15 Name R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PDA[5][15]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "PDA<span class=\"ITSintellisenseLevelDivider\"></span>5 Death Certified By<span class=\"ITSintellisenseLevelDivider\"></span>23 Assigning Agency or D<span class=\"ITSintellisenseSearchMatch\">ep</span>artment <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PDA[5][23]",
+            "nt": 7,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "PDA<span class=\"ITSintellisenseLevelDivider\"></span>8 Autopsy Performed By<span class=\"ITSintellisenseLevelDivider\"></span>15 Name R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PDA[8][15]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "PDA<span class=\"ITSintellisenseLevelDivider\"></span>8 Autopsy Performed By<span class=\"ITSintellisenseLevelDivider\"></span>23 Assigning Agency or D<span class=\"ITSintellisenseSearchMatch\">ep</span>artment <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PDA[8][23]",
+            "nt": 7,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "SFT<span class=\"ITSintellisenseLevelDivider\"></span>SFT<span class=\"ITSintellisenseLevelDivider\"></span>1 Software Vendor Organization<span class=\"ITSintellisenseLevelDivider\"></span>9 Name R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.SFT[1][1][9]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "EVN<span class=\"ITSintellisenseLevelDivider\"></span>5 Operator ID<span class=\"ITSintellisenseLevelDivider\"></span>1 Operator ID<span class=\"ITSintellisenseLevelDivider\"></span>15 Name R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.EVN[5][1][15]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "EVN<span class=\"ITSintellisenseLevelDivider\"></span>5 Operator ID<span class=\"ITSintellisenseLevelDivider\"></span>1 Operator ID<span class=\"ITSintellisenseLevelDivider\"></span>23 Assigning Agency or D<span class=\"ITSintellisenseSearchMatch\">ep</span>artment <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.EVN[5][1][23]",
+            "nt": 7,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "PID<span class=\"ITSintellisenseLevelDivider\"></span>3 Patient Identifier List<span class=\"ITSintellisenseLevelDivider\"></span>1 Patient Identifier List<span class=\"ITSintellisenseLevelDivider\"></span>10 Assigning Agency or D<span class=\"ITSintellisenseSearchMatch\">ep</span>artment <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PID[3][1][10]",
+            "nt": 7,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "PID<span class=\"ITSintellisenseLevelDivider\"></span>5 Patient Name<span class=\"ITSintellisenseLevelDivider\"></span>1 Patient Name<span class=\"ITSintellisenseLevelDivider\"></span>8 Name R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PID[5][1][8]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "PID<span class=\"ITSintellisenseLevelDivider\"></span>6 Mother's Maiden Name<span class=\"ITSintellisenseLevelDivider\"></span>1 Mother's Maiden Name<span class=\"ITSintellisenseLevelDivider\"></span>8 Name R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PID[6][1][8]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "PID<span class=\"ITSintellisenseLevelDivider\"></span>11 Patient Address<span class=\"ITSintellisenseLevelDivider\"></span>1 Patient Address<span class=\"ITSintellisenseLevelDivider\"></span>11 Address R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PID[11][1][11]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "PID<span class=\"ITSintellisenseLevelDivider\"></span>13 Phone Number - Home<span class=\"ITSintellisenseLevelDivider\"></span>1 Phone Number - Home<span class=\"ITSintellisenseLevelDivider\"></span>1 Tel<span class=\"ITSintellisenseSearchMatch\">ep</span>hone Number <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PID[13][1][1]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "PID<span class=\"ITSintellisenseLevelDivider\"></span>13 Phone Number - Home<span class=\"ITSintellisenseLevelDivider\"></span>1 Phone Number - Home<span class=\"ITSintellisenseLevelDivider\"></span>12 Unformatted Tel<span class=\"ITSintellisenseSearchMatch\">ep</span>hone number <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PID[13][1][12]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "PID<span class=\"ITSintellisenseLevelDivider\"></span>14 Phone Number - Business<span class=\"ITSintellisenseLevelDivider\"></span>1 Phone Number - Business<span class=\"ITSintellisenseLevelDivider\"></span>1 Tel<span class=\"ITSintellisenseSearchMatch\">ep</span>hone Number <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PID[14][1][1]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "PID<span class=\"ITSintellisenseLevelDivider\"></span>14 Phone Number - Business<span class=\"ITSintellisenseLevelDivider\"></span>1 Phone Number - Business<span class=\"ITSintellisenseLevelDivider\"></span>12 Unformatted Tel<span class=\"ITSintellisenseSearchMatch\">ep</span>hone number <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PID[14][1][12]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "PID<span class=\"ITSintellisenseLevelDivider\"></span>21 Mother's Identifier<span class=\"ITSintellisenseLevelDivider\"></span>1 Mother's Identifier<span class=\"ITSintellisenseLevelDivider\"></span>10 Assigning Agency or D<span class=\"ITSintellisenseSearchMatch\">ep</span>artment <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PID[21][1][10]",
+            "nt": 7,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "PID<span class=\"ITSintellisenseLevelDivider\"></span>40 Patient Telecommunication Information<span class=\"ITSintellisenseLevelDivider\"></span>1 Patient Telecommunication Information<span class=\"ITSintellisenseLevelDivider\"></span>1 Tel<span class=\"ITSintellisenseSearchMatch\">ep</span>hone Number <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PID[40][1][1]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "PID<span class=\"ITSintellisenseLevelDivider\"></span>40 Patient Telecommunication Information<span class=\"ITSintellisenseLevelDivider\"></span>1 Patient Telecommunication Information<span class=\"ITSintellisenseLevelDivider\"></span>12 Unformatted Tel<span class=\"ITSintellisenseSearchMatch\">ep</span>hone number <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PID[40][1][12]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "PD1<span class=\"ITSintellisenseLevelDivider\"></span>3 Patient Primary Facility<span class=\"ITSintellisenseLevelDivider\"></span>1 Patient Primary Facility<span class=\"ITSintellisenseLevelDivider\"></span>9 Name R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PD1[3][1][9]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "PD1<span class=\"ITSintellisenseLevelDivider\"></span>10 Duplicate Patient<span class=\"ITSintellisenseLevelDivider\"></span>1 Duplicate Patient<span class=\"ITSintellisenseLevelDivider\"></span>10 Assigning Agency or D<span class=\"ITSintellisenseSearchMatch\">ep</span>artment <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PD1[10][1][10]",
+            "nt": 7,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "PD1<span class=\"ITSintellisenseLevelDivider\"></span>14 Place of Worship<span class=\"ITSintellisenseLevelDivider\"></span>1 Place of Worship<span class=\"ITSintellisenseLevelDivider\"></span>9 Name R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PD1[14][1][9]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "ROL<span class=\"ITSintellisenseLevelDivider\"></span>ROL<span class=\"ITSintellisenseLevelDivider\"></span>14 Organization<span class=\"ITSintellisenseLevelDivider\"></span>9 Name R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.ROL[1][14][9]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "NK1<span class=\"ITSintellisenseLevelDivider\"></span>NK1<span class=\"ITSintellisenseLevelDivider\"></span>12 Next of Kin / Associated Parties Employee Number<span class=\"ITSintellisenseLevelDivider\"></span>10 Assigning Agency or D<span class=\"ITSintellisenseSearchMatch\">ep</span>artment <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.NK1[1][12][10]",
+            "nt": 7,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "NK1<span class=\"ITSintellisenseLevelDivider\"></span>NK1<span class=\"ITSintellisenseLevelDivider\"></span>17 Living D<span class=\"ITSintellisenseSearchMatch\">ep</span>endency<span class=\"ITSintellisenseLevelDivider\"></span>1 Living D<span class=\"ITSintellisenseSearchMatch\">ep</span>endency <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.NK1[1][17][1]",
+            "nt": 6,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "NK1<span class=\"ITSintellisenseLevelDivider\"></span>NK1<span class=\"ITSintellisenseLevelDivider\"></span>31 Contact Person's Tel<span class=\"ITSintellisenseSearchMatch\">ep</span>hone Number<span class=\"ITSintellisenseLevelDivider\"></span>1 Contact Person's Tel<span class=\"ITSintellisenseSearchMatch\">ep</span>hone Number <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.NK1[1][31][1]",
+            "nt": 6,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "NK1<span class=\"ITSintellisenseLevelDivider\"></span>NK1<span class=\"ITSintellisenseLevelDivider\"></span>40 Next of Kin Telecommunication Information<span class=\"ITSintellisenseLevelDivider\"></span>1 Tel<span class=\"ITSintellisenseSearchMatch\">ep</span>hone Number <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.NK1[1][40][1]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "NK1<span class=\"ITSintellisenseLevelDivider\"></span>NK1<span class=\"ITSintellisenseLevelDivider\"></span>40 Next of Kin Telecommunication Information<span class=\"ITSintellisenseLevelDivider\"></span>12 Unformatted Tel<span class=\"ITSintellisenseSearchMatch\">ep</span>hone number <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.NK1[1][40][12]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "NK1<span class=\"ITSintellisenseLevelDivider\"></span>NK1<span class=\"ITSintellisenseLevelDivider\"></span>41 Contact Person's Telecommunication Information<span class=\"ITSintellisenseLevelDivider\"></span>1 Tel<span class=\"ITSintellisenseSearchMatch\">ep</span>hone Number <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.NK1[1][41][1]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "NK1<span class=\"ITSintellisenseLevelDivider\"></span>NK1<span class=\"ITSintellisenseLevelDivider\"></span>41 Contact Person's Telecommunication Information<span class=\"ITSintellisenseLevelDivider\"></span>12 Unformatted Tel<span class=\"ITSintellisenseSearchMatch\">ep</span>hone number <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.NK1[1][41][12]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "PV1<span class=\"ITSintellisenseLevelDivider\"></span>7 Attending Doctor<span class=\"ITSintellisenseLevelDivider\"></span>1 Attending Doctor<span class=\"ITSintellisenseLevelDivider\"></span>15 Name R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PV1[7][1][15]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "PV1<span class=\"ITSintellisenseLevelDivider\"></span>7 Attending Doctor<span class=\"ITSintellisenseLevelDivider\"></span>1 Attending Doctor<span class=\"ITSintellisenseLevelDivider\"></span>23 Assigning Agency or D<span class=\"ITSintellisenseSearchMatch\">ep</span>artment <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PV1[7][1][23]",
+            "nt": 7,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "PV1<span class=\"ITSintellisenseLevelDivider\"></span>8 Referring Doctor<span class=\"ITSintellisenseLevelDivider\"></span>1 Referring Doctor<span class=\"ITSintellisenseLevelDivider\"></span>15 Name R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PV1[8][1][15]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "PV1<span class=\"ITSintellisenseLevelDivider\"></span>8 Referring Doctor<span class=\"ITSintellisenseLevelDivider\"></span>1 Referring Doctor<span class=\"ITSintellisenseLevelDivider\"></span>23 Assigning Agency or D<span class=\"ITSintellisenseSearchMatch\">ep</span>artment <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PV1[8][1][23]",
+            "nt": 7,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "PV1<span class=\"ITSintellisenseLevelDivider\"></span>9 Consulting Doctor<span class=\"ITSintellisenseLevelDivider\"></span>1 Consulting Doctor<span class=\"ITSintellisenseLevelDivider\"></span>15 Name R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PV1[9][1][15]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "PV1<span class=\"ITSintellisenseLevelDivider\"></span>9 Consulting Doctor<span class=\"ITSintellisenseLevelDivider\"></span>1 Consulting Doctor<span class=\"ITSintellisenseLevelDivider\"></span>23 Assigning Agency or D<span class=\"ITSintellisenseSearchMatch\">ep</span>artment <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PV1[9][1][23]",
+            "nt": 7,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "PV1<span class=\"ITSintellisenseLevelDivider\"></span>17 Admitting Doctor<span class=\"ITSintellisenseLevelDivider\"></span>1 Admitting Doctor<span class=\"ITSintellisenseLevelDivider\"></span>15 Name R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PV1[17][1][15]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "PV1<span class=\"ITSintellisenseLevelDivider\"></span>17 Admitting Doctor<span class=\"ITSintellisenseLevelDivider\"></span>1 Admitting Doctor<span class=\"ITSintellisenseLevelDivider\"></span>23 Assigning Agency or D<span class=\"ITSintellisenseSearchMatch\">ep</span>artment <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PV1[17][1][23]",
+            "nt": 7,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "PV2<span class=\"ITSintellisenseLevelDivider\"></span>13 Referral Source Code<span class=\"ITSintellisenseLevelDivider\"></span>1 Referral Source Code<span class=\"ITSintellisenseLevelDivider\"></span>15 Name R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PV2[13][1][15]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "PV2<span class=\"ITSintellisenseLevelDivider\"></span>13 Referral Source Code<span class=\"ITSintellisenseLevelDivider\"></span>1 Referral Source Code<span class=\"ITSintellisenseLevelDivider\"></span>23 Assigning Agency or D<span class=\"ITSintellisenseSearchMatch\">ep</span>artment <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PV2[13][1][23]",
+            "nt": 7,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "PV2<span class=\"ITSintellisenseLevelDivider\"></span>23 Clinic Organization Name<span class=\"ITSintellisenseLevelDivider\"></span>1 Clinic Organization Name<span class=\"ITSintellisenseLevelDivider\"></span>9 Name R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.PV2[23][1][9]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "ROL<span class=\"ITSintellisenseLevelDivider\"></span>ROL<span class=\"ITSintellisenseLevelDivider\"></span>14 Organization<span class=\"ITSintellisenseLevelDivider\"></span>9 Name R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H:child(\"ROL\", 2)[1][14][9]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "OBX<span class=\"ITSintellisenseLevelDivider\"></span>OBX<span class=\"ITSintellisenseLevelDivider\"></span>23 Performing Organization Name<span class=\"ITSintellisenseLevelDivider\"></span>9 Name R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.OBX[1][23][9]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "OBX<span class=\"ITSintellisenseLevelDivider\"></span>OBX<span class=\"ITSintellisenseLevelDivider\"></span>24 Performing Organization Address<span class=\"ITSintellisenseLevelDivider\"></span>11 Address R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.OBX[1][24][11]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "OBX<span class=\"ITSintellisenseLevelDivider\"></span>OBX<span class=\"ITSintellisenseLevelDivider\"></span>25 Performing Organization Medical Director<span class=\"ITSintellisenseLevelDivider\"></span>15 Name R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.OBX[1][25][15]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "OBX<span class=\"ITSintellisenseLevelDivider\"></span>OBX<span class=\"ITSintellisenseLevelDivider\"></span>25 Performing Organization Medical Director<span class=\"ITSintellisenseLevelDivider\"></span>23 Assigning Agency or D<span class=\"ITSintellisenseSearchMatch\">ep</span>artment <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.OBX[1][25][23]",
+            "nt": 7,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "GT1<span class=\"ITSintellisenseLevelDivider\"></span>GT1<span class=\"ITSintellisenseLevelDivider\"></span>46 Contact Person's Tel<span class=\"ITSintellisenseSearchMatch\">ep</span>hone Number<span class=\"ITSintellisenseLevelDivider\"></span>1 Contact Person's Tel<span class=\"ITSintellisenseSearchMatch\">ep</span>hone Number <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.GT1[1][46][1]",
+            "nt": 6,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "INSURANCE<span class=\"ITSintellisenseLevelDivider\"></span>1 INSURANCE<span class=\"ITSintellisenseLevelDivider\"></span>IN1<span class=\"ITSintellisenseLevelDivider\"></span>25 R<span class=\"ITSintellisenseSearchMatch\">ep</span>ort Of Eligibility Flag <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.INSURANCE[1].IN1[25]",
+            "nt": 6,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "INSURANCE<span class=\"ITSintellisenseLevelDivider\"></span>1 INSURANCE<span class=\"ITSintellisenseLevelDivider\"></span>IN1<span class=\"ITSintellisenseLevelDivider\"></span>26 R<span class=\"ITSintellisenseSearchMatch\">ep</span>ort Of Eligibility Date <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.INSURANCE[1].IN1[26]",
+            "nt": 6,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "INSURANCE<span class=\"ITSintellisenseLevelDivider\"></span>1 INSURANCE<span class=\"ITSintellisenseLevelDivider\"></span>IN2<span class=\"ITSintellisenseLevelDivider\"></span>11 D<span class=\"ITSintellisenseSearchMatch\">ep</span>endent Of Military Recipient <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.INSURANCE[1].IN2[11]",
+            "nt": 6,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "INSURANCE<span class=\"ITSintellisenseLevelDivider\"></span>1 INSURANCE<span class=\"ITSintellisenseLevelDivider\"></span>IN2<span class=\"ITSintellisenseLevelDivider\"></span>31 Living D<span class=\"ITSintellisenseSearchMatch\">ep</span>endency <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.INSURANCE[1].IN2[31]",
+            "nt": 6,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "ROL<span class=\"ITSintellisenseLevelDivider\"></span>ROL<span class=\"ITSintellisenseLevelDivider\"></span>4 Role Person<span class=\"ITSintellisenseLevelDivider\"></span>1 Role Person<span class=\"ITSintellisenseLevelDivider\"></span>15 Name R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.ROL[1][4][1][15]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "ROL<span class=\"ITSintellisenseLevelDivider\"></span>ROL<span class=\"ITSintellisenseLevelDivider\"></span>4 Role Person<span class=\"ITSintellisenseLevelDivider\"></span>1 Role Person<span class=\"ITSintellisenseLevelDivider\"></span>23 Assigning Agency or D<span class=\"ITSintellisenseSearchMatch\">ep</span>artment <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.ROL[1][4][1][23]",
+            "nt": 7,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "ROL<span class=\"ITSintellisenseLevelDivider\"></span>ROL<span class=\"ITSintellisenseLevelDivider\"></span>11 Office/Home Address/Birthplace<span class=\"ITSintellisenseLevelDivider\"></span>1 Office/Home Address/Birthplace<span class=\"ITSintellisenseLevelDivider\"></span>11 Address R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.ROL[1][11][1][11]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "ROL<span class=\"ITSintellisenseLevelDivider\"></span>ROL<span class=\"ITSintellisenseLevelDivider\"></span>12 Phone<span class=\"ITSintellisenseLevelDivider\"></span>1 Phone<span class=\"ITSintellisenseLevelDivider\"></span>1 Tel<span class=\"ITSintellisenseSearchMatch\">ep</span>hone Number <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.ROL[1][12][1][1]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "ROL<span class=\"ITSintellisenseLevelDivider\"></span>ROL<span class=\"ITSintellisenseLevelDivider\"></span>12 Phone<span class=\"ITSintellisenseLevelDivider\"></span>1 Phone<span class=\"ITSintellisenseLevelDivider\"></span>12 Unformatted Tel<span class=\"ITSintellisenseSearchMatch\">ep</span>hone number <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.ROL[1][12][1][12]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "NK1<span class=\"ITSintellisenseLevelDivider\"></span>NK1<span class=\"ITSintellisenseLevelDivider\"></span>2 Name<span class=\"ITSintellisenseLevelDivider\"></span>1 Name<span class=\"ITSintellisenseLevelDivider\"></span>8 Name R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.NK1[1][2][1][8]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "NK1<span class=\"ITSintellisenseLevelDivider\"></span>NK1<span class=\"ITSintellisenseLevelDivider\"></span>4 Address<span class=\"ITSintellisenseLevelDivider\"></span>1 Address<span class=\"ITSintellisenseLevelDivider\"></span>11 Address R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.NK1[1][4][1][11]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "NK1<span class=\"ITSintellisenseLevelDivider\"></span>NK1<span class=\"ITSintellisenseLevelDivider\"></span>5 Phone Number<span class=\"ITSintellisenseLevelDivider\"></span>1 Phone Number<span class=\"ITSintellisenseLevelDivider\"></span>1 Tel<span class=\"ITSintellisenseSearchMatch\">ep</span>hone Number <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.NK1[1][5][1][1]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "NK1<span class=\"ITSintellisenseLevelDivider\"></span>NK1<span class=\"ITSintellisenseLevelDivider\"></span>5 Phone Number<span class=\"ITSintellisenseLevelDivider\"></span>1 Phone Number<span class=\"ITSintellisenseLevelDivider\"></span>12 Unformatted Tel<span class=\"ITSintellisenseSearchMatch\">ep</span>hone number <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.NK1[1][5][1][12]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "NK1<span class=\"ITSintellisenseLevelDivider\"></span>NK1<span class=\"ITSintellisenseLevelDivider\"></span>6 Business Phone Number<span class=\"ITSintellisenseLevelDivider\"></span>1 Business Phone Number<span class=\"ITSintellisenseLevelDivider\"></span>1 Tel<span class=\"ITSintellisenseSearchMatch\">ep</span>hone Number <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.NK1[1][6][1][1]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "NK1<span class=\"ITSintellisenseLevelDivider\"></span>NK1<span class=\"ITSintellisenseLevelDivider\"></span>6 Business Phone Number<span class=\"ITSintellisenseLevelDivider\"></span>1 Business Phone Number<span class=\"ITSintellisenseLevelDivider\"></span>12 Unformatted Tel<span class=\"ITSintellisenseSearchMatch\">ep</span>hone number <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.NK1[1][6][1][12]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "NK1<span class=\"ITSintellisenseLevelDivider\"></span>NK1<span class=\"ITSintellisenseLevelDivider\"></span>13 Organization Name - NK1<span class=\"ITSintellisenseLevelDivider\"></span>1 Organization Name - NK1<span class=\"ITSintellisenseLevelDivider\"></span>9 Name R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.NK1[1][13][1][9]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "NK1<span class=\"ITSintellisenseLevelDivider\"></span>NK1<span class=\"ITSintellisenseLevelDivider\"></span>26 Mother's Maiden Name<span class=\"ITSintellisenseLevelDivider\"></span>1 Mother's Maiden Name<span class=\"ITSintellisenseLevelDivider\"></span>8 Name R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.NK1[1][26][1][8]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "NK1<span class=\"ITSintellisenseLevelDivider\"></span>NK1<span class=\"ITSintellisenseLevelDivider\"></span>30 Contact Person's Name<span class=\"ITSintellisenseLevelDivider\"></span>1 Contact Person's Name<span class=\"ITSintellisenseLevelDivider\"></span>8 Name R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.NK1[1][30][1][8]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "NK1<span class=\"ITSintellisenseLevelDivider\"></span>NK1<span class=\"ITSintellisenseLevelDivider\"></span>31 Contact Person's Tel<span class=\"ITSintellisenseSearchMatch\">ep</span>hone Number<span class=\"ITSintellisenseLevelDivider\"></span>1 Contact Person's Tel<span class=\"ITSintellisenseSearchMatch\">ep</span>hone Number<span class=\"ITSintellisenseLevelDivider\"></span>1 Tel<span class=\"ITSintellisenseSearchMatch\">ep</span>hone Number <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.NK1[1][31][1][1]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "NK1<span class=\"ITSintellisenseLevelDivider\"></span>NK1<span class=\"ITSintellisenseLevelDivider\"></span>31 Contact Person's Tel<span class=\"ITSintellisenseSearchMatch\">ep</span>hone Number<span class=\"ITSintellisenseLevelDivider\"></span>1 Contact Person's Tel<span class=\"ITSintellisenseSearchMatch\">ep</span>hone Number<span class=\"ITSintellisenseLevelDivider\"></span>12 Unformatted Tel<span class=\"ITSintellisenseSearchMatch\">ep</span>hone number <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.NK1[1][31][1][12]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "NK1<span class=\"ITSintellisenseLevelDivider\"></span>NK1<span class=\"ITSintellisenseLevelDivider\"></span>32 Contact Person's Address<span class=\"ITSintellisenseLevelDivider\"></span>1 Contact Person's Address<span class=\"ITSintellisenseLevelDivider\"></span>11 Address R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.NK1[1][32][1][11]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "NK1<span class=\"ITSintellisenseLevelDivider\"></span>NK1<span class=\"ITSintellisenseLevelDivider\"></span>33 Next of Kin/Associated Party's Identifiers<span class=\"ITSintellisenseLevelDivider\"></span>1 Next of Kin/Associated Party's Identifiers<span class=\"ITSintellisenseLevelDivider\"></span>10 Assigning Agency or D<span class=\"ITSintellisenseSearchMatch\">ep</span>artment <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.NK1[1][33][1][10]",
+            "nt": 7,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "ROL<span class=\"ITSintellisenseLevelDivider\"></span>ROL<span class=\"ITSintellisenseLevelDivider\"></span>4 Role Person<span class=\"ITSintellisenseLevelDivider\"></span>1 Role Person<span class=\"ITSintellisenseLevelDivider\"></span>15 Name R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H:child(\"ROL\", 2)[1][4][1][15]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "ROL<span class=\"ITSintellisenseLevelDivider\"></span>ROL<span class=\"ITSintellisenseLevelDivider\"></span>4 Role Person<span class=\"ITSintellisenseLevelDivider\"></span>1 Role Person<span class=\"ITSintellisenseLevelDivider\"></span>23 Assigning Agency or D<span class=\"ITSintellisenseSearchMatch\">ep</span>artment <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H:child(\"ROL\", 2)[1][4][1][23]",
+            "nt": 7,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "ROL<span class=\"ITSintellisenseLevelDivider\"></span>ROL<span class=\"ITSintellisenseLevelDivider\"></span>11 Office/Home Address/Birthplace<span class=\"ITSintellisenseLevelDivider\"></span>1 Office/Home Address/Birthplace<span class=\"ITSintellisenseLevelDivider\"></span>11 Address R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H:child(\"ROL\", 2)[1][11][1][11]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "ROL<span class=\"ITSintellisenseLevelDivider\"></span>ROL<span class=\"ITSintellisenseLevelDivider\"></span>12 Phone<span class=\"ITSintellisenseLevelDivider\"></span>1 Phone<span class=\"ITSintellisenseLevelDivider\"></span>1 Tel<span class=\"ITSintellisenseSearchMatch\">ep</span>hone Number <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H:child(\"ROL\", 2)[1][12][1][1]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "ROL<span class=\"ITSintellisenseLevelDivider\"></span>ROL<span class=\"ITSintellisenseLevelDivider\"></span>12 Phone<span class=\"ITSintellisenseLevelDivider\"></span>1 Phone<span class=\"ITSintellisenseLevelDivider\"></span>12 Unformatted Tel<span class=\"ITSintellisenseSearchMatch\">ep</span>hone number <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H:child(\"ROL\", 2)[1][12][1][12]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "DB1<span class=\"ITSintellisenseLevelDivider\"></span>DB1<span class=\"ITSintellisenseLevelDivider\"></span>3 Disabled Person Identifier<span class=\"ITSintellisenseLevelDivider\"></span>1 Disabled Person Identifier<span class=\"ITSintellisenseLevelDivider\"></span>10 Assigning Agency or D<span class=\"ITSintellisenseSearchMatch\">ep</span>artment <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.DB1[1][3][1][10]",
+            "nt": 7,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "OBX<span class=\"ITSintellisenseLevelDivider\"></span>OBX<span class=\"ITSintellisenseLevelDivider\"></span>16 Responsible Observer<span class=\"ITSintellisenseLevelDivider\"></span>1 Responsible Observer<span class=\"ITSintellisenseLevelDivider\"></span>15 Name R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.OBX[1][16][1][15]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "OBX<span class=\"ITSintellisenseLevelDivider\"></span>OBX<span class=\"ITSintellisenseLevelDivider\"></span>16 Responsible Observer<span class=\"ITSintellisenseLevelDivider\"></span>1 Responsible Observer<span class=\"ITSintellisenseLevelDivider\"></span>23 Assigning Agency or D<span class=\"ITSintellisenseSearchMatch\">ep</span>artment <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.OBX[1][16][1][23]",
+            "nt": 7,
+            "pt": 101,
+            "s": false
+        },
+        {
+            "dt": "DG1<span class=\"ITSintellisenseLevelDivider\"></span>DG1<span class=\"ITSintellisenseLevelDivider\"></span>16 Diagnosing Clinician<span class=\"ITSintellisenseLevelDivider\"></span>1 Diagnosing Clinician<span class=\"ITSintellisenseLevelDivider\"></span>15 Name R<span class=\"ITSintellisenseSearchMatch\">ep</span>resentation Code <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.DG1[1][16][1][15]",
+            "nt": 7,
+            "pt": 101,
+            "s": true
+        },
+        {
+            "dt": "DG1<span class=\"ITSintellisenseLevelDivider\"></span>DG1<span class=\"ITSintellisenseLevelDivider\"></span>16 Diagnosing Clinician<span class=\"ITSintellisenseLevelDivider\"></span>1 Diagnosing Clinician<span class=\"ITSintellisenseLevelDivider\"></span>23 Assigning Agency or D<span class=\"ITSintellisenseSearchMatch\">ep</span>artment <span class=\"ITSintellisenseOptionValue\">()</span>",
+            "ft": "H.DG1[1][16][1][23]",
+            "nt": 7,
+            "pt": 101,
+            "s": false
+        }
+    ],
+    "options_truncated": true,
+    "search_string": "Ep",
+    "trimmed_expression": "H"
+}

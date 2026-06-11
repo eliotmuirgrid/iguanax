@@ -1,0 +1,18 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">file:seek([whence] [, offset])\n</pre><ul><li><code><strong>file</strong></code>: A file handle returned by <code><a href=\"@io.open\" target=\"_blank\">io.open</a></code> or <code><a href=\"@io.popen\" target=\"_blank\">io.popen</a></code> in read/write mode.</li><li><code><strong>whence</strong></code> <em>(optional)</em>: A string representing the reference point for the offset:</li><li class=\"ql-indent-1\"><code>\"set\"</code> – beginning of file (position 0).</li><li class=\"ql-indent-1\"><code>\"cur\"</code> – current position.</li><li class=\"ql-indent-1\"><code>\"end\"</code> – end of file.</li><li><code><strong>offset</strong></code> <em>(optional)</em>: Number of bytes to offset from the base. Defaults to <code>0</code> if omitted.</li></ul><p><br></p><h3>Notes</h3><ul><li>Used to reposition the read/write pointer within a file.</li><li>If called with no arguments, returns the current file position.</li><li>A successful call returns the new position in bytes from the start of the file.</li><li>On error, returns <code>nil</code> and an error message.</li><li>This is useful for partial file reads/writes or calculating remaining content.</li></ul><p><br></p><h3>Returns</h3><ul><li>If successful: the new position in the file, in bytes. <em><u>(number)</u></em></li><li>If failed: <code>nil</code> and an error message. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local file = io.open(\"data.txt\", \"a\")&nbsp; -- \"a\" = append mode\nfile:write(\"Adding more text.\\n\")&nbsp;&nbsp;\nfile:close()\n&nbsp; &nbsp;\nlocal MyFile = io.open(\"data.txt\")\n-- Move to 100 bytes before the end of the file\nlocal FilePos, Error = MyFile:seek(\"end\", -100)\n\n-- Get the current position (same as seek with no args)\nlocal CurrentPos = MyFile:seek()\n\n-- Move to the start of the file (position 0)\nMyFile:seek(\"set\")\n\n-- Move to the end of the file (returns file size in bytes)\nMyFile:seek(\"end\")\n</pre>",
+    "Name": "io:seek",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> <em>(Optional)</em> The base position to seek from. One of <code>\"set\"</code>, <code>\"cur\"</code>, or <code>\"end\"</code></p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>integer</u></em> <em>(Optional)</em> The offset in bytes from the base position.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Sets and gets the file position."
+}

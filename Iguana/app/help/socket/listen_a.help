@@ -1,0 +1,18 @@
+{
+    "Description": "<p>&nbsp;🔄 <strong>Replacement:</strong> <code style=\"background-color: rgb(240, 240, 240); color: rgb(37, 144, 205);\"><a href=\"http://localhost:7654/@net.tcpAsync.listen\" target=\"_blank\">net.tcpAsync.listen</a></code><a href=\"http://localhost:7654/@ipairs\" target=\"_blank\" style=\"color: rgb(37, 144, 205);\">. </a></p><p><a href=\"http://localhost:7654/@ipairs\" target=\"_blank\" style=\"color: rgb(37, 144, 205);\"> ⚠</a>️ <strong>Deprecated:</strong> <code style=\"background-color: rgb(240, 240, 240);\">socket.listen_a</code> has been deprecated.&nbsp;</p><p><br></p><h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">socket.listen_a{port=12345, ssl = {cert=\"server.crt\", key=\"server.key\"}}\n</pre><ul><li><code><strong>port</strong></code>: Required. The port number on which the socket will accept connections.</li><li><code><strong>ssl</strong></code>: Optional table to configure TLS. If omitted, connection is unencrypted.</li></ul><p><br></p><h3>Notes</h3><ul><li>Invokes <code>socket.onAccept</code> when a new client connects.</li><li>Once connected, <code>socket.onData</code> is used to process incoming data.</li><li>Use <code>socket.close_a</code> to manually close a connection.</li><li>TLS support allows secure communication when <code>ssl</code> parameters are properly provided.</li><li><strong>Deprecated</strong>: This function will be removed in a future version. Migrate to <code>net.tcpAsync.listen</code>.</li></ul>",
+    "Name": "socket.listen_a",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>integer</u></em> The port to listen on.</p>",
+            "Name": "port",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>table</u></em> The 'ssl' table, when used, enables TLS/SSL. It may contain these parameters:</p><p><br></p><ul><li>cert : the name of your certificate file.</li><li>key : the name of your private key file.</li><li>verify_peer : whether peer verification is enabled.</li><li>ca_file : the path to the ca_file.</li></ul>",
+            "Name": "ssl",
+            "Required": false
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "*DEPRECATED* - Use net.tcpAsync.listen instead."
+}

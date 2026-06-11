@@ -1,0 +1,18 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">os.fs.access(path [, mode])\n</pre><ul><li><code><strong>path</strong></code>: The file or directory path to test.</li><li><code><strong>mode</strong></code>: Optional access mode string. Can include:</li><li class=\"ql-indent-1\"><code>'r'</code> – check for read access</li><li class=\"ql-indent-1\"><code>'w'</code> – check for write access</li><li class=\"ql-indent-1\"><code>'x'</code> – check for execute access</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>If <code>mode</code> is omitted, the function checks only for the existence of the file or directory.</li><li>Can be used to verify permissions before performing operations.</li><li>Helps prevent runtime errors due to permission issues or missing files.</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li><code>true</code> if the file exists and is accessible as specified by <code>mode</code> (if provided), otherwise <code>false</code>. <em><u>(bool)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">os.fs.access(\"/tmp/foo\")&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-- exists?\nos.fs.access(\"/tmp/foo\", \"w\")&nbsp; &nbsp; -- writable?\nos.fs.access(\"/tmp/foo\", \"r\")&nbsp; &nbsp; -- readable?\n</pre><ul><li>These examples check for file existence, write access, and read access respectively.</li></ul>",
+    "Name": "os.fs.access",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The path to the file to be checked.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><u>string</u> <em>(Optional)</em> A string containing one or more of <code>'r'</code>, <code>'w'</code>, and <code>'x'</code> to check for read, write, or execute access, respectively.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Determine if you can access the file specified."
+}

@@ -1,0 +1,7 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">iguana.isTest()\n</pre><ul><li>Checks whether the current script is being executed in the Translator editor (test mode).</li></ul><p><br></p><h3>Notes</h3><ul><li>Useful for avoiding long waits (<code><a href=\"@util.sleep\" target=\"_blank\">util.sleep</a></code>) or irreversible operations during development.</li><li>Helps ensure safer test runs within the Translator editor.</li></ul><p><br></p><h3>Returns</h3><ul><li><code>true</code> if the script is running in the editor <em><u>(bool)</u></em></li><li><code>false</code> if the script is running in a live component <em><u>(bool)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local TestMode = iguana.isTest()\nif not TestMode then\n&nbsp; &nbsp;-- Perform a non-repeatable operation like writing to a file or a database\nelse\n&nbsp; &nbsp;-- We are currently in test mode\nend\n</pre>",
+    "Name": "iguana.isTest",
+    "Parameters": null,
+    "ParameterTable": false,
+    "SummaryLine": "Determine if this script is running in the editor (test mode)."
+}

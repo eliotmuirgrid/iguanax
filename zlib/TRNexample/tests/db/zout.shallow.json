@@ -1,0 +1,39 @@
+{
+    "cursor_position": 12,
+    "full_expression": "T.Kin[1].",
+    "help_file": "",
+    "line_number": 7,
+    "options": [
+        {
+            "dt": "GivenName <span class=\"ITSintellisenseOptionValue\">(<span    class='clrz_str'>'Eliot'</span>)</span>",
+            "ft": "T.Kin[1].GivenName",
+            "nt": 6,
+            "pt": 50,
+            "s": true
+        },
+        {
+            "dt": "LastName <span class=\"ITSintellisenseOptionValue\">(<span    class='clrz_str'>'Muir'</span>)</span>",
+            "ft": "T.Kin[1].LastName",
+            "nt": 6,
+            "pt": 50,
+            "s": true
+        },
+        {
+            "dt": "Relation <span class=\"ITSintellisenseOptionValue\">(<span    class='clrz_str'>'Friend'</span>)</span>",
+            "ft": "T.Kin[1].Relation",
+            "nt": 6,
+            "pt": 50,
+            "s": true
+        },
+        {
+            "dt": "Id <span class=\"ITSintellisenseOptionValue\">(<span    class='clrz_kw'>NULL</span>)</span>",
+            "ft": "T.Kin[1].Id",
+            "nt": 7,
+            "pt": 50,
+            "s": true
+        }
+    ],
+    "options_truncated": false,
+    "search_string": "",
+    "trimmed_expression": "T.Kin[1]"
+}

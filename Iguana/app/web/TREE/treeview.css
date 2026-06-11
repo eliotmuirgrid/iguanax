@@ -1,0 +1,75 @@
+/*
+ * Styles for the custom iNTERFACEWARE Treeview control.
+ */
+ 
+ul.ifwareTreeview
+{
+   padding-left: 0px;
+   margin-left: 4px;
+}
+
+ul.ifwareTreeview ul
+{
+   padding: 0px;
+   margin: 3px 0 0 18px;
+}
+
+ul.ifwareTreeview li
+{
+   padding: 2px 0 1px 0px;
+   list-style-type: none;
+   white-space: nowrap;
+}
+
+ul.ifwareTreeview li div
+{
+   white-space: nowrap;
+   display: inline-block;
+}
+
+ul.ifwareTreeview span.treeIcon
+{
+   width: 16px;
+   height: 16px;
+   padding: 0px;
+   margin: 0px;
+   background-position: center center;
+   background-repeat: no-repeat;
+   cursor: pointer;
+   display: inline-block;
+   vertical-align: top;
+}
+
+ul.ifwareTreeview li.collapsable span.treeIcon
+{
+   background-image: url(/TREE/images/arrow-expanded.gif);
+}
+
+ul.ifwareTreeview li.expandable span.treeIcon
+{
+   background-image: url(/TREE/images/arrow-contracted.gif);
+}
+
+ul.ifwareTreeview li.leaf span.treeIcon
+{
+   background-image: none;
+   cursor: default;
+}
+
+ul.ifwareTreeview span.nodeText
+{
+    height: 16px;
+    padding: 1px 0 0 25px;
+    display: inline-block;
+    margin-left: -0.5em;
+    background-position: 5px 0px;
+    background-repeat: no-repeat;
+    white-space: pre;
+}
+
+ul.ifwareTreeview span.hover,
+ul.ifwareTreeview span.hover *
+{
+   color: #215FA3;
+   cursor: pointer;
+}

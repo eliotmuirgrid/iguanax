@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="8px" height="8px" viewBox="0 0 8 8" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <title>dis_r_stop_arrow</title>
+    <g id="dis_r_stop_arrow" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M3.91666667,1 L3.91666667,2.8 L1,2.8 L1,5.2 L3.91666667,5.2 L3.91666667,7 L6.83333333,4 L3.91666667,1 Z M7.625,1 C7.83210678,1 8,1.16789322 8,1.375 L8,6.625 C8,6.83210678 7.83210678,7 7.625,7 C7.41789322,7 7.25,6.83210678 7.25,6.625 L7.25,1.375 C7.25,1.16789322 7.41789322,1 7.625,1 Z" id="Shape-Copy" fill="#E2E5E8"></path>
+    </g>
+</svg>

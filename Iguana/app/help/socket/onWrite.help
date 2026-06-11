@@ -1,0 +1,13 @@
+{
+    "Description": "<p>&nbsp;🔄 <strong>Replacement:</strong> <code style=\"background-color: rgb(240, 240, 240); color: rgb(37, 144, 205);\"><a href=\"http://localhost:7654/@net.tcpAsync:send\" target=\"_blank\">net.tcpAsync:setOnSendComplete</a></code><a href=\"http://localhost:7654/@ipairs\" target=\"_blank\" style=\"color: rgb(37, 144, 205);\">. </a></p><p><a href=\"@net.tcpAsync:setOnSendComplete\" target=\"_blank\" style=\"color: rgb(37, 144, 205);\"> </a><a href=\"http://localhost:7654/@ipairs\" target=\"_blank\" style=\"color: rgb(37, 144, 205);\">⚠</a>️ <strong>Deprecated:</strong> <code style=\"background-color: rgb(240, 240, 240);\">socket.onWrite</code> has been deprecated.&nbsp;</p><p><br></p><h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">socket.onWrite(Id)\n</pre><ul><li><code><strong>Id</strong></code>: The connection identifier for the socket that is now ready to send more data.</li></ul><p><br></p><h3>Notes</h3><ul><li>This function is automatically invoked by the runtime when the socket is ready to send additional data.</li><li>Typically used to continue sending buffered data in non-blocking socket communication patterns.</li><li><strong>Deprecated</strong>: This function will be removed in a future version. Use <code>net.tcpAsync:setOnSendComplete</code> instead for all new implementations.</li></ul><p><br></p><h3>Returns</h3><ul><li>This function does not return a value.</li></ul>",
+    "Name": "socket.onWrite",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>integer</u></em> The ID of the open connection.</p>",
+            "Name": "Id",
+            "Required": true
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "*DEPRECATED* - Use net.tcpAsync:setOnSendComplete instead."
+}

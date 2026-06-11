@@ -1,0 +1,10 @@
+{
+   "Name": "DICOM_SR (From Translator)",
+   "LuaDependencies": [
+      "mapping",
+      "sr"
+   ],
+   "OtherDependencies": [
+      
+   ]
+}

@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">Node:childCount([Name])\n</pre><ul><li><code><strong>Node</strong></code>: The parent node whose children are to be counted.</li><li><code><strong>Name</strong></code> <em>(optional)</em>: The name of the children to count (filters the count to just those).</li></ul><p><br></p><h3>Notes</h3><ul><li>Without a parameter, it returns the total number of child nodes.</li><li>With a string argument, it counts only child nodes matching the provided name.</li><li>Supports both full function and shorthand colon syntax.</li></ul><p><br></p><h3>Returns</h3><ul><li>The number of child nodes. <em><u>(integer)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Xml = [[&lt;note&gt;\n&lt;to&gt;John&lt;/to&gt;\n&lt;from&gt;Mary&lt;/from&gt;\n&lt;heading&gt;Reminder&lt;/heading&gt;\n&lt;body&gt;The samples are in Room 204. Please check them before the end of the day.&lt;/body&gt;\n&lt;detail&gt;Room 204&lt;/detail&gt;\n&lt;detail&gt;2025-06-23&lt;/detail&gt;\n&lt;detail&gt;Wing C&lt;/detail&gt;\n&lt;detail&gt;false&lt;/detail&gt;\n&lt;/note&gt;]]\n&nbsp; &nbsp;\nlocal XmlRoot = xml.parse{data=Xml}.note\n-- Count all children\nlocal count = XmlRoot:childCount()\n\n-- Count children named \"Name\"\nlocal nameCount = XmlRoot:childCount(\"detail\")\n</pre><ul><li>These examples demonstrate both total child counting and filtered counting for children named <code>\"detail\"</code>.</li></ul>",
+    "Name": "node:childCount",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> <em>(Optional)</em> If provided, only children with this name are counted.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Determines the number of children a node has, optionally filtering by name."
+}

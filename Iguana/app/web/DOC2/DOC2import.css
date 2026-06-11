@@ -1,0 +1,20 @@
+.DOC2source{
+   background: #555;         /* button background */
+   color: white;             /* text color */
+   border: none;             /* remove default border */
+   padding: 8px 14px;        /* size */
+   border-radius: 4px;       /* rounded corners */
+   cursor: pointer;          /* pointer cursor on hover */
+   font-size: 14px;          /* text size */
+   transition: background 0.3s ease; /* smooth hover effect */
+ }
+ 
+ .DOC2source:hover {
+   background: #777;         /* hover effect */
+ }
+ 
+ .DOC2config{
+   width: 100%;       /* take up most of the dialog’s width */
+   box-sizing: border-box;  /* include padding/border in that width */
+   padding: 0.5rem;   /* optional for nicer spacing */
+ }

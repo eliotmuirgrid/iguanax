@@ -1,0 +1,157 @@
+.GITSpane {
+	padding: 32px;
+	padding-bottom: 52px;
+	border-radius: 4px;
+	border: solid 1px var(--grey-400);
+	background-color: var(--white);
+	box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+	border: none;
+	max-width: 800px;
+}
+
+.GITStitle {
+	margin: unset;
+	font-weight: var(--bold);
+	font-size: 20px;
+	line-height: 32px;
+	color: var(--grey-700);
+	padding: 0px 4px 24px;
+	margin-bottom: 0px;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding-left: 10px;
+}
+
+
+.GITSsectionTitle{
+   font-weight: bold;
+   margin: 3px 3px 3px 0px;
+   grid-column-start : 1;
+   grid-column-end : 3;   
+   margin-bottom: 4px;
+   display: grid;
+}
+
+.GITSsectionDesc{
+  	grid-column-start : 1;
+  	grid-column-end : 3;   
+  	color : var(--grey-500);
+  	display: grid;
+}
+
+.GITSstatus{
+   color : var(--grey-500);
+   margin-right: 1em;
+   display: flex;
+   align-items: center;
+}
+
+.GITSlabel, .GITSvalue {
+   margin : 3px;
+}
+
+.GITSvalue {
+   grid-column-start : 2;
+   grid-column-end : 2;
+   display: grid;
+}
+
+.GITSvalue.FORMinputGroup{
+	/* grid-column-start : 1; */
+   /* grid-column-end : 2; */
+   display: flex;
+}
+
+/* .GITSeditButton {
+	grid-column-start : 3;
+	grid-column-end   : 3; 
+	display: flex;
+	align-items: end;
+} */
+
+.GITSlabel {
+	grid-column-start : 1;
+	grid-column-end : 1;
+	font-weight: bold;
+	display: flex;
+	align-items: center;
+}
+
+.GITSbuttonGroup{
+	grid-column-start : 1;
+	grid-column-end   : 3;
+	display :grid; 
+	justify-content: right;
+	padding-top : 12px;
+	padding-bottom : 12px;
+}
+
+.GITSsystemPath{
+	max-height: 30em;
+	overflow-y: auto; 
+	white-space: nowrap;
+	overflow-x: scroll;
+	grid-column-start : 1;
+	grid-column-end : 3;   
+	display : grid;
+	margin-left: 3px;
+ }
+ 
+ .GITShelpContainer{
+	display: grid;
+	grid-template-columns: auto auto auto;
+	padding-left: 4px;
+}
+
+
+.GITSwide{
+   grid-column-start : 1;
+   grid-column-end : 3;	
+   display: grid;
+}
+
+.GITSstatus{
+   color : green;
+}
+
+.GITSerror{
+   color: red;
+}
+
+.GITSimageDiv{
+	border: 1px solid var(--grey-400);
+   border-radius: var(--border-radius);
+   background: var(--grey-200);
+   padding: 12px 24px;
+	display: flex;
+	justify-content: center;
+	overflow: auto;
+}
+
+
+.GITSsectionDesc a{
+	color: var(--blue);
+	text-decoration: unset;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+
+.GITSsectionDesc a:hover{
+	text-decoration: underline;
+}
+
+.GITSgrid{
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	padding-left: 36px;
+}
+.GITSgrid > div{
+	padding-top: 8px;
+	padding-bottom: 8px;
+	padding: 12px;
+	display: grid;
+	row-gap: 8px;
+	font-size: 13px;
+	color: var(--grey-800);
+}

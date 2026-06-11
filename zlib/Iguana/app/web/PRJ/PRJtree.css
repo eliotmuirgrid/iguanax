@@ -1,0 +1,384 @@
+span.PRJicon {
+	display: inline-block;
+	height: 16px;
+	vertical-align: top;
+	background-repeat: no-repeat;
+	cursor: pointer;
+	width: 16px;
+	background-position: center center;
+	margin-right: 4px;
+	position: absolute;
+	right: 24px;
+}
+
+.PRJfileTree {
+	list-style-type: none;
+	white-space: nowrap;
+	/* height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden; */
+	margin-top: 0px;
+	/* margin-left: -4px; */
+	margin-bottom: 8px;
+	/* margin-right: -4px; */
+	padding-left: 0px;
+}
+
+/* Add padding to bottom of file tree to accomodate for popover options menu */
+.PRJfileTree::after {
+	content: '';
+	display: block;
+	height: 100px;
+}
+
+/* style file tree scrollbar */
+.PRJfileTree {
+	--scrollbarBG: #ebf3f6;
+	--thumbBG: #D2DDE8;
+	scrollbar-width: thin;
+	scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+}
+
+.PRJfileTree::-webkit-scrollbar {
+	width: 14px;
+	height: 14px;
+}
+
+.PRJfileTree::-webkit-scrollbar-track {
+	background: var(--scrollbarBG);
+}
+
+.PRJfileTree::-webkit-scrollbar-thumb {
+	background-color: var(--thumbBG);
+	border-radius: 8px;
+	border: 4px solid var(--scrollbarBG);
+}
+
+.PRJfileTree *:hover {
+	cursor: pointer;
+}
+
+.PRJfileTree ul {
+	list-style-type: none;
+	white-space: nowrap;
+	padding-left: 12px;
+	transform: translate(0, 0); /* 'hack' used to enable 'position: fixed;' popovers to move along with scroll */
+}
+
+.PRJfileTree [class^='PRJicon'] {
+	display: flex;
+	align-items: center;
+	color: var(--grey-700);
+	margin-bottom: 4px;
+	padding: 4px 4px 2px 4px;
+	overflow: hidden;
+	white-space: nowrap;
+	text-overflow: ellipsis;
+	position: relative;
+	height: 22px;
+	padding-right: 21px;
+	border: solid 1px transparent;
+}
+
+.PRJlibraryUncommitted,
+.PRJlibraryBehind,
+.PRJlibraryAhead {
+	display: flex !important;
+}
+
+.PRJerrorIcon {
+  display: flex !important;
+  color: red !important;
+}
+
+.PRJfileTree [class^='PRJicon']:hover .PRJfolderMenu,
+.PRJfileTree [class^='PRJicon']:hover .PRJfileMenu {
+	display: inline-block !important;
+}
+
+.PRJfolderMenu,
+.PRJfileMenu {
+	display: inline;
+	right: 0px;
+	position: absolute;
+	background-image: url(/PRJ/PRJiconFileMoreOptions.svg);
+	background-position: center;
+	background-repeat: no-repeat;
+	background-color: transparent;
+	width: 24px;
+	height: 100%;
+	border-radius: 3px;
+	margin-right: 0px;
+}
+
+.PRJfolderMenu.PRJmenuSelected,
+.PRJfileMenu.PRJmenuSelected,
+.PRJfolderMenu:hover,
+.PRJfileMenu:hover {
+	background-color: rgba(179, 221, 245, 0.75);
+}
+
+[class^='PRJicon']::before {
+	height: 16px;
+	width: 16px;
+	vertical-align: middle;
+	display: inline-block;
+	position: relative;
+	top: -1px;
+}
+
+.PRJicon-closedDir::before {
+	content: url(/TRANS/images/project/folder-closed.svg);
+}
+
+.PRJicon-openDir::before {
+	content: url(/TRANS/images/project/folder-open.svg);
+}
+
+.PRJicon-closedDir-untracked::before {
+	content: url(/TRANS/images/project/folder-gs-iconClosedUntracked.svg);
+}
+
+.PRJicon-openDir-untracked::before {
+	content: url(/TRANS/images/project/folder-gs-iconOpenUntracked.svg);
+}
+
+.PRJicon-closedDir-modified::before {
+	content: url(/TRANS/images/project/folder-gs-iconClosedModified.svg);
+}
+
+.PRJicon-openDir-modified::before {
+	content: url(/TRANS/images/project/folder-gs-iconOpenModified.svg);
+}
+
+.PRJicon-closedDir-library-locked::before {
+  content: url(/LIB/LIBiconFolderClosedLocked.svg);
+}
+
+.PRJicon-openDir-library-locked::before {
+	content: url(/LIB/LIBiconFolderOpenLocked.svg);
+}
+
+.PRJicon-closedDir-library-unlocked::before {
+  content: url(/LIB/LIBiconFolderClosed.svg);
+}
+
+.PRJicon-openDir-library-unlocked::before {
+  content: url(/LIB/LIBiconFolderOpen.svg);
+}
+
+.PRJicon-config::before {
+	content: url(/TREE/images/PRJiconConfigFields.svg);
+}
+.PRJicon-config-modified::before {
+	content: url(/TREE/images/PRJiconConfigFieldsModified.svg);
+}
+.PRJicon-config-untracked::before {
+	content: url(/TREE/images/PRJiconConfigFieldUntracked.svg);
+}
+.PRJlibraryWarning,
+.PRJlibraryOutOfSync{
+	content: url("/PRJ/PRJlibraryWarning.svg");
+}
+.PRJlibraryUpdate {
+  content: url("/LIB/LIBiconUpdate.svg");
+}
+
+.PRJicon-file::before {
+	content: url(/TREE/images/message.svg);
+}
+
+.PRJicon-file-renamed::before,
+.PRJicon-file-modified::before {
+	content: url(/TREE/images/file-gs-iconMessageModified.svg);
+}
+
+.PRJicon-file-untracked::before {
+	content: url(/TREE/images/file-gs-iconMessageUntracked.svg);
+}
+
+
+.PRJaddFileOrDir {
+	vertical-align: middle;
+	content: url(/TREE/images/add-file.svg);
+}
+
+.PRJaddFileOrDir:hover {
+	background-image: url(/TREE/images/add-file-hover.svg);
+}
+
+.PRJremoveDir {
+	vertical-align: middle;
+	content: url(/TREE/images/remove-dir.svg);
+}
+
+.PRJremoveDir:hover {
+	background-image: url(/TREE/images/remove-dir-hover.svg);
+}
+
+.PRJselectedSample {
+	background-color: #D2EBEE !important;
+	border-radius: var(--border-radius);
+	font-weight: 600;
+	color: var(--grey-900) !important;
+}
+.PRJfolderSelected {
+	border-radius: var(--border-radius);
+	font-weight: 600;
+	color: var(--grey-900) !important;
+}
+.PRJselected {
+	background-color: #D6E9F3 !important;
+	border-radius: var(--border-radius);
+	font-weight: 600;
+	color: var(--grey-900) !important;
+}
+
+[class^='PRJicon'] {
+	border-radius: var(--border-radius);
+	display: flex;
+	align-items: center;
+	padding-left: 4px;
+}
+
+[class^='PRJicon']::before {
+	margin-right: 4px;
+}
+
+[class^='PRJicon']:hover {
+	background-color: rgba(179, 221, 245, 0.25);
+}
+
+.PRJmoreOptions {
+	background-image: none;
+}
+
+.PRJmoreOptions .POPpopover-wrap {
+	display: none;
+	z-index: 1000;
+	top: -15px;
+	left: 26px;
+}
+
+.PRJfileMenu .POPpopover,
+.PRJlibaryMenu .POPpopover,
+.PRJfolderMenu .POPpopover {
+	/* margin-top: 30px;
+	margin-left: -10px; */
+	width: 120px !important;
+	margin-top: 24px;
+	margin-left: -103px;
+}
+
+.PRJlibaryMenu .POPpopover-wrap,
+.PRJfileMenu .POPpopover-wrap,
+.PRJfolderMenu .POPpopover-wrap {
+	display: none;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+}
+
+.PRJlibaryMenu .POPpopover-contents,
+.PRJfileMenu .POPpopover-contents,
+.PRJfolderMenu .POPpopover-contents {
+	padding: 4px;
+}
+
+.PRJlibaryMenu .POPpopover-contents p,
+.PRJfileMenu .POPpopover-contents p,
+.PRJfolderMenu .POPpopover-contents p {
+	margin: 0;
+	padding: 4px;
+	font-size: 11.5px;
+	font-weight: var(--regular);
+	color: var(--grey-800);
+	border-radius: var(--border-radius);
+}
+
+.PRJlibaryMenu .POPpopover-contents p:hover,
+.PRJfileMenu .POPpopover-contents p:hover,
+.PRJfolderMenu .POPpopover-contents p:hover {
+	background: var(--blue-lighter);
+	font-weight: var(--semibold);
+}
+.PRJmenuSelected .POPpopover-wrap {
+	display: inline;
+	position: relative;
+}
+.PRJmoreOptions .POPpopover-wrap .p--small {
+	margin-top: 0px;
+	margin-bottom: 6px;
+}
+.PRJmoreOptions .POPpopover-wrap .p--small:last-child {
+	margin-bottom: 0px;
+}
+.PRJmoreOptions:hover .POPpopover-wrap {
+	display: block;
+}
+.PRJmoreOptions {
+	background-image: url(/TREE/images/more-options.svg);
+}
+.PRJmoreOptions:hover {
+	background-image: url(/TREE/images/more-options-hover.svg);
+}
+.PRJitemName {
+	overflow: hidden;
+	text-overflow: ellipsis;
+	min-width: 8px;
+	margin-right: 4px;
+}
+.PRJitemTag {
+	align-items: center;
+	color: white;
+	border-radius: 9999px;
+	font-size: 9px;
+	font-weight: 600;
+	line-height: 7px;
+	padding: 0 4px;
+}
+
+.PRJdragging {
+   opacity: 0.35;
+}
+.PRJdropZone {
+   background-color: var(--grey-300);
+   border: 1px var(--grey-400) dashed;
+}
+.PRJmenuBox {
+   border: 1px var(--blue) solid !important;
+}
+
+/* Temporary START*/
+.PRJbuttonGroup{
+   display: flex;
+   align-items: center;
+	column-gap: 2px;
+}
+
+.PRJlibraryButton img,
+.PRJaddFileButton img,
+.PRJaddFolderButton img {
+	margin-left: 4px;
+	margin-right: 4px;
+	margin-bottom: -4px;
+	opacity: 0.6;
+	cursor: pointer;
+	width: 18px;
+	height: 30px;
+}
+.PRJlibraryButton:hover img,
+.PRJaddFolderButton:hover img,
+.PRJaddFileButton:hover img{
+	opacity: 1;
+}
+.PRJtabsAndButtons{
+   display: flex;
+   justify-content: space-between;
+   background-color: rgba(var(---blue-dark), 0.1);
+	padding: 0 8px;
+	padding-right: 4px;
+}
+.PRJtabsSection{
+   flex-grow: 1;
+}

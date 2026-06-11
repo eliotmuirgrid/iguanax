@@ -1,0 +1,23 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">os.fs.chown(path, uid, gid)\n</pre><ul><li><code><strong>path</strong></code>: Absolute or relative path to the target file.</li><li><code><strong>uid</strong></code>: Numeric user ID to assign.</li><li><code><strong>gid</strong></code>: Numeric group ID to assign.</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>This function changes file ownership attributes for a given file.</li><li>Only works on <strong>POSIX-compliant systems</strong> (e.g., Linux, macOS).</li><li><strong>Not supported on Windows</strong>.</li><li>The user running the script must have sufficient permissions (typically root or owner) to change ownership.</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">os.fs.chown(\"/tmp/blah.tmp\", 501,20);\n</pre><ul><li>This example sets the owner of <code>/tmp/blah.tmp</code> to user ID <code>501</code> and group ID <code>20</code>.</li></ul>",
+    "Name": "os.fs.chown",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The file path to change ownership for.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>integer</u></em> The new user ID to assign.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>integer</u></em> The new group ID to assign.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Changes the owner and group IDs of a file."
+}

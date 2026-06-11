@@ -1,0 +1,18 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">debug.setfenv(f, table)\n</pre><ul><li><code><strong>f</strong></code>: A Lua function whose environment is being modified.</li><li><code><strong>table</strong></code>: The new environment table to assign to the function.</li></ul><p><br></p><h3>Notes</h3><ul><li>All global variables in Lua reside in environment tables.</li><li>Each Lua function maintains a reference to an environment table.</li><li>When a Lua function is created, it inherits the environment from the context where it was defined.</li><li>This environment can be changed using <code>debug.setfenv</code> (to assign a new one) or <code><a href=\"@debug.getfenv\" target=\"_blank\">debug.getfenv</a></code> (to retrieve it).</li><li>This function only works on Lua functions. C functions always use the global environment (<code>_G</code>) and cannot have their environments changed via Lua.</li></ul><p><br></p><h3>Returns</h3><ul><li>The function <code>f</code>. <em><u>(function)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local env = { greeting = \"hello\" }\n\nlocal function greet()\n&nbsp; &nbsp;return greeting\nend\n\nfunction main()\n&nbsp; &nbsp;debug.setfenv(greet, env)\n&nbsp; &nbsp;print(greet())&nbsp; -- prints \"hello\"\nend\n</pre><ul><li>The function <code>greet()</code> accesses the <code>greeting</code> key from its new environment table.</li></ul>",
+    "Name": "debug.setfenv",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>function</u></em> The function to set the environment for.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>table</u></em> The new environment to assign.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Sets the environment of a function to the given table."
+}

@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">filter.base64.enc(data)\n</pre><ul><li><code><strong>data</strong></code>: The plain string you want to encode using Base64.</li></ul><p><br></p><h3>Returns</h3><ul><li>An encoded string. <em><u>(string)</u></em></li></ul><h4><br></h4><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local X = filter.base64.enc(\"This is life\")\nlocal D = filter.base64.dec(X)\n</pre><ul><li><code>X</code> will hold the Base64-encoded version of <code>\"This is life\"</code>.</li><li><code>D</code> will decode it back to the original string using <code>filter.base64.dec</code>.</li></ul>",
+    "Name": "filter.base64.enc",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The string to encode.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Encodes data as Base64."
+}

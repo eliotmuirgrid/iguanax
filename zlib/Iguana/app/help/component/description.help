@@ -1,0 +1,7 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">component.description()\n</pre><ul><li>Returns the description of the current component as a string.</li></ul><p><br></p><h3>Notes</h3><ul><li>The description is typically set in the component’s configuration panel.</li></ul><h3><br></h3><h3>Returns</h3><ul><li>The component’s description. <em><u>(string)</u></em></li></ul><p><br></p><h3><strong>Example</strong></h3><pre class=\"ql-syntax\" spellcheck=\"false\">-- Get the description of the current component\nlocal description = component.description()\n\ntrace(description)\n-- Output: \"My Component for Processing Orders\"\n</pre>",
+    "Name": "component.description",
+    "Parameters": null,
+    "ParameterTable": false,
+    "SummaryLine": "Returns a string with the current component's description."
+}

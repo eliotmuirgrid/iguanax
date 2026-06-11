@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">print(&lt;value&gt;, ...)\n</pre><ul><li><code><strong>value</strong></code>: The value to be logged </li><li><code><strong>...</strong></code><em> (optional)</em>: Any additional values to be logged</li></ul><p><br></p><h3>Notes</h3><ul><li>Logs the provided values to the component's logs.</li><li>Multiple arguments are automatically converted to strings and concatenated with tab spacing.</li><li>This function is functionally identical to <code><a href=\"@iguana.logInfo\" target=\"_blank\">iguana.logInfo</a></code>.</li><li>Does <strong>not</strong> support tagging messages with a message ID—use <code>iguana.logInfo</code> if you need message association.</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">print(\"The answer to life, the universe and everything is\", 42)\n</pre><p>This will log:</p><pre class=\"ql-syntax\" spellcheck=\"false\">The answer to life, the universe and everything is\t42\n</pre>",
+    "Name": "print",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>any type</u></em> One or more values to log.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Writes values to the component log as an informational entry."
+}

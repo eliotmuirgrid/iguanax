@@ -1,0 +1,43 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">This is experimental and should not be used for production systems.\n</pre>",
+    "Name": "doc.add",
+    "Parameters": [
+        {
+            "Description": "<p>Title of the document\t</p>",
+            "Name": "title",
+            "Required": true
+        },
+        {
+            "Description": "<p>The raw data of the document</p>",
+            "Name": "data",
+            "Required": true
+        },
+        {
+            "Description": "<p>The time in UTC seconds (since 1st January 1970)</p>",
+            "Name": "created",
+            "Required": true
+        },
+        {
+            "Description": "<p>Array of hash tags to associate with the document.  Tags do not have # in front of them.</p>",
+            "Name": "tags",
+            "Required": true
+        },
+        {
+            "Description": "<p>Markdown summary of document.</p>",
+            "Name": "markdown",
+            "Required": true
+        },
+        {
+            "Description": "<p>File extension, like txt, pdf, eml etc.</p>",
+            "Name": "source",
+            "Required": true
+        },
+        {
+            "Description": "<p>Array specifying the related documents </p>",
+            "Name": "relations",
+            "Required": true
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Experimental - it adds a document to a repository."
+}

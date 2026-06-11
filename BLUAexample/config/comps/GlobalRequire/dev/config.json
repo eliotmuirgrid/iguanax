@@ -1,0 +1,32 @@
+{
+    "fields": [
+        {
+            "default": "Import",
+            "description": "Perform Import or Export Operation",
+            "name": "OperationType",
+            "options": "Import,Export",
+            "type": "List"
+        },
+        {
+            "default": "",
+            "description": "A list of tags separated by space. If empty, imports all components.",
+            "name": "CompTags",
+            "options": "",
+            "type": "String"
+        },
+        {
+            "default": "",
+            "description": "Path to the directory containing the comps folder with components to import.",
+            "name": "TempRepoPath",
+            "options": "",
+            "type": "Folder"
+        },
+        {
+            "default": "false",
+            "description": "[Import Operation Only] If true, restart Iguana instance after importing components.",
+            "name": "isRestart",
+            "options": "",
+            "type": "Bool"
+        }
+    ]
+}

@@ -1,0 +1,131 @@
+.DOClistRow:nth-child(odd){
+   background-color: var(--grey-200);
+}
+.DOClistRow:nth-child(even){
+   background-color: var(--white);
+}
+.DOClistRow.DOChighlight {
+   background-color: rgb(129, 147, 176); 
+   color: black;            
+   padding: 0 2px;             
+   border-radius: 4px;        
+ }
+
+.DOClistRow, .DOClistRowHeader{
+   display: flex;
+   align-items: center;
+   column-gap: 12px;
+   user-select: none;
+   background: var(--white);
+   font-size: 11px;
+   color: var(--grey-800);
+   height: 32px;
+   padding: 0 8px;
+ }
+ .DOClistRowHeader{
+   background-color: #ebf3f6 !important;
+ }
+ 
+ .DOClistRow .DOClistRowCheckBox{
+   flex: 0 0 16px;          
+   width: 16px;
+   height: 16px;
+   margin: 0;               
+ }
+ 
+ .DOClistRow .DOClistRowTitle{
+   flex: 1 1 auto;          
+   min-width: 0;            
+   overflow: hidden;
+   text-overflow: ellipsis;
+   white-space: nowrap;     
+ }
+ 
+ .DOClistRow .DOClistRowDate{
+   flex: 0 0 auto;          
+   white-space: nowrap;
+   text-align: right;      
+   width: 160px;           
+ }
+
+ .DOCtree.DOClistTree {
+   display: grid;
+   grid-template-columns: 1fr 20px;   
+   grid-template-rows: 95% 5%;        
+   height: 100%;
+   min-height: 0;
+ }
+
+.DOClist {
+   grid-column: 1;
+   grid-row: 1;
+   overflow: auto;
+   min-height: 0;
+ }
+ 
+ .DOCscrollbar{
+   grid-column: 2;
+   display: grid;
+   grid-template-rows: auto auto 1fr auto auto;
+ }
+
+.DOCbulkActions {
+   grid-column: 1;
+   grid-row: 2;
+   display: flex;
+   align-items: center;
+   justify-content: space-evenly;
+   padding: 5px;
+   background: #f6f8fa;
+   border-top: 1px solid #e6e8eb;
+ }
+ 
+.DOCrightDisplay.DOClistRightDisplay{
+   display: grid;
+   grid-template-rows: auto auto auto auto minmax(0, 1fr) minmax(8%,8%); 
+   min-height: 0;
+   background-color: #cce0e9;
+}
+
+.DOCtagCloud{
+   grid-row: 6;
+   background-color: var(--grey-200);
+   overflow-y: auto;  
+   overflow-x: hidden;
+}
+
+.DOCtagCloudDiv{
+   margin-right: 3px;
+   cursor: pointer;
+}
+.DOCtagCloudDiv:hover{
+   text-decoration: underline;
+}
+
+.DOCresizeControl{
+  right: -6px;
+  top: 0px;
+  bottom: 0px;
+  width: 10px;
+  padding: 0px;
+  border: 0px;
+  position: absolute;
+  outline: none;
+  cursor: ew-resize;
+  background-color: transparent;
+  z-index: 5;
+}
+.DOCresizeShadow{
+  bottom: 0;
+  top: 0;
+  right: 4px;
+  pointer-events: none;
+  position: absolute;
+  width: 2px;
+  transition: 150ms ease-out;
+}
+
+.DOCresizeControl:hover .DOCresizeShadow {
+  background: var(--blue);
+  transition: 75ms ease-in;
+}

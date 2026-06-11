@@ -1,0 +1,150 @@
+.RELtitle {
+	font-family: var(--font-buttons);
+	font-weight: 500;
+	color: var(--grey-600) !important;
+	letter-spacing: 0.05em;
+	font-size: 11px;
+	user-select: none;
+	margin-top: 6px;
+}
+.RELupstreamDiv{
+   background: var(--white);
+	border: 1px solid var(--grey-400);
+	border-radius: var(--border-radius);
+	margin-top: 12px;
+	overflow: auto;
+}
+.RELupstreamDiv .RELupstreamEntry:nth-child(odd){
+	background-color: var(--grey-200); 
+}
+.RELupstreamDiv .RELupstreamEntry:nth-child(even){
+	background-color: var(--white);
+}
+.RELupstreamEntry{
+	padding: 0px;
+	cursor: pointer;
+	user-select: none;
+}
+.RELupstreamEntry:hover{
+   background-color: rgba(var(---blue-light), 0.5) !important;
+	border-radius: var(--border-radius);
+	box-sizing: border-box;
+}
+.RELentrySelected.RELupstreamEntry:hover{
+   background-color: rgba(var(---blue-light), 0.9) !important;
+}
+.RELupstreamBody{
+	display : grid;
+   grid-template-columns: auto auto 1fr auto auto auto minmax(110px, auto); 
+	/* column-gap: 12px; */
+	padding: 8px;
+}
+.RELentrySelected{
+	background-color: rgba(var(---blue-light), 0.7) !important;
+	border-radius: var(--border-radius);
+	box-sizing: border-box;
+ }
+.RELupstreamHeader{
+   display : grid;
+   grid-template-columns: 1fr auto;
+   column-gap: 12px;
+   border-bottom: solid 1px var(--grey-300);
+	padding: 6px;
+}
+.RELlogEntry{
+   grid-template-columns: auto auto 1fr auto auto auto minmax(110px, auto) !important;
+	padding: 8px 16px;
+}
+.RELlogEntry .LOGcellTime,
+.RELupstreamEntry .LOGcellTime{
+	padding-left: 0px;
+}
+.RELlistDiv{
+	background: var(--white);
+	border: 1px solid var(--grey-400);
+	border-radius: var(--border-radius);
+	margin-top: 12px;
+	overflow: auto;
+ }
+.RELmodal{
+   overflow: hidden;
+}
+.RELnoBorder{
+	border: none !important;
+}
+.RELcellPreview{
+   white-space : pre-wrap;
+   overflow: hidden;
+	color: var(--grey-800);
+	font-family: var(--font-monospace);
+	/* margin-top: 6px; */
+	/* margin-bottom: 4px; */
+	text-align: left;
+	line-height: 24px;
+}
+.RELname{
+	color: var(--grey-600);
+	text-decoration: none;
+	padding-left: 8px;
+	line-height: unset !important;
+}
+.RELname:hover{
+	color: var(--blue);
+	text-decoration: underline;
+}
+.RELwindow{
+	display: grid;
+	grid-template-rows: auto 1fr;
+	max-height: calc(100% - 60px);
+	overflow: hidden;
+}
+.RELdiv{
+	display: grid;
+	height: 100%;
+	overflow: hidden;
+}
+.RELdiv2{
+	/* display: grid; */
+	height: 100%;
+	overflow: hidden;
+}
+.RELwindow .POPpopoutCard-content{
+	padding-top: 22px;
+	background-color: var(--grey-200);
+}
+.RELtitleDiv{
+	display: grid;
+	grid-template-columns: 1fr auto;
+}
+.RELlink{
+	/* color: var(--grey-600); */
+	color: var(--blue);
+	text-decoration: none;
+}
+.RELlink:hover{
+	color: var(--blue);
+	text-decoration: underline;
+}
+.RELgrey{
+	color: var(--grey-500);
+	display: inline;
+	/* line-height: 24px; */
+	margin-left: 8px;
+	padding-left: 4px;
+}
+.RELdetails{
+	color: var(--blue);
+	text-decoration: none;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+.RELdetails:hover{
+	text-decoration: underline;
+}
+.RELcontext{
+	width: 66px;
+}
+.RELnoRelated{
+	padding: 8px;
+	padding-left: 12px;
+}

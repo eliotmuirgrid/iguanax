@@ -1,0 +1,73 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">net.http.trace{url=&lt;value&gt; [, ...]}&nbsp;or&nbsp;net.http.trace(&lt;value&gt;)\n</pre><ul><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>url</strong></code>: The url to fetch data from.</li><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>timeout</strong></code> <em>(optional)</em>: Timeout for operation.</li><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>parameters</strong></code> <em>(optional)</em>: A table of parameters to be passed to the server, and is appended to existing parameters in <code><strong>url</strong></code>.</li><li><code><strong>get_parameters</strong></code> <em>(optional)</em>: A table of parameters to be passed to the server, and is appended to existing parameters in <code style=\"background-color: rgb(240, 240, 240);\"><strong>url</strong></code>. For example, {q='a name'} would be passed as \"?q=a%20name\".</li><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>headers</strong></code> <em>(optional)</em>: A key/value table of HTTP header values (e.g. {['Set-Cookie']='Val'}), or an array of strings (e.g. {'Set-Cookie: Val1','Set-Cookie: Val2'}).</li><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>response_headers_format</strong></code> <em>(optional)</em>: Specifies the output format of the response headers:</li><li class=\"ql-indent-1\"><code style=\"background-color: rgb(240, 240, 240);\">default</code> - a table of key/value pairs from the last response after redirects, where the value is the last value for the given header key</li><li class=\"ql-indent-1\"><code style=\"background-color: rgb(240, 240, 240);\">raw</code> - a table containing every line of every header, including redirects</li><li class=\"ql-indent-1\"><code style=\"background-color: rgb(240, 240, 240);\">multiple</code> - a table of key/value pairs of the form {HeaderKey = {Values={Val1,LastVal},Value=LastVal}} where the values are from the last response after redirects</li><li><code><strong>body</strong></code> <em>(optional)</em>: Data to send to the server. Note that this content should be appropriate for the given headers. No escaping is done. When specified, overrides <code><strong>parameters</strong></code></li><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>auth</strong></code> <em>(optional)</em>: When used, the auth table contains:</li><li class=\"ql-indent-1\"><code style=\"background-color: rgb(240, 240, 240);\">username</code> : the username to send to the HTTP server.</li><li class=\"ql-indent-1\"><code style=\"background-color: rgb(240, 240, 240);\">password</code> : the password to send to the HTTP server.</li><li class=\"ql-indent-1\"><code style=\"background-color: rgb(240, 240, 240);\">method</code> <em>(optional)</em> : the authorization method(s) to allow. See below.</li><li class=\"ql-indent-1\"><code style=\"background-color: rgb(240, 240, 240);\">follow</code> <em>(optional)</em> : continue authorization attempts after redirect. This defaults to false to avoid compromising security.</li><li class=\"ql-indent-1\">The authentication method defaults to <code style=\"background-color: rgb(240, 240, 240);\">basic</code>, but can be changed to:<code style=\"background-color: rgb(240, 240, 240);\">digest</code>, <code style=\"background-color: rgb(240, 240, 240);\">digest-ie</code>, <code style=\"background-color: rgb(240, 240, 240);\">gss-negotiate</code>, <code style=\"background-color: rgb(240, 240, 240);\">ntlm</code>, <code style=\"background-color: rgb(240, 240, 240);\">any</code> (allow any method), <code style=\"background-color: rgb(240, 240, 240);\">anysafe</code> (not <code style=\"background-color: rgb(240, 240, 240);\">basic</code>), or a combination (e.g., {'digest','digest-ie'}). When more than one method is allowed, the server will be asked which it supports before authentication is attempted. </li><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>ssl</strong></code> <em>(optional)</em>: A table that can be provided to configure an SSL connection. Options are detailed below the <strong>Example</strong> section.</li><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>cache_connection_by_host</strong></code> <em>(optional)</em>: When <code style=\"background-color: rgb(240, 240, 240);\">true</code>, re-use the HTTP connection for subsequent requests to the same host. When <code style=\"background-color: rgb(240, 240, 240);\">false</code>, re-use the connection for subsequent requests to the same URL, including the path but not including the query string</li><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>http_version</strong></code> <em>(optional)</em>: The specified HTTP version is just a request. Iguana still prioritizes reusing existing connections so it might then reuse a connection using an HTTP version you have not asked for. This can be set to one of:</li><li class=\"ql-indent-1\"><code style=\"background-color: rgb(240, 240, 240);\">http-1.0</code> : Enforce HTTP 1.0 requests.</li><li class=\"ql-indent-1\"><code style=\"background-color: rgb(240, 240, 240);\">http-1.1</code> : Enforce HTTP 1.1 requests.</li><li class=\"ql-indent-1\"><code style=\"background-color: rgb(240, 240, 240);\">http-2</code> : Attempt HTTP 2 requests. Falls back to HTTP 1.1 if HTTP 2 cannot be negotiated with the server.</li><li class=\"ql-indent-1\"><code style=\"background-color: rgb(240, 240, 240);\">http-2-tls</code> : Attempt HTTP 2 over TLS (HTTPS) only. Falls back to HTTP 1.1 if HTTP 2 cannot be negotiated with the HTTPS server. Uses HTTP 1.1 for HTTP servers.</li><li class=\"ql-indent-1\"><code style=\"background-color: rgb(240, 240, 240);\">http-2-prior-knowledge</code> : Issue non-TLS HTTP requests using HTTP/2 without HTTP/1.1 Upgrade. It requires prior knowledge that the server supports HTTP/2 straight away. HTTPS requests still do HTTP/2 the standard way with a negotiated protocol version in the TLS handshake.</li><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>debug</strong></code> <em>(optional)</em>: When <code style=\"background-color: rgb(240, 240, 240);\">true</code> return verbose debug information - errors thrown will also contain debug information.</li><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>live</strong></code> <em>(optional)</em>: When <code style=\"background-color: rgb(240, 240, 240);\">true</code>, requests are sent while in the editor.</li></ul><p><br></p><h3>Notes</h3><ul><li>Fetches data from an HTTP address using the TRACE method. (Behaves like net.http.post.)</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>Response data. <em>(<u>string)</u></em></li><li>Response code. <em>(<u>integer)</u></em></li><li>Response headers. <em>(<u>table)</u></em></li></ul><p><br></p><h3><strong>Example</strong></h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Results, Code, Headers = net.http.trace{url='http://www.interfaceware.com',  parameters={key='value'}}\n</pre><h3><br></h3><h3>SSL Options</h3><ul><li>The <code style=\"background-color: rgb(240, 240, 240);\"><strong>ssl</strong></code><strong> </strong>table can contain:</li><li class=\"ql-indent-1\"><code style=\"background-color: rgb(240, 240, 240);\">cert</code> : the name of your certificate file.</li><li class=\"ql-indent-1\"><code style=\"background-color: rgb(240, 240, 240);\">cert_type</code> : your certificate's type: PEM (default) or DER.</li><li class=\"ql-indent-1\"><code style=\"background-color: rgb(240, 240, 240);\">key</code> : the name of your private key file.</li><li class=\"ql-indent-1\"><code style=\"background-color: rgb(240, 240, 240);\">key_pass</code> : the password to access your private key.</li><li class=\"ql-indent-1\"><code style=\"background-color: rgb(240, 240, 240);\">key_type</code> : your private key's type: PEM (default), DER, or ENG.</li><li class=\"ql-indent-1\"><code style=\"background-color: rgb(240, 240, 240);\">ssl_engine</code> : the engine to use with 'key_type' ENG.</li><li class=\"ql-indent-1\"><code style=\"background-color: rgb(240, 240, 240);\">verify_peer</code> : verify peer certificate (default true).</li><li class=\"ql-indent-1\"><code style=\"background-color: rgb(240, 240, 240);\">verify_host</code> : verify host certificate matches URL (default true).</li><li class=\"ql-indent-1\"><code style=\"background-color: rgb(240, 240, 240);\">ca_file</code> : the certificate(s) file to use for peer verification.</li><li class=\"ql-indent-1\"><code style=\"background-color: rgb(240, 240, 240);\">issuer_cert</code> : the PEM certificate file to validate the issuer of the peer's certificate during peer validation.</li><li class=\"ql-indent-1\"><code style=\"background-color: rgb(240, 240, 240);\">crl_file</code> : the name of the certificate revocation list to use during peer validation.</li><li class=\"ql-indent-1\"><code style=\"background-color: rgb(240, 240, 240);\">ssl_version</code> : use a particular SSL version(s). Possible values for ssl_version are tls-v1, tls-v1.1, tls-v1.2, tls-v1.3. The default behavior is to try tls-v1.3 and then tls-v1.2. Specifying tls-v1 will allow connections to use all tls versions (starting with tls-v1.3 down to tls-v1.0).</li><li class=\"ql-indent-1\"><code style=\"background-color: rgb(240, 240, 240);\">cipher_list</code> : Provide a list of ciphers in OpenSSL format to use. Use cipher_suite_list to set ciphers for TLSv1.3.</li><li class=\"ql-indent-1\"><code style=\"background-color: rgb(240, 240, 240);\">cipher_suite_list</code> : Provide a list of TLSv1.3 cipher suites in OpenSSL format to use.</li></ul>",
+    "Name": "net.http.trace",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u> </em>The URL to fetch data from.</p>",
+            "Name": "url",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>integer</u> </em>Timeout for the operation (default = <code>15</code> seconds).</p>",
+            "Name": "timeout",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u> </em>A table of parameters to be passed to the server, and is appended to existing parameters in 'url'.</p>",
+            "Name": "parameters",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u> </em>A table of GET parameters to be passed to the server, and is appended to existing parameters in 'url'. E.g., {q='a name'} would be passed as \"?q=a%20name\".</p>",
+            "Name": "get_parameters",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>table</u> </em>A key/value table of HTTP header values, or an array of strings.</p>",
+            "Name": "headers",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>table</u> </em>Specifies the output format of the response headers. See Usage.</p>",
+            "Name": "response_headers_format",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u> </em>Data to be sent to the server. No escaping is done. When specified, overrides 'parameters'.</p>",
+            "Name": "body",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>table</u> </em>An 'auth' table with information about credentials and the authorization method(s) to use. See Usage.</p>",
+            "Name": "auth",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>table</u> </em>The 'ssl' table, which can be used to configure SSL connection parameters. See Usage.</p>",
+            "Name": "ssl",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>bool</u> </em>When true, re-use the HTTP connection for subsequent requests to the same host. When false, re-use the connection for subsequent requests to the same URL, including the path but not including the query string. (default is <code>true</code>).</p>",
+            "Name": "cache_connection_by_host",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u> </em>Specifies which HTTP version(s) to use for the request (default = <code>http-2-tls</code>).</p>",
+            "Name": "http_version",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>bool</u> </em>When true return verbose debug information - errors thrown will also contain debug information (default is <code style=\"background-color: rgb(240, 240, 240);\">false</code>).</p>",
+            "Name": "debug",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>bool</u> </em>When true, requests are sent while in the editor (default is <code style=\"background-color: rgb(240, 240, 240);\">false</code>).</p>",
+            "Name": "live",
+            "Required": false
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Fetches data from an HTTP address using the TRACE method."
+}

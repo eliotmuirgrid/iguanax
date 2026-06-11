@@ -1,0 +1,7 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">iguana.version()\n</pre><p><br></p><h3>Notes</h3><ul><li>The table contains three fields, which make up the version info as a whole: the major number, the minor number, and the build number.</li></ul><p><br></p><h3>Returns</h3><ul><li>A table containing the version information for Iguana. <em><u>(table)</u></em></li></ul><p><br></p><h3><strong>Example</strong></h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Version = iguana.version();\n</pre>",
+    "Name": "iguana.version",
+    "Parameters": null,
+    "ParameterTable": false,
+    "SummaryLine": "Get the version info of Iguana."
+}

@@ -1,0 +1,7 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">iguana.appDir()\n</pre><p><br></p><h3>Notes</h3><ul><li>This is useful when you need to access files relative to the Iguana installation directory, such as configuration files or binaries.</li></ul><p><br></p><h3>Returns</h3><ul><li>The directory name as an absolute path. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Dir = iguana.appDir()\n-- Example output: '/path/to/iguana/executable/Iguana/app/bin/'\n</pre><ul><li>The value of <code>Dir</code> will be the full path to the directory where the Iguana process is running from.</li></ul>",
+    "Name": "iguana.appDir",
+    "Parameters": null,
+    "ParameterTable": false,
+    "SummaryLine": "Returns the directory where the Iguana executable resides."
+}

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="32px" height="32px" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 58 (84663) - https://sketch.com -->
+    <title>icon / 32px / msg-server-success</title>
+    <desc>Created with Sketch.</desc>
+    <g id="icon-/-32px-/-msg-server-success" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="Server-Success" transform="translate(6.000000, 6.000000)">
+            <path d="M20,10 C20,15.5225 15.5225,20 10,20 C4.4775,20 0,15.5225 0,10 C0,4.4775 4.4775,0 10,0 C15.5225,0 20,4.4775 20,10 L20,10 Z" id="Fill-1539" fill="#A1D271"></path>
+            <path d="M20,10 C20,15.5225 15.5225,20 10,20 C4.4775,20 0,15.5225 0,10 C0,4.4775 4.4775,0 10,0 C15.5225,0 20,4.4775 20,10 L20,10 Z" id="Stroke-1540" stroke="#82C341" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M6,10 L9,13" id="Path" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></path>
+            <path d="M9,13 L15,7" id="Path" stroke="#FFFFFF" stroke-width="2" stroke-linecap="round"></path>
+        </g>
+    </g>
+</svg>

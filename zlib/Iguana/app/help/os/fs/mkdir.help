@@ -1,0 +1,23 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">os.fs.mkdir{path [, mode] [, parents]}\n</pre><ul><li><code><strong>path</strong></code>: Directory path to create.</li><li><code><strong>mode</strong></code>: Optional access permissions in POSIX format (e.g., <code>\"755\"</code>).</li><li><code><strong>parents</strong></code>: If set to <code>true</code>, creates parent directories as needed.</li></ul><p><br></p><h3>Notes</h3><ul><li>If any of the parent directories in the <code>path</code> are missing and <code>parents</code> is not set, an error is thrown.</li><li>When using the alternative usage (<code>os.fs.mkdir(path [, mode])</code>), the <code>parents</code> parameter is not supported and must be omitted.</li></ul><p><br></p><h3>Returns</h3><ul><li>No return value. Errors will be thrown on failure.</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">os.fs.mkdir{path=\"foo/bar\", mode=\"744\", parents=true}\n\n-- alternatively\nos.fs.mkdir(\"/tmp/foo\")\nos.fs.mkdir(\"/tmp/foo\", \"4644\")\n</pre>",
+    "Name": "os.fs.mkdir",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The directory path to be created.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u></em> <em>(Optional)</em> Mode of access to apply (default = <code>\"755\"</code>).</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>bool</u></em> <em>(Optional)</em> If <code>true</code>, creates intermediate directories as required.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Create a new directory."
+}

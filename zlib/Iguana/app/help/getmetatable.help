@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">getmetatable(object)\n</pre><ul><li><code><strong>object</strong></code>: The Lua table to get the metatable for. </li></ul><p><br></p><h3>Notes</h3><ul><li>Returns the metatable of the given table, if the table does not have a metatable it returns nil.</li><li>If the table's metatable has a <code>__metatable</code> field then this value is returned instead.</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li><span style=\"background-color: initial;\">Metata</span>ble if it exists, otherwise nil. <em><u>(table)</u></em> or <em><u>(nil)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">-- Example: Get metatable for a XML userdata structure\nlocal X = xml.parse{data=\"&lt;patient/&gt;\"}\nlocal MT = getmetatable(X)\n\n-- Example: Get metatable of the db object:\nlocal DbMT = getmetatable(db)\n</pre>",
+    "Name": "getmetatable",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>table</u> </em>Table or userdata object to return metatable for. </p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Returns the metatable of an object."
+}

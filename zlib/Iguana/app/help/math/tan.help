@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">math.tan(x)\n</pre><ul><li><code><strong>x</strong></code>: The angle in radians whose tangent is to be calculated.</li></ul><p><br></p><h3>Returns</h3><ul><li>The tangent of <code>x</code>. <em><u>(number)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local T = math.tan(1)\n</pre><ul><li>This stores the tangent of 1 radian in the variable <code>T</code>.</li></ul>",
+    "Name": "math.tan",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>number</u></em> The angle (in radians) to calculate the tangent from.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Calculates a tangent of an angle (in radians)."
+}

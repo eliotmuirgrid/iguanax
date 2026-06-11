@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">conn:rollback{live = true|false}\n</pre><ul><li><code><strong>conn</strong></code>: The database connection object.</li><li><code><strong>live</strong></code> <em>(optional)</em>: flag to indicate execution in the editor environment.</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>Reverts any changes made during the current transaction.</li><li>Should only be used if <code><a href=\"@db:begin\" target=\"_blank\">db:begin</a></code> was called earlier.</li><li>Useful in error-handling scenarios to ensure data integrity.</li><li>On databases that do not support transactions, this function has no effect (acts as a no-op).</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local conn = db.connect{\n&nbsp; &nbsp;api = db.MY_SQL,\n&nbsp; &nbsp;name = 'test@localhost',\n&nbsp; &nbsp;user = 'root',\n&nbsp; &nbsp;password = 'secret'\n}\n\nconn:begin()\n\n-- Do database operations\n-- if error conn:rollback()\n\nconn:commit()&nbsp; -- end the transaction\n</pre><ul><li>This example demonstrates how to start a transaction, perform operations, and roll back if needed before committing.</li></ul>",
+    "Name": "db:rollback",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>bool</u></em> If <code>true</code>, the rollback will be executed in the editor (default is <code>true</code>).</p>",
+            "Name": "live",
+            "Required": false
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Rolls back a transaction, if one has begun."
+}

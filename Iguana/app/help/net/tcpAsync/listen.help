@@ -1,0 +1,23 @@
+{
+    "Description": "<h3><strong>Usage</strong></h3><pre class=\"ql-syntax\" spellcheck=\"false\">net.tcpAsync.listen{\n&nbsp; &nbsp; port&nbsp; &nbsp; &nbsp;= &lt;port&gt;,\n&nbsp; &nbsp; onAccept = &lt;on_accept_function&gt;,\n&nbsp; &nbsp; ssl&nbsp; &nbsp; &nbsp; = &lt;ssl_table&gt;\n}\n</pre><ul><li><code><strong>port</strong></code>: The port to listen on.</li><li><code><strong>onAccept</strong></code>: A Lua function that will be called when a new connection is accepted. It receives the socket and client IP.</li><li><code><strong>ssl</strong></code> <em>(optional)</em>:  A table to enable and configure TLS/SSL encryption for secure communication. The table supports the keys:</li><li class=\"ql-indent-1\"><code>cert</code> - the path to the certificate file</li><li class=\"ql-indent-1\"><code>key</code> - the path to the private key file</li><li class=\"ql-indent-1\"><code>verify_peer</code> - if <code>true</code>, peer verification is enabled</li><li class=\"ql-indent-1\"><code>ca_file</code> - the path to the certificate authority file</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>This function listens for connect requests on the specified port </li><li>Whenever a client attempts to connect to the port, Iguana calls the onAccept function and a new connection is created</li><li>The <code>onAccept</code> Lua function accepts two arguments: the asynchronous socket connection handle and the client address. These are handled by Iguana and do not need to be passed in.</li><li>In <code>onAccept</code>, the <code><a href=\"@net.tcpAsync:setOnDataReceived\" target=\"_blank\">setOnDataReceived</a></code>, <code><a href=\"@net.tcpAsync:setOnSendComplete\" target=\"_blank\">setOnSendComplete</a></code>, and <code><a href=\"@net.tcpAsync:setOnSocketClosed\" target=\"_blank\">setOnSocketClosed</a></code> methods should be called on the socket object to handle the corresponding socket events</li><li>The functions set up by <code>setOnDataReceived</code>, <code>setOnSendComplete</code> and <code>setOnSocketClosed</code> are callback functions and will not show annotations because of the asynchronous nature of communication</li></ul><p><br></p><h3><strong>Example</strong></h3><pre class=\"ql-syntax\" spellcheck=\"false\">local ConnectionMap = {}\n\nlocal function onData(Socket, Buffer)\n   iguana.logDebug(Socket .. \" received data \" .. Buffer)\n   local conn = ConnectionMap[Socket]\n   conn.buffer = conn.buffer .. Buffer\n   -- request handling logic omitted\n   Socket:send(\"HTTP/1.1 200 OK\\r\\n\\r\\n\")\nend\n\nlocal function onWrite(Socket)   -- optional callback function\n   iguana.logDebug(Socket .. \" ready to receive more data\")\nend\n\nlocal function onClose(Socket, Buffer, Err)\n   iguana.logDebug(Socket .. \" closed\")\n   if Err then\n      iguana.logDebug(Err)\n   end\n   ConnectionMap[Socket] = nil\nend\n\nlocal function onAccept(Socket, ClientIp)\n   iguana.logDebug(Socket .. \" created for \" .. ClientIp)\n   Socket:setOnRead(onData)\n   Socket:setOnWrite(onWrite)\n   Socket:setOnClose(onClose)\n   ConnectionMap[Socket] = { buffer = \"\" }\nend\n\nfunction main()\n &nbsp; net.tcpAsync.listen{port=8888, onAccept=onAccept}\nend\n\n</pre>",
+    "Name": "net.tcpAsync.listen",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>integer</u> </em>The port number on which to listen for incoming connections.</p>",
+            "Name": "port",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>function</u> </em>A Lua function called when a new client connection is accepted.</p>",
+            "Name": "onAccept",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>table</u> </em>A table enabling TLS/SSL encryption for incoming connections. See the Usage section for supported keys.</p>",
+            "Name": "ssl",
+            "Required": false
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Listens for incoming asynchronous socket connection requests on a specified port."
+}

@@ -1,0 +1,7 @@
+.SPINspinner{
+   background-image: url(/TRANS/images/spinner.gif);
+   opacity: 0.5;             /* Standard style for transparency */
+   filter: alpha(opacity=5); /* For IE */
+   height: 16px;
+   width: 16px;
+}

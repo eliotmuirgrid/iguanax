@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+	<symbol id="CORiconUserProfile" viewBox="0 0 24 24">
+		<path fill-rule="evenodd" d="M12 13.25c1.669 0 5 .838 5 2.5V17H7v-1.25c0-1.662 3.331-2.5 5-2.5zM12 7a2.5 2.5 0 11.001 4.999A2.5 2.5 0 0112 7zm0-5C6.47 2 2 6.47 2 12s4.47 10 10 10 10-4.47 10-10S17.53 2 12 2zm0 18c-4.41 0-8-3.59-8-8s3.59-8 8-8 8 3.59 8 8-3.59 8-8 8z"/>
+	</symbol>
+</svg>

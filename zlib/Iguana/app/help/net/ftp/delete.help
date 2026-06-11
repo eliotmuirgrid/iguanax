@@ -1,0 +1,18 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">Conn:delete{remote_path = &lt;path&gt;, debug = &lt;true|false&gt;}\n</pre><ul><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>remote_path</strong></code>: The full path to the file on the remote server.</li><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>debug</strong></code> <em>(optional)</em>: Enable debug log. </li></ul><p><br></p><h3>Notes</h3><ul><li>Use <code><a href=\"@net.ftp.init\" target=\"_blank\">net.ftp.init</a></code> to create a connection object.</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li><code style=\"background-color: rgb(240, 240, 240);\">true</code> if the file is deleted successfully. Errors are thrown on failures. <em><u>(bool)</u></em> </li><li>The debug log if <code style=\"background-color: rgb(240, 240, 240);\"><strong>debug</strong></code> is set. (<em><u>string)</u></em></li></ul><p><br></p><h3><strong>Example</strong></h3><pre class=\"ql-syntax\" spellcheck=\"false\">local FtpConn = net.ftp.init{\n  server='example', \n  username='user', \n  password='password',\n-- live=true -- uncomment to run in translator\n}\n\nFtpConn:delete{remote_path='/fox_out/test.txt'}\n</pre>",
+    "Name": "net.ftp:delete",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The full path to the file on the remote server.</p>",
+            "Name": "remote_path",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>bool</u></em> Enable debug log (default is <code style=\"background-color: rgb(240, 240, 240);\">false</code>).</p>",
+            "Name": "debug",
+            "Required": false
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Delete a file from the FTP server."
+}

@@ -1,0 +1,114 @@
+/* for input, textarea, select */
+.FORMinput {
+	height: 28px;
+	border-radius: var(--border-radius);
+	border: 1px solid var(--grey-400);
+	background-color: var(--white);
+	font-weight: var(--regular);
+	font-size: 12px;
+	line-height: 16px;
+	padding: 6px 8px;
+	color: var(--grey-800);
+	width: 100%;
+	box-sizing: border-box;
+	font-family: var(--font-sans);
+}
+
+.FORMinputError {
+	border-color: var(--red-light);
+}
+
+.FORMinputDisabled {
+	border-color: var(--grey-300);
+	color: var(--grey-300);
+	cursor: not-allowed;
+}
+
+.FORMinput::placeholder {
+	color: var(--grey-400);
+}
+
+.FORMselectBox {
+	height: 28px;
+	border-radius: var(--border-radius);
+	border: 1px solid var(--grey-400);
+	background-color: var(--white);
+	font-weight: var(--regular);
+	font-size: 12px;
+	line-height: 16px;
+	color: var(--grey-800);
+	width: 100%;
+	font-family: var(--font-sans);
+	padding: 0px 32px 0px 8px;
+	-moz-appearance: none;
+	-webkit-appearance: none;
+	appearance: none;
+	background-image: url('/FORM/FORMselectBoxArrow.svg');
+	background-repeat: no-repeat, repeat;
+	background-position: right 8px top 50%, 0 0;
+}
+
+.FORMbutton {
+	font-family: var(--font-buttons);
+	font-size: 12px;
+	text-decoration: none;
+	line-height: 12px;
+	font-weight: var(--semibold);
+	letter-spacing: 0.25px;
+	padding: 8px 16px;
+	border: 0;
+	border-radius: var(--border-radius);
+	display: inline-block;
+	cursor: pointer;
+}
+
+/*  When the mouse button is depressed */
+.FORMbutton:active {
+	background-color: var(--grey-600);
+}
+
+/* Used for grouping inputs together with buttons, eg. "Browse" file selectors */
+.FORMinputGroup {
+	display: flex;
+	align-items: center;
+}
+/* .FORMinputGroupDir{
+	display: flex;
+	align-items: center;
+} */
+
+.FORMinputGroup .FORMinput:first-child {
+	border-top-right-radius: 0;
+	border-bottom-right-radius: 0;
+}
+
+.FORMinputGroup .BUTTONstandard {
+	border-top-left-radius: 0;
+	border-bottom-left-radius: 0;
+	border: 1px solid #c9d0d5;
+	border-left: none;
+}
+
+.FORMlabel {
+	font-weight: var(--semibold);
+}
+
+.FORMlabel+.FORMinput,
+.FORMlabel+.FORMselectBox {
+	margin-top: 4px;
+}
+
+.hint {
+	color: var(--red);
+	font-size: 10px;
+	line-height: 12px;
+	margin-top: 4px;
+}
+
+.hint a {
+	color: var(--red);
+}
+
+.hint--hidden {
+	display: none;
+}

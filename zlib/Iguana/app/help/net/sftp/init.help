@@ -1,0 +1,63 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Conn = net.sftp.init{\n  server = &lt;value&gt;, \n  username = &lt;value&gt;, \n  password = &lt;value&gt;,\n  ...\n}\n</pre><ul><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>server</strong></code>: The remote server to connect to.</li><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>username</strong></code>: The username to use when connecting to the remote server.</li><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>password</strong></code><em> (optional)</em>: The password to  use when connecting to the remote server.</li><li><code><strong>port</strong></code> <em>(optional)</em>: The port to connect on.</li><li><code><strong>timeout</strong></code> <em>(optional)</em>:  Timeout in seconds for FTP operations.</li><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>live</strong></code> <em>(optional)</em>: Whether to establish the connection in translator.</li><li><code><strong>public_key_file</strong></code> <em>(optional)</em>: The name of your public key file.</li><li><code><strong>private_key_file</strong></code> <em>(optional)</em>: The name of your private key file.</li><li><code><strong>private_key_pass</strong></code> <em>(optional)</em>: The password to your private key file.</li><li><code><strong>host_fingerprint</strong></code> <em>(optional)</em>: The MD5 checksum of the remote host's public key.</li><li><code><strong>known_hosts</strong></code> <em>(optional)</em>: An OpenSSH known_hosts file for authenticating remote hosts.</li></ul><p><br></p><h3>Notes</h3><ul><li>Initializes a new SFTP connection (Secure FTP) object and caches the connection parameters. This does not open a connection. The actual connections are managed automatically, a connection is opened and closed each time an SFTP command is issued (get, put, etc). Because of this, there is never a need to close an SFTP connection.</li><li>SFTP, the 'SSH File Transfer Protocol', is not related to FTP even though it also transfers files and has a similar command set. SFTP is a program that uses Secure Shell (SSH) to transfer files, and unlike standard FTP, it encrypts both commands and data. The differences from FTP are evident by the reduced number connection options and hence less paramaters for <code>net.sftp.init</code>.</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>A connection object. <em>(<u>table)</u></em></li></ul><p><br></p><h3><strong>Example</strong></h3><pre class=\"ql-syntax\" spellcheck=\"false\">local SftpConn = net.sftp.init{\n  server='example', \n  username='user', \n  password='password'\n}\n\n-- cache the connection parameters\nlocal SftpConn = net.sftp.init{\n  server='foxton_sftp', \n  username='test_sftp',\n  password='secret'\n}\n</pre><p><br></p><p>If you need help with the advanced sftp options please <a rel=\"nofollow\" href=\"http://www.interfaceware.com/contact.html\" target=\"_blank\">contact support</a> at support@interfaceware.com.</p>",
+    "Name": "net.sftp.init",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u> </em>The server to connect to.</p>",
+            "Name": "server",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u> </em>The remote user to login as.</p>",
+            "Name": "username",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u> </em>The password to authenticate with.</p>",
+            "Name": "password",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>integer</u> </em>The port to use (default = <code style=\"background-color: rgb(240, 240, 240);\">22</code>).</p>",
+            "Name": "port",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>integer</u> </em>Timeout for operations (default = <code style=\"background-color: rgb(240, 240, 240);\">15</code> seconds).</p>",
+            "Name": "timeout",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>bool</u> </em>Enable write operations (put, rename, delete) while in the editor (default is <code style=\"background-color: rgb(240, 240, 240);\">false</code>).</p>",
+            "Name": "live",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u> </em>The name of your public key file.</p>",
+            "Name": "public_key_file",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u> </em>The name of your private key file.</p>",
+            "Name": "private_key_file",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u> </em>The password to access your private key.</p>",
+            "Name": "private_key_pass",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u> </em>The MD5 checksum of the remote host's public key, used to authenticate the server (32 hexadecimals).</p>",
+            "Name": "host_fingerprint",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u> </em>If you have have an OpenSSH known_hosts file for authenticating remote hosts, you can specify it here.</p>",
+            "Name": "known_hosts",
+            "Required": false
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Initializes a new SFTP connection (Secure FTP)."
+}

@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">math.floor(x)\n</pre><ul><li><code><strong>x</strong></code>: A number. The function will return the greatest integer less than or equal to this value.</li></ul><p><br></p><h3>Returns</h3><ul><li>The largest integer ≤ <code>x</code>. <em><u>(number)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local R = math.floor(10.5)\n</pre><ul><li>This returns <code>10</code>, the largest integer less than or equal to <code>10.5</code>.</li></ul><p><br></p><p>See also: <code><a href=\"@math.ceil\" target=\"_blank\">math.ceil</a></code></p>",
+    "Name": "math.floor",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>number</u></em> The number to calculate the floor from.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Calculates the largest integer smaller than or equal to a number."
+}

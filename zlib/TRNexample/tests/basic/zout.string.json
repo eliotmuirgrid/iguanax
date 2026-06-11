@@ -1,0 +1,39 @@
+{
+    "cursor_position": 6,
+    "full_expression": "Str",
+    "help_file": "",
+    "line_number": 4,
+    "options": [
+        {
+            "dt": "<span class=\"ITSintellisenseSearchMatch\">Str</span>ing",
+            "ft": "String",
+            "nt": 101,
+            "pt": 0,
+            "s": true
+        },
+        {
+            "dt": "<span class=\"ITSintellisenseSearchMatch\">str</span>ing  <span class=\"ITSintellisenseOptionValue\">({[<span    class='clrz_str'>'sub'</span>]=<span    class='clrz_kw'>function</span>, [<span    class='clrz_str'>'upper'</span>]=<span    class='clrz_kw'>function</span>, [<span    class='clrz_str'>'len'</span>]=<span    class='clrz_kw'>function</span>, [<span    class='clrz_str'>'gfind'</span>]=<span    class='clrz_kw'>function</span>, [<span    class='clrz_str'>'rep'</span>]=<span    class='clrz_kw'>function</span>, [<span    class='clrz_str'>'find'</span>]=<span    class='clrz_kw'>function</span>, [<span    class='clrz_str'>'match'</span>]=<span    class='clrz_kw'>function</span>, [<span    class='clrz_str'>'char'</span>]=<span    class='clrz_kw'>function</span>, [<span    class='clrz_str'>'dump'</span>]=<span    class='clrz_kw'>function</span>, [<span    class='clrz_str'>'gmatch'</span>]=<span    class='clrz_kw'>function</span>, [<span    class='clrz_str'>'reverse'</span>]=<span    class='clrz_kw'>function</span>, [<span    class='clrz_str'>'byte'</span>]=<span    class='clrz_kw'>function</span>, [<span    class='clrz_str'>'format'</span>]=<span    class='clrz_kw'>function</span>, [&hellip;)</span>",
+            "ft": "string",
+            "nt": 5,
+            "pt": 0,
+            "s": false
+        },
+        {
+            "dt": "load<span class=\"ITSintellisenseSearchMatch\">str</span>ing  <span class=\"ITSintellisenseOptionValue\">(<span    class='clrz_kw'>function</span>)</span>",
+            "ft": "loadstring(",
+            "nt": 6,
+            "pt": 0,
+            "s": true
+        },
+        {
+            "dt": "to<span class=\"ITSintellisenseSearchMatch\">str</span>ing  <span class=\"ITSintellisenseOptionValue\">(<span    class='clrz_kw'>function</span>)</span>",
+            "ft": "tostring(",
+            "nt": 6,
+            "pt": 0,
+            "s": true
+        }
+    ],
+    "options_truncated": false,
+    "search_string": "Str",
+    "trimmed_expression": ""
+}

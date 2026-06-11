@@ -1,0 +1,18 @@
+{
+    "Description": "<p>&nbsp;🔄 <strong>Replacement:</strong> <code style=\"background-color: rgb(240, 240, 240); color: rgb(37, 144, 205);\"><a href=\"@net.tcpAsync:send\" target=\"_blank\">net.tcpAsync:send</a></code><a href=\"http://localhost:7654/@ipairs\" target=\"_blank\" style=\"color: rgb(37, 144, 205);\">. </a></p><p><a href=\"http://localhost:7654/@ipairs\" target=\"_blank\" style=\"color: rgb(37, 144, 205);\"> ⚠</a>️ <strong>Deprecated:</strong> <code style=\"background-color: rgb(240, 240, 240);\">socket.send_a</code> has been deprecated.&nbsp;</p><h3><br></h3><h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">socket.send_a(data, connectionId)\n</pre><ul><li><code><strong>data</strong></code>: The string payload to transmit.</li><li><code><strong>connectionId</strong></code>: An integer representing the ID of the socket previously opened.</li></ul><p><br></p><h3>Notes</h3><ul><li>Sends the specified <code>data</code> asynchronously to the given <code>connectionId</code>.</li><li>When the remote host is ready to receive additional data, the <code>socket.onWrite</code> callback function is triggered.</li><li>This function is non-blocking; it returns immediately after initiating the send.</li><li>This API is deprecated and will be removed in a future version.</li></ul><p><br></p><h3>Returns</h3><ul><li>This function does <strong>not</strong> return a value.</li></ul>",
+    "Name": "socket.send_a",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The data to be sent over the socket.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>integer</u></em> The identifier of the open socket connection.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "*DEPRECATED* - Use net.tcpAsync:send instead."
+}

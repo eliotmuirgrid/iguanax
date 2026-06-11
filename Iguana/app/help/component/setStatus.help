@@ -1,0 +1,13 @@
+{
+    "Description": "<p> 🔄  <strong>Replacement:</strong> <code style=\"background-color: rgb(240, 240, 240); color: rgb(37, 144, 205);\"><a href=\"http://localhost:7654/@ui.setStatusMessage\" target=\"_blank\">ui.setStatusMessage</a></code>. </p><p> ⚠️  <strong>Deprecated:</strong>    <code style=\"background-color: rgb(240, 240, 240);\">component.setStatus</code> will be removed in a future version.&nbsp;</p><p><br></p><h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">component.setStatus{data}\n</pre><ul><li><code><strong>data</strong></code>: HTML content used to populate the component's custom status area.</li></ul><p><br></p><h3>Notes</h3><ul><li>This function injects a block of HTML into a section of the component's detail card.</li><li>It is commonly used for debugging, displaying component-specific status, or embedding interactive diagnostic visuals.</li><li>This feature will be removed in a future version. Use <code>ui.setStatusMessage</code> instead.</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">component.setStatus{data=\"&lt;p&gt;Hello World!&lt;/p&gt;\"}\n</pre>",
+    "Name": "component.setStatus",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The HTML block to be displayed within the component detail card.</p>",
+            "Name": "data",
+            "Required": true
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "*DEPRECATED* - Use ui.setStatusMessage instead."
+}

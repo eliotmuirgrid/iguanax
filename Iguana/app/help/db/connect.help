@@ -1,0 +1,43 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local conn = db.connect{\n&nbsp; &nbsp;api&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= &lt;api&gt;,\n&nbsp; &nbsp;name&nbsp; &nbsp; &nbsp; &nbsp; = &lt;name&gt;,\n&nbsp; &nbsp;user&nbsp; &nbsp; &nbsp; &nbsp; = &lt;user&gt;,\n&nbsp; &nbsp;password&nbsp; &nbsp; = &lt;password&gt;,\n&nbsp; &nbsp;live&nbsp; &nbsp; &nbsp; &nbsp; = &lt;true_or_false&gt;,\n&nbsp; &nbsp;use_unicode = &lt;true_or_false&gt;,\n&nbsp; &nbsp;timeout&nbsp; &nbsp; &nbsp;= &lt;timeout_seconds&gt;\n}\n</pre><ul><li><code><strong>api</strong></code>: Specifies the database driver to use.</li><li><code><strong>name</strong></code>: Provides the database name or address.</li><li><code><strong>user</strong></code><strong> / </strong><code><strong>password</strong></code>: Used for authentication (not needed for <code>db.SQLITE</code>).</li><li><code><strong>live</strong></code> <em>(optional)</em>: If <code>true</code> (default), allows database operations to run in the editor; if <code>false</code>, they will not execute.</li><li><code><strong>use_unicode</strong></code> <em>(optional)</em>: When <code>true</code>, enables Unicode communication with the database.</li><li><code><strong>timeout</strong></code> <em>(optional)</em>: Sets the maximum duration for query execution.</li></ul><p><br></p><h3>Notes</h3><ul><li>By default, connections are live, meaning database operations execute interactively in the editor.</li><li>If needed, the connection handle can be stored for later operations.</li></ul><p><br></p><h3>Returns</h3><ul><li>A database connection handle that enables further database operations. <em><u>(db_connection_object)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local conn = db.connect{\n&nbsp; &nbsp;api&nbsp; &nbsp; &nbsp; = db.MY_SQL,\n&nbsp; &nbsp;name&nbsp; &nbsp; &nbsp;= 'MyDatabase',\n&nbsp; &nbsp;user&nbsp; &nbsp; &nbsp;= 'me',\n&nbsp; &nbsp;password = 'secret'\n}\n\n-- Now use the connection object to do a query\nconn:query{sql = 'SELECT * FROM Patients'}\n</pre><ul><li>This example demonstrates how to create a database connection and use it to perform a simple query.</li></ul>",
+    "Name": "db.connect",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>integer</u></em> Database driver type (e.g., <code>db.MY_SQL</code>, <code>db.SQL_SERVER</code>).</p>",
+            "Name": "api",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u></em> Target database name or file (for <code>db.SQLITE</code>).</p>",
+            "Name": "name",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u></em> Username.</p>",
+            "Name": "user",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u></em> Password.</p>",
+            "Name": "password",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>bool</u></em> Whether the connection runs live in the editor.</p>",
+            "Name": "live",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>bool</u></em> Whether to enable Unicode communication.</p>",
+            "Name": "use_unicode",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>integer</u></em> Query timeout in seconds (0 for infinite; default 300). Only for ODBC connections.</p>",
+            "Name": "timeout",
+            "Required": false
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Returns a database connection handle."
+}

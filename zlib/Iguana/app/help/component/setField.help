@@ -1,0 +1,18 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">component.setField{key = &lt;field_name&gt;, value = &lt;new_value&gt;}\n</pre><ul><li><code><strong>key</strong></code>: The name of the custom field.</li><li><code><strong>value</strong></code>: The value to set — can be a string, integer, or bool.</li></ul><p><br></p><h3>Notes</h3><ul><li>This function updates the value of a custom field just like setting it through the component’s configuration card in the UI.</li><li>For more information about custom fields, see <code><a href=\"http://localhost:7654/@component.fields\" target=\"_blank\">component.fields</a></code>.</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">-- Set the port number (integer)\ncomponent.setField{key = \"port\", value = 8080}\n\n-- Set an API key (string)\ncomponent.setField{key = \"API_KEY\", value = \"&lt;your decrypted key here&gt;\"}\n\n-- Enable maintenance flag (bool)\ncomponent.setField{key = \"maintenance\", value = true}\n</pre>",
+    "Name": "component.setField",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The name of the custom field you want to update.</p>",
+            "Name": "key",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string, integer or bool</u></em> The new value to assign to the custom field.</p>",
+            "Name": "value",
+            "Required": true
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Sets a custom field to a specified value for the current component."
+}

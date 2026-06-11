@@ -1,0 +1,18 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">pcall(f [, arg1 , ...])\n</pre><ul><li><code><strong>f</strong></code>: The function to call in a protected manner.</li><li><code><strong>arg1, ...</strong></code><em> (optional)</em>: Any number of arguments to provide during the function call.</li></ul><p><br></p><h3>Notes</h3><ul><li>This is how errors can be caught in Lua.</li><li>Running a function with <code>pcall</code> is referred to as calling the function in <em>protected mode</em>. This means that any error in the function is not propagated. Instead <code>pcall</code> catches the information raised by the <code><a href=\"@error\" target=\"_blank\">error</a></code> function and returns a status code.</li><li>The first return value is <code>true</code> if the call succeeds without errors. In such case, <code>pcall</code> also returns all results from the call, after this first result. </li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>Status code. <em>(<u>bool)</u></em></li><li>On success: multiple returns: The results from the function call&nbsp;<em>(<u>any type)</u></em>&nbsp;<strong>OR</strong>&nbsp;<em><u>on failure</u></em>: error message. <em>(<u>string)</u></em> or <em>(<u>table)</u></em></li></ul><p><br></p><h3><strong>Example</strong></h3><pre class=\"ql-syntax\" spellcheck=\"false\">function Foo(Data, Count)\n\nend\n\nlocal Success, Msg = pcall(Foo, \"Data Arg1\", 44);\nif (not Success) then\n   print(\"Failed with: \"..Msg)\nend\n</pre><ul><li>In case of any error, <code>pcall</code> returns <code>false</code> plus the error message or object that was invoked by the error.  </li></ul><p><br></p><p>For example:</p><pre class=\"ql-syntax\" spellcheck=\"false\">function foo()\n&nbsp; &nbsp;error({message=\"Bang\", code=1})\nend\nlocal Success, Result = pcall(foo)\n</pre>",
+    "Name": "pcall",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>function</u> </em>Function to call.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>any type</u> </em>Multiple parameters: Argument to the function.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Calls a function in protected mode, using the supplied arguments."
+}

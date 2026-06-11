@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">s:rep(n)\n</pre><ul><li><code><strong>s</strong></code>: The source string to repeat.</li><li><code><strong>n</strong></code>: The number of times to repeat the string.</li></ul><p>Returns a new string that is the concatenation of <em>n</em> copies of the original string.</p><p><br></p><h3>Returns</h3><ul><li>A new string containing <em>n</em> copies of <code>s</code> concatenated together. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local S = \".oOo.\";\nlocal Border = S:rep(4)\n-- Border is \".oOo..oOo..oOo..oOo.\"\n</pre>",
+    "Name": "string:rep",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>integer</u></em> Number of copies to concatenate.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Concatenates n copies of the specified string."
+}

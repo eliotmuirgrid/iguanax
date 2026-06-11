@@ -1,0 +1,18 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">next(table [, index])\n</pre><ul><li><code><strong>table</strong></code>: The table to traverse</li><li><code><strong>index</strong></code> <em>(optional)</em>: The index position to start at or <code>nil</code> </li></ul><p><br></p><h3>Notes</h3><ul><li>Allows a program to traverse all fields of a table.</li><li><code>next</code> returns the next index of the table and its associated value. </li><li>If <code>index</code> is <code>nil</code>, <code>next</code> returns an initial index and its associated value.</li><li>If called with the last index, or with <code>nil</code> in an empty table, <code>next</code> returns <code>nil</code>. </li><li>If the second argument is absent, then it is interpreted as <code>nil</code>. In particular, you can use <code>next(t)</code> to check whether a table is empty.</li><li>The order in which the indices are enumerated is not specified, <em>even for numeric indices</em>. (To traverse a table in numeric order, use a numerical <strong>for </strong>or the <code><a href=\"@ipairs\" target=\"_blank\">ipairs</a></code> function.)</li><li>The behavior of <code>next</code> is <em>undefined</em> if, during the traversal, you assign any value to a non-existent field in the table. You may however modify existing fields. In particular, you may clear existing fields.</li></ul><p><br></p><h3>Returns</h3><ul><li><span style=\"background-color: initial;\">Next</span>&nbsp;index and value at that index in table. (<em><u>any type)</u> </em>and<em> <u>(any type)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local T = {}\nT[1] = \"hello\"\nT[2] = \"world\"\n&nbsp;&nbsp;\nnext(T)    -- returns 1, 'hello'\nnext(T, 1) -- returns 2, 'world'\n</pre>",
+    "Name": "next",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>table</u> </em>Table to be traversed.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>any type</u> (Optional) </em>Index position to start at.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Allows a program to traverse all fields of a table."
+}

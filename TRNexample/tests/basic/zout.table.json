@@ -1,0 +1,32 @@
+{
+    "cursor_position": 10,
+    "full_expression": "People.",
+    "help_file": "",
+    "line_number": 6,
+    "options": [
+        {
+            "dt": "Fred <span class=\"ITSintellisenseOptionValue\">({})</span>",
+            "ft": "People.Fred",
+            "nt": 5,
+            "pt": 0,
+            "s": false
+        },
+        {
+            "dt": "Mary <span class=\"ITSintellisenseOptionValue\">({[<span    class='clrz_str'>'age'</span>]=<span    class='clrz_num'>1</span>})</span>",
+            "ft": "People.Mary",
+            "nt": 5,
+            "pt": 0,
+            "s": false
+        },
+        {
+            "dt": "Marylyn <span class=\"ITSintellisenseOptionValue\">({[<span    class='clrz_str'>'favourite'</span>]=<span    class='clrz_str'>'icecream'</span>})</span>",
+            "ft": "People.Marylyn",
+            "nt": 5,
+            "pt": 0,
+            "s": false
+        }
+    ],
+    "options_truncated": false,
+    "search_string": "",
+    "trimmed_expression": "People"
+}

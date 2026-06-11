@@ -1,0 +1,25 @@
+{
+    "cursor_position": 7,
+    "full_expression": "T.Na",
+    "help_file": "",
+    "line_number": 7,
+    "options": [
+        {
+            "dt": "Kin<span class=\"ITSintellisenseLevelDivider\"></span>1 Kin Row<span class=\"ITSintellisenseLevelDivider\"></span>Given<span class=\"ITSintellisenseSearchMatch\">Na</span>me <span class=\"ITSintellisenseOptionValue\">(<span    class='clrz_str'>Eliot</span>)</span>",
+            "ft": "T.Kin[1].GivenName",
+            "nt": 6,
+            "pt": 50,
+            "s": true
+        },
+        {
+            "dt": "Kin<span class=\"ITSintellisenseLevelDivider\"></span>1 Kin Row<span class=\"ITSintellisenseLevelDivider\"></span>Last<span class=\"ITSintellisenseSearchMatch\">Na</span>me <span class=\"ITSintellisenseOptionValue\">(<span    class='clrz_str'>Muir</span>)</span>",
+            "ft": "T.Kin[1].LastName",
+            "nt": 6,
+            "pt": 50,
+            "s": true
+        }
+    ],
+    "options_truncated": false,
+    "search_string": "Na",
+    "trimmed_expression": "T"
+}

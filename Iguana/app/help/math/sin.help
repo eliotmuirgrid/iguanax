@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">math.sin(x)\n</pre><ul><li><code><strong>x</strong></code>: The angle (in radians) for which the sine is to be calculated.</li></ul><p><br></p><h3>Returns</h3><ul><li>The sine of <code>x</code>. <em><u>(number)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local R = math.sin(math.rad(45))\n</pre><ul><li>This computes the sine of 45 degrees by first converting the angle to radians using <code><a href=\"@math.rad\" target=\"_blank\">math.rad</a></code>.</li></ul>",
+    "Name": "math.sin",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>number</u></em> The angle (in radians) to calculate the sine from.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Calculates the sine of an angle (in radians)."
+}

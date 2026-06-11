@@ -1,0 +1,6 @@
+MODULE=myhello
+
+BUILD_DIR=HelloWorld
+SRC=$(BUILD_DIR)/hello.cpp
+
+include ../admin/makefile.lua_module

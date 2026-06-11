@@ -1,0 +1,23 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">filter.uuencoding.enc(data, filename [, mode])\n</pre><ul><li><code><strong>data</strong></code>: Input string or stream to encode.</li><li><code><strong>filename</strong></code>: File name to include in the uuencoded output.</li><li><code><strong>mode</strong></code> <em>(optional)</em>: Octal representation of file permissions (e.g., 644).</li></ul><h4><br></h4><h3>Notes</h3><ul><li>The encoded format embeds the file name and permissions in its header.</li><li>This is useful for transferring binary files over channels that only support text.</li><li>The embedded metadata (filename and permissions) is recoverable via <code><a href=\"@filter.uuencoding.dec\" target=\"_blank\">filter.uuencoding.dec</a></code>.</li></ul><p><br></p><h3>Returns</h3><ul><li>A uuencoded string suitable for text-based file transfer. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local R = filter.uuencoding.enc(\"2342342dsfd\", \"out.txt\", 655)\nlocal Data, Info = filter.uuencoding.dec(R)\n</pre><ul><li><code>R</code> holds the uuencoded string.</li><li><code>Info</code> contains metadata, including the filename and mode.</li></ul>",
+    "Name": "filter.uuencoding.enc",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The raw data to encode.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u></em> The name to associate with the encoded output.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>integer</u></em> <em>(Optional)</em> The octal file mode (default is <code>644</code>). Represents permissions.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Encodes data for a Unix-to-Unix transfer (uuencode)."
+}

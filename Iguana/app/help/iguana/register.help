@@ -1,0 +1,18 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">iguana.register(Event, functionName)\n</pre><ul><li><code><strong>event</strong></code>: The event name to watch for. Supported values include:</li><li class=\"ql-indent-1\"><code>\"startup\"</code> – Triggered when Iguana starts.</li><li class=\"ql-indent-1\"><code>\"shutdown\"</code> – Triggered when Iguana stops.</li><li><code><strong>functionName</strong></code>: The name of a function defined in the global scope that should be called when the event occurs.</li></ul><p><br></p><h3>Notes</h3><ul><li><strong>Required:</strong> To use this feature, set <code>IFW_ENABLE_GLOBAL_EVENTS=true</code>.</li><li>The function name must refer to a globally defined Lua function.</li><li>Only <code>\"startup\"</code> and <code>\"shutdown\"</code> are currently supported as event names.</li></ul><p><br></p><h3><strong><span class=\"ql-cursor\">﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿﻿</span>Example</strong></h3><pre class=\"ql-syntax\" spellcheck=\"false\">function OnStartup()\n&nbsp; &nbsp;ui.addDashboardColumn{\n&nbsp; &nbsp;   name = \"custom\",\n&nbsp; &nbsp;   width = 100,\n&nbsp; &nbsp;   priority = 1,\n&nbsp; &nbsp;   title = \"Custom\"\n&nbsp; &nbsp;}\n   ui.setDashboardColumn{name=\"custom\", value=\"AAAA\"}\nend\n\niguana.register(\"startup\", \"OnStartup\")\n\nfunction OnShutdown()\n&nbsp; &nbsp;local Now = os.time()&nbsp;\n&nbsp; &nbsp;local F = io.open(\"shutdown\" .. Now, \"w\")\n&nbsp; &nbsp;F:close()\nend\n\niguana.register(\"shutdown\", \"OnShutdown\")\n</pre><ul><li>When Iguana starts, it will call <code>OnStartup</code>. When Iguana stops, it will call <code>OnShutdown</code>.</li><li>In this code example:</li><li class=\"ql-indent-1\">On Iguana startup, a new dashboard column gets added and the value \"AAAA\" is set in that column for this component. </li><li class=\"ql-indent-1\">On Iguana shutdown, a file is created in the iguana working directory named with a file name like \"shutdown\" followed by a timestamp, e.g.: <code>shutdown1766082739</code></li></ul>",
+    "Name": "iguana.register",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The name of the event that will trigger the function.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u></em> The name of the globally defined function to call.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Register a global function to be called for a specified Iguana event."
+}

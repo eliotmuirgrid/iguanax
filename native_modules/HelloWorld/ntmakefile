@@ -1,0 +1,8 @@
+msbuild.x64:
+	msbuild HelloWorld.sln /p:Configuration=Release /p:Platform=x64
+
+msbuild.x86:
+	msbuild HelloWorld.sln /p:Configuration=Release /p:Platform=Win32
+
+clean:
+	-del /s /f /q *.lib *.obj *.dll

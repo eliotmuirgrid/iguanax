@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">ipairs(t)\n</pre><ul><li><code><strong>t</strong></code>: Lua table with integer keys to iterate</li></ul><p><br></p><h3>Notes</h3><ul><li>Reads elements from the table in <strong>numeric key order</strong>.</li><li>Only includes consecutive integer keys starting from 1.</li><li>If the table contains gaps in numeric keys, iteration will stop at the first nil value.</li><li>To iterate over all key-value pairs in a table (including non-numeric keys), use <code><a href=\"@pairs\" target=\"_blank\">pairs</a></code> instead.</li></ul><p><br></p><h3>Returns</h3><ul><li>An iterator function. <em><u>(function)</u></em></li><li>The input table. <em><u>(table)</u></em></li><li>The starting index (<code>0</code>). <em><u>(integer)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Table = { \"alpha\", \"beta\", \"gamma\" }\nfor i, v in ipairs(Table) do\n&nbsp; &nbsp;print(i, v)\nend\n</pre>",
+    "Name": "ipairs",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>table</u></em> Table to iterate.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Iterates over the numerically indexed elements of a table (stops at the first non-numeric index)."
+}

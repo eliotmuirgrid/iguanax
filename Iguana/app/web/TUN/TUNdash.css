@@ -1,0 +1,789 @@
+.TUNpageLayout {
+   overflow: hidden;
+ }
+ 
+ .TUNdashboard {
+   display: grid;
+   grid-template-columns: auto 1fr;
+ }
+ 
+ .TUNsortAsc::after {
+   content: url("/TUN/TUNiconSortDown.svg");
+   margin-top: 0px;
+   margin-left: 3px;
+ }
+ 
+ .TUNsortDsc::after {
+   content: url("/TUN/TUNiconSortUp.svg");
+   margin-top: 0px;
+   margin-left: 3px;
+ }
+ 
+ .TUNsearch {
+   padding: 8px 16px 16px 16px;
+   position: relative;
+ }
+ 
+ .TUNsearchHeader {
+   display: flex;
+   justify-content: space-between;
+   align-items: baseline;
+   margin-bottom: 4px;
+ }
+ 
+ .TUNsearchLabel {
+   color: var(--grey-600);
+   font-family: var(--font-buttons);
+   font-weight: 500;
+   letter-spacing: 0.02em;
+   font-size: 11px;
+ }
+ 
+ .TUNsearchInput {
+   width: 100%;
+   height: 28px;
+   border-radius: var(--border-radius);
+   background-color: transparent;
+   font-weight: var(--regular);
+   font-size: 12px;
+   box-sizing: border-box;
+ }
+ 
+ .TUNcheckbox input {
+   margin-right: 2px;
+ }
+ 
+ .TUNlistView {
+   display: grid;
+   grid-template-rows: 72px 1fr auto;
+   position: relative;
+   background-color: #ebf3f6;
+   border-right: 1px solid var(--grey-400);
+   height: 100vh;
+   z-index: 1;
+ }
+ 
+ .TUNsideHeader {
+   padding: 0px;
+   display: flex;
+   /* justify-content: space-between; */
+   column-gap: 140px;
+   align-items: center;
+   border-bottom: 1px solid var(--grey-300);
+   margin: 0 16px;
+ }
+ 
+ .TUNheading {
+   font-family: var(--font-buttons);
+   color: var(--blue-dark);
+   font-size: 16px;
+   font-weight: 500;
+ }
+ 
+ .TUNheadingButtons {
+   display: flex;
+   flex-wrap: nowrap;
+   gap: 8px;
+ }
+ .TUNonlyCheckedContainer{
+   display: block;
+   width: 170px;
+   height: 28px;
+   position: relative;
+   cursor: pointer;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+ }
+ 
+ 
+ .TUNeditConnectionsContainer {
+   display: block;
+   width: 170px;
+   height: 28px;
+   position: relative;
+   cursor: pointer;
+   -webkit-user-select: none;
+   -moz-user-select: none;
+   -ms-user-select: none;
+   user-select: none;
+   top: -38px;
+ }
+ 
+ /* Hide the browser's default checkbox */
+ .TUNonlyCheckedContainer input,
+ .TUNeditConnectionsContainer input {
+   position: absolute;
+   opacity: 0;
+   cursor: pointer;
+   height: 0;
+   width: 0;
+ }
+ 
+ /* Create a custom checkbox */
+ .TUNonlyCheckedIcon{
+   height: 28px;
+ }
+ .TUNeditConnectionsIcon{
+   height: 32px;
+ }
+ .TUNonlyCheckedIcon,
+ .TUNeditConnectionsIcon {
+   font-family: var(--font-buttons);
+   font-size: 11px;
+   font-weight: 500;
+   white-space: nowrap;
+   position: absolute;
+   opacity: 1;
+   top: 0;
+   left: 0;
+   width: auto;
+   padding: 0px 16px 0px 12px;
+   border-radius: 28px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   background-color: rgba(231,244,244,.6);
+   border: 1px solid var(--blue);
+   color: var(--blue);
+ }
+ 
+ .TUNonlyCheckedIcon svg,
+ .TUNeditConnectionsIcon svg {
+   fill: currentColor;
+   height: 16px;
+   width: 16px;
+   margin-right: 8px;
+ }
+ 
+ /* On mouse-over, add a grey background color */
+ .TUNeditConnectionsContainer:hover input ~ .TUNeditConnectionsIcon {
+   color: var(--blue);
+ }
+ 
+ /* When the checkbox is checked, add a blue background */
+ .TUNonlyCheckedContainer input:checked ~ .TUNonlyCheckedIcon,
+ .TUNeditConnectionsContainer input:checked ~ .TUNeditConnectionsIcon {
+   background-color: #C9DFE8;
+   box-shadow: inset 0 2px 2px rgba(0, 0, 0, 0.2);
+   border: none;
+   color: var(--blue-dark);
+ }
+ 
+ /* Table Rows */
+ .TUNtableRow {
+   display: grid;
+   grid-template-columns: 70px auto auto 1fr ;
+   border-bottom: 1px solid var(--grey-200);
+   user-select: none;
+   background: var(--white);
+   align-items: center;
+   font-size: 11px;
+   color: var(--grey-800);
+   height: 32px;
+ }
+ 
+ .TUNtableRow:hover {
+   cursor: pointer;
+ }
+ .TUNrowHighlighted{
+   background-color: var(--blue-lighter);
+ }
+ 
+ .TUNcomponentRow.TUNselected,
+ .TUNtableRowHighlight {
+   background-color: var(--blue-lighter);
+ }
+ 
+ .TUNrowChecked {
+   background-color: var(--blue-light) !important;
+ }
+ .TUNrowChecked.TUNrowHighlighted {
+   background-color: var(--blue-lighter)!important;
+ }
+ .TUNrowSelected.TUNrowHighlighted{
+   background-color: var(--blue-light);
+ }
+ .TUNrowSelected {
+   background-color: var(--blue-lighter);
+ }
+ 
+ .TUNtableRow > :first-child {
+   margin-left: 16px;
+ }
+ 
+ .TUNtableRow:first-child > * {
+   height: 100%;
+   display: flex;
+   align-items: center;
+   color: var(--grey-700);
+   font-size: 10px;
+   font-family: var(--font-buttons);
+ }
+ 
+ .TUNtableRow:last-child {
+   border-bottom: 1px solid var(--grey-300);
+   /* border-bottom-right-radius: 4px;
+   border-bottom-left-radius: 4px; */
+ }
+ 
+ .TUNtableRow.TUNsourceSelected div:not(.POPtooltip) * {
+   color: var(--white) !important;
+ }
+ 
+ .TUNtableRow.TUNcannotConnectTo.TUNsourceSelected div:not(.POPtooltip) * {
+   color: var(--white) !important;
+ }
+ 
+ .TUNtableRow.TUNsourceSelected .TOGtoggle {
+   border: 1px solid var(--white);
+ }
+ 
+ .TUNtableRow.TUNcannotConnectTo * {
+   color: var(--grey-400);
+ }
+ 
+ .TUNaddFromUrlButton,
+ .TUNaddPeer {
+   border-radius: 9999px;
+   font-family: var(--font-buttons);
+   font-weight: var(--semibold);
+   font-size: 10px;
+   line-height: 10px;
+   letter-spacing: 0.25px;
+   cursor: pointer;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 28px;
+   width: fit-content;
+   box-sizing: border-box;
+   color: var(--white);
+   transition: 250ms ease-out;
+ }
+ .TUNaddFromUrlButton{
+   background-color: var(--grey-400);
+   padding: 0 12px 0px 12px;
+ }
+ .TUNaddFromUrlButton:hover{
+   background-color: var(--grey-500);
+   transition: 70ms ease-in;
+ }
+ .TUNaddPeer {
+   background-color: var(--green);
+   padding: 0 12px 0px 8px;
+ }
+ .TUNaddPeer:hover {
+   background-color: var(--green-hover);
+   transition: 70ms ease-in;
+ }
+ 
+ .TUNaddPeer:active {
+   background-color: var(--green-active);
+ }
+ 
+ .TUNtableHeading {
+   cursor: pointer;
+   background-color: #ebf3f6;
+   border-bottom: 1px solid var(--grey-300);
+   position: sticky;
+   top: 0px;
+   z-index: 100;
+ }
+ 
+ .TUNresizeControl {
+   right: -6px;
+   top: 0;
+   bottom: 0;
+   width: 10px;
+   padding: 0;
+   border: 0;
+   position: absolute;
+   outline: none;
+   cursor: ew-resize;
+   background-color: transparent;
+ }
+ 
+ .TUNresizeShadow {
+   bottom: 0;
+   top: 0;
+   right: 4px;
+   pointer-events: none;
+   position: absolute;
+   width: 2px;
+   transition: 150ms ease-out;
+ }
+ 
+ .TUNresizeControl:hover .TUNresizeShadow {
+   background: var(--blue);
+   /* box-shadow: 3px 0px 10px rgba(0,0,0,0.5); */
+   transition: 75ms ease-in;
+ }
+ 
+ .TUNcomponentName {
+   color: #2590cd;
+   cursor: pointer;
+   white-space: nowrap;
+   font-size: 11px;
+ }
+ .TUNserverLabel{
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+ }
+ .TUNselectToolbar {
+    padding: 24px 16px 24px 16px;
+    position: relative;
+   display: grid;
+   grid-template-columns: auto 190px;
+ }
+ .TUNselectToolbar select:disabled {
+    opacity: 0.3;
+ }
+ 
+ .TUNtableOverflow {
+   overflow: hidden;
+   position: relative;
+ }
+ 
+ .TUNresultCount {
+   color: var(--grey-600);
+   font-size: 10px;
+ }
+ 
+ .TUNmanageLinkRow {
+   display: grid;
+   grid-template-columns: 30px auto;
+   padding: 4px;
+   border: 1px solid var(--grey-300);
+   border-bottom: 0;
+   margin-left: 8px;
+   margin-right: 8px;
+   user-select: none;
+ }
+ 
+ .TUNlinkGuid {
+   color: var(--grey-600);
+   padding-left: 5px;
+   font-size: 11px;
+ }
+ 
+ .TUNlinkLabel * {
+   display: inline-block;
+ }
+ 
+ .TUNmapErrorDiv,
+ .TUNtooManyMessage{
+   color: var(--grey-700);
+   font-size: 16px  !important;
+   position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+   text-align: center;
+ }
+ 
+ /* Color of connection path on hover (delete connection) */
+ .TUNlink.TUNeditMode:hover {
+   stroke: var(--red) !important;
+   cursor: pointer;
+ }
+ .TUNnodeContents {
+   transition: transform 500ms ease;
+   background: var(--white);
+   border-radius: 28px;
+   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.25);
+   width: 100px;
+   height: 28px;
+   padding: 0px 8px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   cursor: pointer;
+   /* position: relative; */
+ }
+ 
+ 
+ .TUNtableRow .TUNcannotConnectTo {
+   background: #DFEBF1 !important;
+   box-shadow: 0 2px 2px rgb(0 0 0 / 5%);
+ }
+ 
+ .TUNcannotConnectTo.TUNnodeChecked {
+   background: #DFEBF1 !important;
+   box-shadow: 0 2px 2px rgb(0 0 0 / 5%);
+ }
+ .TUNcannotConnectTo {
+   background: #DFEBF1 !important;
+   box-shadow: 0 2px 2px rgb(0 0 0 / 5%);
+ }
+ .TUNcannotConnectTo.TUNsourceSelected{
+   background: var(--blue-dark) !important;
+   box-shadow: 0 2px 2px rgb(0 0 0 / 25%);
+ }
+ 
+ .TUNcannotConnectTo .TUNnodeLabel {
+   color: var(--grey-500);
+ }
+ 
+ .TUNcannotConnectTo .TUNnodeLabel::before {
+   opacity: 0.5;
+ }
+ 
+ .TUNnode .TUNsourceSelected {
+   background: var(--blue-dark) !important;
+   box-shadow: 0 2px 2px rgb(0 0 0 / 25%);
+ }
+ 
+ .TUNsourceSelected .TUNnodeLabel {
+   color: white;
+ }
+ 
+ .TUNsourceSelected.TUNcannotConnectTo .TUNnodeLabel::before {
+   opacity: 1;
+ }
+ 
+ .TUNnodeContents.TUNgroupedNode {
+   background-color: var(--green-lighter);
+ }
+ 
+ .TUNnodeContents.TUNgroupedNode.TUNnodeHighlighted,
+ .TUNnodeContents.TUNgroupedNode.TUNnodeSelected {
+   background-color: var(--green-light) !important;
+ }
+ 
+ .TUNnodeContents.TUNgroupedNode.TUNnodeSelected.TUNnodeHighlighted {
+   background-color: var(--green) !important;
+ }
+ .TUNavailableComponents {
+   height: 100%;
+   max-height: 200px;
+   overflow-y: auto;
+ }
+ 
+ .TUNclearSearch {
+   z-index: 998;
+   background: none;
+   position: absolute;
+   right: 24px;
+   bottom: 22px;
+ }
+ 
+ .TUNclearSearch:hover {
+   background-color: transparent;
+ }
+
+.TUNtableContainer {
+    display: grid;
+    grid-auto-rows: auto;
+    max-height: calc(100% - 16px);
+    overflow-y: scroll;
+    --scrollbarBG: #ebf3f6;
+    --thumbBG: #d2dde8;
+    scrollbar-width: thin;
+    scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+    position: relative;
+}
+
+.TUNstepList {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.TUNstepList li {
+    color: #777777;
+    font-size: 16px;
+    margin: 5px 0;
+    list-style: none;
+}
+
+.TUNstepTitle {
+    font-size: 20px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    margin-top: 10px;
+}
+ 
+ .TUNtableContainer::-webkit-scrollbar {
+   width: 16px;
+   height: 16px;
+ }
+ 
+ .TUNtableContainer::-webkit-scrollbar-track {
+   background: var(--scrollbarBG);
+ }
+ 
+ .TUNtableContainer::-webkit-scrollbar-thumb {
+   background-color: var(--thumbBG);
+   border-radius: 8px;
+   border: 5px solid var(--scrollbarBG);
+ }
+ 
+ .TUNcenterText {
+   text-align: center;
+   justify-content: center;
+ }
+ 
+ .TUNcenterText .TOGtoggle {
+   margin: auto; /* center toggle switch */
+   width: 12px;
+   height: 12px;
+ }
+ 
+ .TUNnamePlusLabel {
+   overflow: hidden;
+   display: flex;
+   align-items: center;
+   justify-items: center;
+   height: 100%;
+ }
+ 
+ .TUNserverLabelHtml {
+   overflow: hidden;
+   white-space: nowrap;
+   padding-left: 12px;
+   padding-right: 24px;
+   font-size: 10px;
+ }
+ 
+ 
+ .TUNlabel {  /* make label scrollable for search */
+   overflow-x: hidden;
+ }
+ 
+ .TUNlabel span {
+   line-height: 18px;
+ }
+ 
+ .TUNdetailedCard {
+   display: grid;
+   grid-template-rows: auto 1fr auto;
+ }
+ 
+ .TUNdetailedTitleBar {
+   display: grid;
+   row-gap: 16px;
+   padding-bottom: 12px;
+   margin-bottom: 12px;
+   border-bottom: 1px solid var(--grey-300);
+ }
+ 
+ .TUNcardTitleBarLayout {
+   display: grid;
+   grid-template-columns: 65px 1fr 54px;
+ }
+ 
+ .TUNdetailNameLabel {
+   color: #2590cd;
+   font-size: 14px;
+   font-weight: 600;
+ }
+ 
+ .TUNcardLabel {
+   color: grey;
+   white-space: pre-wrap;
+ }
+ 
+ .TUNcardLabelBox {
+   line-height: 1.75;
+   font-size: 12.5px;
+ }
+ 
+ .TUNmax500 {
+   max-width: 500px;
+   overflow-wrap: break-word;
+ }
+ 
+ .TUNscript {
+   cursor: pointer;
+   color: #2590cd;
+   padding: 4px;
+   margin: 4px;
+ }
+ 
+ .TUNeditComponentDetails {
+   color: #2590cd;
+   cursor: pointer;
+   white-space: nowrap;
+   overflow: hidden;
+   text-overflow: ellipsis;
+   font-size: 11px;
+   display: inline;
+ }
+ 
+ .TUNrunComponentOn {
+   color: #2590cd;
+   font-size: 14px;
+   font-weight: 600;
+   padding-top: 17px;
+ }
+ 
+ .TUNrunComponentOnSelector {
+   grid-column: 2 / 3;
+   padding: 8px;
+   padding-right: 16px;
+ }
+ 
+ .TUNrunComponentInfo {
+   height: 50px;
+   width: 50px;
+   display: none;
+   align-items: center;
+   justify-content: center;
+   position: absolute;
+   left: 0px;
+   top: 0px;
+ }
+ 
+ .TUNrunComponentInfo:hover {
+   background: rgba(179, 221, 245, 0.25);
+   cursor: pointer;
+ }
+ 
+ a:visited.TUNrepoLink {
+   text-decoration: none;
+ }
+ 
+ .TUNcustomFieldEdit {
+   cursor: pointer;
+   color: #2590cd;
+   margin: 12px;
+ }
+ 
+ @keyframes fadein {
+   0% {
+     opacity: 0;
+     transform: translateY(100%);
+   }
+   100% {
+     opacity: 1;
+     transform: translateY(0%);
+   }
+ }
+ .TUNiconAddStyle14px {
+   width: 14px;
+   height: 14px;
+   margin-right: 8px;
+   fill: currentColor;
+ }
+ 
+ .TUNeditConnectionsContainer input:checked ~ .TUNeditConnectionsIcon .TUNconnectionInfoDiv{
+    visibility: visible;
+ }
+ .TUNeditConnectionsContainer input:checked ~ .TUNeditConnectionsIcon .TUNconnectionInfoDiv:hover ~ {
+    visibility: visible;
+ }
+ .TUNconnectionInfoDiv{
+    visibility: hidden;
+    padding-right: 3px;
+ }
+ 
+ .TUNeditConnectionTooltip {
+   width: 220px;
+   font-size: 10px !important;
+ }
+ 
+ .TUNlastAct {
+   display: flex;
+   align-items: center;
+   height: 100%;
+ }
+ 
+ .TUNlastActTooltip {
+   min-width: 110px !important;
+   padding-left: 6px !important;
+   text-align: center !important;
+ }
+ 
+ .TUNlastActText .TUNlastActLink {
+   padding: 4px;
+   margin: 4px;
+ }
+ 
+ .TUNlastActLink {
+   cursor: pointer;
+   color: #2590cd;
+ }
+ 
+ .TUNcheckedRow {
+   background-color: var(--blue-light);
+ }
+ 
+ .TUNswitchOff {
+   background-color: #c9d0d5 !important;
+ }
+ 
+ .TUNswitchOn {
+   background-color: #33b44a !important;
+ }
+ 
+ .TUNswitchInProg {
+   background-color: #fee94e !important;
+ }
+ 
+ .TUNswitchErr {
+   background-color: #d0011b !important;
+ }
+ .TUNtooltipOverflow .POPtooltipContent{
+   overflow-y: auto !important;
+   max-height: 60px;
+ }
+ .TUNbulkActionPopup {
+   max-width: 500px;
+ }
+ .TUNbulkDialogClass{
+   padding-bottom: 24px;
+ }
+ .TUNserverLabel, .TUNcenterText, .TUNlabel {
+   color: var(--grey-600);
+ }
+ .TUNshowOnlyCheckedSwitchBox{
+   display: flex;
+   justify-content: right;
+ }
+ .TUNshowOnlyCheckedLabel{
+   margin: auto 0;
+   text-align: right;
+   color: var(--grey-600);
+   font-size: 11px;
+ }
+ .TUNshowOnlyCheckedToggle{
+   margin: auto;
+   text-align: center;
+   justify-content: center;
+ }
+ .TUNshowOnlyCheckedToggle .TOGtoggle{
+   margin: auto;
+   width: 28px;
+   height: 13px;
+ }
+ .TUNrowBuffer{
+   display: grid;
+   grid-template-columns: 36px 50px minmax(125px, 2.5fr) 45px 45px 45px minmax(60px, 1fr);
+   user-select: none;
+   height: 60px;
+ }
+ .TUNlinkArea{
+   stroke-width: 10px;
+ }
+ .TUNdeleteInfo{
+   display: inline-block;
+   cursor: pointer;
+ }
+ .TUNnotWritable{
+   background-color: #c9d0d5;
+ }
+ .TUNlistDataError{
+   color: var(--grey-600);
+   text-align: center;
+   padding: 24px;
+ }
+ .TUNdisplayNone{
+   display : none;
+ }

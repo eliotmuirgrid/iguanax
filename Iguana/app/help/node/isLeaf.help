@@ -1,0 +1,7 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">Node:isLeaf()\n</pre><ul><li><code><strong>Node</strong></code>: The node you want to inspect to determine if it is terminal (no children).</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>A leaf node contains data but no child nodes.</li><li>Common use cases include recursive parsing, conditional logic, and validation of hierarchical data structures like XML or HL7.</li><li>Use this method when deciding whether to directly extract a value or to continue traversing child elements.</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li><code>true</code> if the node is a leaf (has no children), <code>false</code> otherwise. <em><u>(bool)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Xml = xml.parse{data = \"&lt;record&gt;&lt;id&gt;123&lt;/id&gt;&lt;meta&gt;&lt;source&gt;lab&lt;/source&gt;&lt;/meta&gt;&lt;/record&gt;\"}\n\nif Xml.record.id:isLeaf() then\n&nbsp; &nbsp;trace(\"ID is a leaf node containing value: \" .. Xml.record.id:nodeValue())\nend\n</pre><ul><li>In this example, the <code>id</code> field is a leaf node, so it is safe to extract its value directly.</li></ul>",
+    "Name": "node:isLeaf",
+    "Parameters": null,
+    "ParameterTable": false,
+    "SummaryLine": "Determines whether a node is a leaf node (i.e., has no children)."
+}

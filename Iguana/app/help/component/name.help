@@ -1,0 +1,7 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">component.name()\n</pre><ul><li>Retrieves the human-readable name of the current component.</li></ul><p><br></p><h3>Notes</h3><ul><li>The component <strong>name</strong> is the user-defined display name you assign when creating or editing the component in Iguana.</li><li>Unlike the component ID (which is unique and unchangeable after creation), the name can be changed at any time through the UI.</li><li>This function is useful for:</li><li class=\"ql-indent-1\">Logging and tracing,</li><li class=\"ql-indent-1\">Dynamically identifying which component is running,</li><li class=\"ql-indent-1\">Debugging multi-component systems.</li><li><strong>Reminder:</strong> Since the name can be changed by users at any time, avoid relying on it for unique identification. Use <code><a href=\"http://localhost:7654/@component.id\" target=\"_blank\">component.id</a></code> if you need a stable, unique identifier.</li></ul><p><br></p><h3>Returns</h3><ul><li>The current name of the component. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">-- Get the name of the current component\nlocal componentName = component.name()\n\ntrace(componentName)\n-- Output: \"Data Processor A\"\n</pre>",
+    "Name": "component.name",
+    "Parameters": null,
+    "ParameterTable": false,
+    "SummaryLine": "Returns the display name of the current component as a string."
+}

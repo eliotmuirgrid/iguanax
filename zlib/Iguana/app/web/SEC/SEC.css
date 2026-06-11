@@ -1,0 +1,211 @@
+.SECtitle {
+    margin: unset;
+    font-weight: var(--bold);
+    font-size: 20px;
+    line-height: 32px;
+    color: var(--grey-700);
+    padding-bottom: 24px;
+    margin-bottom: 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10px;
+}
+
+.SECview .SECviewTable {
+    display: grid;
+    grid-template-columns: 1fr;
+    border: 1px solid var(--grey-300);
+    background-color: var(--grey-100);
+    border-radius: var(--border-radius);
+    overflow-x: auto;
+}
+
+.SECedit .SECviewTable {
+    display: grid;
+    grid-template-columns: 1fr auto;
+    border: 1px solid var(--grey-300);
+    background-color: var(--grey-100);
+    border-radius: var(--border-radius);
+    overflow-x: auto;
+}
+
+.SECedit .SECviewTable .SECtableHeading {
+    grid-column: 1 / -1;
+}
+
+.SECrow {
+    padding: 18px 24px;
+    border-bottom: 1px solid var(--grey-300);
+    display: flex;
+    align-items: center;
+    line-height: 28px;
+}
+
+.SECtoggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+    width: 100%;
+    padding: 4px 0;
+}
+
+.SECcheckbox {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.SECpath {
+    flex: 1;
+    transition: color 0.2s ease;
+}
+
+.SECignored {
+    color: var(--grey-500);
+    text-decoration: line-through;
+}
+
+.SEChint {
+    font-size: 12px;
+    color: var(--grey-500);
+    font-weight: normal;
+    margin-left: 8px;
+}
+
+/* Hover effect for the row */
+.SECviewTable .SECrow:hover {
+    background-color: var(--grey-200);
+}
+
+/* Focus styles for accessibility */
+.SECcheckbox:focus-visible + .SECpath {
+    outline: 2px solid var(--primary-500);
+    outline-offset: 2px;
+    border-radius: 2px;
+}
+
+.SECallIgnored .SECpath {
+    color: var(--grey-500);
+    text-decoration: line-through;
+}
+
+.SECtableHeading .SECtoggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    cursor: pointer;
+}
+
+.SECtableHeading .SECcheckbox {
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+.SECreadOnly {
+    cursor: default;
+}
+
+.SECreadOnly .SECcheckbox {
+    cursor: default;
+    opacity: 0.7;
+}
+
+/* Add Row Button Styling */
+.SECadd {
+    border-radius: 9999px;
+    font-family: var(--font-buttons);
+    font-weight: var(--semibold);
+    font-size: 10px;
+    line-height: 10px;
+    letter-spacing: 0.25px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    height: 28px;
+    width: fit-content;
+    padding: 0 12px 0px 8px;
+    box-sizing: border-box;
+    background-color: var(--grey-200);
+    color: var(--grey-600);
+    transition: 250ms ease-out;
+    margin: 16px auto 0px auto;
+    user-select: none;
+}
+
+.SECadd:hover {
+    background-color: var(--grey-300);
+    text-decoration: none;
+    transition: 75ms ease-in;
+}
+
+.FORMbutton.BUTTONcancel.BUTTONwarning {
+    cursor: pointer;
+    color: var(--grey-600);
+}
+
+.FORMbutton.BUTTONcancel.BUTTONwarning:hover {
+    color: var(--grey-800);
+}
+
+.SECheading{
+    padding: 18px 24px;
+	min-height: 32px;
+	box-sizing: border-box;
+	display: flex;
+	align-items: center;
+    user-select: none;
+}
+.SECheading,
+.SECrow{
+	display: grid;
+	column-gap: 24px;
+	grid-template-columns: 1fr auto;
+}
+.SECdirHeading{
+	border-bottom: 1px solid var(--grey-300);
+	background-color: var(--grey-200);
+}
+.SECdirHeading>div{
+	font-weight: var(--semibold);
+	color: var(--grey-800);
+}
+.SECdirsTable{
+	border-radius: var(--border-radius);
+	border: 1px solid var(--grey-300);
+	background-color: var(--grey-100);
+	overflow: hidden;
+	width: 100%;
+}
+.SEConDiv{
+    padding: 12px 24px;
+    border-radius: var(--border-radius);
+    border: 1px solid var(--grey-300);
+    background-color: var(--grey-100);
+    display: grid;
+    grid-template-columns: 150px 1fr;
+    column-gap: 24px;
+}
+.SECdisabled{
+    opacity: 0.5;
+    pointer-events: none;
+}
+.SEConDiv div{
+    line-height: 34px;
+}
+.SECinfo{
+    /* font-size: 12.5px; */
+    color: var(--grey-600);
+    font-weight: normal;
+    border: 1px solid var(--grey-300);
+    border-radius: var(--border-radius);
+    padding: 24px;
+    margin: 12px 0;
+}
+.SECsecure{
+    display: inline-block;
+    opacity: 0.5;
+    padding-left: 6px;
+}

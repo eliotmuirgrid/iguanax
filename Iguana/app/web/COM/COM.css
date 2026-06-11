@@ -1,0 +1,385 @@
+.COMmodal{
+   height: 100vh;
+   overflow-y: auto;
+   /* border-left: 1px solid var(--grey-400); */
+   /* border-top: 1px solid var(--grey-400); */
+   background-color: #ebf3f6;
+}
+.COMcommitRow{
+   background-color: var(--white);
+   color: var(--grey-700); 
+}
+.COMcommitListFade{
+   background-color: #ebf3f6;
+   padding: 20px;
+   opacity: 75%;
+   position: sticky;
+   bottom: 0;
+}
+.SPLTcollapse .COMcommitListFade{
+   display: none;
+}
+.TRANSmodal .COMtooltip{
+   top: 66px !important;
+}
+
+.COMtooltip {
+   z-index: 997 !important;
+   top: 20px !important; 
+   max-height: 95vh;
+   max-width: 45vw;
+   overflow: hidden;
+   height: auto;
+   padding: 20px;
+   background: white;
+   border-radius: 8px;
+   box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+   width: -webkit-fill-available;
+}
+.COMtooltipContent{
+   overflow: auto;
+   max-height: 90vh;
+   padding-bottom: 10px;
+}
+.COMmodalContainer{
+   position: relative;
+   background: var(--white);
+   display: grid;
+   grid-template-rows: 66px 1fr;
+}
+.COMgrid{
+   display: grid;
+   grid-template-columns: auto 1fr;
+   padding: 24px;
+   column-gap: 24px;
+}
+.COMpreviewSelected{
+   background-color: rgba(var(---green-lighter), 0.7);
+}
+.COMpreviewSelected:hover{
+   background-color: rgba(var(---green-lighter), 0.9) !important;
+}
+   
+.COMheader{
+   border-bottom: solid 1px var(--grey-400);
+   background-color: #ebf3f6;
+}
+.COMheader * {
+  font-family: var(--font-buttons);
+  color: var(--grey-600);
+  font-size: 16px;
+  font-weight: 500;
+}
+.COMpopoutModal{
+   display: grid;
+   grid-template-columns: auto 1fr;
+   height: 100%;
+   overflow: hidden;
+   background-color: var(--grey-100);
+}
+.COMdiffSelected{
+   background-color: rgba(var(---green-lighter), 0.7) !important;
+}
+.COMcommitRowDetails{
+   display: grid;
+   grid-template-columns: 1fr auto;
+   padding-left: 8px;
+}
+.COMwindow .POPpopoutCard-content{
+   height: calc(100% - 61px);
+   padding: 0px;
+}
+.COMcommitRow{
+   font-size: 11px;
+   cursor: pointer;
+   margin-left: 0px;
+   display: grid;
+   grid-template-columns: 1fr auto;
+   padding: 8px;
+   padding-left: 12px;
+   line-height: 17.5px;
+   max-height: 49px;
+   border-bottom: 1px solid var(--grey-300);
+   overflow: hidden;
+   text-overflow: ellipsis;
+   box-sizing: border-box;
+   max-height: 46px;
+   user-select: none;
+   display: -webkit-box;
+   -webkit-line-clamp: 2;
+   -webkit-box-orient: vertical;
+}
+.COMcommitRowContainer{
+   overflow: hidden;
+   text-overflow: ellipsis;
+}
+.COMcommitRow:hover{
+   background-color: rgba(var(---green-lighter), 0.3);
+   box-sizing: border-box;
+}
+.COMcommitRowDate{
+   font-weight: 600 !important;
+   font-size: 11px !important;
+   padding-top: 4px;
+   padding-left: 2px;
+   padding-right: 24px;
+}
+.COMcommitHash{
+   font-family: var(--font-monospace);
+   font-size: 11px !important;
+   border: 1px solid var(--grey-300);
+   padding: 2px;
+   padding-left: 8px;
+   padding-right: 8px;
+   margin-right: 4px;
+   border-radius: var(--border-radius);
+}
+.COMmessage{
+   padding-top: 2px;
+   font-size: 11px !important;
+}
+.COMauthor{
+   font-size: 11px !important;
+   padding-left: 8px;
+   padding-bottom: 8px;
+   color: var(--grey-600);
+}
+.COMdetails{
+   border-radius: var(--border-radius);
+   border: 1px solid var(--grey-400);
+   padding: 12px;
+   padding-bottom: 4px;
+   background-color: var(--white);
+}
+.COMfolderDetails{
+   border-top: 1px solid var(--grey-400);
+   margin-top: 2px;
+   padding-top: 10px;
+   padding-bottom: 4px;
+   padding-left: 10px;
+   padding-right: 12px;
+   display: grid;
+   grid-template-columns: auto 1fr;
+   font-family: var(--font-monospace);
+   column-gap: 4px;
+   font-size: 10.5px !important;
+}
+.TGITdiffCling.TGITdiffFrom{
+   border-right: 1px solid var(--grey-300);
+}
+.COMrowBuffer{
+   user-select: none;
+   height: 200px;
+   background-color: #ebf3f6;
+}
+.COMpopoutListSplitter{
+   position: relative;
+   border-right: 1px solid var(--grey-400);
+   display: grid;
+   grid-template-rows: 1fr;
+   overflow: hidden;
+   padding: 16px;
+   padding-left: 32px;
+   width: 500px;
+}
+.COMresizeControl{
+   right: -5px;
+   top: 0;
+   bottom: 0;
+   width: 10px;
+   padding: 0;
+   border: 0;
+   position: absolute;
+   outline: none;
+   cursor: ew-resize;
+   background-color: transparent;
+   z-index: 20;
+}
+.COMresizeShadow{
+   bottom: 0;
+   top: 0;
+   right: 4px;
+   pointer-events: none;
+   position: absolute;
+   width: 3px;
+   transition: 150ms ease-out;
+}
+.COMresizeControl:hover .COMresizeShadow {
+   background: var(--blue);
+   transition: 75ms ease-in;
+}
+.COMpopoutList{
+   height: 100%;
+   overflow-y: auto;
+   border: 1px solid var(--grey-400);
+   border-radius: var(--border-radius);
+}
+.COMinnerDiv{
+   overflow-y: auto;
+   height: 100%;
+   overflow-y: auto;
+   /* border: 1px solid var(--grey-400); */
+   /* border-radius: var(--border-radius); */
+   /* padding-left: 10px;
+   padding-right: 10px;
+   padding-top: 10px; */
+   /* background-color: var(--grey-100); */
+}
+.COMpopoutDiff{
+   display: grid;
+   height: 100%;
+   overflow: hidden;
+   row-gap: 24px;
+   grid-template-rows: 1fr auto;
+}
+.COMrollback{
+   display: grid;
+   grid-template-columns: 1fr auto;
+   padding: 24px;
+   padding-top: 12px;
+   padding-bottom: 12px;
+   border-top: 1px solid var(--grey-400);
+   color: var(--grey-600);
+   border: 1px solid var(--grey-400);
+   border-radius: var(--border-radius);
+   background-color: var(--grey-100);
+}
+.COMrollbackText{
+   padding-top: 5px;
+   font-family: var(--font-buttons);
+}
+.COMpopoutDiffContainer{
+   position: relative;
+   display: grid;
+   grid-template-rows: 1fr;
+   overflow: hidden;
+   padding: 16px;
+   padding-right: 32px;
+   padding-bottom: 26px !important;
+}
+.COMcloseButtonContainer{
+   display: flex;
+   height: 23px;
+   width: 100%;
+   position: sticky;
+   z-index: 10000;
+   top: 0;
+   left: 5px;
+   align-items: center;
+   box-sizing: border-box;
+   cursor: pointer;
+   padding: 5px;
+   padding-left: 3px;
+   box-sizing: border-box;
+}
+.COMcloseButton{
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   height: 18px;
+   width: 18px;
+   color: var(--white);
+   margin-top: 4px;
+}
+.COMcloseButtonContainer:hover .COMcloseButton{
+   opacity: 80%;
+   border-radius: var(--border-radius);
+   background: var(--grey-600);
+   border: 1px solid var(--grey-600);
+}
+.COMcommitDateContainer{
+   padding-top: 8px;
+   background-color: var(--grey-200);
+   color: var(--grey-600);
+}
+.COMcommitDateContainer:first-child{
+   padding-top: 8px;
+}
+.COMcommitDate{
+   display: flex;
+   padding-bottom: 5px;
+   align-items: center;
+   user-select: none;
+   border-bottom: 1px solid var(--grey-300);
+   font-size: 12px;
+   padding-left: 12px;
+}
+.COMcommitListType{
+   color: var(--grey-600);
+   font-size: 10.5px;
+}
+.COMerror{
+   padding: 12px;
+   font-size: 12px;
+   color: var(--grey-600);
+   font-family: var(--font-monospace);
+}
+.COMerrorWarning{
+   color: var(--red);
+   font-size: 12px;
+   font-family: var(--font-monospace);
+}
+.COMerrorWarningLink{
+   color: var(--blue);
+   text-decoration: unset;
+   cursor: pointer;
+   padding-left: 2px;
+   padding-right: 2px;
+}
+.COMerrorWarningLink:hover{
+   text-decoration: underline;
+}
+.COMdivHalf *{
+   font-size: 11px !important;
+}
+.COMdivHalf{
+   min-width: 580px;
+}
+.COMrowDate{
+   display: grid;
+   grid-template-columns: 1fr auto;
+   border-bottom: 1px solid var(--grey-400);
+   margin-bottom: 8px;
+   height: 28px;
+}
+.COMrestore{
+   height: 22px;
+   font-size: 9.5px;
+   border: 1px solid var(--grey-300);
+   padding: 0px 8px;
+   font-weight: 550;
+}
+.COMrestore:hover {
+	background-color: var(--green-hover);
+	transition: 120ms ease-in;
+   color: white;
+}
+.COMbody{
+   margin-top: 18px;
+   margin-bottom: 18px;
+   line-height: 24px;
+}
+.COMcommitRow.PRJicon-closedDir-library-unlocked {
+   padding-left: 30px;
+   position: relative;
+ }
+ 
+ .COMcommitRow.PRJicon-closedDir-library-unlocked::before {
+   content: url("/LIB/LIBiconFolderClosed.svg");
+   display: inline-block;
+   width: 12px;
+   height: 12px;
+   background-repeat: no-repeat;
+   background-position: center;
+   vertical-align: middle;
+   cursor: pointer;
+   margin-right: 4px;
+   position: absolute;
+   left: 10px;
+   top: 50%;
+   transform: translateY(-60%); /* nudged slightly upward */
+   opacity: 0.8;
+ }
+ .COMcommitRow.PRJicon-closedDir-library-unlocked:hover::before{
+   opacity: 1;
+ }

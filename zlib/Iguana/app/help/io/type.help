@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">io.type(obj)\n</pre><ul><li><code><strong>obj</strong></code>: The value you want to check. Typically this will be a file handle returned from <code><a href=\"@io.open\" target=\"_blank\">io.open</a></code> or <code><a href=\"@io.popen\" target=\"_blank\">io.popen</a></code>.</li></ul><p><br></p><h3>Notes</h3><ul><li>Useful for validating file objects before attempting to operate on them.</li></ul><p><br></p><h3>Returns</h3><ul><li>A string describing the type of file handle: <em><u>(string)</u></em></li><li class=\"ql-indent-1\"><code>\"file\"</code> if the handle is open.</li><li class=\"ql-indent-1\"><code>\"closed file\"</code> if the handle has been closed.</li><li class=\"ql-indent-1\"><code>nil</code> if the object is not a file handle.</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local F = io.open(\"file.txt\", \"w\")\nlocal State = io.type(F)&nbsp; -- \"file\"\nF:close()\nState = io.type(F)&nbsp; &nbsp; &nbsp; &nbsp; -- \"closed file\"\n</pre>",
+    "Name": "io.type",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>object</u></em> The object to be checked.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Checks whether the file handle is valid."
+}

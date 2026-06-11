@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">debug.getfenv(f)\n</pre><ul><li><code><strong>f</strong></code>: A function<strong> </strong>to return the environment of. If <code style=\"background-color: rgb(240, 240, 240);\">f</code> is not a Lua function the global environment is returned.</li></ul><p><br></p><h3>Notes</h3><ul><li>All global variables live as fields in ordinary Lua tables, called environment tables or simply environments.</li><li>Each function written in Lua has its own reference to an environment, so that all global variables in that function will refer to that environment table.</li><li>When a function is created, it inherits the environment from the function that created it (usually in Iguana this will be the global environment).</li><li>To change or get the environment table of a Lua function, you call <code><a href=\"@setfenv\" target=\"_blank\">setfenv</a></code> or <code><a href=\"@getfenv\" target=\"_blank\">getfenv</a></code>.</li><li>Any functions written in C and exported to Lua (C functions) all share the common global environment (_G).</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>Function environment. <em>(<u>table)</u></em></li></ul><p><br></p><h3><strong>Example</strong></h3><pre class=\"ql-syntax\" spellcheck=\"false\">-- compare function environment to global environment \"_G\"\nfunction main()\n   -- myFunc is called from main so it should match the environemnt of main and itself   \n   myFunc()\nend\n\nfunction myFunc()\n   if (debug.getfenv(0)      == _G) then print ('Match') end --&gt; \"Match\" to global environment _G\n   if (debug.getfenv(1)      == _G) then print ('Match') end --&gt; \"Match\" to environment for calling function\n   if (debug.getfenv(main)   == _G) then print ('Match') end --&gt; \"Match\" to environment for main\n   if (debug.getfenv(2)      == _G) then print ('Match') end --&gt; \"Match\" to environment for this function\n   if (debug.getfenv(myFunc) == _G) then print ('Match') end --&gt; \"Match\" to environment for myFunc (this function)\nend\n</pre><p><br></p>",
+    "Name": "debug.getfenv",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>function</u> </em>Function to return environment for.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Returns the environment of the supplied function."
+}

@@ -1,0 +1,23 @@
+{
+    "Description": "<p> 🔄  <strong>Replacement:</strong> <code style=\"background-color: rgb(240, 240, 240); color: rgb(37, 144, 205);\"><a href=\"http://localhost:7654/@util.findPattern\" target=\"_blank\">util.findPattern</a></code>. </p><p> ⚠️  <strong>Deprecated:</strong>    <code style=\"background-color: rgb(240, 240, 240);\">test.search</code> will be removed in a future version.&nbsp;</p><p><br></p><h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">test.search(searchString, stringToSearch, exactMatch)\n</pre><ul><li><strong>searchString</strong>: Pattern to look for (can include regex).</li><li><strong>stringToSearch</strong>: The string to scan for matches.</li><li><strong>exactMatch</strong>: Set to <code>\"true\"</code> to match only whole words.</li></ul><p><br></p><h3>Notes</h3><ul><li>For whole word matching, ensure the flag is explicitly set to <code>\"true\"</code> — partial matches will be ignored.</li><li>This function is intended for simple pattern testing in controlled environments and is now deprecated in favor of more robust utilities.</li></ul><p><br></p><h3>Returns</h3><ul><li>A boolean indicating whether a match was found.</li><li> (<code>true</code> if a match exists, <code>false</code> otherwise)</li></ul>",
+    "Name": "test.search",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The search pattern or string to match. Supports basic string and regular expression syntax.</p>",
+            "Name": "searchString",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u></em> The target string in which to search.</p>",
+            "Name": "stringToSearch",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u></em> Flag (<code>\"true\"</code> or <code>\"false\"</code>) to control whether whole word matching is enforced.</p>",
+            "Name": "exactMatch",
+            "Required": true
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "*DEPRECATED* - Use util.findPattern instead."
+}

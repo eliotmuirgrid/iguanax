@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">math.deg(x)\n</pre><ul><li><code><strong>x</strong></code>: A numeric value in radians to be converted to degrees.</li></ul><p><br></p><h3>Returns</h3><ul><li>The angle <code>x</code> converted to degrees. <em><u>(number)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local R = math.deg(1)\n</pre><ul><li>This converts 1 radian into degrees.</li></ul>",
+    "Name": "math.deg",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>number</u></em> The angle (in radians) to convert to degrees.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Converts an angle from radians to degrees."
+}

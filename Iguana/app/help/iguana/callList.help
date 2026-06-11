@@ -1,0 +1,7 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local ApiList = iguana.callList();\n</pre><p><br></p><h3>Notes</h3><ul><li>Returns a list of all the API calls that you can make with <code><a href=\"@iguana.call\" target=\"_blank\">iguana.call</a></code></li></ul><p><br></p><h3>Returns</h3><ul><li>A list of all the API calls that you can make with iguana.call. <em><u>(table)</u></em></li></ul><p><em><span class=\"ql-cursor\">﻿﻿</span></em></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local ApiList = iguana.callList();\n</pre>",
+    "Name": "iguana.callList",
+    "Parameters": null,
+    "ParameterTable": false,
+    "SummaryLine": "Returns list of calls that can be called using iguana.call"
+}

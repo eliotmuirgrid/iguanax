@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">util.generateGUID(Size)\n</pre><ul><li><code><strong>size</strong></code>: The bit-length of the GUID. Values smaller than 128 or not divisible by 8 are invalid.</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>Common values for <code>size</code> are <code>128</code>, <code>256</code>, or <code>512</code>.</li><li>GUIDs are useful for generating unique record keys, message IDs, or trace tokens.</li></ul><h3><br></h3><h3><strong>Returns</strong></h3><ul><li>A new GUID as a string. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Guid = util.generateGUID(128)\n</pre>",
+    "Name": "util.generateGUID",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>integer</u></em> The size of the GUID in bits. Must be <strong>at least 128</strong> and divisible by <strong>8</strong>.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Generates a globally unique identifier (GUID)."
+}

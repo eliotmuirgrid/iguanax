@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">pairs(t)\n</pre><ul><li><code><strong>t</strong></code>: The table to iterate over. (<em>table</em>)</li></ul><p><br></p><h3>Notes </h3><ul><li>Iterates over all key-value pairs, including both numeric and string keys.</li><li><strong>Do not</strong> add or remove fields from the table while iterating—it may cause unexpected behavior.</li><li>The order of iteration is not guaranteed.</li><li>For sequential numeric keys (e.g., arrays), use <code><a href=\"@ipairs\" target=\"_blank\">ipairs</a></code>.</li></ul><p><br></p><h3>Returns</h3><ul><li>The next function for iteration. <em><u>(function)</u></em></li><li>The table being iterated. <em><u>(table)</u></em></li><li>The initial key (always <code>nil</code>). <em><u>(nil)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local T = {\n   name = \"John\",\n   age = 54,\n   active = true\n}\n\nfor K, V in pairs(T) do\n   trace(K, V)\nend\n</pre>",
+    "Name": "pairs",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> Table to iterate.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Iterates over all key-value pairs in a table, including both string and numeric keys."
+}

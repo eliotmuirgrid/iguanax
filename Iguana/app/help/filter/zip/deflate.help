@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">filter.zip.deflate(table)\n</pre><ul><li><code><strong>table</strong></code>: A hierarchical table of string keys and values:</li><li class=\"ql-indent-1\">String values are treated as file contents.</li><li class=\"ql-indent-1\">Nested tables represent directories.</li></ul><p><br></p><h3>Notes</h3><ul><li>This function is the reverse of <code><a href=\"@filter.zip.inflate\" target=\"_blank\">filter.zip.inflate</a></code>.</li><li>Directory and file names become table keys.</li><li>Values are either:</li><li class=\"ql-indent-1\"><em>Strings</em> → treated as file contents.</li><li class=\"ql-indent-1\"><em>Tables</em> → treated as subdirectories.</li></ul><p><br></p><h3>Returns</h3><ul><li>A string containing the ZIP-compressed representation of the table. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local T = {}\nT[\"readme.txt\"]&nbsp; &nbsp; &nbsp; &nbsp; = \"This is a readme!\"\nT[\"readme2.txt\"]&nbsp; &nbsp; &nbsp; &nbsp;= \"This is also a readme!\"\nT[\"dir\"]&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;= {}\nT[\"dir\"][\"readme3.txt\"] = \"Some more reading material!\"\n\nlocal Data = filter.zip.deflate(T)\nlocal R = filter.zip.inflate(Data)\ntrace(R.dir[\"readme3.txt\"])\n</pre>",
+    "Name": "filter.zip.deflate",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>table</u></em> A table representing files and directories (may be nested). Keys are names, values are file contents or nested tables.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Compress a table into binary ZIP data."
+}

@@ -1,0 +1,28 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">ui.addDashboardColumn{\n&nbsp; &nbsp; name = &lt;column_name&gt;,\n&nbsp; &nbsp; width = &lt;column_width&gt;,\n&nbsp; &nbsp; priority = &lt;priority_value&gt;,\n&nbsp; &nbsp; title = &lt;css_title&gt;\n}\n</pre><ul><li><code><strong>name</strong></code>: The name of the custom column.</li><li><code><strong>width</strong></code> <em>(optional)</em>: The pixel width of the column.</li><li><code><strong>priority</strong></code> <em>(optional)</em>: Controls order; lower numbers appear earlier. Use <code>-1</code> to push the column to the end.</li><li><code><strong>title</strong></code> <em>(optional)</em>: A display title for the column header.</li></ul><h3><br></h3><h3>Notes</h3><ul><li>You can set custom columns like “Port,” “Version,” or any other metadata relevant to your component.</li><li>You do not need to explicitly add the column before setting its value with <code><a href=\"http://localhost:7654/@ui.setDashboardColumn\" target=\"_blank\">ui.setDashboardColumn</a></code>, but the column won’t appear on the dashboard until it’s been defined with this function.</li><li>Columns are sorted by priority in ascending order. If multiple columns share the same priority, they are sorted alphabetically by name.</li><li>If the component has the tag #autostart, the column will persist on restart.</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">-- Add a custom dashboard column named \"Port\" with width 100 and priority 1\nui.addDashboardColumn{\n&nbsp; &nbsp; name = \"Port\",\n&nbsp; &nbsp; width = 100,\n&nbsp; &nbsp; priority = 1,\n&nbsp; &nbsp; title = \"Port Number\"\n}\n</pre>",
+    "Name": "ui.addDashboardColumn",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The name of the column to display.</p>",
+            "Name": "name",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>integer</u></em> The width of the column in pixels.</p>",
+            "Name": "width",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>integer</u></em> Determines the display order (use -1 for last).</p>",
+            "Name": "priority",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u></em> A CSS title string shown as the column header.</p>",
+            "Name": "title",
+            "Required": false
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Sets a custom column on the dashboard."
+}

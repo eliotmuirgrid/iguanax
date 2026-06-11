@@ -1,0 +1,13 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">ui.setBorderColor{color = \"&lt;color_value&gt;\"}\n</pre><ul><li><code><strong>color</strong></code>: The desired border color, provided as a hex code (like <code>#FF0000</code>) or any valid CSS color string (e.g., <code>red</code>, <code>blue</code>, <code>rgb(255,0,0)</code>).</li></ul><h3><br></h3><h3>Notes</h3><ul><li>This function updates the border color of the component while it is running.</li><li>The color value can follow standard CSS color formats, including:</li><li class=\"ql-indent-1\">Hex (<code>#RRGGBB</code> or <code>#RGB</code>)</li><li class=\"ql-indent-1\">Named colors (<code>red</code>, <code>green</code>, <code>blue</code>, etc.)</li><li class=\"ql-indent-1\">RGB/RGBA strings (<code>rgb(255,0,0)</code>, <code>rgba(255,0,0,0.5)</code>)</li><li>Useful for visually signaling component status (e.g., red for error, green for success).</li><li>Setting color=\"\" will remove the color.</li><li>If the component has the tag #autostart, the color will persist on restart.</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">-- Set the border color to bright red\nui.setBorderColor{color = \"#FF0000\"}\n</pre>",
+    "Name": "ui.setBorderColor",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The color of the border.</p>",
+            "Name": "color",
+            "Required": true
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Sets the color of the component’s border."
+}

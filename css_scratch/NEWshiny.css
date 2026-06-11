@@ -1,0 +1,16 @@
+
+ .NEWclean * {
+   font-size: revert;
+ }
+
+.NEWheading{
+   color : red;
+}
+
+.NEWparagraph {
+   font-style: italic;
+}
+
+.NEWnested {
+   font-style : initial;
+}

@@ -1,0 +1,843 @@
+.NWCnameFeedback{
+   color: var(--red);
+	font-size: 10px;
+	line-height: 12px;
+	margin-top: 4px;
+}
+.NWCaccessWarning{
+	color: var(--grey-600);
+	padding-left: 36px;
+	overflow: hidden;
+	width: 100%;
+	text-overflow: ellipsis; 
+	white-space: nowrap;
+	font-size: 15px;
+
+	/* text-align: center; */
+}
+.NWCdescription {
+	display: block;
+	border-radius: var(--border-radius);
+	border: 1px solid var(--grey-400);
+	background-color: var(--white);
+	font-weight: var(--regular);
+	font-size: 12px;
+	line-height: 16px;
+	padding: 6px 8px;
+	color: var(--grey-800);
+	width: 100%;
+	box-sizing: border-box;
+	font-family: var(--font-sans);
+	resize: none;
+	margin-top: 4px;
+}
+.NWCdescription::placeholder {
+	color: var(--grey-400);
+}
+.NWCheader{
+	font-family: var(--font-buttons);
+	color: var(--grey-500);
+	font-weight: 500;
+	font-size: 11px;
+	letter-spacing: 0.05em;
+}
+.NWCrepoFeedback,
+.NWCrepoDoesntExistFeedback,
+.NWCnameFeedback{
+   color: var(--red);
+	font-size: 10px;
+	line-height: 12px;
+	margin-top: 4px;
+  	overflow: visible;
+  	position: absolute;
+}
+.NWCnameExistsFeedback{
+	color: var(--red);
+	font-size: 10px;
+	line-height: 12px;
+	margin-top: 4px;
+  	overflow: visible;
+}
+.NWCtemplateDiv {
+	flex-grow: 1;
+	display: grid;
+	grid-template-rows: auto auto 40px 1fr;
+	border-radius: var(--border-radius);
+	min-height: 0;
+	overflow: hidden;
+	padding-left: 8px;
+}
+.NWCsourceComponent{
+	padding-bottom: 12px;
+	border-bottom: 1px solid var(--grey-400);
+	margin-bottom: 18px;
+	margin-right: 24px;
+}
+.NWCsourceComponentName{
+	font-size: 12px;
+	color: #4a5568;
+	opacity: 0.75;
+	line-height: 1.7;
+}
+.NWChidden{
+	display: none !important;
+}
+.NWCgitFeedback{
+   border: 1px solid var(--grey-400);
+   border-radius: var(--border-radius);
+   background: var(--grey-200);
+   padding: 24px 32px;
+}
+.NWCnoCollections{
+	color: var(--grey-600);
+	border: solid 1px var(--grey-200);
+	border-radius: var(--border-radius);
+   padding: 100px;
+	text-align: center;
+	height: 100%;
+}
+.NWCfilter {
+	background-image: url(/NWC/NWCiconFilter.svg);
+	background-repeat: no-repeat;
+	background-position: 6px center;
+	padding-left: 28px;
+	min-width: 120px;
+}
+.NWCheaderDiv{
+	margin-bottom: 12px;
+	padding-right: 24px;
+}
+.NWcheckboxGridDiv{
+	margin-bottom: 4px;
+	padding-right: 4px;
+	display: grid;
+	grid-template-columns: 1fr auto;
+}
+.NWCcheckboxDiv{
+	border: 1px solid var(--grey-400);
+	border-radius: var(--border-radius);
+	background-color: var(--grey-200);
+	padding: 12px;
+	padding-left: 24px;
+	padding-right: 20px;
+	margin-right: 16px;
+}
+.NWCrepoLink{
+	display: flex;
+	height: 100% !important;
+	justify-content: center;
+	align-items: center;
+	width: 40px;
+	margin-top: 5px;
+
+}
+.NWCrepoLink:hover{
+	color: var(--blue);
+}
+.NWCopenLinkDiv{
+	content: url(/NWC/NWCiconNewWindow.svg);
+}
+.NWCrepoLink:hover .NWCopenLinkDiv,
+.NWCopenCollection:hover .NWCopenLinkDiv{
+	content: url(/NWC/NWCiconNewWindowHover.svg);
+}
+.NWCmodal{
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+	color: var(--grey-800);
+}
+.NWCcardContent {
+	display: grid;
+	grid-gap: 12px;
+	grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+	padding-bottom: 4px;
+}
+.LBRfilterByCollectionSelect,
+.NWCfilterByCollectionSelect,
+.LBRcardContent-hide,
+.NWCcardContent-hide {
+	height: 100%;
+	overflow-y: auto;
+	overflow-x: hidden;
+	padding-bottom: 0px;
+	box-sizing: border-box;
+	padding-right: 8px;
+}
+.NWCcardLoading {
+	background-image: url(/TRANS/images/spinner.gif);
+	background-repeat: no-repeat;
+	background-position: center center;
+	background-size: 24px;
+	opacity: 0.5;
+	filter: alpha(opacity=5);
+	height: 100%;
+	width: 100%;
+}
+.NWCbitbucketUrl{
+	padding-left: 4px;
+	padding-right: 4px;
+}
+.NWCaccessError{
+	color: red;
+	padding-right: 4px;
+}
+
+.NWCnoBitbucketAccess{
+	width: 100%;
+	color: var(--grey-800);
+	letter-spacing: 0.05em;
+	max-height: calc(100% - 24px);
+	font-size: 13px;
+	display: flex;
+	height: 100% !important;
+	justify-content: center;
+	align-items: center;
+}
+.NWCnoTemplatesDefined{
+	width: 100%;
+	color: var(--grey-400);
+	letter-spacing: 0.05em;
+	max-height: calc(100% - 24px);
+	font-size: 11px;
+	display: flex;
+	height: 100% !important;
+	gap: 28%;
+}
+.NWCnoTemplatesDefinedText{
+	display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+.NWCnewCardError{
+	color: red;
+   padding: 100px;
+}
+
+.NWCtemplateCard-visible {
+	opacity: 1;
+	animation: fadein .4s cubic-bezier(0.29, 1.29, 1, 1) forwards;
+}
+.NWCnoCache{
+	background-color: var(--grey-200) !important;
+}
+.NWCblankCard,
+.NWCtemplateCard {
+	border-radius: var(--border-radius);
+	background-color: var(--white);
+	border: 1px solid var(--grey-400);
+	height: 142px;
+	text-align: left;
+	display: inline-block;
+	overflow: hidden;
+	padding: 20px;
+	/* padding-top: 16px; */
+	padding-bottom: 24px;
+	box-sizing: border-box;
+	display: grid;
+	grid-template-rows: auto 1fr;
+	user-select: none;
+}
+.NWCnoTemplatesDefined .NWCblankCard{
+	width: 230px;
+}
+.NWCtemplateCard{
+	opacity: 0;
+}
+.NWCblankCard{
+ 	border: 3px dotted var(--grey-400);
+	padding: 18px !important;
+	color: var(--grey-500);
+}
+.NWCblankCard:hover{
+	padding: 20px !important;
+	color: unset;
+}
+.NWCblankCard,
+.NWCcached{
+	cursor: pointer;
+}
+.NWCcomponentListRow:hover,
+.NWCcached:hover,
+.NWCblankCard:hover,
+.NWCtemplateCardSelected{
+	background-color: #F8FCFE;
+	border: 1px solid var(--blue);
+	box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
+}
+.LBRtemplateCard:hover .DASHrenderHashtagInfoSymbol,
+.NWCcached:hover .DASHrenderHashtagInfoSymbol,
+.NWCtemplateCardSelected .DASHrenderHashtagInfoSymbol{
+	background-color: #F8FCFE;
+}
+
+.NWCtemplateCard span {
+	font-size: 11px;
+	line-height: 1.6em;
+	word-wrap: break-word;
+	white-space: pre-wrap;
+	color: var(--grey-600);
+	box-decoration-break: clone;
+}
+.NWCtemplateCardHeader {
+	display: flex;
+	justify-content: space-between;
+}
+.NWCcatalogueModalContainer {
+	height: calc(100% - 36px);
+	padding-top: 24px !important;
+}
+.NWCcardContainer {
+	overflow: auto;
+}
+.NWCcardContainer::-webkit-scrollbar {
+	display: none;
+}
+.LBRtemplateCardName,
+.NWCtemplateCardName{
+	display: block;
+	font-weight: bold;
+	font-size: 12px;
+	margin-bottom: 6px;
+	word-wrap: break-word;
+	color: var(--grey-800);
+}
+.NWCblankCardName {
+	font-weight: bold;
+	font-size: 12px;
+	margin-bottom: 12px;
+	word-wrap: break-word;
+}
+.LBRtemplateCardDesc,
+.NWCtemplateCardDesc {
+	overflow: auto;
+	word-wrap: break-word;
+	height: 63px;
+
+}
+.LBRtemplateCard:hover .DASHrenderHashtagInfoSymbol,
+.NWCtemplateCard:hover .DASHrenderHashtagInfoSymbol{
+	opacity: 1;
+	color: var(--blue);
+}
+.LBRtemplateCardDesc .DASHrenderHashtagInfoSymbol,
+.NWCtemplateCardDesc .DASHrenderHashtagInfoSymbol{
+	color: var(--grey-500);
+	/* opacity: .6; */
+}
+.LBRtemplateCardDesc,
+.NWCtemplateCardDesc {
+	padding-top: 2px;
+	--scrollbarBG: #FFFFFF;
+	--thumbBG: #D2DDE8;
+	scrollbar-width: thin;
+	scrollbar-color: var(--thumbBG) var(--scrollbarBG);
+	line-height: 21px;
+}
+.LBRtemplateCardDesc::-webkit-scrollbar,
+.NWCtemplateCardDesc::-webkit-scrollbar {
+	width: 16px;
+	height: 16px;
+}
+.LBRtemplateCardDesc::-webkit-scrollbar-track,
+.NWCtemplateCardDesc::-webkit-scrollbar-track {
+	background: var(--scrollbarBG);
+}
+.LBRtemplateCardDesc::-webkit-scrollbar-thumb,
+.NWCtemplateCardDesc::-webkit-scrollbar-thumb {
+	background-color: var(--thumbBG);
+	border-radius: 8px;
+	border: 5px solid var(--scrollbarBG);
+}
+
+.NWCfilterContainer {
+	background: var(--grey-200);
+	padding: 12px 18px;
+	padding-left: 10px;
+	border: 1px solid var(--grey-400);
+	border-radius: var(--border-radius);
+	margin-bottom: 12px;
+	margin-right: 8px;
+	cursor: default;
+}
+.NWCfilterContainer:hover{
+	background-color: #F8FCFE;
+	border: 1px solid var(--blue);
+	box-shadow: 0 2px 4px rgb(0 0 0 / 20%);
+}
+.NWClistContainer{
+	height: 100%;
+	overflow-y: scroll;
+}
+.NWCrepoLinkHrefDiv{
+	display: grid;
+	column-gap: 8px;
+	grid-template-columns: 40px 1fr;	
+}
+
+.NWCbuttons {
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: end;
+	margin-top: 12px;
+	margin-right: 0;
+	margin-left: auto;
+}
+.NWCtopHeaderDiv{
+	display: grid;
+	grid-template-columns: 1fr 40px 40px 22px;	
+}
+.NWCeditable{
+	display: grid;
+	grid-template-columns: auto 40px 1fr 80px;	
+}
+.LBRmodal,
+.NWCgrid{
+	display: grid;
+	grid-template-columns: 344px 1fr 440px;	
+	column-gap: 12px;
+	height: calc(100% - 150px);
+	overflow: hidden;
+}
+.NWCeditableLabel{
+	padding-top: 6px;
+	padding-bottom: 6px;
+}
+.NWCconnectComponentsCheck,
+.NWCeditableCheck{
+	height: 14px;
+	margin-top: 6px;
+	margin-bottom: 6px;
+}
+.LBRdetailsDiv,
+.NWCaddComponentsGrid{
+	height: 100%;
+	overflow: hidden;
+	display: grid;
+	grid-template-rows: auto 1fr;
+	margin-left: 8px;
+	padding-left: 24px;
+	border-left: solid 1px var(--grey-400);
+}
+.LBRdetailsDiv{
+	grid-template-rows: auto 1fr auto auto;
+	row-gap: 18px;
+	margin-right: 12px;
+}
+.NWCadd{
+	margin-right: 22px !important;
+}
+
+.NWCaddComponentButtons {
+	display: grid;
+	grid-template-columns: auto auto;
+	justify-content: end;
+	margin-right: 0;
+	margin-left: auto;
+}
+.NWCcomponentListRow{
+	display: grid;
+	grid-template-columns: 1fr 0px auto;
+	padding: 6px 12px;
+	margin-bottom: 6px;
+	border-radius: var(--border-radius);
+	background-color: var(--white);
+	border: 1px solid var(--grey-400);
+	cursor: pointer;
+	box-sizing: border-box;
+}
+.NWCremoveListRow{
+	cursor: pointer;
+}
+.NWCrowGuid{
+	visibility: hidden;
+}
+.NWCconnectComponentsGrid{
+	display: grid;
+	grid-template-columns:  auto 40px 1fr;
+}
+.NWCcomponentListDiv{
+	height: 100%;
+	overflow: hidden;
+	display: grid;
+	row-gap: 8px;
+	grid-template-rows: 1fr auto auto;
+	position: relative;
+	padding-bottom: 1px;
+}
+.LBRmodal,
+.NWCmodal{
+	user-select: none;
+}
+.NWCname{
+	margin-right: 12px;
+}
+.NWCtrashIcon{
+	width: 16px;
+	height: 16px;
+	margin-top: -4px;
+	margin-bottom: -4px;
+	fill: currentColor;
+}
+.NWCbuttonsRow{
+	display: grid;
+	grid-template-columns: auto auto 1fr auto auto auto;
+	justify-content: end;
+	margin-right: 16px;
+	margin-top: 28px;
+	margin-left: auto;
+	width: 100%;
+}
+.NWCrefreshCacheGrid{
+	display: grid;
+	grid-template-columns: 1fr auto;
+	column-gap: 8px;
+	word-break: break-all;
+	padding-left: 8px;
+}
+.NWCrefreshCache{
+	color: var(--blue);
+	text-decoration: none;
+	cursor: pointer;
+}
+.NWCrefreshCache:hover {
+	color: var(--blue);
+	text-decoration: underline;
+	cursor: pointer;
+}
+.NWCnoCacheRow{
+	display: grid;
+	grid-template-columns: 150px 1fr;
+}
+.NWCtag{
+	margin-top: 8px;
+}
+.NWCcollectionsDiv{
+	width: 100%;
+	margin-bottom: 12px;
+	display: flex;
+	gap: 10px;
+	align-items: center;
+}
+.NWCcollectionsLabel{
+	font-weight: bold;
+}
+.NWCpaddingRight{
+	padding-right: 24px;
+}
+.NWCcustomTemplateCard{
+	display: none !important;
+}
+.NWCmoveRepoDiv{
+	border: 0;
+	border-radius: var(--border-radius);
+	background-color: var(--grey-100);
+	color: var(--grey-600);
+	font-size: 22px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	cursor: move;
+	background-color: var(--grey-200);
+}
+.NWCmoveRepoDiv:hover{
+	background-color: var(--grey-300);
+}
+.NWCremoveComponent{
+	padding-bottom: 4px;
+   display: flex;
+   align-items: center;
+   justify-content: center;
+   padding-top: 0px;
+	padding: 2px
+}
+.NWCrefreshInfo{
+	color: var(--grey-600);
+	text-decoration: none;
+}
+.NWCrefreshInfoLink{
+	color: var(--blue);
+	text-decoration: none;
+	padding-left: 2px;
+	padding-right: 2px;
+}
+.NWCrefreshInfoLink:hover{
+	text-decoration: underline;
+}
+/* Card description area */
+.LBRtemplateCardDesc,
+.NWCtemplateCardDesc {
+	position: relative;
+	/* leave room so text doesn't collide with the fixed link */
+	padding-bottom: 27px;             /* tweak for your font/line-height */
+	/* optional: clamp text so cards stay even height */
+	overflow: hidden;
+	display: -webkit-box;
+	-webkit-box-orient: vertical;
+	-webkit-line-clamp: 4	;            /* choose the number of visible lines */
+ }
+ 
+ /* The “Learn more” link (the last link in the desc) */
+.LBRtemplateCardDesc .DASHrenderHashtagInfoSymbol,
+.NWCtemplateCardDesc .DASHrenderHashtagInfoSymbol {
+	position: absolute;
+	right: 0;
+	bottom: 3px;                      /* align visually with text baseline */
+	white-space: nowrap;
+	background: #fff;                 /* avoids overlap on last line if needed */
+	padding-left: 24px;                /* small separation from truncated text */
+	border-radius: var(--border-radius);
+ }
+ 
+ /* Optional: make the hashtag look unaffected by clamping */
+ .LBRtemplateCardDesc .DASHhashtag,
+ .NWCtemplateCardDesc .DASHhashtag {
+	white-space: nowrap;
+ }
+ .LBRtemplateCardDesc .DASHhashtag,
+.NWCtemplateCardDesc .DASHhashtag{
+	margin-right: 1px;
+	font-size: 10.5px;
+}
+/* Wrapper -------------------------------------------------- */
+.LBRfilterByCollectionDiv,
+.NWCfilterByCollectionDiv {
+	/* adjust these to match your modal padding */
+	overflow: hidden;
+}
+.LBRheaderTitle,
+.NWCheaderTitle {
+	letter-spacing: 0.04em;
+	font-size: 13px;
+	font-weight: 600;
+	margin-bottom: 18px;
+	color: #374151;
+}
+.LBRfilterByCollectionSelect,
+.NWCfilterByCollectionSelect {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+	height: calc(100% - 48px);
+}
+
+/* Collection card ------------------------------------------ */
+.LBRcollectionCard,
+.NWCcollectionCard {
+	border: 1px solid #e5e7eb;
+	border-radius: 6px;
+	padding: 14px 18px;
+	background-color: #ffffff;
+	cursor: pointer;
+	transition:
+		background-color 120ms ease-out,
+		border-color 120ms ease-out,
+		box-shadow 120ms ease-out;
+	font-size: 13px;
+	color: #111827;
+	margin: 1px;
+	overflow-wrap: anywhere;   /* modern */
+	word-break: break-word;    /* fallback */
+	white-space: normal;
+}
+.LBRcollectionCard:hover,
+.NWCcollectionCard:hover {
+	background: #f9fafb;
+	border-color: #d1d5db;
+}
+.LBRcollectionName,
+.NWCcollectionName {
+	color: #1f2937; /* tailwind gray-800 */
+}
+.LBRcollectionCard:hover,
+.NWCcollectionCard:hover {
+	border-color: #cbd5f5;
+	box-shadow: 0 0 0 1px #e5e7ff;
+}
+.NWCaddComponentsGrid .NWCcollectionCard{
+	margin-right: 22px;
+}
+.LBRcollectionCard--selected,
+.NWCcollectionCard--selected {
+	border-color: #2563eb;
+	background-color: #eff6ff;
+	box-shadow: 0 0 0 1px #2563eb;
+}
+
+/* If your target browsers support :has(), this will highlight
+   the card when its checkbox is checked. */
+.LBRcollectionCard:has(.LBRcollectionCheck:checked),
+.NWCcollectionCard:has(.NWCcollectionCheck:checked) {
+	border-color: #2563eb;
+	background-color: #eff6ff;
+	box-shadow: 0 0 0 1px #2563eb;
+}
+
+/* Header line: checkbox + name ----------------------------- */
+
+.LBRheaderGrid,
+.NWCheaderGrid {
+	display: grid;
+	grid-template-columns: auto 1fr;
+	align-items: center;
+	column-gap: 8px;
+	margin-bottom: 2px;
+}
+
+.LBRcollectionCheck,
+.NWCcollectionCheck {
+	margin: 0;
+	width: 14px;
+	height: 14px;
+	cursor: pointer;
+}
+
+.LBRcollectionName,
+.NWCcollectionName {
+	font-weight: 600;
+	font-size: 13px;
+	line-height: 1.3;
+}
+ .NWCemoji {
+	filter: grayscale(1);
+	opacity: 0.7; /* optional */
+	margin-right: 2px;
+	font-size: 0.9em;
+	vertical-align: -0.05em;
+ }
+/* Description text ----------------------------------------- */
+
+.LBRcollectionDescription,
+.NWCcollectionDescription {
+	margin-left: 24px;      /* lines up under the label text */
+	font-size: 12px;
+	color: #6b7280;
+	line-height: 1.4;
+}
+
+/* Accessibility: keyboard focus ---------------------------- */
+
+.LBRcollectionCheck:focus-visible,
+.NWCcollectionCheck:focus-visible {
+	outline: 2px solid #2563eb;
+	outline-offset: 2px;
+}
+.LBRcomponent,
+.NWCcomponent{
+	background-color: var(--grey-100) !important;
+}
+/* =========================================================
+   Collections list alignment (FINAL) — NWC + LBR
+   Put this at the BOTTOM of the stylesheet.
+   ========================================================= */
+
+/* Card */
+.NWCcollectionCard,
+.LBRcollectionCard {
+  border: 1px solid #eceef1;
+  border-radius: 10px;
+  padding: 12px 14px;
+  padding-left: 14px; /* slight left emphasis */
+  background: #fff;
+  cursor: pointer;
+  transition: background 120ms ease, border-color 120ms ease, box-shadow 120ms ease;
+}
+
+.NWCcollectionCard:hover,
+.LBRcollectionCard:hover {
+  background: #f8fafc;
+  border-color: #d6d9dd;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.04);
+}
+
+/* Header grid: checkbox | (emoji) | title */
+.NWCheaderGrid,
+.LBRheaderGrid {
+  display: grid;
+  grid-template-columns: 20px 1fr; /* checkbox lane */
+  gap: 6px;
+  align-items: center; /* center to first text line */
+}
+
+.NWCheaderGrid.has-emoji,
+.LBRheaderGrid.has-emoji {
+  grid-template-columns: 22px 16px 1fr; /* checkbox | emoji | title */
+  gap: 6px;
+}
+
+/* Checkbox (visual 16x16, bigger hit area) */
+.NWCcollectionCheck,
+.LBRcollectionCheck {
+  width: 16px;
+  height: 16px;
+  margin-top: 0;
+
+  /* larger click target without changing visual size */
+  padding: 4px;
+  box-sizing: content-box;
+  cursor: pointer;
+
+  transform: none; /* ensure no old nudges survive */
+}
+
+/* Emoji lane: fixed 16x16 */
+.NWCemojiWrap,
+.LBRemojiWrap {
+  width: 16px;
+  height: 16px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 1px;
+  background: transparent;
+}
+
+/* Emoji glyph */
+.NWCemoji,
+.LBRemoji {
+  font-size: 13px;
+  line-height: 1;
+  opacity: 0.8;
+  filter: grayscale(1);
+  vertical-align: -0.05em; /* optical per-glyph correction */
+}
+
+/* Title */
+.NWCcollectionName,
+.LBRcollectionName {
+  font-weight: 600;
+  font-size: 13px;
+  /* line-height: 1.2; */
+  color: #1f2937;
+}
+
+/* Description */
+.NWCcollectionDescription,
+.LBRcollectionDescription {
+  font-size: 12px;
+  line-height: 1.35;
+  color: #6b7280;
+  margin-top: 1px;
+}
+
+/* Description indent rules */
+.NWCheaderGrid:not(.has-emoji) + .NWCcollectionDescription,
+.LBRheaderGrid:not(.has-emoji) + .LBRcollectionDescription {
+  margin-left: calc(20px + 6px); /* checkbox lane + gap */
+}
+
+.NWCheaderGrid.has-emoji + .NWCcollectionDescription,
+.LBRheaderGrid.has-emoji + .LBRcollectionDescription {
+  margin-left: calc(22px + 16px + 6px + 6px); /* checkbox + emoji + gaps */
+}
+
+/* Accessibility focus */
+.NWCcollectionCheck:focus-visible,
+.LBRcollectionCheck:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+.NWCbranch{
+	display: none;
+}

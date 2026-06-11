@@ -1,0 +1,153 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Conn = net.ftp.init{\n  server = &lt;value&gt;, \n  username = &lt;value&gt;, \n  password = &lt;value&gt;,\n  ...\n}\n</pre><ul><li><code><strong>server</strong></code>: The remote server to connect to.</li><li><code><strong>username</strong></code>: The username to use when connecting to the remote server.</li><li><code><strong>password</strong></code><em> (optional)</em>: The password to  use when connecting to the remote server.</li><li><code><strong>live</strong></code> <em>(optional)</em>: Whether to establish the connection in translator.</li><li>Most users only need to specify <code style=\"background-color: rgb(240, 240, 240);\"><strong>server</strong></code>, <code style=\"background-color: rgb(240, 240, 240);\"><strong>username</strong></code>, and <code style=\"background-color: rgb(240, 240, 240);\"><strong>password</strong></code>. Additional optional parameters like <code style=\"background-color: rgb(240, 240, 240);\"><strong>active</strong></code> and <code style=\"background-color: rgb(240, 240, 240);\"><strong>use_ssl</strong></code> can be used to fine-tune the connection if needed. They are detailed below the <strong>Example</strong> section.</li></ul><p><br></p><h3>Notes</h3><ul><li>Initializes a new FTP connection object and caches the connection parameters. This does not open a connection. The actual connections are managed automatically, a connection is opened and closed each time an FTP command is issued (get, put, etc). Because of this, there is never a need to close an FTP connection.</li><li>Other options include specifying IPV4 only (using 'no_eprt' or 'no_epsv'), etc.</li><li>When a command is run the file type is detected and the correct transfer mode, 'ascii' (text) or 'binary', is chosen automatically.</li><li>The connection defaults to passive mode, you can also create an active connection using the <code><strong>active</strong></code> parameter.  Typically this won't work unless your Iguana instance is out on the internet.</li><li>Setting the <code><strong>active</strong></code> parameter means we are in active FTP mode and sending a PORT command with the given local IP/hostname (or network interface on Unix).  Use '-' for the default local IP address and a random port.  A particular port or range of ports can be added after the IP/hostname, e.g. ':32000', '192.168.1.2:32000', or 'eth0:32000-33000'.  Note that '-:32000' is invalid; omit the hyphen when specifying a port for the default IP.   </li><li>Possible values for <code><strong>ssl_version</strong></code> are tls-v1, tls-v1.1, tls-v1.2, tls-v1.3. The default behavior is to try tls-v1.3 and then tls-v1.2. Specifying tls-v1 will allow connections to use all tls versions (starting with tls-v1.3 down to tls-v1.0).</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>A connection object. <em>(<u>table)</u></em></li></ul><p><br></p><h3><strong>Example</strong></h3><h4>Basic Example</h4><pre class=\"ql-syntax\" spellcheck=\"false\">local FtpConn = net.ftp.init{\n  server='example', \n  username='user', \n  password='password'\n}\n</pre><h4> More Examples</h4><pre class=\"ql-syntax\" spellcheck=\"false\">-- active connection on default IP &amp; default port\nlocal FtpConn = net.ftp.init{server='foxton_ftp', username='test_ftp', password='secret', active='-'}\n\n-- active connection on default IP &amp; default port\n-- restrict to using IPV4 addressing (no_eprt=true), no_eprt can be added to any of the following commands\nlocal FtpConn = net.ftp.init{server='foxton_ftp', username='test_ftp', password='secret', active='-', no_eprt=true}\n\n-- active connection on default IP &amp; port specified\nlocal FtpConn = net.ftp.init{server='foxton_ftp', username='test_ftp', password='secret', active=':32000'}\n\n-- active connection on default IP &amp; with local machine name specified\nlocal FtpConn = net.ftp.init{server='foxton_ftp', username='test_ftp', password='secret', active='foxton-pc1'}\n\n-- active connection on default IP &amp; with local machine name &amp; port specified\nlocal FtpConn = net.ftp.init{server='foxton_ftp', username='test_ftp', password='secret', active='foxton-pc1:32000'}\n\n-- active connection on default IP &amp; with local machine IP specified\nlocal FtpConn = net.ftp.init{server='foxton_ftp', username='test_ftp', password='secret', active='10.211.55.12'}\n\n-- active connection on default IP &amp; with local machine IP and port range specified\nlocal ftpConn = net.ftp.init{server='foxton_ftp', username='test_ftp', password='secret', active='10.211.55.12:32000-33000'}\n</pre><p><br></p><h3>Other Supported Options</h3><p>The options listed below are all optional. They can be set to configure and fine-tune the FTP connection.</p><h4>Connection Behaviour Options</h4><ul><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>port</strong></code>: The port to connect on.</li><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>timeout</strong></code>: Timeout in seconds for FTP operations.</li><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>live</strong></code>: Whether to establish the connection in translator.</li><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>on_ready</strong></code>: An array of commands to be issued after setting the transfer mode, before any actual transfers are started.</li><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>alt_auth</strong></code>: <em> </em>Command to send when USER/PASS authentication fails. </li><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>acct</strong></code>: <em> </em>Account data to send when asked by some atypical servers.</li></ul><p><br></p><h4>FTP Mode Options</h4><ul><li><code><strong>active</strong></code>: Open a local port for active FTP mode. See <strong>Notes</strong>.</li><li><code><strong>no_eprt</strong></code>: Active mode: do not try EPRT or LPRT before trying PORT</li><li><code><strong>no_epsv</strong></code>:<em> </em>Passive mode: do not try EPSV before PASV, just use PASV</li><li><code><strong>skip_pasv_ip</strong></code>: Passive mode: ignore the IP address sent by the server; instead open the new port on the same machine </li><li><code><strong>use_pret</strong></code>: Send a non-standard PRET command before PASV or EPSV </li></ul><p><br></p><h4>Ssl Related Options:</h4><ul><li><code><strong>use_ssl</strong></code>: Enable explicit SSL mode. Valid options: <code style=\"background-color: rgb(240, 240, 240);\">all</code> (always enable), <code style=\"background-color: rgb(240, 240, 240);\">try</code> (optional), <code style=\"background-color: rgb(240, 240, 240);\">control</code> (control connection) (default is <code style=\"background-color: rgb(240, 240, 240);\">try</code>)</li><li><code><strong>certificate_file</strong></code>: The name of your certificate file.</li><li><code><strong>certificate_type</strong></code>: The type of the certificate file, either <code style=\"background-color: rgb(240, 240, 240);\">PEM</code> (default) or <code style=\"background-color: rgb(240, 240, 240);\">DER</code>.</li><li><code><strong>private_key_file</strong></code>: The name of your private key file.</li><li><code><strong>private_key_pass</strong></code>: The password to your private key file.</li><li><code><strong>private_key_type</strong></code>: Your private key's type either <code style=\"background-color: rgb(240, 240, 240);\">PEM</code> (default), <code style=\"background-color: rgb(240, 240, 240);\">DER</code>, or <code style=\"background-color: rgb(240, 240, 240);\">ENG</code>.</li><li><code><strong>ssl_engine</strong></code>: The engine to use when <code><strong>private_key_type</strong></code> is set to <code>ENG</code>. This applies when the key is managed by a cryptographic engine.</li><li><code><strong>verify_peer</strong></code>: If <code><strong>true</strong></code>, verify the peer's certificate</li><li><code><strong>verify_host</strong></code>: If <code><strong>true</strong></code>, verify the host's certificate matches URL</li><li><code><strong>ca_file</strong></code>: The certificate(s) file to use for peer verification.</li><li><code><strong>issuer_cert</strong></code>: The PEM certificate file to validate the issuer of the peer's certificate during peer validation.</li><li><code><strong>crl_file</strong></code>: The name of the certificate revocation list to use during peer validation.</li><li><code><strong>ssl_version</strong></code>: Use a particular SSL version(s).</li><li><code><strong>cipher_list</strong></code>: Provide a list of ciphers in OpenSSL format to use. Use <code><strong>cipher_suite_list</strong></code> to set ciphers for TLSv1.3.</li><li><code><strong>cipher_suite_list</strong></code>: Provide a list of TLSv1.3 cipher suites in OpenSSL format to use.</li></ul><p><br></p><p>If you need help with the advanced ftp options please <a href=\"https://www.interfaceware.com/contact\" target=\"_blank\">contact support</a> at support@interfaceware.com. </p>",
+    "Name": "net.ftp.init",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u> </em>The server to connect to.</p>",
+            "Name": "server",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u> </em>The remote user to login as.</p>",
+            "Name": "username",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u> </em>The password to authenticate with.</p>",
+            "Name": "password",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>integer</u> </em>The port to use (default = <code style=\"background-color: rgb(240, 240, 240);\">21</code>).</p>",
+            "Name": "port",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>integer</u> </em>Timeout for operations (default = <code style=\"background-color: rgb(240, 240, 240);\">15</code> seconds).</p>",
+            "Name": "timeout",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>bool</u> </em>Enable write operations (put, rename, delete) while in the editor (default is <code style=\"background-color: rgb(240, 240, 240);\">false</code>).</p>",
+            "Name": "live",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u> </em>Open a local port for active FTP mode (see Notes).</p>",
+            "Name": "active",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>bool</u> </em>Active mode: do not try EPRT or LPRT before trying PORT (default is <code style=\"background-color: rgb(240, 240, 240);\">false</code>).</p>",
+            "Name": "no_eprt",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>bool</u> </em>Passive mode: do not try EPSV before PASV, just use PASV (default is <code style=\"background-color: rgb(240, 240, 240);\">false</code>). </p>",
+            "Name": "no_epsv",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>bool</u> </em>Passive mode: ignore the IP address sent by the server; instead open the new port on the same machine (default is <code style=\"background-color: rgb(240, 240, 240);\">false</code>). </p>",
+            "Name": "skip_pasv_ip",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>bool</u> </em>Send a non-standard PRET command before PASV or EPSV (default is <code style=\"background-color: rgb(240, 240, 240);\">false</code>). </p>",
+            "Name": "use_pret",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u> </em>Command to send when USER/PASS authentication fails. </p>",
+            "Name": "alt_auth",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u> </em>Account data to send when asked by some atypical servers.</p>",
+            "Name": "acct",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>table</u> </em>An array of commands to be issued after setting the transfer mode, before any actual transfers are started.</p>",
+            "Name": "on_ready",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u> </em>Enable explicit SSL mode. Valid options: <code style=\"background-color: rgb(240, 240, 240);\">all</code> (always enable), <code style=\"background-color: rgb(240, 240, 240);\">try</code> (optional), <code style=\"background-color: rgb(240, 240, 240);\">control</code> (control connection) (default is <code style=\"background-color: rgb(240, 240, 240);\">try</code>).</p>",
+            "Name": "use_ssl",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u> </em>The name of your certificate file.</p>",
+            "Name": "certificate_file",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u> </em>Your certificate's type: <code style=\"background-color: rgb(240, 240, 240);\">PEM</code> (default) or <code style=\"background-color: rgb(240, 240, 240);\">DER</code>.</p>",
+            "Name": "certificate_type",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u> </em>The name of your private key file.</p>",
+            "Name": "private_key_file",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u> </em>The password to access your private key.</p>",
+            "Name": "private_key_pass",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u> </em>Your private key's type: <code style=\"background-color: rgb(240, 240, 240);\">PEM</code> (default), <code style=\"background-color: rgb(240, 240, 240);\">DER</code>, or <code style=\"background-color: rgb(240, 240, 240);\">ENG</code>.</p>",
+            "Name": "private_key_type",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u> </em>The engine to use with 'key_type' ENG.</p>",
+            "Name": "ssl_engine",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>bool</u> </em>Verify peer certificate (default is <code style=\"background-color: rgb(240, 240, 240);\">true</code>).</p>",
+            "Name": "verify_peer",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>bool</u> </em>Verify host certificate matches URL (default is <code style=\"background-color: rgb(240, 240, 240);\">true</code>). </p>",
+            "Name": "verify_host",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u> </em>The certificate(s) file to use for peer verification.</p>",
+            "Name": "ca_file",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u> </em>The PEM certificate file to validate the issuer of the peer's certificate during peer validation.</p>",
+            "Name": "issuer_cert",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u> </em>The name of the certificate revocation list to use during peer validation.</p>",
+            "Name": "crl_file",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u> U</em>se a particular SSL version(s).</p>",
+            "Name": "ssl_version",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u> </em>Provide a list of ciphers in OpenSSL format to use. Use cipher_suite_list to set ciphers for TLSv1.3.</p>",
+            "Name": "cipher_list",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u> </em>Provide a list of TLSv1.3 cipher suites in OpenSSL format to use.</p>",
+            "Name": "cipher_suite_list",
+            "Required": false
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Initializes a new FTP connection."
+}

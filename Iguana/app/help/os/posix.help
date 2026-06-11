@@ -1,0 +1,7 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">os.posix();\n</pre><p><br></p><h3>Notes</h3><ul><li>Returns <code>true</code> if the current operating system is POSIX-compliant (e.g., Linux, macOS).</li><li>Returns <code>false</code> for non-POSIX systems such as Windows.</li><li>Useful for writing platform-specific logic in a cross-platform environment.</li></ul><p><br></p><h3>Returns</h3><ul><li><code>true</code> for POSIX systems; <code>false</code> for non-POSIX systems. <em><u>(bool)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local IsPosix = os.posix()\n-- Returns false for Windows\n-- Returns true for Linux and MacOS\n</pre>",
+    "Name": "os.posix",
+    "Parameters": null,
+    "ParameterTable": false,
+    "SummaryLine": "Returns a boolean indicating whether the operating system the component is running on is POSIX-compliant."
+}

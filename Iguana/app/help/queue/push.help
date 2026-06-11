@@ -1,0 +1,18 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">queue.push{data = &lt;data&gt;, tags = &lt;tags&gt;}\n-- or\nqueue.push(&lt;data&gt; [, &lt;tags&gt;])\n</pre><ul><li><code><strong>data</strong></code>: The message string to be enqueued.</li><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>tags</strong></code>: Tags for the message.</li></ul><p><br></p><h3>Notes</h3><ul><li>This function enqueues a message into the Iguana queue for the component when it is actively running.</li><li>It will not enqueue anything while in the Translator's test mode.</li><li>Use it to programmatically inject messages for processing by a component’s queue.</li></ul><p><br></p><h3>Returns</h3><ul><li>A unique Message ID string in the format <code>\"&lt;component ID&gt;-&lt;epoch timestamp&gt;-&lt;sub-millisecond ID&gt;\"</code>. <em><u>(string)</u></em></li><li class=\"ql-indent-1\">The component ID is the ID of this component.</li><li class=\"ql-indent-1\">The epoch timestamp is a timestamp with millisecond precision.</li><li class=\"ql-indent-1\">The sub-millisecond ID is an incrementing integer value. It is used to distinguish messages when multiple messages are received in the same millisecond.</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local id = queue.push{data = \"MSH...\", tags = \"#hl7 #adt\"}\n\n-- Alternatively\nlocal id = queue.push(\"MSH...\", \"#hl7 #adt\")\n</pre>",
+    "Name": "queue.push",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The string to be pushed into the queue.</p>",
+            "Name": "data",
+            "Required": true
+        },
+        {
+            "Description": "<p><em><u>string</u> (Optional)</em> A list of tags to be associated with the message.</p>",
+            "Name": "tags",
+            "Required": false
+        }
+    ],
+    "ParameterTable": true,
+    "SummaryLine": "Pushes a message for the component into the Iguana queue."
+}

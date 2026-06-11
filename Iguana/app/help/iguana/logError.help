@@ -1,0 +1,18 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">iguana.logError(text [, message_id])\n</pre><ul><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>text</strong></code>: The text to log</li><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>message_id</strong></code> <em>(optional)</em>: Provide a message ID to associate the log with allowing for context view to work for this log message</li></ul><p><br></p><h3>Notes</h3><ul><li>Add an Error log entry with the given text.</li><li>Use <code style=\"background-color: rgb(240, 240, 240);\"><a href=\"http://127.0.0.1:7654/@iguana.messageId\" target=\"_blank\">iguana.messageId</a></code> or <code style=\"background-color: rgb(240, 240, 240);\"><a href=\"http://127.0.0.1:7654/@queue.push\" target=\"_blank\">queue.push</a></code> to obtain a message ID.</li><li class=\"ql-indent-1\">The component must be running for <code style=\"background-color: rgb(240, 240, 240);\">iguana.messageId</code> or <code style=\"background-color: rgb(240, 240, 240);\">queue.push</code> to return a valid ID.</li><li>Equivalent to <code style=\"background-color: rgb(240, 240, 240);\">iguana.log(text, message_id, \"#error\")</code>.</li><li>Calling this function will also increment the current component's error count by one.</li><li>You can configure the Log Browser to only display error messages by enabling \"Only Errors\" in the Filters section.</li></ul><p><br></p><h3><strong>Example</strong></h3><h4><strong>Simple Example</strong></h4><pre class=\"ql-syntax\" spellcheck=\"false\">-- Add \"A problem has occurred of great magnitude\" to the component log\niguana.logError(\"A problem has occurred of great magnitude\")\n</pre><h4>Example with a Message ID</h4><pre class=\"ql-syntax\" spellcheck=\"false\">-- Run the component to exercise this code. In translator, calling \n-- iguana.messageId() will return nil if the component is a source \n-- or \"0-0-0\" otherwise.\nlocal MsgId = iguana.messageId()\niguana.logError(\"Error message\", MsgId)\n</pre>",
+    "Name": "iguana.logError",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>string</u></em> The text to log.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>string</u> (Optional)</em> A message ID to associate the log with.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Add an Error log entry with the given text."
+}

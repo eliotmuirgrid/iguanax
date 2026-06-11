@@ -1,0 +1,23 @@
+{
+    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">Dest:mapRange(Source, Start [, End])\n</pre><ul><li><code><strong>Dest</strong></code>: The destination node to receive the mapped values.</li><li><code><strong>Source</strong></code>: The source node to copy values from.</li><li><code><strong>Start</strong></code> and <code><strong>End</strong></code>: Specify the inclusive range of fields to map.</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>Fields are copied in order and inserted sequentially into the destination node.</li><li>If <code>End</code> is not provided, only the single node at <code>Start</code> is mapped.</li><li>Useful when you only need to map a portion of a node tree (e.g., certain OBX segments or selected subfields).</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>Nothing.</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">-- Assume MsgIn is a parsed HL7 message\n-- Copy fields 2 through 5 from MSH into a custom header\n\nlocal MsgOut = hl7.message{vmd = 'demo.vmd', name = 'ADT'}\nMsgOut.MSH:mapRange(MsgIn.MSH, 2, 5)\n</pre><ul><li>This example maps MSH fields 2 to 5 from the source message (<code>MsgIn</code>) into the destination message (<code>MsgOut</code>).</li></ul>",
+    "Name": "node:mapRange",
+    "Parameters": [
+        {
+            "Description": "<p><em><u>node tree</u></em> The node to copy fields from.</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>integer</u></em> The starting index of the range to copy (inclusive).</p>",
+            "Name": "",
+            "Required": false
+        },
+        {
+            "Description": "<p><em><u>integer</u></em> The ending index of the range to copy (inclusive). If omitted, only the field at <code>Start</code> is copied.</p>",
+            "Name": "",
+            "Required": false
+        }
+    ],
+    "ParameterTable": false,
+    "SummaryLine": "Maps a range of fields from a source node to a destination node."
+}

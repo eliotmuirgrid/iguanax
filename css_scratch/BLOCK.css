@@ -1,0 +1,11 @@
+.BLOCKinline *{
+   display: inline;
+}
+
+.BLOCKblock * {
+   display: block;
+}
+
+div * {
+   outline: red solid 1px;
+}

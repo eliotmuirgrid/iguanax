@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg">
+   <symbol id="close" viewBox="0 0 16 16">
+     <path fill-rule="evenodd" d="M12.95 1.636l1.414 1.414L9.414 8l4.95 4.95-1.414 1.414L8 9.414l-4.95 4.95-1.414-1.414L6.586 8l-4.95-4.95L3.05 1.636 8 6.586z"/>
+   </symbol>
+</svg>
