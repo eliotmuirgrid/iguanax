@@ -9,3 +9,5 @@ You should also be aware that Iguana X is currently a development project and sh
 If you are interested in using this technology commercially or operationally, I encourage you to contact me directly to discuss your intended use case. A negotiated source code license may be appropriate depending on your requirements, support expectations, and deployment plans.
 
 Making informed decisions about licensing, intellectual property, support, and production readiness at the outset is far preferable to discovering limitations or obligations later.
+
+Eliot Muir
