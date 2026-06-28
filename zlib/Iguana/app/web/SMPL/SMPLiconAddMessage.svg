@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>button_add_msg</title>
-    <g id="button_add_msg" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M13,0 L13,9 L12,9 L12,1 L2,1 L2,14 L9,14 L9,15 L1,15 L1,0 L13,0 Z M10,9 L10,10 L4,10 L4,9 L10,9 Z M10,6 L10,7 L4,7 L4,6 L10,6 Z M10,3 L10,4 L4,4 L4,3 L10,3 Z" id="Combined-Shape" fill="#6B7A86"></path>
-        <polygon id="+" fill="#6B7A86" fill-rule="nonzero" points="13.7966436 16 13.7966436 13.8253012 16 13.8253012 16 12.2108434 13.7966436 12.2108434 13.7966436 10 12.2033564 10 12.2033564 12.2108434 10 12.2108434 10 13.8253012 12.2033564 13.8253012 12.2033564 16"></polygon>
-    </g>
-</svg>

@@ -1,7 +1,0 @@
-{
-    "Description": "<p> 🔄  <strong>Replacement:</strong> <code style=\"background-color: rgb(240, 240, 240); color: rgb(37, 144, 205);\"><a href=\"http://localhost:7654/@component.projectRoot\" target=\"_blank\">component.projectRoot</a></code>. </p><p> ⚠️  <strong>Deprecated:</strong>    <code style=\"background-color: rgb(240, 240, 240);\">iguana.projectRoot</code> will be removed in a future version.&nbsp;</p><p><br></p><h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">iguana.projectRoot()\n</pre><p><br></p><h3>Notes</h3><ul><li>This function will be removed in a future version.</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>The full filesystem path to the root directory of the component. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local P = iguana.projectRoot()\n</pre>",
-    "Name": "iguana.projectRoot",
-    "Parameters": null,
-    "ParameterTable": false,
-    "SummaryLine": "*DEPRECATED* - Use component.projectRoot instead."
-}

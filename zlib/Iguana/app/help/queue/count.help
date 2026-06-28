@@ -1,7 +1,0 @@
-{
-    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">queue.count()\n</pre><ul><li>Returns the number of messages currently in the queue for the running component.</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>This function provides real-time insight into how many messages are currently queued for processing.</li><li>Useful for monitoring, diagnostics, or scaling decisions within your Iguana environment.</li></ul><h3><br></h3><h3><strong>Returns</strong></h3><p> An integer representing the current queue size. <em><u>(number)</u></em></p><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local QueueCount = queue.count()\n-- Returns the queue count of the component\n</pre><ul><li>This example captures the number of queued messages into a local variable for further use.</li></ul>",
-    "Name": "queue.count",
-    "Parameters": null,
-    "ParameterTable": false,
-    "SummaryLine": "Returns a number with the current component's queue count."
-}

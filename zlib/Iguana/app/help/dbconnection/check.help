@@ -1,7 +1,0 @@
-{
-    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">conn:check()\n</pre><ul><li><code><strong>conn</strong></code>: The database connection object to check.</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>Returns <code>true</code> if the connection is active and responsive.</li><li>Returns <code>false</code> if the connection is closed, invalid, or non-live.</li><li>Inside the Translator, <code>:check()</code> will return <code>false</code> for non-live (test-mode) connections.</li><li>This method is useful for verifying connection status before executing queries or operations.</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>A boolean indicating whether the database connection is accessible. <em><u>(bool)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">if not Conn or not Conn:check() then\n&nbsp; &nbsp;if Conn then\n&nbsp; &nbsp; &nbsp; Conn:close()\n&nbsp; &nbsp;end\n\n&nbsp; &nbsp;Conn = db.connect{\n&nbsp; &nbsp; &nbsp; api = db.MY_SQL,\n&nbsp; &nbsp; &nbsp; name = 'test@localhost',\n&nbsp; &nbsp; &nbsp; user = 'root',\n&nbsp; &nbsp; &nbsp; password = 'secret'\n&nbsp; &nbsp;}\nend\n</pre><ul><li>This example checks if a database connection is active. If not, it safely closes the existing handle (if any) and re-establishes a new connection.</li></ul>",
-    "Name": "db:check",
-    "Parameters": null,
-    "ParameterTable": true,
-    "SummaryLine": "Check whether database is accessible."
-}

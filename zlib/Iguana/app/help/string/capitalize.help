@@ -1,7 +1,0 @@
-{
-    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">s:capitalize()\n</pre><ul><li><code><strong>s</strong></code>: The string to capitalize.</li></ul><p> Returns a copy of the string with the first character converted to uppercase. The rest of the string remains unchanged.</p><p><br></p><h3>Returns</h3><ul><li>A copy of the string with its first letter capitalized. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local S = \"fred\"\nS = S:capitalize()\n-- S is now \"Fred\"\n</pre>",
-    "Name": "string:capitalize",
-    "Parameters": null,
-    "ParameterTable": false,
-    "SummaryLine": "Capitalizes the first letter of a string."
-}

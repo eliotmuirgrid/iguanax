@@ -1,7 +1,0 @@
-{
-    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">crypto.library.version()\n</pre><ul><li>Fetches the version string from the built-in OpenSSL library.</li></ul><p><br></p><h3>Returns</h3><ul><li>A string containing the OpenSSL library version. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Version = crypto.library.version();\n</pre><ul><li>This retrieves the current OpenSSL library version and stores it in the variable <code>Version</code>.</li></ul>",
-    "Name": "crypto.library.version",
-    "Parameters": null,
-    "ParameterTable": false,
-    "SummaryLine": "Returns the OpenSSL library version."
-}

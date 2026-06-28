@@ -1,7 +1,0 @@
-{
-    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">Node:nodeValue()\n</pre><ul><li><code><strong>Node</strong></code>: Must be a leaf node (i.e. a node with no children or nested structure).</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>This function <strong>only works with leaf nodes</strong>—nodes that contain a direct string value and no children.</li><li>Attempting to call it on a branch node (a node with children) will raise a Lua error.</li><li>If you want the full string serialization of any node, including those with children, use <code><a href=\"@node:S\" target=\"_blank\">node:S</a></code> instead.</li></ul><h3><br></h3><h3><strong>Returns</strong></h3><ul><li>The value of the given node. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Xml = xml.parse{data = \"&lt;patient name='fred'/&gt;\"}\nlocal AsString = Xml.patient.name:nodeValue()\n</pre><ul><li>This example retrieves the value of the <code>name</code> attribute from the <code>patient</code> element as a string.</li></ul>",
-    "Name": "node:nodeValue",
-    "Parameters": null,
-    "ParameterTable": false,
-    "SummaryLine": "Determines the value of a node."
-}

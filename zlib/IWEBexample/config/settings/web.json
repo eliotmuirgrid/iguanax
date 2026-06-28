@@ -1,9 +1,0 @@
-{
-    "cert_key": "config/other/webcert.pem",
-    "color": "",
-    "description": "7654 Server",
-    "guid": "sAVWsv6z1Ova9p77VydBiS",
-    "port": "7654",
-    "private_key": "config/other/webkey.pem",
-    "secure": false
-}

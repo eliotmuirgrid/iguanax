@@ -1,7 +1,0 @@
-{
-    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">component.dir()\n</pre><ul><li>Returns the absolute directory path of the current component.</li></ul><p><br></p><h3>Notes</h3><ul><li>The returned directory is the <strong>root folder of the component</strong>, which includes:</li><li class=\"ql-indent-1\">The <code>dev/</code> folder (containing the Translator code),</li><li class=\"ql-indent-1\">The <code>component.json</code> file,</li><li class=\"ql-indent-1\">Other configuration and metadata files.</li><li>This is <strong>different from the run directory</strong>, which is only populated when the component is executed from a commit (not in development mode).</li><li class=\"ql-indent-1\">To access the runtime directory for the component, whether in development or commit mode, use <code><a href=\"@component.projectRoot\" target=\"_blank\">component.projectRoot</a></code></li><li>Useful for accessing or managing files relative to the component, or for debugging file paths.</li></ul><h3><br></h3><h3>Returns</h3><ul><li>The absolute path to the component’s root directory. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">-- Get the directory of the current component\nlocal dir = component.dir()\n\ntrace(dir)\n-- Output: \"/path/to/IguanaX/config/comps/MyComponent/\"\n</pre>",
-    "Name": "component.dir",
-    "Parameters": null,
-    "ParameterTable": false,
-    "SummaryLine": "Returns the full path to the current component’s directory."
-}

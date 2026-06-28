@@ -1,7 +1,0 @@
-All files from the original lua-5.1.4.tar.gz release are unchanged.  The
-following files have been added:
-
-	luavs.bat - copied from etc/luavs.bat and modified to build Lua
-	            as C++, as needed by Iguana.
-        win32/    - 32-bit versions of lua51.lib and lua51.dll.
-	win64/    - 64-bit versions of same.

@@ -1,7 +1,0 @@
-{
-    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">json.createObject()\n</pre><ul><li>Creates an empty Lua table annotated as a JSON object (<code>json_empty_object</code>).</li><li>Useful for explicitly distinguishing an empty JSON object <code>{}</code> from a plain empty Lua table <code>{}</code>.</li><li>Functionally equivalent to <code>{}</code>, but adds an annotation for clarity and documentation.</li></ul><p><br></p><h3>Notes</h3><ul><li>Although this function returns a Lua table with a label, it does <strong>not</strong> produce a special JSON structure or node tree.</li><li>In practice, regular Lua tables <code>{}</code> are sufficient to represent JSON objects unless explicit documentation is needed.</li></ul><p><br></p><h3>Returns</h3><ul><li>An empty JSON object, represented as a Lua table. <em><u>(table)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local J = json.createObject()\n\nlocal J2 = {}&nbsp; -- equivalent plain Lua table\n</pre>",
-    "Name": "json.createObject",
-    "Parameters": null,
-    "ParameterTable": false,
-    "SummaryLine": "Creates an empty JSON object."
-}

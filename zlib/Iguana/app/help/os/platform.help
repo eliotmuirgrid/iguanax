@@ -1,7 +1,0 @@
-{
-    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">os.platform();\n</pre><p><br></p><h3>Notes</h3><ul><li>Returns a lowercase string describing the host OS.</li><li>The result can be used for conditional platform-specific logic.</li><li>Possible return values include:</li><li class=\"ql-indent-1\"><code>\"macos\"</code></li><li class=\"ql-indent-1\"><code>\"windows\"</code></li><li class=\"ql-indent-1\"><code>\"linux\"</code></li></ul><p><br></p><h3>Returns</h3><ul><li>A lowercase string representing the platform. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local P = os.platform()\ntrace(P)&nbsp; -- P can be 'macos', 'windows', or 'linux'\n</pre>",
-    "Name": "os.platform",
-    "Parameters": null,
-    "ParameterTable": false,
-    "SummaryLine": "Returns a lowercase string indicating which operating system the component is running on."
-}

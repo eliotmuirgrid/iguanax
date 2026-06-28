@@ -1,7 +1,0 @@
-{
-    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">component.tags()\n</pre><ul><li>Returns a list with the current component's tags.</li></ul><p><br></p><h3>Notes</h3><ul><li>The returned list contains all tags that have been assigned to the component.</li><li>Tags are typically used to identify, categorize, or filter components within Iguana.</li></ul><p><br></p><h3>Returns</h3><ul><li>A list of tags assigned to the component. <em><u>(table)</u></em></li></ul><p><br></p><h3><strong>Example</strong></h3><pre class=\"ql-syntax\" spellcheck=\"false\">-- Get the tags of the current component\nlocal tags = component.tags()\n\n-- Output the tags for debugging\ntrace(tags)\n</pre>",
-    "Name": "component.tags",
-    "Parameters": null,
-    "ParameterTable": false,
-    "SummaryLine": "Returns a list of tags associated with the current component."
-}

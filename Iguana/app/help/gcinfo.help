@@ -1,7 +1,0 @@
-{
-    "Description": "<p><strong>DEPRECATED - use collectgarbage(\"count\") instead.</strong></p><p><br></p><p>&nbsp;🔄 <strong>Replacement:</strong> <code style=\"background-color: rgb(240, 240, 240); color: rgb(37, 144, 205);\"><a href=\"@collectgarbage\" target=\"_blank\">collectgarbage</a></code>.</p><p>⚠️ <strong>Deprecated:</strong> <code style=\"background-color: rgb(240, 240, 240);\">gcinfo</code> will be removed in a future version.&nbsp;</p><p><br></p><h3>Notes</h3><ul><li>The <code>gcinfo</code> function has been deprecated and will be removed in a future version.</li><li>The replacement, <code>collectgarbage(\"count\")</code>, is the preferred and standard method for querying Lua memory usage.</li></ul><p><br></p><pre class=\"ql-syntax\" spellcheck=\"false\">local ram = collectgarbage(\"count\")\ntrace(ram)   -- 148.257812\n</pre>",
-    "Name": "gcinfo",
-    "Parameters": null,
-    "ParameterTable": false,
-    "SummaryLine": "*DEPRECATED* - Use collectgarbage(\"count\") instead."
-}

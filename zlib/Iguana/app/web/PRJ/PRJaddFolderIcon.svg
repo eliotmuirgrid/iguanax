@@ -1,7 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>PRJaddFolderIcon</title>
-    <g id="PRJaddFolderIcon" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M14,11 L14,13 L16,13 L16,14 L14,14 L14,16 L13,16 L13,14 L11,14 L11,13 L13,13 L13,11 L14,11 Z M6.48751093,3 C6.82675911,3 7.14287218,3.1719958 7.32713888,3.45683805 L8.00196857,5 L14,5 C14.5522847,5 15,5.44771525 15,6 L15,10 L14,10 L14,6 L2,6 L2,13 L9,13 L9,14 L2,14 C1.44771525,14 1,13.5522847 1,13 L1,4 C1,3.44771525 1.44771525,3 2,3 L6.48751093,3 Z M6.38808282,4 L2,4 L2,5 L6.825,5 L6.38808282,4 Z" id="Combined-Shape-Copy-8" fill="#35617D" fill-rule="nonzero"></path>
-    </g>
-</svg>

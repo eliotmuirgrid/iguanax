@@ -1,7 +1,0 @@
-{
-    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">s:reverse()\n</pre><ul><li><code><strong>s</strong></code>: The string whose characters should be returned in reverse order.</li></ul><p><br></p><h3>Returns</h3><ul><li>A <strong>new string</strong> with characters in reverse order. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local S = \"DERF\"\nlocal R = S:reverse()&nbsp; -- R is \"FRED\"\n</pre>",
-    "Name": "string:reverse",
-    "Parameters": null,
-    "ParameterTable": false,
-    "SummaryLine": "Reverses the order of a string."
-}

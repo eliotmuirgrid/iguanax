@@ -1,7 +1,0 @@
-{
-    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Components = iguana.components()\n</pre><ul><li>Returns a Lua table mapping the name of each component to its corresponding GUID.</li></ul><p><br></p><h3>Notes</h3><ul><li>This function is read-only.</li></ul><p><br></p><h3>Returns</h3><ul><li>A table where:</li><li class=\"ql-indent-1\">Key = Component name <em><u>(string)</u></em></li><li class=\"ql-indent-1\">Value = Component GUID <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Components = iguana.components()\n\nfor Name, GUID in pairs(Components) do\n&nbsp; &nbsp;trace(Name, GUID)\nend\n</pre>",
-    "Name": "iguana.components",
-    "Parameters": null,
-    "ParameterTable": false,
-    "SummaryLine": "Returns the name and GUID of components on the local Iguana instance."
-}

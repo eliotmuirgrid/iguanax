@@ -1,7 +1,0 @@
-{
-    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">crypto.library.digests()\n</pre><ul><li>Fetches the list of supported or built-in OpenSSL digest algorithms, along with associated metadata.</li></ul><h3><br></h3><h3>Returns</h3><ul><li>A table containing the supported digest algorithms and their related metadata. <em><u>(table)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local X = crypto.library.digests()\n</pre><ul><li>This retrieves the available digest algorithms and assigns the result to the variable <code>X</code>.</li></ul><p><br></p><h3>Warning</h3><ul><li>The return format is subject to change. This function is intended for interactive querying and debugging, not for use in production code relying on a fixed format.</li></ul>",
-    "Name": "crypto.library.digests",
-    "Parameters": null,
-    "ParameterTable": false,
-    "SummaryLine": "Returns the list of supported OpenSSL digest algorithms."
-}

@@ -1,6 +1,0 @@
-.ROWdiv{
-   display: grid;
-   grid-template-columns: auto 1fr;
-   column-gap: 24px;
-   row-gap: 8px;
-}

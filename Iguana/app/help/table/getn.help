@@ -1,7 +1,0 @@
-{
-    "Description": "<h3><strong>Deprecated - Use the # operator instead.</strong> </h3><p><br></p><h3>Status</h3><ul><li>This function has been <strong>removed</strong> from Lua 5.1 and later.</li><li>Calling it will raise an error in modern Lua versions.</li></ul><p><br></p><h3>Notes</h3><ul><li>Use the length operator <code>#</code> instead to get the size of a table.</li><li>Table length is determined by the highest numeric key with <strong>no gaps</strong> in the sequence.</li><li>Once a gap is encountered (e.g., missing index), the length is calculated <strong>up to</strong> that gap.</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local t = {\n   [1] = \"iNTERFACEWARE\",\n   [2] = \"IguanaX\",\n   [5] = true,\n   key = 42\n}\ntrace(#t)   -- 2\ntrace(table.getn(t))   -- 2\n</pre>",
-    "Name": "table.getn",
-    "Parameters": null,
-    "ParameterTable": false,
-    "SummaryLine": "*DEPRECATED* - Use the # operator instead."
-}

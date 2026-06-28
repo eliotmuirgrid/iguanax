@@ -1,7 +1,0 @@
-{
-    "Description": "<p> 🔄  <strong>Replacement:</strong> <code style=\"background-color: rgb(240, 240, 240); color: rgb(37, 144, 205);\"><a href=\"http://localhost:7654/@component.id\" target=\"_blank\">component.id</a></code>. </p><p> ⚠️  <strong>Deprecated:</strong>    <code style=\"background-color: rgb(240, 240, 240);\">iguana.translatorGuid</code> will be removed in a future version.&nbsp;</p><p><br></p><h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">component.id()\n</pre><ul><li>This function returns a string that uniquely identifies the Translator component it’s called from.</li></ul><h4><br></h4><h3>Notes</h3><ul><li>This was historically used to retrieve the current Translator's GUID.</li><li>The modern replacement is <code>component.id</code>, which behaves identically.</li><li>Useful for dynamically referencing the component when sending messages (e.g., in <code><a href=\"@queue.push\" target=\"_blank\">queue.push</a></code>) or logging.</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Id = component.id()\n-- Returns the ID of the current component\n</pre>",
-    "Name": "iguana.translatorGuid",
-    "Parameters": null,
-    "ParameterTable": false,
-    "SummaryLine": "*DEPRECATED* - Use component.id instead."
-}

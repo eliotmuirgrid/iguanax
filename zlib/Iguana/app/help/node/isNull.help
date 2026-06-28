@@ -1,7 +1,0 @@
-{
-    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">Node:isNull()\n</pre><ul><li><code><strong>Node</strong></code>: The node to check for presence or absence in the structure.</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>Returns <code>true</code> if the node is null (not present in the message structure).</li><li>Returns <code>false</code> if the node exists—even if it is empty.</li><li>Especially useful in conditional logic to verify that optional fields or segments exist before accessing them.</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>A boolean indicating whether the node is present. <em><u>(bool)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Xml = xml.parse{data = \"&lt;person&gt;&lt;name&gt;Jane&lt;/name&gt;&lt;/person&gt;\"}\n\nif Xml.person.age:isNull() then\n&nbsp; &nbsp;trace(\"Age is missing.\")\nend\n</pre><ul><li>In this example, the check ensures that accessing the age node doesn't raise an error if the field is absent in the XML.</li></ul>",
-    "Name": "node:isNull",
-    "Parameters": null,
-    "ParameterTable": false,
-    "SummaryLine": "Determines if a node is null (i.e., not present)."
-}

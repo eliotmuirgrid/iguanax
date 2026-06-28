@@ -1,5 +1,0 @@
-"asd"
-
-function main()
-   
-end

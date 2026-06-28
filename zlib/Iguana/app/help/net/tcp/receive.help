@@ -1,7 +1,0 @@
-{
-    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">Socket:receive()\n</pre><ul><li><code style=\"background-color: rgb(240, 240, 240);\"><strong>Socket</strong></code>: a tcp connection opened with <code style=\"color: rgb(37, 144, 205);\"><a href=\"http://localhost:7654/@net.tcp.connect\" target=\"_blank\">net.tcp.connect</a></code></li></ul><p><br></p><h3>Notes</h3><ul><li>Receive data from a remote host via a socket opened using <code>net.tcp.connect</code>.</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li><span style=\"color: rgb(68, 68, 68);\">A string containing the received data. </span><em style=\"color: rgb(68, 68, 68);\">(<u>string)</u></em></li><li><code style=\"color: rgb(68, 68, 68);\">nil</code><span style=\"color: rgb(68, 68, 68);\"> if the connection was closed. </span><em style=\"color: rgb(68, 68, 68);\">(<u>nil)</u></em></li></ul><p><br></p><h3><strong>Example</strong></h3><pre class=\"ql-syntax\" spellcheck=\"false\">local s = net.tcp.connect('hostname:8086')\ns:send(Data)\nlocal Ack = s:receive()\ns:close()\n</pre>",
-    "Name": "net.tcp:receive",
-    "Parameters": null,
-    "ParameterTable": false,
-    "SummaryLine": "Receive data from a remote host via an open socket."
-}

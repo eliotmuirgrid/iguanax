@@ -1,7 +1,0 @@
-{
-    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">Node:trimRWS()\n</pre><ul><li><code><strong>Node</strong></code>: A node containing a string value. Only trailing (right-side) spaces will be removed.</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>Does not modify the original node—returns a new trimmed string.</li><li>Leading white space (on the left side) is <strong>not</strong> affected.</li><li>Useful for formatting or cleaning strings from HL7, XML, or user input data.</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>A string with trailing white space trimmed. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Xml = xml.parse{data = \"&lt;value&gt;&nbsp; &nbsp;data&nbsp; &nbsp;&lt;/value&gt;\"}\nlocal Clean = Xml.value:trimRWS()\n-- Returns: '&nbsp; &nbsp;data'\n</pre><ul><li>This example demonstrates trimming a node value from the right side only.</li></ul>",
-    "Name": "node:trimRWS",
-    "Parameters": null,
-    "ParameterTable": false,
-    "SummaryLine": "Trims white space from the right of a string."
-}

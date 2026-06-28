@@ -1,1 +1,0 @@
-include ../newbuild/library.make

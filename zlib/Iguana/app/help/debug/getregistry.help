@@ -1,7 +1,0 @@
-{
-    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">debug.getregistry()\n</pre><p><br></p><h3>Notes</h3><ul><li>The registry is a special table used by the Lua C API to store global data in a safe and controlled way.</li><li>It is shared across all Lua states and accessible only through the debug API or C code.</li><li>Lua libraries and C extensions commonly use the registry to cache functions, tables, or userdata.</li><li>Modifying the registry directly should be done with care, as it can affect internal Lua behavior.</li></ul><p><br></p><h3>Returns</h3><ul><li>The Lua registry table. <em><u>(table)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local T = debug.getregistry()\nprint(type(T))&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;-- prints \"table\"\nprint(T._LOADED)&nbsp; &nbsp; &nbsp; &nbsp;-- access the table of loaded modules\n</pre><ul><li>In this example, we retrieve the registry and inspect the <code>_LOADED</code> field, which tracks modules loaded with <code>require</code>.</li></ul>",
-    "Name": "debug.getregistry",
-    "Parameters": null,
-    "ParameterTable": false,
-    "SummaryLine": "Returns the Lua registry table."
-}

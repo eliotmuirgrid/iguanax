@@ -1,4 +1,0 @@
-"asd"😊
-function main()
-
-end

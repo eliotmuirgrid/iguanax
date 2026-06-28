@@ -1,7 +1,0 @@
-{
-    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">Node:nodeText()\n</pre><ul><li><code><strong>Node</strong></code>: The node whose text content you want to extract. Can be an element that holds character data (e.g., XML content like <code>&lt;tag&gt;value&lt;/tag&gt;</code>).</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>Unlike <code><a href=\"@node:nodeValue\" target=\"_blank\">nodeValue</a></code>, this function is safe to call even on branch nodes.</li><li>It traverses down to find the text node and returns its value.</li><li>Commonly used for extracting plain content from XML or similar hierarchical formats where nodes may wrap character data.</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>The text content of the node. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Xml = xml.parse{data = \"&lt;greeting&gt;Hello world&lt;/greeting&gt;\"}\nlocal Text = Xml.greeting:nodeText()\n-- Returns: 'Hello world'\n</pre><ul><li>This example extracts the string <code>\"Hello world\"</code> from within the <code>&lt;greeting&gt;</code> tag of a parsed XML node.</li></ul>",
-    "Name": "node:nodeText",
-    "Parameters": null,
-    "ParameterTable": false,
-    "SummaryLine": "Returns the text value of a node."
-}

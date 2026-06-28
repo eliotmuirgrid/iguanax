@@ -1,8 +1,0 @@
-[core]
-	bare = true
-	filemode = true
-	ignorecase = true
-	precomposeunicode = true
-	autocrlf = false
-[core]
-	repositoryformatversion = 0

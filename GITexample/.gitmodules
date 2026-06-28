@@ -1,6 +1,0 @@
-[submodule "CHK"]
-	path = CHK
-	url = git@bitbucket.org:interfaceware/chk.git
-[submodule "LLPC"]
-	path = LLPC
-	url = git@bitbucket.org:interfaceware/llpc.git

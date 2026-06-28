@@ -1,8 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="16px" height="16px" viewBox="0 0 16 16" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <title>icon-check-blue</title>
-    <g id="icon-check-blue" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M8,1 C11.8734472,1 15,4.14389191 15,8 C15,11.8734472 11.8734472,15 8,15 C4.14389191,15 1,11.8734472 1,8 C1,4.14389191 4.14389191,1 8,1 Z" id="Path" fill="#2590CD" fill-rule="nonzero"></path>
-        <polygon id="Path" fill="#FFFFFF" fill-rule="nonzero" points="6.54091574 9.61516232 11.5955226 4.56055545 12.5161494 5.48118221 6.54099456 11.456337 3.50139989 8.39940327 4.42202665 7.47877651 6.54107337 9.6152674"></polygon>
-    </g>
-</svg>

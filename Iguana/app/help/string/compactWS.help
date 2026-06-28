@@ -1,7 +1,0 @@
-{
-    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">s:compactWS()\n</pre><ul><li><code><strong>s</strong></code>: The string to process.</li></ul><p>Replaces all sequences of consecutive spaces in <code><strong>s</strong></code> with a single space.</p><p>Leading and trailing whitespace is not affected by this function.</p><p><br></p><h3>Notes</h3><ul><li>This function does <strong>not</strong> trim leading or trailing whitespace.</li><li>It is equivalent to calling: <code><a href=\"@string:gsub\" target=\"_blank\">string:gsub</a>(s, '%s%s+', ' ')</code></li><li>For trimming, consider using <code><a href=\"@string:trimWS\" target=\"_blank\">string:trimWS</a></code> in conjunction with this function.</li><li>Also available as <code><a href=\"@node:compactWS\" target=\"_blank\">node:compactWS</a></code>.</li></ul><h3><br></h3><h3>Returns</h3><ul><li>A copy of the string with multiple spaces replaced by a single space. <em><u>(string)</u></em></li><li>The number of substitutions performed. <em><u>(integer)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local S = \"This&nbsp; &nbsp; needs&nbsp; to&nbsp; &nbsp; be&nbsp; &nbsp;cleaned&nbsp; &nbsp;up.\"\nS, Count = S:compactWS()\n-- S is now \"This needs to be cleaned up.\"\n-- Count is 4\n</pre>",
-    "Name": "string:compactWS",
-    "Parameters": null,
-    "ParameterTable": false,
-    "SummaryLine": "Replaces multiple spaces in a string with a single space."
-}

@@ -1,7 +1,0 @@
-{
-    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">Node:nodeType()\n</pre><ul><li><code><strong>Node</strong></code>: Any node whose type and category you want to inspect.</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>Common return values include <code>\"segment\"</code>, <code>\"field\"</code>, <code>\"component\"</code>, <code>\"attribute\"</code>, <code>\"text\"</code>, etc.</li><li>Useful for debugging and programmatically identifying how to work with a given node.</li><li>Helps differentiate between leaf and branch nodes when building dynamic logic for HL7/XML/etc.</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>A string describing the type and category of the node. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Msg = hl7.parse{vmd = 'demo.vmd', data = hl7_example}\nlocal Type = Msg.MSH[3][1]:nodeType()\n-- Returns something like: 'component'\n</pre><ul><li>This example retrieves the type of the first component of <code>MSH.3</code> in an HL7 message.</li></ul>",
-    "Name": "node:nodeType",
-    "Parameters": null,
-    "ParameterTable": false,
-    "SummaryLine": "Returns the type and category of a node."
-}

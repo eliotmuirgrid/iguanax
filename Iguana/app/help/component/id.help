@@ -1,7 +1,0 @@
-{
-    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">component.id()\n</pre><ul><li>Retrieves the component’s unique identifier.</li></ul><h3><br></h3><h3>Notes</h3><ul><li>Every component in Iguana is assigned a <strong>unique ID string</strong> when created. This ID is used internally to distinguish components, especially when multiple components share the same name or are cloned from each other.</li><li>The component ID is typically visible in the <strong>component’s configuration files</strong> (e.g., in its folder name or metadata) and can also be used for debugging or logging purposes.</li><li>The ID remains <strong>persistent</strong> across restarts and deployments unless the component is deleted and recreated.</li></ul><h3><br></h3><h3>Returns</h3><ul><li>The unique component ID <em><u>(string)</u></em>.</li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">-- Get the unique ID of the current component\nlocal componentId = component.id()\n\ntrace(componentId)\n-- Output: \"Component_8Gihw3B6DhjXKF\"\n</pre>",
-    "Name": "component.id",
-    "Parameters": null,
-    "ParameterTable": false,
-    "SummaryLine": "Returns the unique ID of the current component as a string."
-}

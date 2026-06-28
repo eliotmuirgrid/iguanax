@@ -1,7 +1,0 @@
-{
-    "Description": "<h3><strong>Usage</strong></h3><pre class=\"ql-syntax\" spellcheck=\"false\">Socket:close()\n</pre><ul><li><code><strong>Socket</strong></code>: The asynchronous socket connection handle<strong> </strong>to be closed.</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>Acts on an asynchronous socket connection handle, closing the connection</li><li>Use <code><a href=\"@net.tcpAsync:setOnSocketClosed\" target=\"_blank\">setOnSocketClosed</a></code> to register an <code>onSocketClosed</code> callback function. This callback function will be executed when the connection is closed.</li></ul><p><br></p><h3><strong>Example</strong></h3><pre class=\"ql-syntax\" spellcheck=\"false\">local function onClose(Socket, Buffer, Error)\n   iguana.logDebug(Socket .. \" closed\")\n   -- remove from connection map\nend\n\nSocket:setOnSocketClosed(onClose)\nSocket:close()\n</pre>",
-    "Name": "net.tcpAsync:close",
-    "Parameters": null,
-    "ParameterTable": false,
-    "SummaryLine": "Closes an asynchronous socket connection."
-}

@@ -1,7 +1,0 @@
-{
-    "Description": "<h3>Usage</h3><pre class=\"ql-syntax\" spellcheck=\"false\">Node:trimWS()\n</pre><ul><li><code><strong>Node</strong></code>: A node containing a string value. Both left-side and right-side spaces will be removed.</li></ul><p><br></p><h3><strong>Notes</strong></h3><ul><li>Returns a trimmed version of the string; the original node is not modified.</li><li>Equivalent to combining <code><a href=\"@node:trimLWS\" target=\"_blank\">node:trimLWS</a></code> and <code><a href=\"@node:trimRWS\" target=\"_blank\">node:trimRWS</a></code> in one call.</li><li>Ideal for normalizing data values from HL7, XML, or user input.</li></ul><p><br></p><h3><strong>Returns</strong></h3><ul><li>A string with both leading and trailing white space trimmed. <em><u>(string)</u></em></li></ul><p><br></p><h3>Example</h3><pre class=\"ql-syntax\" spellcheck=\"false\">local Xml = xml.parse{data = \"&lt;value&gt;&nbsp; &nbsp;spaced content&nbsp; &nbsp;&lt;/value&gt;\"}\nlocal Clean = Xml.value:trimWS()\n-- Returns: 'spaced content'\n</pre><ul><li>This example shows how to strip unwanted spaces from both ends of a node string.</li></ul>",
-    "Name": "node:trimWS",
-    "Parameters": null,
-    "ParameterTable": false,
-    "SummaryLine": "Trims white space from the start and end of a string."
-}
