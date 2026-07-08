@@ -38,6 +38,8 @@ But when I go and meet our maker, it will form a secure foundation for my custom
 and no one needs to panic.  Critical infrastructure software needs to be treated differently
 from ordinary products.
 
+For an up to date [status on Iguana X go here,](https://github.com/eliotmuirgrid/press/blob/master/iguanax/i.md).
+
 [Eliot Muir](https://www.linkedin.com/in/eliotmuir/) 
 
 Architect of Iguana 
