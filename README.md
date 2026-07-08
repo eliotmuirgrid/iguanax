@@ -38,6 +38,6 @@ But when I go and meet our maker, it will form a secure foundation for my custom
 and no one needs to panic.  Critical infrastructure software needs to be treated differently
 from ordinary products.
 
-[Eliot Muir](https://www.linkedin.com/in/eliotmuir/)
-Architect of Iguana
-Founder and CEO of iNTERFACEWARE
+[Eliot Muir](https://www.linkedin.com/in/eliotmuir/) 
+Architect of Iguana 
+Founder and CEO of iNTERFACEWARE 
