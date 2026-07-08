@@ -28,3 +28,8 @@ when I have had time to make something which actually works stably in production
 point I am recommending all my customers use either Iguana 6.1.5 or Iguana 6.2.
 
 Go to [www.interfaceware.com](https://www.interfaceware.com). For more information.
+
+When it happens does that mean you can forget about Eliot Muir and making sure he's okay and looked
+after?  No - I still need to make some money.  The opensource version of Iguana X will never be the
+best version, it will lag in a few things.  It will still be infinitely better than Mirth Connect
+which is a security nightmare or a hacker's wet dream depending on your perspective ;-)
