@@ -11,8 +11,8 @@ wants to make 50 times the modest check he wrote to the founder.  This is how bu
 and this is why you need to have better arrangements when it comes 
 
 Iguana X isn't yet fit to be critical infra-structure code for anyone.  The queueing/logging
-part of the product while it does have an elegant design doesn't appear to have the features
-one needs.  A queueing system shouldn't have these 'features':
+part of the product while it does have an elegant design appears to have additional features
+one does not generally want.  A queueing system shouldn't have these 'features':
 
 - It shouldn't stop mysteriously working.
 - It shouldn't mysteriously lose data.
