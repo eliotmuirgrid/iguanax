@@ -8,7 +8,7 @@ ship.
 
 Because Larry will do what Larry does and jack up the price to unreasonable levels because he
 wants to make 50 times the modest check he wrote to the founder.  This is how business works
-and this is why you need to have better arrangements when it comes 
+and this is why you need to have better arrangements when it comes.
 
 Iguana X isn't yet fit to be critical infra-structure code for anyone.  The queueing/logging
 part of the product while it does have an elegant design appears to have additional features
