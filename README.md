@@ -33,3 +33,11 @@ When it happens does that mean you can forget about Eliot Muir and making sure h
 after?  No - I still need to make some money.  The opensource version of Iguana X will never be the
 best version, it will lag in a few things.  It will still be infinitely better than Mirth Connect
 which is a security nightmare or a hacker's wet dream depending on your perspective ;-)
+
+But when I go it will form a secure foundation for my customers so that the lights can stay on
+and no one needs to panic.  Critical infrastructure software needs to be treated differently
+from ordinary products.
+
+[Eliot Muir](https://www.linkedin.com/in/eliotmuir/)
+Architect of Iguana
+Founder and CEO of iNTERFACEWARE
