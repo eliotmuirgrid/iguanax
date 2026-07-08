@@ -7,7 +7,7 @@ damned important to trust that one day the founder won't accept a modest sized c
 ship.
 
 Because Larry will do what Larry does and jack up the price to unreasonable levels because he
-wants to make 50X times the modest check he wrote to the founder.  This is how business works
+wants to make 50 times the modest check he wrote to the founder.  This is how business works
 and this is why you need to have better arrangements when it comes 
 
 Iguana X isn't yet fit to be critical infra-structure code for anyone.  The queueing/logging
