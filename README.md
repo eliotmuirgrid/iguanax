@@ -39,5 +39,7 @@ and no one needs to panic.  Critical infrastructure software needs to be treated
 from ordinary products.
 
 [Eliot Muir](https://www.linkedin.com/in/eliotmuir/) 
+
 Architect of Iguana 
+
 Founder and CEO of iNTERFACEWARE 
