@@ -1,7 +1,11 @@
 # Opps I nuked the Iguana X Source code Repo - but it's been forked already
 
-I deliberately nuked this archive of Iguana X source code to illustrate a point.  Critical
-infra-structure software cannot depend on the whims of single person nor vendor. It's too
+I deliberately nuked this archive of Iguana X source code to illustrate a point. 
+
+Oh actually I made that up - it was an accident when I was goofing around with being provocative
+and switching to making the main branch 'master' instead of 'main'.
+
+Critical infra-structure software cannot depend on the whims of single person nor vendor. It's too
 damned important to trust that one day the founder won't accept a modest sized check from
 [Larry Elison](https://en.wikipedia.org/wiki/Larry_Ellison) and go sip pina coladas on a cruise
 ship.
