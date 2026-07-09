@@ -29,7 +29,8 @@ doesn't yet.
 
 I will get around to fixing that and there will be a Mozilla 2.0 licensed version of Iguana X
 when I have had time to make something which actually works stably in production.  Until that
-point I am recommending all my customers use either Iguana 6.1.5 or Iguana 6.2.
+point I am recommending all my customers use either Iguana 6.1.5 or Iguana 6.2 if they are doing
+something serious.  Iguana X is a lot of fun to play with and it looks much prettier!
 
 Go to [www.interfaceware.com](https://www.interfaceware.com). For more information.
 
