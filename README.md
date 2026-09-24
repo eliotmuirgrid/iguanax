@@ -1,53 +1,32 @@
-# Opps I nuked the Iguana X Source code Repo - but it's been forked already
+# iNTERFACEWARE Source Code
 
-I deliberately nuked this archive of Iguana X source code to illustrate a point. 
+## Important Notice Regarding Intellectual Property and Licensing
 
-Oh actually I made that up - it was an accident when I was goofing around with being provocative
-and switching to making the main branch 'master' instead of 'main'.
+This source code has been made available solely for the purpose of
+business continuity, maintenance, support, and long-term operational
+security for existing licensed users of iNTERFACEWARE software.
 
-Critical infra-structure software cannot depend on the whims of single person nor vendor. It's too
-damned important to trust that one day the founder won't accept a modest sized check from
-[Larry Elison](https://en.wikipedia.org/wiki/Larry_Ellison) and go sip pina coladas on a cruise
-ship.
+Publication of this source code in this repository does not constitute
+a release of the software into the public domain, an open-source
+licence, or a grant of any additional licence or other intellectual
+property rights.
 
-Because Larry will do what Larry does and jack up the price to unreasonable levels because he
-wants to make 50 times the modest check he wrote to the founder.  This is how business works
-and this is why you need to have better arrangements when it comes.
+Except for rights expressly granted under an existing written licence
+or other agreement with iNTERFACEWARE, no permission is granted to
+copy, modify, distribute, sublicense, sell, commercialize, create
+derivative works from, or otherwise exploit this source code.
 
-Iguana X isn't yet fit to be critical infra-structure code for anyone.  The queueing/logging
-part of the product while it does have an elegant design appears to have additional features
-one does not generally want.  A queueing system shouldn't have these 'features':
+All applicable copyright and other intellectual property rights are
+reserved.
 
-- It shouldn't stop mysteriously working.
-- It shouldn't mysteriously lose data.
-- It shouldn't have have real mysteries.
+Existing iNTERFACEWARE customers may continue to exercise the rights
+provided under their applicable licence agreements. Nothing in this
+repository expands, replaces, or modifies those agreements.
 
-In general **mysterious behavior** with a queuing system is a bad idea.
+The availability of this source code should not be interpreted as
+authorization for any former employee, contractor, third party, or
+other organization to distribute, license, sublicense, commercialize,
+or create derivative products from iNTERFACEWARE technology.
 
-Also the product needs to operate completely independently of any cloud resources like bitbucket. It
-doesn't yet. 
-
-I will get around to fixing that and there will be a Mozilla 2.0 licensed version of Iguana X
-when I have had time to make something which actually works stably in production.  Until that
-point I am recommending all my customers use either Iguana 6.1.5 or Iguana 6.2 if they are doing
-something serious.  Iguana X is a lot of fun to play with and it looks much prettier!  But it's not
-so fun if you actually expect it to stay up and running and not lose your data.
-
-Go to [www.interfaceware.com](https://www.interfaceware.com). For more information.
-
-When it happens does that mean you can forget about Eliot Muir and making sure he's okay and looked
-after?  No - I still need to make some money.  The opensource version of Iguana X will never be the
-best version, it will lag in a few things.  It will still be infinitely better than Mirth Connect
-which is a security nightmare or a hacker's wet dream depending on your perspective ;-)
-
-But when I go and meet our maker, it will form a secure foundation for my customers so that the lights can stay on
-and no one needs to panic.  Critical infrastructure software needs to be treated differently
-from ordinary products.
-
-For an up to date [status on Iguana X go here,](https://github.com/eliotmuirgrid/press/blob/master/iguanax/i.md).
-
-[Eliot Muir](https://www.linkedin.com/in/eliotmuir/) 
-
-Architect of Iguana 
-
-Founder and CEO of iNTERFACEWARE 
+**No rights are granted except those expressly provided under an
+applicable written agreement with iNTERFACEWARE.**
